@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/11/05 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/11/05/</link>
+    <description>Recent content in 2014/11/05 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 05 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/11/05/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>新サービス Dailyshot をリリース！</title>
+      <link>http://staff.feedtailor.jp/2014/11/05/565</link>
+      <pubDate>Wed, 05 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/05/565</guid>
+      <description>
+
+&lt;p&gt;このたび、新サービス「Dailyshot」を始めます。&lt;/p&gt;
+
+&lt;p&gt;サービスの企画＆サーバ開発のくまくら (&lt;a href=&#34;http://twitter.com/kumatch&#34;&gt;@kumatch&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/dailyshot_icon-150x150.png&#34; alt=&#34;dailyshot_icon&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-thumbnail wp-image-581&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;色々な小さな情報を毎日記録:ee220bf67a08b8c94e8cacd1423e0109&#34;&gt;色々な小さな情報を毎日記録&lt;/h2&gt;
+
+&lt;p&gt;Dailyshot は、自分で決めたテーマに基づいて、一日の様々な事柄や出来事を小さく記録していくサービスです。&lt;/p&gt;
+
+&lt;p&gt;小さくというのは、例えば一枚の写真、簡潔な一言、数字、あるいは印（マーク）といったものになります。そういった小さな情報を少しずつ、一日単位で綴っていき、それら記録を「日付」という時系列で並べていきます。&lt;/p&gt;
+
+&lt;p&gt;一方、他の人（友人）も同じように一日単位の小さな記録を作っています。あなたがその人をサービス内でフォローすると、自分の毎日の記録と並んで、その人の記録が一緒に表示されます。そうすると、ある一日の出来事として、あなたと友人がどうだったのかということを眺めることができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/press_dailyshot_ios_01.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/press_dailyshot_ios_01-169x300.png&#34; alt=&#34;press_dailyshot_ios_01&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-570&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ふとしたきっかけで過去の自分や友人の身の回りを振り返って眺めるというのはなかなか楽しいものです。あるいは、友人同士であえて同じテーマの内容を毎日記録していって、比較をしては一喜一憂するのも良いかもしれません。&lt;/p&gt;
+
+&lt;p&gt;みんなの毎日の記録が一杯になってくると、大きな画面で一気に眺めるのが壮観です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/press_dailyshot_ios_09.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/press_dailyshot_ios_09-300x141.png&#34; alt=&#34;press_dailyshot_ios_09&#34; width=&#34;300&#34; height=&#34;141&#34; class=&#34;alignnone size-medium wp-image-573&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iPhone6 Plus の大きな画面で見るのがオススメですね！&lt;/p&gt;
+
+&lt;p&gt;上のように自分や友人の記録を一気に眺めることができることをコンセプトの１つとして据えていたので、最初の方でも書いているように、記録できる内容は出来る限り小さくしようと考えました。それらを並べた際、１マスの中に記録された内容が省略されることなく全貌すべてを見れるようにしたかったからです。&lt;/p&gt;
+
+&lt;p&gt;なので、文字を記録することができる「単文」で入力可能な文字数は、７文字にしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/press_dailyshot_ios_03.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/press_dailyshot_ios_03-169x300.png&#34; alt=&#34;press_dailyshot_ios_03&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-574&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dailyshot は、企画時点でこの仕様を提示した際には少し笑いが起きた上で、サービス用のアプリ開発の開始直後、アプリ担当の &lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;@sumihiro&lt;/a&gt; が始めて単文をアプリから投稿しようと「Dailyshot」と入力したところ、サーバからエラー応答を受け取ったため、サーバの不具合ではないかと本気で聞かれたところから始まりました。（もちろんサーバ視点では妥当な振る舞い）&lt;/p&gt;
+
+&lt;h2 id=&#34;本当に気に入ったものへ-そのとおりの思いを:ee220bf67a08b8c94e8cacd1423e0109&#34;&gt;本当に気に入ったものへ、そのとおりの思いを&lt;/h2&gt;
+
+&lt;p&gt;Dailyshot では、他のひとが記録として投稿した内容に対して他の SNS と同様に「Like」することができるのですが、Like した、していないという類いのものではなく、その度合いを示せるよう Like を複数回行えるようにしました。つまり、友人のその日の投稿を本当に気に入った場合は、20 Like を贈ることができます。&lt;/p&gt;
+
+&lt;p&gt;Like をたくさん贈るためには、ほんの少し昔に流行ったあのやり方と同じように、ボタンをたくさん押します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/press_dailyshot_ios_06.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/press_dailyshot_ios_06-169x300.png&#34; alt=&#34;press_dailyshot_ios_06&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-575&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;しかし、一度に無制限で贈れてしまうと訳が分からなくなってしまうので、一応僅かばかりの制約を作りました。システムとして現在 Like 可能な数が設けられています。Like リソースの上限値が 100 になっていますので、あるタイミングで１つの投稿に Like できる数は 100 まで、ということになります。このリソースは時間と共に回復する、これまたよく聞いたことがあるようなシステムです。回復したあと、同じ投稿に対して再び Like することは可能ですので、日を改めて投稿を見た際にやっぱり気に入っていてもう一度幾つか贈る、というような楽しみ方ができますよ。&lt;/p&gt;
+
+&lt;h2 id=&#34;dailyshot-の楽しみ方:ee220bf67a08b8c94e8cacd1423e0109&#34;&gt;Dailyshot の楽しみ方&lt;/h2&gt;
+
+&lt;p&gt;Dailyshot は、たとえば次にあげるような楽しみ方があります。もちろんこれだけではないはずで、毎日継続して何かを記録していき、それらが並ぶというコンセプトに沿って様々な使い方がありそうです。&lt;/p&gt;
+
+&lt;h3 id=&#34;写真日記:ee220bf67a08b8c94e8cacd1423e0109&#34;&gt;写真日記&lt;/h3&gt;
+
+&lt;p&gt;例えばペットの毎日の様子を写真に撮って、Dailyshot に記録していきます。毎日続けていって、あるときにふと振り返ってみると、小さかったときの様子、顔つきの変化などが見て取れるはずです。&lt;/p&gt;
+
+&lt;h3 id=&#34;ひとこと日記:ee220bf67a08b8c94e8cacd1423e0109&#34;&gt;ひとこと日記&lt;/h3&gt;
+
+&lt;p&gt;その日にやった事、特徴的だった出来事を一言で表して記録していきます。先ほど挙げたように、なにせ７文字ですから、書けることは限られています。１、２文章書くことと比べても楽なわりに、後日読み直してみると良い思い出しができたり、むりやり短いひとことで書いたが故の可笑しさを楽しめたりできます。&lt;/p&gt;
+
+&lt;h3 id=&#34;トレーニング記録:ee220bf67a08b8c94e8cacd1423e0109&#34;&gt;トレーニング記録&lt;/h3&gt;
+
+&lt;p&gt;上げたウェイト、あるいは走った距離、歩いた歩数。それぞれトレーニングしている内容毎にテーマを１つずつ作って記録していけば、日々の成長の様子、あるいは相互関係を掴めるかもしれません。&lt;/p&gt;
+
+&lt;p&gt;友達とも同じ内容を記録していけば、お互いに良い影響を与え合いながら継続させていくことも。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:ee220bf67a08b8c94e8cacd1423e0109&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;新しいサービス Dailyshot についてと、その基本的な使い方について紹介しました。&lt;/p&gt;
+
+&lt;p&gt;会社ページの方でもリリースに関する情報を掲載しています。そちらでも詳細に紹介していますので、是非ご覧ください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://feedtailor.jp/press_dailyshot&#34; title=&#34;フィードテイラー、毎日の写真や一言を残していく新感覚のライフログサービス「Dailyshot」をスタート！&#34; target=&#34;_blank&#34;&gt;フィードテイラー、毎日の写真や一言を残していく新感覚のライフログサービス「Dailyshot」をスタート！&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;まだまだ機能面では不足があったり、開発中でアイデアはあったもののもう少し内容を詰めた方がいいという理由から取り下げた機能もあったりします。そのあたりは今後のリリースにて実装、機能提供する予定です。毎日記録していこうと思えるよう、記録を眺めるのが楽しくなるよう、サービス内容を広げていければと考えています。Dailyshot を、どうぞよろしくお願いします！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

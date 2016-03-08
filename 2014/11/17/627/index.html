@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法 &middot; feedtailor Inc. スタッフブログ</title>
+    <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="feedtailor Inc.">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="icon" href="http://staff.feedtailor.jp/favicon.ico">
+    <link rel="apple-touch-icon" href="http://staff.feedtailor.jp/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/style.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/monokai.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法" />
+<meta property="og:description" content="めっきり寒くなりました。熱燗が美味しい季節がようやくやってきましたね。
+
+feedtailor Inc. で一番ののんだくれ、すみひろです。
+
+Dailyshot v1.1.0 をリリースしました。
+
+2014年11月5日にファーストバージョンをリリースしましたがいくつかの不具合を含んでおり、即座に修正を行った v1.0.1 の申請を行ったのですが結果としてリジェクトされリリースできずにいました。
+
+結局は v1.0.1 でのリリースを諦め、 v1.0.1 でリジェクトされた条項に抜本的対策を施し、 v1.1.0 としてリリースするに至りました。
+
+Dailyshot のダウンロードはこちらから。
+
+
+
+リジェクト理由は&#8221;14. Personal attacks&#8221;の第3項
+
+App Store Review Guidelines からリジェクト理由として挙げられた箇所を引用します。
+
+
+14.3: Apps that display user generated content must include a method for filtering objectionable material, a mechanism for users to flag offensive content, and the ability to block abusive users from the service
+
+
+ざっくり要約すると「ユーザーが投稿を行うなら、ヤバい投稿をフィルタリングさせる、通報できる、ブロックできるようにしろ」ということですね。
+
+つまり、「未成年者がエロいコンテンツを見ることを防ぐ」や「不愉快で見たくない投稿を行うユーザーをブロックする」ことを目的にユーザーを保護しようという目的があるようです。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://staff.feedtailor.jp/2014/11/17/627" />
+
+
+<meta property="og:updated_time" content="2014-11-17T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法">
+<meta itemprop="description" content="めっきり寒くなりました。熱燗が美味しい季節がようやくやってきましたね。
+
+feedtailor Inc. で一番ののんだくれ、すみひろです。
+
+Dailyshot v1.1.0 をリリースしました。
+
+2014年11月5日にファーストバージョンをリリースしましたがいくつかの不具合を含んでおり、即座に修正を行った v1.0.1 の申請を行ったのですが結果としてリジェクトされリリースできずにいました。
+
+結局は v1.0.1 でのリリースを諦め、 v1.0.1 でリジェクトされた条項に抜本的対策を施し、 v1.1.0 としてリリースするに至りました。
+
+Dailyshot のダウンロードはこちらから。
+
+
+
+リジェクト理由は&#8221;14. Personal attacks&#8221;の第3項
+
+App Store Review Guidelines からリジェクト理由として挙げられた箇所を引用します。
+
+
+14.3: Apps that display user generated content must include a method for filtering objectionable material, a mechanism for users to flag offensive content, and the ability to block abusive users from the service
+
+
+ざっくり要約すると「ユーザーが投稿を行うなら、ヤバい投稿をフィルタリングさせる、通報できる、ブロックできるようにしろ」ということですね。
+
+つまり、「未成年者がエロいコンテンツを見ることを防ぐ」や「不愉快で見たくない投稿を行うユーザーをブロックする」ことを目的にユーザーを保護しようという目的があるようです。
+">
+
+
+<meta itemprop="dateModified" content="2014-11-17T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1622">
+
+
+
+<meta itemprop="keywords" content="2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,node,アプリご紹介,全般,技術情報,未分類,8bitter,bgtube,book,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法"/>
+<meta name="twitter:description" content="めっきり寒くなりました。熱燗が美味しい季節がようやくやってきましたね。
+
+feedtailor Inc. で一番ののんだくれ、すみひろです。
+
+Dailyshot v1.1.0 をリリースしました。
+
+2014年11月5日にファーストバージョンをリリースしましたがいくつかの不具合を含んでおり、即座に修正を行った v1.0.1 の申請を行ったのですが結果としてリジェクトされリリースできずにいました。
+
+結局は v1.0.1 でのリリースを諦め、 v1.0.1 でリジェクトされた条項に抜本的対策を施し、 v1.1.0 としてリリースするに至りました。
+
+Dailyshot のダウンロードはこちらから。
+
+
+
+リジェクト理由は&#8221;14. Personal attacks&#8221;の第3項
+
+App Store Review Guidelines からリジェクト理由として挙げられた箇所を引用します。
+
+
+14.3: Apps that display user generated content must include a method for filtering objectionable material, a mechanism for users to flag offensive content, and the ability to block abusive users from the service
+
+
+ざっくり要約すると「ユーザーが投稿を行うなら、ヤバい投稿をフィルタリングさせる、通報できる、ブロックできるようにしろ」ということですね。
+
+つまり、「未成年者がエロいコンテンツを見ることを防ぐ」や「不愉快で見たくない投稿を行うユーザーをブロックする」ことを目的にユーザーを保護しようという目的があるようです。
+"/>
+<meta name="twitter:site" content="@feedtailor"/>
+
+
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://staff.feedtailor.jp/" id="logo"><span class="site-title">feedtailor Inc. スタッフブログ</span></a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/categories/">Categories</a>
+          
+          
+      </nav>
+        
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+		
+	    <section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                
+                <img src="http://staff.feedtailor.jp/images/2014/11/dailyshot_logo_100.png" class="article-banner">
+                
+            
+
+            <header class="article-header">
+    <a href="http://staff.feedtailor.jp/2014/11/17/627">
+    <h1 class="article-title" itemprop="name">
+        AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2014-11-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-11-17</time>
+            
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">技術情報</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/tags/dailyshot">Dailyshot</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>めっきり寒くなりました。熱燗が美味しい季節がようやくやってきましたね。</p>
+
+<p>feedtailor Inc. で一番ののんだくれ、<a href="http://twitter.com/sumihiro">すみひろ</a>です。</p>
+
+<p><a href="/2014/11/17/613">Dailyshot v1.1.0 をリリース</a>しました。</p>
+
+<p>2014年11月5日にファーストバージョンをリリースしましたがいくつかの不具合を含んでおり、即座に修正を行った v1.0.1 の申請を行ったのですが結果としてリジェクトされリリースできずにいました。</p>
+
+<p>結局は v1.0.1 でのリリースを諦め、 v1.0.1 でリジェクトされた条項に抜本的対策を施し、 v1.1.0 としてリリースするに至りました。</p>
+
+<p>Dailyshot のダウンロードはこちらから。</p>
+
+<p><a href="https://itunes.apple.com/jp/app/dailyshot/id932716879" target="_blank"><img src="/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png" alt="AppStoreからダウンロード" width="135" height="40" class="alignnone size-full wp-image-58" /></a></p>
+
+<h2 id="リジェクト理由は-8221-14-personal-attacks-8221-の第3項:2a9ff3b89ce4f5340f58c95fd3271e62">リジェクト理由は&#8221;14. Personal attacks&#8221;の第3項</h2>
+
+<p><a href="https://developer.apple.com/app-store/review/guidelines/#personal-attacks">App Store Review Guidelines</a> からリジェクト理由として挙げられた箇所を引用します。</p>
+
+<blockquote>
+<p>14.3: Apps that display user generated content must include a method for filtering objectionable material, a mechanism for users to flag offensive content, and the ability to block abusive users from the service</p>
+</blockquote>
+
+<p>ざっくり要約すると「ユーザーが投稿を行うなら、ヤバい投稿をフィルタリングさせる、通報できる、ブロックできるようにしろ」ということですね。</p>
+
+<p>つまり、「未成年者がエロいコンテンツを見ることを防ぐ」や「不愉快で見たくない投稿を行うユーザーをブロックする」ことを目的にユーザーを保護しようという目的があるようです。</p>
+
+<h2 id="twitter-や-facebook-はどうしてる:2a9ff3b89ce4f5340f58c95fd3271e62">Twitter や Facebook はどうしてる？</h2>
+
+<p>ユーザー投稿型のサービスとして、今ならば Twitter と Facebook が双璧をなしていますね。</p>
+
+<p>それぞれのサービスでも iOS アプリがありますが、どのように対応しているかを確認してみます。</p>
+
+<h3 id="twitter:2a9ff3b89ce4f5340f58c95fd3271e62">Twitter</h3>
+
+<p>特定のユーザーをブロックすること、特定のツイートをスパムなどとして報告できるようになっています。</p>
+
+<div id="attachment_629" style="width: 310px" class="wp-caption alignnone">
+  <a href="/images/2014/11/IMG_3070.jpg"><img src="/images/2014/11/IMG_3070-300x266.jpg" alt="ツイートに問題があることを報告できる。またユーザーをブロックできる。" width="300" height="266" class="size-medium wp-image-629" /></a>
+  
+  <p class="wp-caption-text">
+    ツイートに問題があることを報告できる。またユーザーをブロックできる。
+  </p>
+</div>
+
+<p>また、ウェブサイトでは、自分の投稿が不適切な内容を含むと宣言すること、そして他人の不適切な内容を含む投稿を表示しないことを設定可能です。</p>
+
+<div id="attachment_630" style="width: 310px" class="wp-caption alignnone">
+  <a href="/images/2014/11/twitter-settings.png"><img src="/images/2014/11/twitter-settings-300x145.png" alt="「不適切な内容を含む可能性のある画像/動画を表示する前に警告を表示しない」と 「ツイートする画像/動画を不適切な内容を含むものとして設定する」の設定でユーザーを保護している" width="300" height="145" class="size-medium wp-image-630" /></a>
+  
+  <p class="wp-caption-text">
+    「不適切な内容を含む可能性のある画像/動画を表示する前に警告を表示しない」と<br />「ツイートする画像/動画を不適切な内容を含むものとして設定する」の設定でユーザーを保護している
+  </p>
+</div>
+
+<h3 id="facebook:2a9ff3b89ce4f5340f58c95fd3271e62">Facebook</h3>
+
+<p>投稿に対して「この投稿を報告する」として問題があることを報告できるようにしています。</p>
+
+<p>また、ユーザーに対してもブロックできるようになっています。</p>
+
+<div id="attachment_632" style="width: 310px" class="wp-caption alignnone">
+  <a href="/images/2014/11/IMG_3074.jpg"><img src="/images/2014/11/IMG_3074-300x177.jpg" alt="投稿に対して問題を報告でき雨r。また、ユーザーをブロックすることもできる" width="300" height="177" class="size-medium wp-image-632" /></a>
+  
+  <p class="wp-caption-text">
+    投稿に対して問題を報告できる。また、ユーザーをブロックすることもできる
+  </p>
+</div>
+
+<h2 id="dailyshot-はどう対応した:2a9ff3b89ce4f5340f58c95fd3271e62">Dailyshot はどう対応した？</h2>
+
+<p>Dailyshot では、以下の二つの機能を実装しました。</p>
+
+<h3 id="ショットの問題を報告する機能:2a9ff3b89ce4f5340f58c95fd3271e62">ショットの問題を報告する機能</h3>
+
+<p>ショットを表示した時、左下に「報告」のボタンが現れます。ここからそのショットの問題点を報告できるようになりました。</p>
+
+<p>報告する内容はユーザーに選択させ、性的、暴力的、権利、その他の問題を簡単に報告できるようにしました。</p>
+
+<div id="attachment_633" style="width: 310px" class="wp-caption alignnone">
+  <a href="/images/2014/11/IMG_3080.jpg"><img src="/images/2014/11/IMG_3080-300x177.jpg" alt="4種類の問題のどれかを簡単に報告できる" width="300" height="177" class="size-medium wp-image-633" /></a>
+  
+  <p class="wp-caption-text">
+    4種類の問題のどれかを簡単に報告できる
+  </p>
+</div>
+
+<h3 id="特定ユーザーのテーマをブロックする機能:2a9ff3b89ce4f5340f58c95fd3271e62">特定ユーザーのテーマをブロックする機能</h3>
+
+<p>ユーザのプロフィールを表示した時、画面の一番下に「〜さんをブロックする」ボタンが表示されます。これを使って、ユーザーをブロックすることができます。</p>
+
+<p>ブロックすると、そのユーザーのテーマがパブリックタイムラインに表示されなくなります。ただし、自分でそのユーザーのタイムラインを見に行った場合にはテーマが表示されます。また、ブロックしたユーザーは自分のタイムラインを見ることができます。</p>
+
+<p>あくまで「見たくないものが急に表示される」事態を防ぐ機能です。</p>
+
+<div id="attachment_634" style="width: 310px" class="wp-caption alignnone">
+  <a href="/images/2014/11/IMG_3081.jpg"><img src="/images/2014/11/IMG_3081-300x266.jpg" alt="特定のユーザーをブロックし、表示されないようにする" width="300" height="266" class="size-medium wp-image-634" /></a>
+  
+  <p class="wp-caption-text">
+    特定のユーザーをブロックし、表示されないようにする
+  </p>
+</div>
+
+<p>これら二つの機能を実装し、Dailyshot v1.1.0 は審査を通過することができました。</p>
+
+<h2 id="最後に:2a9ff3b89ce4f5340f58c95fd3271e62">最後に</h2>
+
+<p>14.3項は<a href="https://github.com/jaredsinclair/AppStoreReviewGuidelines/commit/46ed21b844473343680282b40800304e28381e5f#diff-1b07cb2ba52400b236afd363c871579e">2014年9月1日のガイドライン</a>更新で追加されたようです。</p>
+
+<p>相変わらずのアップルさんの急な審査基準の変更には毎度ながら手を焼きますが、ユーザーを保護するための変更ならば真摯に対応するべきです。</p>
+
+<p>また、今回はこの対応で審査を通過することができましたが、これが完全な対応かどうかは分かりません。現在の審査基準を満たしてはいるももの、将来ではもっと厳密な対応が求められるかもしれません。本記事はあくまで一例としてご参考までにご提供致します。</p>
+
+<p>Dailyshot のダウンロードはこちらから。</p>
+
+<p><a href="https://itunes.apple.com/jp/app/dailyshot/id932716879" target="_blank"><img src="/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png" alt="AppStoreからダウンロード" width="135" height="40" class="alignnone size-full wp-image-58" /></a></p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://staff.feedtailor.jp/2014/11/17/627" data-id="2a9ff3b89ce4f5340f58c95fd3271e62" class="article-share-link">
+        Share
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://staff.feedtailor.jp/2014/11/17/613" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">新しいライフログサービス Dailyshot の ver1.1.0 を公開しました</div>
+    </a>
+    
+
+    
+    <a href="http://staff.feedtailor.jp/2014/12/02/647" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+    <section id="comments">
+        <div id="disqus_thread">
+            
+        </div>
+    </section>
+
+</section>
+
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/11/1083" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                        技術情報
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/11/1083" class="title">超聖域: iOSアプリのビルドツール</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-11</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/10/1013" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/javafx_gradle_screenshot-450x184.png)" alt="AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                        技術情報
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/10/1013" class="title">超聖域：JavaFXのGradleビルド</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-10</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/06/1041" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/launch-bg-450x200.png)" alt="AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">
+                        アプリご紹介
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/06/1041" class="title">顔写真にTwitterのアイコンをかぶせる iMasks を公開しました</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-06</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/05/1003" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/cocos2dx-450x200.png)" alt="AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                        未分類
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/05/1003" class="title">超聖域：Cocos2d-xでスライドパズルを作った</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-05</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/03/965" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/07/F8EE9162-5D47-48DC-B63D-47FEC8D17C54-450x200.png)" alt="AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                        未分類
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/03/965" class="title">超聖域: Unityでゲームを作ろうとした話</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-03</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/node">
+                    node
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">
+                    アプリご紹介
+                </a>
+                <span class="category-list-count">49</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e5%85%a8%e8%88%ac">
+                    全般
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                    技術情報
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                    未分類
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/04">
+                    2014/04
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/05">
+                    2014/05
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/06">
+                    2014/06
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/07">
+                    2014/07
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/08">
+                    2014/08
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/09">
+                    2014/09
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/10">
+                    2014/10
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/11">
+                    2014/11
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/12">
+                    2014/12
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/01">
+                    2015/01
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/02">
+                    2015/02
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/03">
+                    2015/03
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/04">
+                    2015/04
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/05">
+                    2015/05
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/07">
+                    2015/07
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/08">
+                    2015/08
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://staff.feedtailor.jp/tags/8bitter" style="font-size: 12px;">8bitter</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/bgtube" style="font-size: 12px;">bgtube</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/book" style="font-size: 12px;">book</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/cocos2d-x" style="font-size: 12px;">cocos2d-x</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/codescanner" style="font-size: 12px;">codescanner</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/cwnotify" style="font-size: 12px;">cwnotify</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/dailyshot" style="font-size: 12px;">dailyshot</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/express" style="font-size: 12px;">express</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/groups" style="font-size: 12px;">groups</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/imasks" style="font-size: 12px;">imasks</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/node" style="font-size: 12px;">node</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/nyatter" style="font-size: 12px;">nyatter</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/php" style="font-size: 12px;">php</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/qr%e7%9b%ae%e8%a6%9a%e3%81%be%e3%81%97" style="font-size: 12px;">qr目覚まし</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/sora" style="font-size: 12px;">sora</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/sunshine" style="font-size: 12px;">sunshine</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/tailsearch" style="font-size: 12px;">tailsearch</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%8b%e3%82%93%e3%81%98%e3%81%8b%e3%81%aa" style="font-size: 12px;">かんじかな</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e3%82%a2%e3%83%ab%e3%83%90%e3%83%a0" style="font-size: 12px;">そらアルバム</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e3%83%ac%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">そらレーダー</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e6%a1%88%e5%86%85" style="font-size: 12px;">そら案内</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e6%b0%97%e6%b8%a9" style="font-size: 12px;">そら気温</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e7%94%a8%e5%bf%83" style="font-size: 12px;">そら用心</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%82%a2%e3%83%97%e3%83%aa%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9" style="font-size: 12px;">アプリリリース</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e5%af%8c%e8%b1%aakeyboard" style="font-size: 12px;">富豪keyboard</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e8%b6%85%e8%81%96%e5%9f%9f" style="font-size: 12px;">超聖域</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://staff.feedtailor.jp/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://staff.feedtailor.jp/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

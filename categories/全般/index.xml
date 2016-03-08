@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>全般 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/categories/%E5%85%A8%E8%88%AC/</link>
+    <description>Recent content in 全般 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 30 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/categories/%E5%85%A8%E8%88%AC/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>フィードテイラーのここが変わってる！「今日の新発見」編</title>
+      <link>http://staff.feedtailor.jp/2015/04/30/908</link>
+      <pubDate>Thu, 30 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/30/908</guid>
+      <description>
+
+&lt;p&gt;はじめまして、&lt;a href=&#34;http://feedtailor.jp&#34;&gt;フィードテイラー&lt;/a&gt;の新人／最年長の tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;新人と言っても既に4ヶ月経ってしまいました。世間の新入社員は4ヶ月でどれくらい成長するんでしょうか。&lt;/p&gt;
+
+&lt;p&gt;それはともかくとして、今回は弊社の一日の流れをご紹介したいと思います。&lt;/p&gt;
+
+&lt;p&gt;このブログをご覧になっている方でしたらご存じかもしれませんが、&lt;a href=&#34;http://feedtailor.jp/wp/&#34;&gt;弊社代表の大石&lt;/a&gt;はかなり就労環境に対して先進的な考えを持っており、各所で&lt;a href=&#34;http://gmba.jp/2015-02-19-15-20-41/44-opinions/1219-opinion-oishi-vol2.html&#34;&gt;情報発信&lt;/a&gt;したりメディアに取り上げられています。&lt;/p&gt;
+
+&lt;p&gt;変わった制度は色々ありますが、&lt;strong&gt;残業禁止&lt;/strong&gt;、&lt;strong&gt;副業推奨&lt;/strong&gt;、&lt;strong&gt;SNS推奨&lt;/strong&gt;、&lt;strong&gt;エンジニアの電話／メール禁止&lt;/strong&gt;、&lt;a href=&#34;http://feedtailor.jp/wp/?p=178&#34;&gt;Mac&lt;/a&gt;や[iPad]()、最近では&lt;a href=&#34;http://feedtailor.jp/wp/?p=14361&#34;&gt;&lt;strong&gt;Apple Watchの購入支援&lt;/strong&gt;&lt;/a&gt;など。Windows禁止の時期もあったようです（今も？）。&lt;/p&gt;
+
+&lt;h4 id=&#34;残業禁止:06bfe9762bf86195123d9bef496e49fe&#34;&gt;残業禁止&lt;/h4&gt;
+
+&lt;p&gt;最近、耳にする機会が増えたIT系での残業禁止ですが、弊社ではかなり前から取り組んでいます。&lt;/p&gt;
+
+&lt;p&gt;実際に（緊急時を除き）ほとんど&lt;strong&gt;毎日 17:50 には誰もいません！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;残業禁止といっても残業代が支払われないだけでサービス残業しているケースはよくありますが、本当に帰ってます。&lt;/p&gt;
+
+&lt;p&gt;それを支えているのが、&lt;strong&gt;毎日朝夕２回のミーティング&lt;/strong&gt;です。&lt;/p&gt;
+
+&lt;h4 id=&#34;朝ミーティング:06bfe9762bf86195123d9bef496e49fe&#34;&gt;朝ミーティング〜&lt;/h4&gt;
+
+&lt;p&gt;毎朝9:00から5分程度全員でその日やるべき事、御客様からのフィードバックや打合せの時間調整／報告などを確認します。&lt;/p&gt;
+
+&lt;p&gt;終わったら直ぐに各自仕事を始めます。社内の会話は slack や twitter、場合によっては Redmine のチケット上で行われるのでほとんど会話はありません。当然電話もメールも来ないのでひたすらコードを書き続けています。&lt;/p&gt;
+
+&lt;p&gt;12:00〜12:45 の昼休みを挟んで午後ももくもくと作業を続けます。&lt;/p&gt;
+
+&lt;p&gt;その後、17:00 頃から各自日報を slack に投げ始め、17:15 から夕方ミーティング。終わったら定時に帰るという流れです。&lt;/p&gt;
+
+&lt;h4 id=&#34;夕方ミーティング:06bfe9762bf86195123d9bef496e49fe&#34;&gt;夕方ミーティング&lt;/h4&gt;
+
+&lt;p&gt;入社して一番驚いたのがこの夕方ミーティングです。&lt;/p&gt;
+
+&lt;p&gt;各自3分間程度、その日の作業内容を報告（発表）します。日報を出すことは普通にあると思いますが、&lt;strong&gt;発表&lt;/strong&gt;というのが肝で。&lt;/p&gt;
+
+&lt;p&gt;その日の作業でこんな物作りましたとか、ここまで動くようになりましたとか、画面に映して発表します。ほぼ毎日、みんな動く物を出してくるのであまり作業が進まなかった日はなかなかつらいです。16:00頃から何を発表しようか考え出して、何もなければ何とか見せられるものを作ろうと追い込みを掛けます。もしかしたら15:00〜17:00が一番集中している時間帯かも知れません。&lt;/p&gt;
+
+&lt;h4 id=&#34;今日の新発見:06bfe9762bf86195123d9bef496e49fe&#34;&gt;今日の新発見&lt;/h4&gt;
+
+&lt;p&gt;夕方ミーティングではもう一つ「&lt;a href=&#34;http://feedtailor.jp/wp/?p=8384&#34;&gt;今日の新発見&lt;/a&gt;」というものを発表しなければいけません。&lt;/p&gt;
+
+&lt;p&gt;発表する内容は技術的な事柄であれば何でもいいのですが、みなさん&lt;strong&gt;毎日発見はありますか？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;毎日はないですよね。私もないです。&lt;/p&gt;
+
+&lt;p&gt;作業中に気づいたちょっとしたTipsでもあればいいのですが、そんなもの毎日は見つかりません。なのでSNS、技術系ポータルサイトやブログを普段から見まくって話すネタを探しています。&lt;/p&gt;
+
+&lt;p&gt;これだけ書くとなんだか面倒くさいことをやっているようにしか聞こえませんが、なれてくると案外コレが楽しくって。むしろすごく重要な事ではないかと思えてきます。&lt;/p&gt;
+
+&lt;p&gt;同僚と話題がかぶらないように、&lt;strong&gt;自分の得意分野を探すきっかけ&lt;/strong&gt;にもなります。&lt;/p&gt;
+
+&lt;p&gt;毎日同じ物を作り続けていると、どうしても頭の中がソレだけになったりしませんか?&lt;/p&gt;
+
+&lt;p&gt;今使っている技術や手法に縛られて視野が狭くなってしまいがちです。私は以前そうでした。&lt;/p&gt;
+
+&lt;p&gt;が、技術は日々進歩しています。&lt;/p&gt;
+
+&lt;p&gt;一度遅れをとると、追いつくには相当な努力が必要だと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;普段からアンテナを張っておくと自然と色々なことに興味がわいてきて、作りたいモノや試したいことが増えます&lt;/strong&gt;（たぶん）。&lt;/p&gt;
+
+&lt;p&gt;こうなるともはや発表は関係ないです。見事に術中にはまってます(?)。&lt;/p&gt;
+
+&lt;p&gt;弊社が&lt;a href=&#34;https://itunes.apple.com/us/app/sora-youjin/id910413680?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;アレ&lt;/a&gt;や&lt;a href=&#34;https://itunes.apple.com/jp/app/8bitter/id600772761?mt=8&#34;&gt;コレ&lt;/a&gt;や&lt;a href=&#34;https://itunes.apple.com/jp/app/fu-haobukku-zhenno-jian-kaiki/id576560440?mt=8&#34;&gt;ソレ&lt;/a&gt;や幾つもネタアプリを作っている源の一つはコレかも知れません。&lt;/p&gt;
+
+&lt;p&gt;長くなりましたが、技術のフォローアップはもちろん、就労時間にメリハリを付けるためにも、朝／夕方ミーティングや「今日の新発見」を導入してみてはいかがでしょうか？&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>feedtailor スタッフブログを始めます</title>
+      <link>http://staff.feedtailor.jp/2014/04/18/45</link>
+      <pubDate>Thu, 17 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/04/18/45</guid>
+      <description>&lt;p&gt;feedtailor代表の oishi です。&lt;/p&gt;
+
+&lt;p&gt;これまで&lt;a href=&#34;http://feedtailor.jp/&#34;&gt;(株)フィードテイラー&lt;/a&gt;のブログは僕の個人ブログ的(?)な&lt;a href=&#34;http://feedtailor.jp/wp/&#34;&gt;社長ブログ&lt;/a&gt;のみだったのですが、この度、エンジニアを含む弊社スタッフが自ら発信する場として別ブログを立ち上げる事にしました。名付けて &lt;strong&gt;feedtailor スタッフブログ&lt;/strong&gt; &amp;#8230;ってそのままですね  &lt;img src=&#34;http://staff.feedtailor.jp/images/smilies/icon_smile.gif&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;例えばアプリの話。これまでは僕が社長ブログでアプリ紹介を書いていたのですが、アップデートには余り言及出来ていなかったりとか、あるアプリの実は面白い機能や活用方が紹介しきれていなかったりとか、ちょっと勿体ない事になっていたのです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/feedtailor&#34;&gt;github&lt;/a&gt;に公開しているモノの話とかもそうですね。実は超便利なツールが密やかに追加されているのですが一切言及してなかったりとか、ライブラリの&lt;a href=&#34;https://github.com/feedtailor/FTFoundation&#34;&gt;FTFoundation&lt;/a&gt;に便利なクラスが追加されてます&amp;#8230;的な話とか。このへんはエンジニアの生の声が外にでる方が良いと思ってたのです、前々から。&lt;/p&gt;
+
+&lt;p&gt;他にもウチの社内の雑多なネタ、今週のお菓子とか(笑)、&lt;a href=&#34;http://feedtailor.jp/wp/?p=8384&#34;&gt;毎日夕方にやってる新発見&lt;/a&gt;ネタとか、そんな話題もありかも知れないですね。まぁまぁ色々考えられるのでいわゆる開発ブログ的な位置付けではなく、緩い感じでスタッフブログとしました。&lt;/p&gt;
+
+&lt;p&gt;基本的に執筆陣は僕以外がメインになると思います。月に数回更新できれば&amp;#8230;ぐらいの頻度でやっていく予定ですので御覧頂ければ幸いです。そんな訳で &lt;a href=&#34;http://staff.feedtailor.jp/&#34;&gt;feedtailorスタッフブログ&lt;/a&gt; をどうぞ宜しくお願い致します。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/10 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/10/</link>
+    <description>Recent content in 2014/10 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 30 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/10/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>雨雲予測アプリ そらレーダー v1.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/30/557</link>
+      <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/30/557</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/3a32a3262646918bc6b4c57662b6c293.png&#34; alt=&#34;Icon-60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-305&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲予測アプリ「そらレーダー」の v1.1.0 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS8対応&lt;/li&gt;
+&lt;li&gt;iPhone6/6Plus対応&lt;/li&gt;
+&lt;li&gt;通知設定が消えることがある問題を修正&lt;/li&gt;
+&lt;li&gt;広告SDK更新&lt;/li&gt;
+&lt;li&gt;外部ライブラリ更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最新の環境に合わせたアップデートです。&lt;/p&gt;
+
+&lt;p&gt;6/6Plusでは地図も広々と表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141030_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141030_2.png&#34; alt=&#34;20141030_2&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-558&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、通知設定まわりのバグも修正されています。フィードバックをいただいたユーザのみなさんどうもありがとうございました。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方も是非どうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら気温 v1.2.1 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/28/554</link>
+      <pubDate>Tue, 28 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/28/554</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-474&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ホーム画面に現在地（に最も近いアメダス観測地点）の気温を表示する、そら気温の v1.2.1 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:7a617fa8999d43361b184b23eda1adb6&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iPhone6/6Plusにおいて現在地での気圧表示に対応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iPhone6/6Plusで搭載された気圧計を早速使ってみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/8c59997c257f46a9bd9c237f8cade56d.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/8c59997c257f46a9bd9c237f8cade56d.png&#34; alt=&#34;20141028_Screen Shot 2014-10-28 at 9.04.21 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-555&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;デバイスの気圧計から取得できる値をそのまま表示しているだけですので、一般に公表されているデータとは当然ズレがあると思いますが、「低気圧が近づいてるな」とかそういう参考までに、ということで。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;ホーム画面の片隅において、気温をチェックしてみてはいかがでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>止めにくい目覚ましアプリ QR目覚まし v1.2.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/27/550</link>
+      <pubDate>Mon, 27 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/27/550</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-106&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;QR目覚ましがiPhone6/6Plusに対応しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:83d7f39c6a36c84a36d899cdcb42a275&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iPhone6/6Plusへの対応&lt;/li&gt;
+&lt;li&gt;ナイトモード中のバッテリ節約&lt;/li&gt;
+&lt;li&gt;バグ修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;6/6Plusに対応したことによる恩恵はほとんどないかもしれませんけれど、せっかくなのでこれを機会に対応してみました。&lt;/p&gt;
+
+&lt;p&gt;ナイトモード中に落ちる問題などのバグも修正されています。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;朝しっかり起きられて、睡眠ログもヘルスケアに保存できて、しかも&lt;strong&gt;無料&lt;/strong&gt;、なQR目覚まし。一度お試しくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（Mac版）v2.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/22/527</link>
+      <pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/22/527</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/icon_128x128.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-529&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Macの超定番お天気アプリ「そら案内」の v2.0.0 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;デザインの一新&lt;/li&gt;
+&lt;li&gt;天気画像の一新（10.9以降のみ）
+
+&lt;ul&gt;
+&lt;li&gt;アメダス各種情報追加&lt;/li&gt;
+&lt;li&gt;XバンドMPレーダ予測追加&lt;/li&gt;
+&lt;li&gt;PM2.5予測追加&lt;/li&gt;
+&lt;li&gt;黄砂予測追加&lt;/li&gt;
+&lt;li&gt;台風情報追加&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;予報をカレンダーに重複して書き出す問題を修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;追記2014.10.23&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;v2.0.0にアップデート後、表示されなくなったという方はお手数ですが、一度データの初期化を試してみてください。ご迷惑をおかけして申し訳ありません。（地域設定など全部消えてしまいます）&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;そら案内を終了&lt;/li&gt;
+&lt;li&gt;Finderでoptionキー押しながら「移動」メニュー→「ライブラリ」を選択&lt;/li&gt;
+&lt;li&gt;ライブラリ/Containers/jp.feedtailor.osx.SoraAnnai のフォルダを削除&lt;/li&gt;
+&lt;li&gt;そら案内を起動&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;デザインの一新:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;デザインの一新&lt;/h4&gt;
+
+&lt;p&gt;まずは見た目そのものですけれど、冒頭のアプリアイコンからもわかるようにデザインを一新しました。ちょうどiOS版がiOS7からフラットデザイン化されたように、先日公開された OS X 10.10 Yosemite を意識してMac版もフラット的なデザインになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/5e6b7c9c3a010930b29cbfc74c7876a61.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/5e6b7c9c3a010930b29cbfc74c7876a61.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-21 午後4.32.48&#34; width=&#34;600&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-534&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気アイコンなども一式フラット化されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/44bc451ed574ab46b48fbd29c50c1396.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/44bc451ed574ab46b48fbd29c50c1396.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-21 午後4.33.28 のコピー&#34; width=&#34;565&#34; height=&#34;436&#34; class=&#34;alignnone size-full wp-image-535&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;天気画像の一新:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;天気画像の一新&lt;/h4&gt;
+
+&lt;p&gt;さて、今回の目玉はデザインではなく「天気画像」。いままで、数枚の画像を切り替えて表示できるだけだったんですが、地図を用いてiOS版と同等の情報量になりました（＊Macの標準地図を使っているため「天気画像」の機能追加は OS X 10.9 Mavericks 以降のみとなります）&lt;/p&gt;
+
+&lt;p&gt;おなじみ「天気図」。各情報は右のメニューで切り替えます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/3f2aa7be6c01d66915924e811383a4ee.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/3f2aa7be6c01d66915924e811383a4ee.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.36 のコピー&#34; width=&#34;514&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-537&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「アメダス」もこの通り。詳細はマウスオーバーで表示。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/fe5e88e201c384783968e00bb2504994.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/fe5e88e201c384783968e00bb2504994.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.12 のコピー&#34; width=&#34;470&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-538&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「XバンドMPレーダー予測」もつきました。Macを使いながら直近の雨予想をチェックしましょう。（XバンドMPレーダーは直近5分後の降雨予測を表示します）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/bdea89a808430b9614ea377ce306f87d.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/bdea89a808430b9614ea377ce306f87d.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.59 のコピー&#34; width=&#34;470&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-539&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もちろん、黄砂やPM2.5、台風なども一通りそろっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/9535af33d3f9288887d46eaada023421.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/9535af33d3f9288887d46eaada023421.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.30.27 のコピー&#34; width=&#34;471&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-540&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;おおよそ必要な天気情報はそら案内で確認することができるようになったのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;デスクトップの片隅で天気をお知らせしてくれるそら案内。みなさん是非お使いくださいませ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Book&#43; v1.9.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/17/512</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/17/512</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id446695394&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/bookplus.png&#34; alt=&#34;bookplus&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-513&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これまた1年ぶりにアップデートしたアプリの紹介です。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:5bd2de209147d7fe2617b1ea604b47a7&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;iOS7/8対応&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS7以降のみの対応となります&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;各種ライブラリの更新&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Boxの新APIに対応&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;細かいバグ修正&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id446695394&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;主に、今後のメンテのために iOS8 を機会に最新の環境でビルドし直して動作確認したという感じです。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;簡単なアプリ紹介:5bd2de209147d7fe2617b1ea604b47a7&#34;&gt;簡単なアプリ紹介&lt;/h3&gt;
+
+&lt;p&gt;恒例となってきたアプリ紹介をざっくりと。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Book+ は PDFの管理と高速閲覧に特化した電子書籍リーダーです。&lt;/p&gt;
+
+&lt;p&gt;管理のし易さと読み易さに徹底的にこだわって、独自機能を多数搭載しています。iPadやiPhoneでPDFを読みたい方にお勧めです！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;つまり、いわゆるPDFリーダーです。zip/rarで圧縮した画像ファイル群（漫画などでよく使われている形式）も閲覧できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141017_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141017_1.png&#34; alt=&#34;20141017_1&#34; width=&#34;600&#34; height=&#34;338&#34; class=&#34;alignnone size-full wp-image-517&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ページ送りの方向や、一画面あたりの表示ページ数、など細かい設定ももちろん可能です。&lt;/p&gt;
+
+&lt;p&gt;ファイルはフォルダ構造で管理できます。ドラッグ &amp;amp; ドロップでの並び替えなども可能。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141017_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141017_2.png&#34; alt=&#34;20141017_2&#34; width=&#34;600&#34; height=&#34;338&#34; class=&#34;alignnone size-full wp-image-518&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いくつかの外部ストレージ（Dropbox, WebDav, S3, SugarSync, Pogoplug, Boxなど）にも対応していますので、そちらのファイルも直接閲覧したり、ダウンロードしてコピーしたりできます。&lt;/p&gt;
+
+&lt;p&gt;ブックマークや単純な図形の描画もできます。iCloud連携することで、複数のデバイス間で描画した図形を同期することもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141017_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141017_4.png&#34; alt=&#34;20141017_4&#34; width=&#34;600&#34; height=&#34;338&#34; class=&#34;alignnone size-full wp-image-521&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみに、一画面あたり最大64ページを同時に表示できますので、たとえばこんなことも。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141017_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141017_5.png&#34; alt=&#34;20141017_5&#34; width=&#34;450&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-519&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;他にも機能満載のリーダーとなっていますので、いろいろとさわってみてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id446695394&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CodeScanner v2.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/14/501</link>
+      <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/14/501</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id352276408&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/3a32a3262646918bc6b4c57662b6c293.png&#34; alt=&#34;Icon-60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-502&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;またまた1年半ぶりに更新したアプリの紹介です。&lt;/p&gt;
+
+&lt;h4 id=&#34;更新内容:4d7100dff5a21b1a99c37bddfc34b88a&#34;&gt;更新内容&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;iOS7/8対応&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS7以降のみの対応となります&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;デコードをiOS標準ライブラリに置き換え（1/2次元の切り替えを廃止）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ネットワーク連携を廃止&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;対応ブラウザの整理&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id352276408&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前バージョンまでは1/2次元のコード読み取りにZxingというオープンソースのライブラリを使用していたのですが、iOS7よりOS標準で対応しましたので、全面的に差し替えました。&lt;/p&gt;
+
+&lt;p&gt;対応コードはOSの仕様に準じますが、いまのところ以下の通りです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1次元
+
+&lt;ul&gt;
+&lt;li&gt;UPC-E&lt;/li&gt;
+&lt;li&gt;EAN-8, EAN-13&lt;/li&gt;
+&lt;li&gt;CODE 39&lt;/li&gt;
+&lt;li&gt;CODE 93&lt;/li&gt;
+&lt;li&gt;CODE 128&lt;/li&gt;
+&lt;li&gt;ITF&lt;/li&gt;
+&lt;li&gt;PDF417&lt;/li&gt;
+&lt;li&gt;Interleaved 2 of 5&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2次元
+
+&lt;ul&gt;
+&lt;li&gt;QR Code&lt;/li&gt;
+&lt;li&gt;Data Matrix&lt;/li&gt;
+&lt;li&gt;Aztec&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;簡単なアプリ紹介:4d7100dff5a21b1a99c37bddfc34b88a&#34;&gt;簡単なアプリ紹介&lt;/h3&gt;
+
+&lt;p&gt;さて、久しぶりのアップデートなのでざっくりとですがアプリの紹介も。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;CodeScannerはバーコードやQRコードをはじめとする 1次元 or 2次元コードを連続して読み取る事のできるリーダーアプリです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ということで、よくあるコードリーダーなのですが、&lt;strong&gt;連続して読み取る事のできる&lt;/strong&gt;というところがキモになっております。&lt;/p&gt;
+
+&lt;p&gt;起動すると、スキャン画面です。シャッターボタンとかはないので、カメラに写ったコードを片っ端からどんどん読み込んでいきます。一番下に表示されているのが、直近の読み取り結果になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_1.png&#34; alt=&#34;20141014_1&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-505&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;スキャン履歴一覧です。読み込んだコードに応じた処理がいろいろできます。複数の読み込み結果を連結してコピー、なんてこともできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_2.png&#34; alt=&#34;20141014_2&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-506&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;たとえば、読み込んだコードがURLならブラウザを開きます。Safari以外のブラウザアプリが入っている場合も設定次第で、直接呼び出せるようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_3.png&#34; alt=&#34;20141014_3&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-507&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ほかにも、住所登録や電話はもちろん、バーコードからアマゾン・Googleショッピングへのアクセスも可能です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;あるとなにかと便利なコードリーダー。是非使ってみてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id352276408&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Groups for facebook. v1.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/10/486</link>
+      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/10/486</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id561836613&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/icon_120.png&#34; alt=&#34;icon_120&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-487&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最終更新が1年前という古いアプリですが、久しぶりのアップデートです。&lt;/p&gt;
+
+&lt;h4 id=&#34;更新内容:8808999dea43598bfb6da1720d39ad82&#34;&gt;更新内容&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;iOS7/8対応&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本バージョンからiOS7以降のみの対応となります&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iPhone6/6Plus対応&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;システムのFacebookアカウントと連携&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;外部ライブラリ更新&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id561836613&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iOS7がでたときはそのままにしていたのですが、iOS8を機に7/8対応ということで整理しました。&lt;/p&gt;
+
+&lt;p&gt;ついでに大画面にも対応したので、従来の4inchが&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_1_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_1_4.png&#34; alt=&#34;20141010_1_4&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-492&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;6Plusではこうなります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_1.png&#34; alt=&#34;20141010_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-493&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;ちょっと紹介:8808999dea43598bfb6da1720d39ad82&#34;&gt;ちょっと紹介&lt;/h3&gt;
+
+&lt;p&gt;1年ぶりのアップデートということなので、アプリ自身の紹介も少し。&lt;/p&gt;
+
+&lt;p&gt;AppStoreから引用すると、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Groups for facebook (通称 Groups) は facebook のグループ閲覧や投稿に特化したアプリケーションです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;というわけで、Facebookのグループを見るのに特化したアプリです。&lt;/p&gt;
+
+&lt;p&gt;グループの数が増えてくると、注目したいグループだけを表示させたい、とか、気になるスレッドを常にチェックしておきたい、とかそういう要望が出てきます。もちろん、公式でも設定を使いこなせばある程度のことはできるんですが、そこは専用アプリでシンプルにいきましょうよ、と。&lt;/p&gt;
+
+&lt;p&gt;起動してアカウントと連携させると、所属しているグループがざっと一覧で表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_2.png&#34; alt=&#34;20141010_2&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-495&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;で、これ、必要なグループだけを残して、それ以外を非表示にすることもできるんです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_5.png&#34; alt=&#34;20141010_5&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-496&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;各グループの中は上記のスクリーンショットの通りですが、スレッドをのぞくとこんな感じ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_3.png&#34; alt=&#34;20141010_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-497&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;スレッドの右下にある☆マークをタップすることで、そのスレッドをお気に入りとして登録できます。お気に入りしたスレッドには簡単にアクセスできるようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_4.png&#34; alt=&#34;20141010_4&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-498&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このようにシンプルながらにグループ使いとしては最低限の機能がそろっているのではないかと。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;無料&lt;/strong&gt;ですし、Facebookなみなさま、一度お試しくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id561836613&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら気温 v1.2.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/09/473</link>
+      <pubDate>Thu, 09 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/09/473</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-474&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ホーム画面に現在地（に最も近いアメダス観測地点）の気温を表示する、そら気温の v1.2.0 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:336febdd9469bc5ebe477024e50d0dd4&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS8への対応&lt;/li&gt;
+&lt;li&gt;iPhone6/6Plusへの対応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;特に新機能があるわけではありませんが、最新の環境に対応しました。&lt;/p&gt;
+
+&lt;h3 id=&#34;ちょっと紹介:336febdd9469bc5ebe477024e50d0dd4&#34;&gt;ちょっと紹介&lt;/h3&gt;
+
+&lt;p&gt;当スタッフブログで取り上げるのは初めてなので、少しだけアプリの紹介を。&lt;/p&gt;
+
+&lt;p&gt;冒頭に書いたままなのですが、ホーム画面のアプリのバッジとして直近のアメダス観測地点の気温を表示します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_31.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_31.png&#34; alt=&#34;20141009_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-481&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これ↑、247度ではなくて、24.7度です。小数を表示するかどうかは設定で切り替えられます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_2.png&#34; alt=&#34;20141009_2&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-477&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、マイナスの時は9が先頭の4桁数字になります。0もバッジの仕様としては表示できませんので、0度のときは9000という表示になります。&lt;/p&gt;
+
+&lt;p&gt;アプリを開くと、もう少し詳しい情報が見られます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_1.png&#34; alt=&#34;20141009_1&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-478&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;青いマークが現在地で、赤いピンが観測地点です。観測値の更新は10分ごとで、だいたい10-20分以内の観測値が表示されます。&lt;/p&gt;
+
+&lt;p&gt;現在地に直近の観測地点、と書きましたが、直近の観測地点が山の中にあったりと参考にならない場合は、観測地点を地図から選択することもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_5.png&#34; alt=&#34;20141009_5&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-479&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;注意事項:336febdd9469bc5ebe477024e50d0dd4&#34;&gt;注意事項&lt;/h4&gt;
+
+&lt;p&gt;アプリを立ち上げることなく、バックグランドで動くことを前提としたアプリなので、いくつかの注意事項があります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;更新タイミングはまちまちです。iOSがよろしくバックグランドで動かしてくれるようなのでその点ご了承ください。ただ、あまりにアプリを立ち上げていないと「このアプリ使わないのかな？」と更新が止まることがあるようなので、たまにはアプリを立ち上げてください。&lt;/li&gt;
+&lt;li&gt;バックグラウンドで更新されない場合は設定アプリの「一般」-「Appのバックグラウンド更新」で「そら気温」が「オン」になっているか確認してください。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;普段はほとんど立ち上げる必要もないですが、ホーム画面の片隅において、気温をチェックしてみてはいかがでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

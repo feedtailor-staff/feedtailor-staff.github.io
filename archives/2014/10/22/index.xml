@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/10/22 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/10/22/</link>
+    <description>Recent content in 2014/10/22 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 22 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/10/22/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（Mac版）v2.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/22/527</link>
+      <pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/22/527</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/icon_128x128.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-529&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Macの超定番お天気アプリ「そら案内」の v2.0.0 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;デザインの一新&lt;/li&gt;
+&lt;li&gt;天気画像の一新（10.9以降のみ）
+
+&lt;ul&gt;
+&lt;li&gt;アメダス各種情報追加&lt;/li&gt;
+&lt;li&gt;XバンドMPレーダ予測追加&lt;/li&gt;
+&lt;li&gt;PM2.5予測追加&lt;/li&gt;
+&lt;li&gt;黄砂予測追加&lt;/li&gt;
+&lt;li&gt;台風情報追加&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;予報をカレンダーに重複して書き出す問題を修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;追記2014.10.23&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;v2.0.0にアップデート後、表示されなくなったという方はお手数ですが、一度データの初期化を試してみてください。ご迷惑をおかけして申し訳ありません。（地域設定など全部消えてしまいます）&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;そら案内を終了&lt;/li&gt;
+&lt;li&gt;Finderでoptionキー押しながら「移動」メニュー→「ライブラリ」を選択&lt;/li&gt;
+&lt;li&gt;ライブラリ/Containers/jp.feedtailor.osx.SoraAnnai のフォルダを削除&lt;/li&gt;
+&lt;li&gt;そら案内を起動&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;デザインの一新:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;デザインの一新&lt;/h4&gt;
+
+&lt;p&gt;まずは見た目そのものですけれど、冒頭のアプリアイコンからもわかるようにデザインを一新しました。ちょうどiOS版がiOS7からフラットデザイン化されたように、先日公開された OS X 10.10 Yosemite を意識してMac版もフラット的なデザインになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/5e6b7c9c3a010930b29cbfc74c7876a61.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/5e6b7c9c3a010930b29cbfc74c7876a61.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-21 午後4.32.48&#34; width=&#34;600&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-534&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気アイコンなども一式フラット化されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/44bc451ed574ab46b48fbd29c50c1396.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/44bc451ed574ab46b48fbd29c50c1396.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-21 午後4.33.28 のコピー&#34; width=&#34;565&#34; height=&#34;436&#34; class=&#34;alignnone size-full wp-image-535&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;天気画像の一新:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;天気画像の一新&lt;/h4&gt;
+
+&lt;p&gt;さて、今回の目玉はデザインではなく「天気画像」。いままで、数枚の画像を切り替えて表示できるだけだったんですが、地図を用いてiOS版と同等の情報量になりました（＊Macの標準地図を使っているため「天気画像」の機能追加は OS X 10.9 Mavericks 以降のみとなります）&lt;/p&gt;
+
+&lt;p&gt;おなじみ「天気図」。各情報は右のメニューで切り替えます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/3f2aa7be6c01d66915924e811383a4ee.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/3f2aa7be6c01d66915924e811383a4ee.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.36 のコピー&#34; width=&#34;514&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-537&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「アメダス」もこの通り。詳細はマウスオーバーで表示。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/fe5e88e201c384783968e00bb2504994.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/fe5e88e201c384783968e00bb2504994.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.12 のコピー&#34; width=&#34;470&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-538&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「XバンドMPレーダー予測」もつきました。Macを使いながら直近の雨予想をチェックしましょう。（XバンドMPレーダーは直近5分後の降雨予測を表示します）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/bdea89a808430b9614ea377ce306f87d.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/bdea89a808430b9614ea377ce306f87d.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.59 のコピー&#34; width=&#34;470&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-539&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もちろん、黄砂やPM2.5、台風なども一通りそろっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/9535af33d3f9288887d46eaada023421.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/9535af33d3f9288887d46eaada023421.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.30.27 のコピー&#34; width=&#34;471&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-540&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;おおよそ必要な天気情報はそら案内で確認することができるようになったのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;デスクトップの片隅で天気をお知らせしてくれるそら案内。みなさん是非お使いくださいませ。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

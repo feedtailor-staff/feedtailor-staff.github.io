@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015/01/29 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2015/01/29/</link>
+    <description>Recent content in 2015/01/29 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 29 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2015/01/29/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>チャットワークの新規投稿を通知するMacアプリ CWNotify をソースごと公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/01/29/749</link>
+      <pubDate>Thu, 29 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/01/29/749</guid>
+      <description>
+
+&lt;p&gt;社内ツール、社外ツールとして利用しているチャットワーク。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.chatwork.com/ja/&#34; target=&#34;blank&#34;&gt;チャットワーク（ChatWork） | ビジネスが加速するクラウド会議室&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「ルームへの新規投稿を逃さす素早く知りたいですね」という話が社内で話題になり、ちょうどAPI（プレビュー版）も公開されたところでしたので社内ツールとしてつくった CWNotify をソース丸ごと公開します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/feedtailor/CWNotify&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/01/Icon_128.png&#34; alt=&#34;Icon_128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-750&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらにビルド済みバイナリもあるのでご利用ください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/feedtailor/CWNotify/releases&#34; target=&#34;_blank&#34;&gt;GitHub: Releases · feedtailor/CWNotify&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;概要:02877e8783d601010381f86e6a4779ec&#34;&gt;概要&lt;/h3&gt;
+
+&lt;p&gt;チャットワークのピン留めしたルームへの自分以外の投稿を通知センターに通知する、というそれだけのアプリです。&lt;/p&gt;
+
+&lt;p&gt;自分宛の投稿じゃないからといって見逃すことが少なくなります。&lt;/p&gt;
+
+&lt;p&gt;1分単位で更新しているのでそれなりのスピード感で通知が飛んできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：チャットワークAPIはプレビュー版ですのでその点ご注意ください&lt;/p&gt;
+
+&lt;h3 id=&#34;使い方:02877e8783d601010381f86e6a4779ec&#34;&gt;使い方&lt;/h3&gt;
+
+&lt;p&gt;上述のようにプレビュー版のAPIを使用しているため、APIの利用申請をしなければなりません（アカウントごとに）。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://developer.chatwork.com/ja/&#34; target=&#34;_blank&#34;&gt;チャットワークAPIドキュメント&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このページのリンクをクリックすると、利用申請したことになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/01/ab4ee8ed0f4b2b129648967c05084d3b.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/01/ab4ee8ed0f4b2b129648967c05084d3b.png&#34; alt=&#34;20150129_スクリーンショット 2015-01-29 9.21.04 のコピー&#34; width=&#34;600&#34; height=&#34;437&#34; class=&#34;alignnone size-full wp-image-752&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;申請完了メールが届いたら、こちらのページに従って APIトークンを取得します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://developer.chatwork.com/ja/authenticate.html&#34; target=&#34;_blank&#34;&gt;認証方法：チャットワークAPIドキュメント&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここでようやく CWNotify を起動。トークン入力画面が表示されますので、トークンを入力してOK。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/01/164b5e299699ea754e0c4d8012cf0e59.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/01/164b5e299699ea754e0c4d8012cf0e59.png&#34; alt=&#34;スクリーンショット 2015-01-29 9.25.27&#34; width=&#34;533&#34; height=&#34;189&#34; class=&#34;alignnone size-full wp-image-756&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これで完了です。あとは、1分ごとにピン留めルームをチェックして通知センターに通知が上がってきます。（これはテスト用に自分の投稿を通知させてますが実際には通知されません）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/01/7bfdfe0660da0db6d7ff6813da93e5db.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/01/7bfdfe0660da0db6d7ff6813da93e5db.png&#34; alt=&#34;20150129_スクリーンショット 2015-01-29 9.30.17 のコピー&#34; width=&#34;300&#34; height=&#34;133&#34; class=&#34;alignnone size-full wp-image-758&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;細かい調整や機能強化はぜひソースをいじってみてくださいませ。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

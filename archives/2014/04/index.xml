@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/04 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/04/</link>
+    <description>Recent content in 2014/04 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 24 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/04/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>止めにくい目覚ましアプリ QR目覚まし v1.0.2 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/04/24/102</link>
+      <pubDate>Thu, 24 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/04/24/102</guid>
+      <description>
+
+&lt;h3 id=&#34;ごあいさつ:3a9ba9a578aa5498e92c38517633f2e7&#34;&gt;ごあいさつ&lt;/h3&gt;
+
+&lt;p&gt;まずはじめにということで、はじめましてです。&lt;a href=&#34;https://twitter.com/itok\_twit&#34; target=\_blank&gt;itok&lt;/a&gt;です。feedtailorの古参エンジニアです。iOS/Macがメインですが、たまにサーバサイドもちょっとだけ触ったりします。うちの代表作「&lt;a href=&#34;http://sora-annai.jp/&#34; target=_blank&gt;そら案内&lt;/a&gt;」の中の人ということで今後ともよろしくお願いします。（個人の&lt;a href=&#34;http://itok.jp/&#34; target=_blank&gt;ブログ&lt;/a&gt;と文体変わらない感じですけれど、その点はご了承ください）&lt;/p&gt;
+
+&lt;h3 id=&#34;本題:3a9ba9a578aa5498e92c38517633f2e7&#34;&gt;本題&lt;/h3&gt;
+
+&lt;p&gt;さてさて、というわけで表題の通り「QR目覚まし」の v1.0.2 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-106&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;バグ修正&lt;/li&gt;
+&lt;li&gt;広告SDK更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;変更点自体はそれほどたいしたことはないのですけれど、せっかくスタッフブログも始まったことですので、開発者によるアプリ紹介などを。&lt;/p&gt;
+
+&lt;h3 id=&#34;qr目覚ましとは:3a9ba9a578aa5498e92c38517633f2e7&#34;&gt;QR目覚ましとは&lt;/h3&gt;
+
+&lt;p&gt;僕自身の生活習慣から生まれたアプリです。&lt;/p&gt;
+
+&lt;p&gt;それまではiOS標準の目覚ましを使ってました。でも、これですね、二度寝しやすいんですよね。アラーム鳴ったときにすぐにアラームを停止できちゃうんですよ。&lt;/p&gt;
+
+&lt;p&gt;スヌーズにしたつもりでも、寝ぼけているから、タップかスワイプかで操作間違って、アラームを完全に止めちゃって、そのままzzz&amp;#8230;（まあ、実際には、朝型生活をしているので多少二度寝しても致命的なことはほとんどないわけですけれど）&lt;/p&gt;
+
+&lt;p&gt;じゃ、簡単に止められないようなアプリを作ったらいいんじゃないかと。&lt;/p&gt;
+
+&lt;p&gt;公開当時のツイートを参照しますと、&lt;/p&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;
+  &lt;p&gt;
+    僕は朝起きたらまずMacの前に座る。ので、そこまでいくと「起きた」ってことになる。というわけで、Macの前まで行くと止まるような目覚ましを作ったらいいんじゃないかということになって、QR目覚まし が生まれました。
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    &amp;mdash; itok@いとーけー (@itok_twit) &lt;a href=&#34;https://twitter.com/itok_twit/statuses/430493584882536448&#34;&gt;2014, 2月 4&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;と、まあそういうわけで、なにかiPhoneを使って操作をしたら止まるようなもの（でもiPhone単体では成り立たないような操作）を考えていて、結果的にそれがQRコードをスキャンすると止まる、っていうところに行き着いたのでした。&lt;/p&gt;
+
+&lt;h3 id=&#34;itok的使い方:3a9ba9a578aa5498e92c38517633f2e7&#34;&gt;itok的使い方&lt;/h3&gt;
+
+&lt;p&gt;僕自身の設定はこんな感じです（普段、開発機であるtouchをアラーム用に使っているので英語環境のまんまですが）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/04/20140422_Screenshot-2014.04.22-15.14.14.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/20140422_Screenshot-2014.04.22-15.14.14-168x300.png&#34; alt=&#34;20140422_Screenshot 2014.04.22 15.14.14&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-103&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;普段は上二つを使ってますが、その時の状況に応じて、下二つを使うこともあります。&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;（余談ですが、なぜ開発機を使うかというと、このtouchにはあまりアプリが入ってなくて、ふと目が覚めたときにメールやSNSをチェックできないようにしているからです）&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;いつも、アラーム音が鳴ると、まずスヌーズボタンを押すようにしています。家族と一緒に寝ているので、他の人を起こすわけにはいかないですしね。そこから、起き上がるか二度寝するかはその時の意識次第。&lt;/p&gt;
+
+&lt;p&gt;スヌーズボタンを押しても最終的にQRコードをスキャンしない限りアラーム音は定期的（この場合は3分ごと）に鳴るので、あとは眠気に打ち勝って、寝室から出てMacの前まで移動するだけ。Macのところには別のiPhone（普段使いの5s）がおいてありますので、Macのスリープを解除しつつ、5s上のQRコードをスキャンして完了。それから、朝の作業開始、という具合。&lt;/p&gt;
+
+&lt;p&gt;取っ掛かりはややこしそうに思えるかもしれませんけれど、実際のところそんなに面倒な話でもないです。ただ、バッテリ残量には気をつけないといけないので、そこは注意してください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;という感じで、新生活が始まった人もたくさんおられるでしょうし、無料アプリなんで規則正しい生活のおともにぜひ使ってみてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>動画を分離する新作アプリ「Sunshine(サンシャイン)」をリリースします！</title>
+      <link>http://staff.feedtailor.jp/2014/04/18/32</link>
+      <pubDate>Fri, 18 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/04/18/32</guid>
+      <description>
+
+&lt;h2 id=&#34;ごあいさつ:e1112cabc3153f77bd7b2146c9100670&#34;&gt;ごあいさつ&lt;/h2&gt;
+
+&lt;p&gt;皆様、初めまして。feedtailor Inc. の赤魔導士、&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;新しくできたこの&lt;a href=&#34;http://staff.feedtailor.jp/&#34;&gt;feedtailor Inc. スタッフブログ&lt;/a&gt;で、記念となる一発目の新作アプリ「&lt;strong&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/sunshine-the-stream-splitter/id826301053?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;Sunshine(サンシャイン)&lt;/a&gt;&lt;/strong&gt;」のリリースご紹介をさせていただきます！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/sunshine-the-stream-splitter/id826301053?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;sunshineって何するアプリ:e1112cabc3153f77bd7b2146c9100670&#34;&gt;Sunshineって何するアプリ？&lt;/h2&gt;
+
+&lt;p&gt;Sunshineは&lt;strong&gt;動画から音声だけを切り出したり、逆に音声を消して映像だけにしたりする&lt;/strong&gt;アプリです！なんとなく利用シーンが思い浮かびましたか？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/skitch.png&#34; alt=&#34;Sunshineは音声と映像を切り出します&#34; width=&#34;540&#34; height=&#34;296&#34; class=&#34;alignnone size-full wp-image-47&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;アプリのレビューをするブロガー&lt;/strong&gt;さんや、&lt;strong&gt;商品の利用シーンのデモ動画を作る営業の方&lt;/strong&gt;にはとても強力なツールになること間違いありません！&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;アプリを使っているシーンをビデオ撮影したけど自分の声が入っていて恥ずかしい… → Sunshineで音声は消して映像だけにしましょう！&lt;/li&gt;
+&lt;li&gt;会議のシーンを撮影したけど、音声だけあればいいって言われちゃいました… → Sunshineで音声だけ抜き出して上司にメールで送りましょう！&lt;/li&gt;
+&lt;li&gt;ライブを撮影したけど、音声だけループで聴きたい！ → Sunshineで音声だけにして再生アプリに渡しましょう！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;sunshineの使い方:e1112cabc3153f77bd7b2146c9100670&#34;&gt;Sunshineの使い方&lt;/h2&gt;
+
+&lt;p&gt;使い方はとても簡単です！&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;動画を選んで&lt;/li&gt;
+&lt;li&gt;映像だけにするか、音声だけにするか選んで&lt;/li&gt;
+&lt;li&gt;少し待ったらできあがり！&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/skitch1.png&#34; alt=&#34;Sunshineの使い方&#34; width=&#34;540&#34; height=&#34;626&#34; class=&#34;alignnone size-full wp-image-52&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;細かい設定はできませんが、その代わりにとても高速に処理されます。&lt;/p&gt;
+
+&lt;p&gt;長い動画から映像だけにする場合は少しだけ時間がかかります。その間は、アプリを終了せずにしばらくお待ちくださいね。&lt;/p&gt;
+
+&lt;p&gt;できあがった映像ファイル、または音声ファイルはアプリ間共有によってDropboxなど対応するアプリに渡すことができます。&lt;/p&gt;
+
+&lt;p&gt;逆に、DropboxなどからSunshineに動画ファイルを渡すこともできます！&lt;/p&gt;
+
+&lt;h2 id=&#34;ご注意:e1112cabc3153f77bd7b2146c9100670&#34;&gt;ご注意&lt;/h2&gt;
+
+&lt;p&gt;Sunshineは無料で購入できます！&lt;/p&gt;
+
+&lt;p&gt;しかし、無料でご利用いただける回数には&lt;strong&gt;10回まで&lt;/strong&gt;の制限があります。&lt;/p&gt;
+
+&lt;p&gt;11回以上ご利用いただくには&lt;strong&gt;200円の制限解除&lt;/strong&gt;をご購入いただく必要があります。&lt;/p&gt;
+
+&lt;p&gt;制限解除を一度ご購入いただいた後は、回数に制限なく何回でもご利用いただけます。&lt;/p&gt;
+
+&lt;h2 id=&#34;なんでsunshineって名前なの:e1112cabc3153f77bd7b2146c9100670&#34;&gt;なんでSunshineって名前なの？&lt;/h2&gt;
+
+&lt;p&gt;「&lt;strong&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/sunshine-the-stream-splitter/id826301053?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;Sunshine(サンシャイン)&lt;/a&gt;&lt;/strong&gt;」の名前の由来は、実は弊社feedtailor Inc.が以前にリリースしたサムネイルも動画再生するYouTube動画プレイヤーアプリ「**&lt;a href=&#34;https://itunes.apple.com/jp/app/ashura-player-samuneirumo/id575096078?mt=8&#34;&gt;ASHURA Player(アシュラプレイヤー)&lt;/strong&gt;&lt;/a&gt;」と関係があるのです。&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;「サンシャイン」と「アシュラ」とくれば、そう、「はぐれ悪魔超人コンビ」です！（知らない人は30代のおじさんに聞いてみてね！）&lt;/p&gt;
+
+&lt;p&gt;いくつもの動画を同時に再生できる「ASHURA Player」、そして大きな動画を小さな音声ファイルにしてしまう「Sunshine」。まさにぴったりのネーミングですね！&lt;/p&gt;
+
+&lt;h2 id=&#34;最後に:e1112cabc3153f77bd7b2146c9100670&#34;&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;feedtailor Inc. スタッフブログからの最初のアプリご紹介はいかがでしたでしょうか？&lt;/p&gt;
+
+&lt;p&gt;今後も、新しいアプリのお知らせや、すでにリリースされたアプリの便利な使い方などをご紹介する予定です。&lt;/p&gt;
+
+&lt;p&gt;以上、今回は&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;が皆様にお送り致しました！&lt;/p&gt;
+
+&lt;p&gt;「&lt;strong&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/sunshine-the-stream-splitter/id826301053?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;Sunshine(サンシャイン)&lt;/a&gt;&lt;/strong&gt;」はこちらからダウンロードできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/sunshine-the-stream-splitter/id826301053?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>feedtailor スタッフブログを始めます</title>
+      <link>http://staff.feedtailor.jp/2014/04/18/45</link>
+      <pubDate>Thu, 17 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/04/18/45</guid>
+      <description>&lt;p&gt;feedtailor代表の oishi です。&lt;/p&gt;
+
+&lt;p&gt;これまで&lt;a href=&#34;http://feedtailor.jp/&#34;&gt;(株)フィードテイラー&lt;/a&gt;のブログは僕の個人ブログ的(?)な&lt;a href=&#34;http://feedtailor.jp/wp/&#34;&gt;社長ブログ&lt;/a&gt;のみだったのですが、この度、エンジニアを含む弊社スタッフが自ら発信する場として別ブログを立ち上げる事にしました。名付けて &lt;strong&gt;feedtailor スタッフブログ&lt;/strong&gt; &amp;#8230;ってそのままですね  &lt;img src=&#34;http://staff.feedtailor.jp/images/smilies/icon_smile.gif&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;例えばアプリの話。これまでは僕が社長ブログでアプリ紹介を書いていたのですが、アップデートには余り言及出来ていなかったりとか、あるアプリの実は面白い機能や活用方が紹介しきれていなかったりとか、ちょっと勿体ない事になっていたのです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/feedtailor&#34;&gt;github&lt;/a&gt;に公開しているモノの話とかもそうですね。実は超便利なツールが密やかに追加されているのですが一切言及してなかったりとか、ライブラリの&lt;a href=&#34;https://github.com/feedtailor/FTFoundation&#34;&gt;FTFoundation&lt;/a&gt;に便利なクラスが追加されてます&amp;#8230;的な話とか。このへんはエンジニアの生の声が外にでる方が良いと思ってたのです、前々から。&lt;/p&gt;
+
+&lt;p&gt;他にもウチの社内の雑多なネタ、今週のお菓子とか(笑)、&lt;a href=&#34;http://feedtailor.jp/wp/?p=8384&#34;&gt;毎日夕方にやってる新発見&lt;/a&gt;ネタとか、そんな話題もありかも知れないですね。まぁまぁ色々考えられるのでいわゆる開発ブログ的な位置付けではなく、緩い感じでスタッフブログとしました。&lt;/p&gt;
+
+&lt;p&gt;基本的に執筆陣は僕以外がメインになると思います。月に数回更新できれば&amp;#8230;ぐらいの頻度でやっていく予定ですので御覧頂ければ幸いです。そんな訳で &lt;a href=&#34;http://staff.feedtailor.jp/&#34;&gt;feedtailorスタッフブログ&lt;/a&gt; をどうぞ宜しくお願い致します。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

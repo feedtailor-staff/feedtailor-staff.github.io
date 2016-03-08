@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>新サービス Dailyshot をリリース！ &middot; feedtailor Inc. スタッフブログ</title>
+    <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="feedtailor Inc.">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="icon" href="http://staff.feedtailor.jp/favicon.ico">
+    <link rel="apple-touch-icon" href="http://staff.feedtailor.jp/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/style.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/monokai.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="新サービス Dailyshot をリリース！" />
+<meta property="og:description" content="このたび、新サービス「Dailyshot」を始めます。 サービスの企画＆サーバ開発のくまくら (@kumatch) です。 色々な小さな情報を毎日記録 Dailyshot は、自分で決め" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://staff.feedtailor.jp/2014/11/05/565" />
+
+
+<meta property="og:updated_time" content="2014-11-05T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="新サービス Dailyshot をリリース！">
+<meta itemprop="description" content="このたび、新サービス「Dailyshot」を始めます。 サービスの企画＆サーバ開発のくまくら (@kumatch) です。 色々な小さな情報を毎日記録 Dailyshot は、自分で決め">
+
+
+<meta itemprop="dateModified" content="2014-11-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2091">
+
+
+
+<meta itemprop="keywords" content="2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,node,アプリご紹介,全般,技術情報,未分類,8bitter,bgtube,book,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="新サービス Dailyshot をリリース！"/>
+<meta name="twitter:description" content="このたび、新サービス「Dailyshot」を始めます。 サービスの企画＆サーバ開発のくまくら (@kumatch) です。 色々な小さな情報を毎日記録 Dailyshot は、自分で決め"/>
+<meta name="twitter:site" content="@feedtailor"/>
+
+
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://staff.feedtailor.jp/" id="logo"><span class="site-title">feedtailor Inc. スタッフブログ</span></a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/categories/">Categories</a>
+          
+          
+      </nav>
+        
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+		
+	    <section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                
+                <img src="http://staff.feedtailor.jp/images/2014/11/dailyshot_logo_100.png" class="article-banner">
+                
+            
+
+            <header class="article-header">
+    <a href="http://staff.feedtailor.jp/2014/11/05/565">
+    <h1 class="article-title" itemprop="name">
+        新サービス Dailyshot をリリース！
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2014-11-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-11-05</time>
+            
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">アプリご紹介</a>
+                
+                
+            </div>
+            
+        
+
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>このたび、新サービス「Dailyshot」を始めます。</p>
+
+<p>サービスの企画＆サーバ開発のくまくら (<a href="http://twitter.com/kumatch">@kumatch</a>) です。</p>
+
+<p><a href="https://itunes.apple.com/jp/app/dailyshot/id932716879" target="_blank"><img src="/images/2014/11/dailyshot_icon-150x150.png" alt="dailyshot_icon" width="150" height="150" class="alignnone size-thumbnail wp-image-581" /></a></p>
+
+<h2 id="色々な小さな情報を毎日記録:ee220bf67a08b8c94e8cacd1423e0109">色々な小さな情報を毎日記録</h2>
+
+<p>Dailyshot は、自分で決めたテーマに基づいて、一日の様々な事柄や出来事を小さく記録していくサービスです。</p>
+
+<p>小さくというのは、例えば一枚の写真、簡潔な一言、数字、あるいは印（マーク）といったものになります。そういった小さな情報を少しずつ、一日単位で綴っていき、それら記録を「日付」という時系列で並べていきます。</p>
+
+<p>一方、他の人（友人）も同じように一日単位の小さな記録を作っています。あなたがその人をサービス内でフォローすると、自分の毎日の記録と並んで、その人の記録が一緒に表示されます。そうすると、ある一日の出来事として、あなたと友人がどうだったのかということを眺めることができます。</p>
+
+<p><a href="/images/2014/11/press_dailyshot_ios_01.png"><img src="/images/2014/11/press_dailyshot_ios_01-169x300.png" alt="press_dailyshot_ios_01" width="169" height="300" class="alignnone size-medium wp-image-570" /></a></p>
+
+<p>ふとしたきっかけで過去の自分や友人の身の回りを振り返って眺めるというのはなかなか楽しいものです。あるいは、友人同士であえて同じテーマの内容を毎日記録していって、比較をしては一喜一憂するのも良いかもしれません。</p>
+
+<p>みんなの毎日の記録が一杯になってくると、大きな画面で一気に眺めるのが壮観です。</p>
+
+<p><a href="/images/2014/11/press_dailyshot_ios_09.png"><img src="/images/2014/11/press_dailyshot_ios_09-300x141.png" alt="press_dailyshot_ios_09" width="300" height="141" class="alignnone size-medium wp-image-573" /></a></p>
+
+<p>iPhone6 Plus の大きな画面で見るのがオススメですね！</p>
+
+<p>上のように自分や友人の記録を一気に眺めることができることをコンセプトの１つとして据えていたので、最初の方でも書いているように、記録できる内容は出来る限り小さくしようと考えました。それらを並べた際、１マスの中に記録された内容が省略されることなく全貌すべてを見れるようにしたかったからです。</p>
+
+<p>なので、文字を記録することができる「単文」で入力可能な文字数は、７文字にしました。</p>
+
+<p><a href="/images/2014/11/press_dailyshot_ios_03.png"><img src="/images/2014/11/press_dailyshot_ios_03-169x300.png" alt="press_dailyshot_ios_03" width="169" height="300" class="alignnone size-medium wp-image-574" /></a></p>
+
+<p>Dailyshot は、企画時点でこの仕様を提示した際には少し笑いが起きた上で、サービス用のアプリ開発の開始直後、アプリ担当の <a href="http://twitter.com/sumihiro">@sumihiro</a> が始めて単文をアプリから投稿しようと「Dailyshot」と入力したところ、サーバからエラー応答を受け取ったため、サーバの不具合ではないかと本気で聞かれたところから始まりました。（もちろんサーバ視点では妥当な振る舞い）</p>
+
+<h2 id="本当に気に入ったものへ-そのとおりの思いを:ee220bf67a08b8c94e8cacd1423e0109">本当に気に入ったものへ、そのとおりの思いを</h2>
+
+<p>Dailyshot では、他のひとが記録として投稿した内容に対して他の SNS と同様に「Like」することができるのですが、Like した、していないという類いのものではなく、その度合いを示せるよう Like を複数回行えるようにしました。つまり、友人のその日の投稿を本当に気に入った場合は、20 Like を贈ることができます。</p>
+
+<p>Like をたくさん贈るためには、ほんの少し昔に流行ったあのやり方と同じように、ボタンをたくさん押します。</p>
+
+<p><a href="/images/2014/11/press_dailyshot_ios_06.png"><img src="/images/2014/11/press_dailyshot_ios_06-169x300.png" alt="press_dailyshot_ios_06" width="169" height="300" class="alignnone size-medium wp-image-575" /></a></p>
+
+<p>しかし、一度に無制限で贈れてしまうと訳が分からなくなってしまうので、一応僅かばかりの制約を作りました。システムとして現在 Like 可能な数が設けられています。Like リソースの上限値が 100 になっていますので、あるタイミングで１つの投稿に Like できる数は 100 まで、ということになります。このリソースは時間と共に回復する、これまたよく聞いたことがあるようなシステムです。回復したあと、同じ投稿に対して再び Like することは可能ですので、日を改めて投稿を見た際にやっぱり気に入っていてもう一度幾つか贈る、というような楽しみ方ができますよ。</p>
+
+<h2 id="dailyshot-の楽しみ方:ee220bf67a08b8c94e8cacd1423e0109">Dailyshot の楽しみ方</h2>
+
+<p>Dailyshot は、たとえば次にあげるような楽しみ方があります。もちろんこれだけではないはずで、毎日継続して何かを記録していき、それらが並ぶというコンセプトに沿って様々な使い方がありそうです。</p>
+
+<h3 id="写真日記:ee220bf67a08b8c94e8cacd1423e0109">写真日記</h3>
+
+<p>例えばペットの毎日の様子を写真に撮って、Dailyshot に記録していきます。毎日続けていって、あるときにふと振り返ってみると、小さかったときの様子、顔つきの変化などが見て取れるはずです。</p>
+
+<h3 id="ひとこと日記:ee220bf67a08b8c94e8cacd1423e0109">ひとこと日記</h3>
+
+<p>その日にやった事、特徴的だった出来事を一言で表して記録していきます。先ほど挙げたように、なにせ７文字ですから、書けることは限られています。１、２文章書くことと比べても楽なわりに、後日読み直してみると良い思い出しができたり、むりやり短いひとことで書いたが故の可笑しさを楽しめたりできます。</p>
+
+<h3 id="トレーニング記録:ee220bf67a08b8c94e8cacd1423e0109">トレーニング記録</h3>
+
+<p>上げたウェイト、あるいは走った距離、歩いた歩数。それぞれトレーニングしている内容毎にテーマを１つずつ作って記録していけば、日々の成長の様子、あるいは相互関係を掴めるかもしれません。</p>
+
+<p>友達とも同じ内容を記録していけば、お互いに良い影響を与え合いながら継続させていくことも。</p>
+
+<h2 id="まとめ:ee220bf67a08b8c94e8cacd1423e0109">まとめ</h2>
+
+<p>新しいサービス Dailyshot についてと、その基本的な使い方について紹介しました。</p>
+
+<p>会社ページの方でもリリースに関する情報を掲載しています。そちらでも詳細に紹介していますので、是非ご覧ください。</p>
+
+<p><a href="http://feedtailor.jp/press_dailyshot" title="フィードテイラー、毎日の写真や一言を残していく新感覚のライフログサービス「Dailyshot」をスタート！" target="_blank">フィードテイラー、毎日の写真や一言を残していく新感覚のライフログサービス「Dailyshot」をスタート！</a></p>
+
+<p>まだまだ機能面では不足があったり、開発中でアイデアはあったもののもう少し内容を詰めた方がいいという理由から取り下げた機能もあったりします。そのあたりは今後のリリースにて実装、機能提供する予定です。毎日記録していこうと思えるよう、記録を眺めるのが楽しくなるよう、サービス内容を広げていければと考えています。Dailyshot を、どうぞよろしくお願いします！</p>
+
+<p><a href="https://itunes.apple.com/jp/app/dailyshot/id932716879" target="_blank"><img src="/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png" alt="AppStoreからダウンロード" width="135" height="40" class="alignnone size-full wp-image-58" /></a></p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://staff.feedtailor.jp/2014/11/05/565" data-id="ee220bf67a08b8c94e8cacd1423e0109" class="article-share-link">
+        Share
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://staff.feedtailor.jp/2014/11/04/560" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Groups for facebook. v1.1.1 を公開しました</div>
+    </a>
+    
+
+    
+    <a href="http://staff.feedtailor.jp/2014/11/06/590" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">そら案内（Mac版）v2.0.2 を公開しました</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+    <section id="comments">
+        <div id="disqus_thread">
+            
+        </div>
+    </section>
+
+</section>
+
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/11/1083" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                        技術情報
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/11/1083" class="title">超聖域: iOSアプリのビルドツール</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-11</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/10/1013" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/javafx_gradle_screenshot-450x184.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                        技術情報
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/10/1013" class="title">超聖域：JavaFXのGradleビルド</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-10</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/06/1041" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/launch-bg-450x200.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">
+                        アプリご紹介
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/06/1041" class="title">顔写真にTwitterのアイコンをかぶせる iMasks を公開しました</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-06</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/05/1003" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/cocos2dx-450x200.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                        未分類
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/05/1003" class="title">超聖域：Cocos2d-xでスライドパズルを作った</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-05</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/03/965" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/07/F8EE9162-5D47-48DC-B63D-47FEC8D17C54-450x200.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                        未分類
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/03/965" class="title">超聖域: Unityでゲームを作ろうとした話</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-03</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/node">
+                    node
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">
+                    アプリご紹介
+                </a>
+                <span class="category-list-count">49</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e5%85%a8%e8%88%ac">
+                    全般
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                    技術情報
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                    未分類
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/04">
+                    2014/04
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/05">
+                    2014/05
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/06">
+                    2014/06
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/07">
+                    2014/07
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/08">
+                    2014/08
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/09">
+                    2014/09
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/10">
+                    2014/10
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/11">
+                    2014/11
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/12">
+                    2014/12
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/01">
+                    2015/01
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/02">
+                    2015/02
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/03">
+                    2015/03
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/04">
+                    2015/04
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/05">
+                    2015/05
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/07">
+                    2015/07
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/08">
+                    2015/08
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://staff.feedtailor.jp/tags/8bitter" style="font-size: 12px;">8bitter</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/bgtube" style="font-size: 12px;">bgtube</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/book" style="font-size: 12px;">book</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/cocos2d-x" style="font-size: 12px;">cocos2d-x</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/codescanner" style="font-size: 12px;">codescanner</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/cwnotify" style="font-size: 12px;">cwnotify</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/dailyshot" style="font-size: 12px;">dailyshot</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/express" style="font-size: 12px;">express</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/groups" style="font-size: 12px;">groups</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/imasks" style="font-size: 12px;">imasks</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/node" style="font-size: 12px;">node</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/nyatter" style="font-size: 12px;">nyatter</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/php" style="font-size: 12px;">php</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/qr%e7%9b%ae%e8%a6%9a%e3%81%be%e3%81%97" style="font-size: 12px;">qr目覚まし</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/sora" style="font-size: 12px;">sora</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/sunshine" style="font-size: 12px;">sunshine</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/tailsearch" style="font-size: 12px;">tailsearch</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%8b%e3%82%93%e3%81%98%e3%81%8b%e3%81%aa" style="font-size: 12px;">かんじかな</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e3%82%a2%e3%83%ab%e3%83%90%e3%83%a0" style="font-size: 12px;">そらアルバム</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e3%83%ac%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">そらレーダー</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e6%a1%88%e5%86%85" style="font-size: 12px;">そら案内</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e6%b0%97%e6%b8%a9" style="font-size: 12px;">そら気温</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e7%94%a8%e5%bf%83" style="font-size: 12px;">そら用心</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%82%a2%e3%83%97%e3%83%aa%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9" style="font-size: 12px;">アプリリリース</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e5%af%8c%e8%b1%aakeyboard" style="font-size: 12px;">富豪keyboard</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e8%b6%85%e8%81%96%e5%9f%9f" style="font-size: 12px;">超聖域</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://staff.feedtailor.jp/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://staff.feedtailor.jp/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

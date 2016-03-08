@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技術情報 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/categories/%E6%8A%80%E8%A1%93%E6%83%85%E5%A0%B1/</link>
+    <description>Recent content in 技術情報 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 11 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/categories/%E6%8A%80%E8%A1%93%E6%83%85%E5%A0%B1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>超聖域: iOSアプリのビルドツール</title>
+      <link>http://staff.feedtailor.jp/2015/08/11/1083</link>
+      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/08/11/1083</guid>
+      <description>
+
+&lt;p&gt;iOSアプリ開発担当のふじしげ((&lt;a href=&#34;https://twitter.com/nakiwo&#34;&gt;@nakiwo&lt;/a&gt;)です。&lt;/p&gt;
+
+&lt;p&gt;7/1 から 7/7 にかけて社内で行われた&lt;a href=&#34;http://feedtailor.jp/wp/?p=14425&#34;&gt;「超聖域」&lt;/a&gt; の結果レポートをまとめました。&lt;/p&gt;
+
+&lt;p&gt;結論からいいますと、紆余曲折あって最終的は&amp;#8221;DSLな設定ファイルを利用するRubyGemを作ってみよう&amp;#8221;という取り組みになっています。&lt;/p&gt;
+
+&lt;p&gt;フィードテイラーのiOSアプリビルドには、当初itok作のMakefileが利用されていました。xcodebuildを初めとするXcode付属のコマンドラインツールを組み合わせて、ビルドからデプロイを行うものです。Xcodeツール類のバージョンアップに伴う修正や新しい要件に対応するためこのMakefileの改造に着手。気づけば自分がメンテナンス担当に。&lt;/p&gt;
+
+&lt;p&gt;日々細かい改良を施すというよりは、必要な時に少しまとまった時間をとって最低限の改良を行うにとどまる事が多かったのですが、超聖域という事で今まで気になりつつも放置していた部分に大きく手を入れよう試みを行いました。&lt;/p&gt;
+
+&lt;h2 id=&#34;これまでの状況:cebb9691144de1cb2625562fdc24a012&#34;&gt;これまでの状況&lt;/h2&gt;
+
+&lt;p&gt;これまでの状況はざっくりと以下のような感じです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Makefileに改造が必要になる。iOS2時代から綿々と受け継がれる秘伝のタレのレシピを紐解く。&lt;/li&gt;
+&lt;li&gt;そのうちMakefileで何をやってるか分かってきたので改造開始。&lt;/li&gt;
+&lt;li&gt;Makefile内のシェル芸の理解にかかる時間が多くなってきたので、慣れているRubyベースでRakefile化 (シェル苦手)&lt;/li&gt;
+&lt;li&gt;Rakefileをメンテナンス&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Xcodeビルドツール類の情報は、現在ではネット上に沢山あるので基本的に困る事はないと思います。ツールとしてまとまったものとしては、&lt;a href=&#34;https://github.com/nomad/shenzhen&#34;&gt;SHENZHEN&lt;/a&gt;や、新しいところでは&lt;a href=&#34;https://github.com/KrauseFx/fastlane&#34;&gt;fastlane&lt;/a&gt;が有名どころです。(これらのツールのコードを読むと色々参考になるのでオススメ)&lt;/p&gt;
+
+&lt;p&gt;社内のRakefileでは、xcodebuildを直接触って動作確認しつつ、ネット上の各種情報や既存の実装を参考に必要なエッセンスを取り込むような事をしていました。&lt;/p&gt;
+
+&lt;h2 id=&#34;fastlane:cebb9691144de1cb2625562fdc24a012&#34;&gt;fastlane&lt;/h2&gt;
+
+&lt;p&gt;先にあげましたが、新しめのツールとして &lt;a href=&#34;https://github.com/KrauseFx/fastlane&#34;&gt;fastlane&lt;/a&gt;があります。iOSアプリ開発にまつわる様々なタスクをなんでも自動化してしまおうという壮大なプロジェクト。試してみる価値大では？という印象を受けました。&lt;/p&gt;
+
+&lt;p&gt;超聖域は、自前ツールのメンテナンスをやめてfastlaneで既存のタスクを置き換えようという試みからスタートする事に。&lt;/p&gt;
+
+&lt;p&gt;設定ファイルであるFastfileで各種ツールの組み合わせを柔軟にカスタマイズ可能で、これを極めて今後はこれ一本で！と勢い勇んで取り掛かりました。しかしいざやってみると細かい挙動を理解するのに一苦労。&lt;/p&gt;
+
+&lt;p&gt;fastlaneはそれぞれ単体で利用可能なツール類を組み合わせて利用する仕組みになっています。細かい挙動を知るにはそれら単体ツールの挙動をよく知る必要が有ります。それに加えてfastlane自体の挙動もよく理解している必要があり、思ったより学習コストが高い印象を受けました。&lt;/p&gt;
+
+&lt;p&gt;ドキュメントに記載されていない挙動を理解するためにfastlaneツール類のソースコードを読む事しばし。そのうちに色々知見が得られました。残念ながらfastlane自体を使いこなすにはいたりませんでしたが、得られた知見を元に元の社内ツールを改良するというアプローチに方向転換しました。&lt;/p&gt;
+
+&lt;p&gt;(fastlane自体はやりたい事にうまくはまると良いツールだと思いますので今後も注目していきたいと思っています)&lt;/p&gt;
+
+&lt;h2 id=&#34;gem化したコマンドラインツールへの置き換え:cebb9691144de1cb2625562fdc24a012&#34;&gt;Gem化したコマンドラインツールへの置き換え&lt;/h2&gt;
+
+&lt;p&gt;社内Rakefileは必要最低限の機能しかない規模の小さいもので見通しは良い状態にあります。ただ、いくつか問題があったのでそれを潰していく事にしました。&lt;/p&gt;
+
+&lt;p&gt;まず既存のRakefileで抱えていた問題点から。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1つのRakefileだけで構成。gitで管理してはいるものの、バージョン管理が曖昧な状態。&lt;/li&gt;
+&lt;li&gt;Rakefile内に全ての必要なコードが書かれている。別途Gemを取り込むということができない構造&lt;/li&gt;
+&lt;li&gt;Rakefileのタスクの挙動を変更するために別途YAMLの設定ファイルを利用している。Ruby DSLな設定ファイルが使えればもう少し柔軟な記述ができるのに..。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;問題点を解消するために以下のような構成に変更することにしました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rakefileではなく、Gem化した専用コマンドツール化する。バージョン管理と依存Gemの取り込みが容易になる。&lt;/li&gt;
+&lt;li&gt;設定ファイルはYAMLではなくDSL化した専用ファイルにする。設定ファイル内の記述が柔軟に。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ここからはiOS周りの話ではなく、&amp;#8221;GemやRuby DSLを作ったことが無い人間によるコマンドラインツール作成&amp;#8221;、という内容になります。&lt;/p&gt;
+
+&lt;p&gt;作ったコマンドは&amp;#8221;ftbuild&amp;#8221;と命名しました。(今の所一般公開予定はありません)&lt;/p&gt;
+
+&lt;h2 id=&#34;gemの作成:cebb9691144de1cb2625562fdc24a012&#34;&gt;Gemの作成&lt;/h2&gt;
+
+&lt;p&gt;bundlerでGemのひな形を作成することができるのでこれを利用。(&lt;a href=&#34;http://bundler.io/v1.10/bundle_gem.html&#34;&gt;&lt;code&gt;bundle gem&lt;/code&gt;&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;gempsec自体じっくり見るのは初めてでしたが、cocoapodsのpodspecと似た構造なのですんなり理解できました。&lt;/p&gt;
+
+&lt;p&gt;(cocoapodsはRubyGemsやBundlerを真似て作られているので似ていて当然)&lt;/p&gt;
+
+&lt;p&gt;Gem化する事で、ツールのバージョン管理と、依存Gemの取り込みが一般的な方法でできるようになりました。&lt;/p&gt;
+
+&lt;p&gt;このGemは一般公開する予定が無いので、privateなgitリポジトリに置きます。&lt;/p&gt;
+
+&lt;p&gt;利用する際は、bundlerのGemfileで以下のようにリポジトリを直接指定します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem &amp;quot;ftbuild&amp;quot;, :git =&amp;gt; &#39;url/to/ftbuild.git&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;次にgemspecに依存Gemを追加。今回は以下のようなGemを利用しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://whatisthor.com&#34;&gt;Thor&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;サブコマンドを持つコマンドラインインターフェースを簡単に作成できる。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/defunkt/colored&#34;&gt;colored&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ターミナルへのテキスト色付け。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/JEG2/highline&#34;&gt;highline&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ユーザとの対話。パスワード伏字機能アリ。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/supermarin/xcpretty&#34;&gt;xcpretty&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;xcodebuildの出力をいい感じに整形。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/ckruse/CFPropertyList&#34;&gt;CFPropertyList&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;plistの操作。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-sdk-ruby&#34;&gt;aws-sdk-resources&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;s3の操作用。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;あとは元のRakefileに実装していた諸々機能をThorベースでコマンド化していきます。&lt;/p&gt;
+
+&lt;h2 id=&#34;dsl:cebb9691144de1cb2625562fdc24a012&#34;&gt;DSL&lt;/h2&gt;
+
+&lt;p&gt;昨今の開発シーンでは、RubyベースのDSLを設定ファイルとして利用する事がよくあります。(Gemfile、Podfile、Rakefile、Fastfile、etc..)&lt;/p&gt;
+
+&lt;p&gt;fastlaneのソースを読んでいる際、DSLの設定ファイルの取り扱いのコードが案外あっさりしている事がわかったので実装してみました。(参考にしたのは&lt;a href=&#34;https://github.com/KrauseFx/deliver/tree/d6dcdaf0bcc8c15befe25def1664ec0ae1a2f304/lib/deliver/deliverfile&#34;&gt;このあたり&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;基本はRubyで書かれた設定ファイルを読み込んでinstance_evalするだけです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;content = File.read(path)
+self.instance_eval(content)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;あとは上の例でselfとなっているオブジェクトに、設定項目に対応するメソッドを用意します。&lt;/p&gt;
+
+&lt;p&gt;例えば設定ファイルに&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hogehoge &amp;quot;xyz&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;という項目を作りたい場合は、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def hogehoge(val)
+  # valを保存
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;というメソッドを作って値を保存するなり好きなように料理します。&lt;/p&gt;
+
+&lt;p&gt;単純な値設定のみの項目であれば、method_missing を実装して処理を共通化するとすっきりします。(&lt;a href=&#34;https://github.com/KrauseFx/deliver/blob/d6dcdaf0bcc8c15befe25def1664ec0ae1a2f304/lib/deliver/deliverfile/dsl.rb#L19-L61&#34;&gt;参考コード&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;ここまでの段階だけでも設定ファイル側では、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dir_path = &amp;quot;path_to_dir&amp;quot;
+
+hogehoge dir_path + &amp;quot;_1&amp;quot;
+hogehoge dir_path + &amp;quot;_2&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;のような記述が可能になり、YAMLの設定ファイルより記述力が格段に増します。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:cebb9691144de1cb2625562fdc24a012&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;fastlaneは要注目。&lt;/li&gt;
+&lt;li&gt;fastlane配下の各種ツールは単体で使える。必要なものだけつまみ食いするのも有効。&lt;/li&gt;
+&lt;li&gt;RubyGem・Ruby DSLの作成は思ったより敷居が低かった。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当初の作戦(fastlaneへの移行)とは違う方向になりましたが、結果的には社内ツールが利用・メンテナンス共にすっきりした状態に移行できました。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>超聖域：JavaFXのGradleビルド</title>
+      <link>http://staff.feedtailor.jp/2015/08/10/1013</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/08/10/1013</guid>
+      <description>
+
+&lt;p&gt;営業兼開発の tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;7月1日〜7日まで弊社の９周年記念(?)として&lt;a href=&#34;http://feedtailor.jp/wp/?p=14425&#34;&gt;「超聖域」&lt;/a&gt;なるイベントが開催されました。&lt;/p&gt;
+
+&lt;p&gt;「超聖域」っていうのは、期間中は通常業務をやらなくていいので自由に作りたいものを作ってねー、というもので、私は対外的な業務があるので100%開発とは行かなかったのですが、2日間くらいはがっつり開発できました。&lt;/p&gt;
+
+&lt;p&gt;で、何をやったかというと以前から着手していた &lt;a href=&#34;http://www.syncnel.biz&#34;&gt;SYNCNEL&lt;/a&gt; のJavaFXアプリケーションのGradleビルドスクリプトを書いてました。&lt;/p&gt;
+
+&lt;h1 id=&#34;javafx:487d6aeeb1d45f9fa3b6f695d13cfb66&#34;&gt;JavaFX&lt;/h1&gt;
+
+&lt;p&gt;JavaFXとはJavaのGUIツールキットでJDK8からは標準で提供されています。&lt;/p&gt;
+
+&lt;p&gt;SYNCNELでは以前からWindows専用アプリケーションをいくつかご提供していたのですが、個人的に「Macでも使いたい」とか「Java8の新機能（ラムダ式とか）を使ってみたい」との思いから（主に後者）、JavaFXでデスクトップアプリを作り始めました。&lt;/p&gt;
+
+&lt;p&gt;JavaFXではSelf-Containedなアプリ（ルー語みたい？）、つまりJavaの実行環境を内包した単独実行できるアプリケーションを作る機能が用意されていて、比較的簡単にデスクトップアプリが作成できます。&lt;/p&gt;
+
+&lt;p&gt;簡単とは言いましたが、はまるポイントは幾つもあったので、今回はその内のビルドスクリプトについてご紹介します。&lt;/p&gt;
+
+&lt;h1 id=&#34;gradleビルドスクリプト:487d6aeeb1d45f9fa3b6f695d13cfb66&#34;&gt;Gradleビルドスクリプト&lt;/h1&gt;
+
+&lt;p&gt;アプリ自体はコードが書ければできあがるんですが、それを公開するとなるといろいろやることがあります。&lt;/p&gt;
+
+&lt;p&gt;一般の方に使っていただくにはインストーラを用意したり、コードにサインしたり、・・・・・・。&lt;/p&gt;
+
+&lt;p&gt;JavaFXアプリをビルドするための方法は標準でOracleから提供されているんですが、これがなぜかAntのタスクで。&lt;/p&gt;
+
+&lt;p&gt;既にあるGradleスクリプトから外部タスクとして実行する手もあったんですがなんか気持ちよくないので、Gradleのタスクとして直接実行するようにしました。&lt;/p&gt;
+
+&lt;p&gt;JARファイル作成までは探せば情報があるんですが、その先がなくて、試行錯誤の末、できあがったのが以下の build.gradle です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import groovy.xml.NamespaceBuilder
+
+apply plugin: &#39;java&#39;
+apply plugin: &#39;idea&#39;
+
+version = &#39;アプリのバージョン&#39;
+
+def vender_name    = &#39;ベンダー名&#39;
+def jar_name       = &#39;JARファイル名&#39;
+def app_name       = &#39;アプリ名&#39;
+def app_width      = &#39;アプリのウィンドウ幅&#39;
+def app_height     = &#39;アプリのウィンドウ高さ&#39;
+def app_main_class = &#39;JavaFXのアプリケーションクラス&#39;
+
+configurations { antfx }
+
+...
+
+dependencies {
+    // 環境変数からJDKのロケーションを取得
+    antfx files(&amp;quot;${project.property(&#39;org.gradle.java.home&#39;)}/lib/ant-javafx.jar&amp;quot;)
+    // 依存ライブラリ
+    compile ... 
+}
+
+task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
+    def jar_dir  = &amp;quot;${buildDir}/libs&amp;quot;
+    def jar_file = &amp;quot;${jar_dir}/${jar_name}-${version}.jar&amp;quot;
+
+    def fx = NamespaceBuilder.newInstance(ant, &#39;javafx:com.sun.javafx.tools.ant&#39;)
+    ant.taskdef(
+            resource: &#39;com/sun/javafx/tools/ant/antlib.xml&#39;,
+            uri: &#39;javafx:com.sun.javafx.tools.ant&#39;,
+            // src/main/deploy をクラスパスに追加
+            classpath: &#39;src/main/deploy:&#39; + configurations.antfx.asPath)
+
+    fx.application(
+            id: jar_name,
+            name: app_name,
+            version: version,
+            mainClass: app_main_class)
+
+    copy {
+        into jar_dir
+        from configurations.runtime
+    }
+
+    fx.jar(destfile: jar_file) {
+        application(refid: jar_name)
+        fileset(dir: &amp;quot;${buildDir}/resources/main&amp;quot;)
+        fileset(dir: &amp;quot;${buildDir}/classes/main&amp;quot;)
+        resources {
+            fileset(dir: jar_dir)
+        }
+    }
+
+    fx.deploy(
+            outdir: distsDir,
+            outfile: jar_name,
+            width: app_width,
+            height: app_height,
+            nativeBundles: &#39;all&#39;,
+            verbose: true) {
+        application(refid: jar_name)
+        resources {
+            fileset(dir: jar_dir)
+        }
+        info(title: app_name, vendor: vender_name)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;アプリやOSX用dmgのアイコン等のプラットフォーム固有のファイルは src/main/deploy/package/(macosx|windows) 以下に置いてください。&lt;/p&gt;
+
+&lt;p&gt;後はタスクを実行するだけで、OSXならdmgファイル、Windowsならmsiファイル(WIXが必要) まで出来上がり。署名すれば、MacAppStore にも出せます。&lt;/p&gt;
+
+&lt;p&gt;Androidアプリをデスクトップに移植とかしたい人はJavaFXを検討するのもいいかもしれません。&lt;/p&gt;
+
+&lt;p&gt;ということで、ビルドしたアプリケーションは近日中に SYNCNEL Content Manager（仮名）としてリリース予定です！！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>超聖域：SYNCNEL KAIZEN</title>
+      <link>http://staff.feedtailor.jp/2015/07/31/988</link>
+      <pubDate>Fri, 31 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/07/31/988</guid>
+      <description>
+
+&lt;p&gt;サーバサイド担当のくまくら (&lt;a href=&#34;https://twitter.com/kumatch&#34;&gt;@kumatch&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;7/1 から 7/7 まで社内で行われた&lt;a href=&#34;http://feedtailor.jp/wp/?p=14425&#34;&gt;「超聖域」&lt;/a&gt; の成果報告のブログ記事となります。&lt;/p&gt;
+
+&lt;p&gt;私はこれまで &lt;a href=&#34;https://www.syncnel.biz/&#34;&gt;SYNCNEL&lt;/a&gt; のサーバサイドの実装と構築を担当し続けているのですが、今回自由に使っていい一週間あるということで、その SYNCNEL サービスの運用のなか Issue として挙げられている事柄のうち個人的に関心あるものをピックアップして、ある程度の方針決定、あるいは解決に至るまでできるかに時間を充てることにしました。&lt;/p&gt;
+
+&lt;h2 id=&#34;1-サブドメインベースアプリケーション:17417599a4aa11ab0744475e5dd75780&#34;&gt;1. サブドメインベースアプリケーション&lt;/h2&gt;
+
+&lt;p&gt;SYNCNEL では、サービス契約されたお客様ごとに固有の名前を持った識別子を発行して運用しているのですが、この識別子をサービスのサブドメイン部分に据えてより良いサービス提供ができないかという機能案がありましたので、その可能性について調査と仮実装を行ってみました。&lt;/p&gt;
+
+&lt;h3 id=&#34;ドメインをワイルドカードで運用する:17417599a4aa11ab0744475e5dd75780&#34;&gt;ドメインをワイルドカードで運用する&lt;/h3&gt;
+
+&lt;p&gt;何はともあれ、任意のサブドメインを持つドメインアドレスで特定のエントリサーバへリクエストしてもらう必要がありますので、ドメインはワイルドカードで運用することになります。&lt;/p&gt;
+
+&lt;p&gt;たとえば Amazon Route53 では &lt;a href=&#34;http://aws.amazon.com/jp/route53/faqs/#Support_for_wildcard_entries&#34;&gt;全てのレコードタイプによるワイルドカードエントリがサポートされている&lt;/a&gt; ので、これを利用すれば簡単に実現可能です。&lt;/p&gt;
+
+&lt;p&gt;www.example.com という A レコードと *.example.com というワイルドカードな CNAME レコードが存在している場合でも、www.example.com の解決はきちんと A レコードの方になりますので、公式サイトサーバとアプリケーションサーバとを区別して備えるといったことも容易ではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;ただ、利用している DNS サービスによってはワイルドカードエントリが定義不可能なものもあるようです。&lt;/p&gt;
+
+&lt;h3 id=&#34;アクセスコントロール-と-サービスコントロール:17417599a4aa11ab0744475e5dd75780&#34;&gt;「アクセスコントロール」と「サービスコントロール」&lt;/h3&gt;
+
+&lt;p&gt;リクエストを受け付けるサーバ側はどんな構成になるべきかと考えた際に、結論として「サブドメイン部分にあたる会社識別子を用いて会社を特定した上で、どのような問題を解決したいのか」という点でやるべきことが異なるということに至りました。&lt;/p&gt;
+
+&lt;p&gt;たとえば、特定した会社によってシャーディングしたり、リクエスト元の制限や認証方式の切り替えなどを統括して行いたいというのであれば、エントリサーバでそれらの処理を行った上で後ろに控えるアプリケーションサーバへ Proxy するといった体制が考えられます。この体制のポイントとしてアプリケーションサーバで備えているサービス固有の振る舞いとは切り離されていて、アプリケーションレイヤには直接関係のないインフラストラクチャやセキュリティの解決が行えているというところです。アクセスコントロールが主たる目的となります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/07/3e571536dc03bb3a152da5af748424e2.png&#34; alt=&#34;access control&#34; width=&#34;743&#34; height=&#34;490&#34; class=&#34;alignnone size-full wp-image-993&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一方、アプリケーション内で特定した会社ごとに固有な内容に基づく振る舞いを行いたい場合は、アプリケーションサーバ上で直接サブドメイン名による会社の特定と処理を行う必要があります。たとえば簡単な例だとページトップのロゴを変更したりですとか、特定した会社による名前空間内でサービスのための処理を施すなどが考えられます。こういったケースだと、この振る舞いそのものはアプリケーションレイヤに組み込まれるべき実装になっていくことでしょう。こちらは実際のサービス内容を決定する、サービスコントロールが主の目的になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/07/009c9f7a4c31e2ce5119767977c90e13.png&#34; alt=&#34;service control&#34; width=&#34;775&#34; height=&#34;388&#34; class=&#34;alignnone size-full wp-image-994&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;以上で目的がはっきりとしました。&lt;/p&gt;
+
+&lt;p&gt;今回私は、前者のアクセスコントロールのパターンのためのサーバを Node を使って実装してみました。HTTP アクセスしてきたクライアントのリクエストソースからサブドメイン部を抽出して、サーバプロセス内で保持しているルーティング情報に基づいて転送を行うというものです。転送には &lt;a href=&#34;https://github.com/nodejitsu/node-http-proxy&#34;&gt;http-proxy&lt;/a&gt; や &lt;a href=&#34;https://github.com/substack/bouncy&#34;&gt;bouncy&lt;/a&gt; などを利用して、同じことを行ういくつかのサーバプログラムコードを書きました。&lt;/p&gt;
+
+&lt;p&gt;以下のコードは http-proxy を使った例です。ここでは静的に持った情報を元に転送先を決定する処理のみを行っていますが、前述したとおり転送前に個別に設けられたアクセス制限処理を合わせて行うこともできます。またここでは会社情報自体がコードに埋め込まれていますが、別途任意のデータベースに保持しておいてそこから参照すれば情報更新後もサーバの再起動なしに反映、利用することができることでしょう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;br /&amp;gt;var http = require(&amp;quot;http&amp;quot;);
+var httpProxy = require(&amp;quot;http-proxy&amp;quot;);
+var headerHostname = require(&amp;quot;header-hostname&amp;quot;);
+
+var routes = {
+    foo: {
+        host: &amp;quot;172.16.0.1&amp;quot;, port: 8000
+    },
+    bar: {
+        host: &amp;quot;172.16.10.1&amp;quot;, port: 8000
+    }
+};
+
+
+var proxy = httpProxy.createProxyServer({ xfwd: true });
+var server = http.createServer(function(req, res) {
+    var hostname = headerHostname(req.headers);
+    var company = hostname.match(/^([a-z0-9-]+).example.com$/);
+    var route = routes[company] || undefined;
+
+    if (route) {
+        proxy.web(req, res, route);
+    } else {
+        res.writeHead(404, {&#39;Content-Type&#39;: &#39;text/plain&#39;});
+        res.end();
+    }
+});
+
+server.listen(80);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;後者のサービスコントロールパターンの方も実際のアプリケーションサーバ側のコードとして実装して、初アクセス時に会社名を表示したりなどの会社固有の振る舞いを実装してみました。こちらはコード例は割愛します。&lt;/p&gt;
+
+&lt;h2 id=&#34;2-php-5-3-から-php-5-6-への環境移行テスト:17417599a4aa11ab0744475e5dd75780&#34;&gt;2. PHP 5.3 から PHP 5.6 への環境移行テスト&lt;/h2&gt;
+
+&lt;p&gt;SYNCNEL のアプリケーションサーバの一部は PHP で書かれているのですが、その箇所は古い実装体系から継続的に進めてきたため、内部の一部ではより古い PHP コードが残っています。その都合上 PHP 5.3 へのアップグレードを最後に、それ以上のアップグレードを行うことをこれまで行うことができていませんでした。&lt;/p&gt;
+
+&lt;p&gt;今回まとまった時間が用意されたということで、現行のコードを PHP 5.4 以降のものへアップグレードするための考慮点の調査と、実際にアップグレードしてみての移行テストを行いました。やはり古いコードがベースになっているということもあり、PHP の設定値および直接コード側の改変が若干必要でしたが、ひとまずは最新バージョンである PHP 5.6 でアプリケーションサーバの稼働やテストコードによる動作（green）に成功しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://php.net/manual/ja/migration54.new-features.php&#34;&gt;PHP 5.4 の新機能&lt;/a&gt;でコードが比較的楽に書けるようになる（配列は言わずもがなですが、個人的にはクロージャ内での $this 参照が嬉しい）恩恵もありますが、セキュリティアップデートの考慮や、最近では Composer で管理している各 module が requirement している PHP バージョンが 5.4 以降になりはじめていたりなどもあり、すみやかにバージョンアップを行いたいところです。&lt;/p&gt;
+
+&lt;p&gt;表面上動いているように見えるだけという可能性はまだまだ捨てきれないので、今後継続して動作確認を行った上で是非とも本番系への反映を済ませたいと考えています。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>超聖域：そら案内</title>
+      <link>http://staff.feedtailor.jp/2015/07/30/950</link>
+      <pubDate>Thu, 30 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/07/30/950</guid>
+      <description>&lt;p&gt;こんにちは、そら案内担当のitokです。&lt;/p&gt;
+
+&lt;p&gt;超聖域ということで私が選んだ題材は「そら案内」でした。WWDCで発表されたiOS9 / watchOS2 / Swift2.0、これらをふんだんに使った新しい「そら案内」を、ということで調査含めてがっつりと時間を使わせてもらいました。&lt;/p&gt;
+
+&lt;p&gt;ものすごくざっくりというともともとiOS6で書かれていた現行のそら案内をiOS8で、そしてもちろんSwift2.0で書き直そうという取り組みです。&lt;/p&gt;
+
+&lt;p&gt;さて、そら案内は予報を取り扱う共通ライブラリ的なものがありまして、それでもってiOS/Mac版、あるいはほかのそらシリーズのアプリとの共通化を図っています。&lt;/p&gt;
+
+&lt;p&gt;というわけで、まずはその部分の作り直しです。もともと後付けの機能やらなにやらでごちゃごちゃしてきたところもあって、そのあたりをすっきりとさせました。そのあたりはAndroid / Windows版を新規に作ってきた上でのフィードバックって感じですね。&lt;/p&gt;
+
+&lt;p&gt;データベースにはRealmを採用し、予報のパースにはHimotokiを。JSONマッパーは初めて使う（面倒そうで躊躇していた）のですが、定義さえしてしまえばすごくすっきりしたので大満足です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://realm.io/&#34; target=&#34;_blank&#34;&gt;Realm is a mobile database: a replacement for SQLite &amp;amp; Core Data&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ikesyo/Himotoki&#34; target=&#34;_blank&#34;&gt;ikesyo/Himotoki · GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;通信部分はもともとAFNetworkingだったんですが、そもそも単純なGETくらいしか使っていないので、素でNSURLSessionを使うことにしました。&lt;/p&gt;
+
+&lt;p&gt;日程の前半を使って共通部分を書き直し、後半でちょっとした動作デモでも、、、と思ってwatchOS2に手を出したのですが・・・&lt;/p&gt;
+
+&lt;p&gt;当時はそもそもCocoaPodsがwatchOS2に対応していなかったり（週をまたぐと対応されていた）、ほかのライブラリ群が対応していなかったりということであえなく断念。このあたりがβ環境を突き進んでいるときの弊害ですね。仕方ない。（2015.7.29時点ではおおむね対応されているようです。ライブラリ作者の皆様ありがとうございます）&lt;/p&gt;
+
+&lt;p&gt;そのかわりといってはなんですが、watchOS2のcomplicationまわりをいろいろと触っていまして、各CLKComplicationTemplateで必要とされているアイコンのサイズが複雑過ぎたので一覧を作ってみました。参考までにどうぞ。（外にお見せできる成果はこのくらいなんで）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/CLKComplication_list.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/07/CLKComplication_list-300x174.png&#34; alt=&#34;CLKComplication_list&#34; width=&#34;300&#34; height=&#34;174&#34; class=&#34;alignnone size-medium wp-image-954&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;全体として、こういう大がかりな作り込みはまとまった時間をしっかり使わないと難しい（いつものように複数プロジェクトを平行して作業していると難しい）ので、ちょうどいい機会でした。1本に集中しきれなかったのは残念でしたがそれはそれとしてそれだけ手間取ることができたのも時間があったからというところもありますし、もし次の機会があればそれに生かしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;さてさて、次期バージョンのそら案内、iOS9に間に合わせるべく熱意作業中ですのでお楽しみに。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法</title>
+      <link>http://staff.feedtailor.jp/2014/11/17/627</link>
+      <pubDate>Mon, 17 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/17/627</guid>
+      <description>
+
+&lt;p&gt;めっきり寒くなりました。熱燗が美味しい季節がようやくやってきましたね。&lt;/p&gt;
+
+&lt;p&gt;feedtailor Inc. で一番ののんだくれ、&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2014/11/17/613&#34;&gt;Dailyshot v1.1.0 をリリース&lt;/a&gt;しました。&lt;/p&gt;
+
+&lt;p&gt;2014年11月5日にファーストバージョンをリリースしましたがいくつかの不具合を含んでおり、即座に修正を行った v1.0.1 の申請を行ったのですが結果としてリジェクトされリリースできずにいました。&lt;/p&gt;
+
+&lt;p&gt;結局は v1.0.1 でのリリースを諦め、 v1.0.1 でリジェクトされた条項に抜本的対策を施し、 v1.1.0 としてリリースするに至りました。&lt;/p&gt;
+
+&lt;p&gt;Dailyshot のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;リジェクト理由は-8221-14-personal-attacks-8221-の第3項:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;リジェクト理由は&amp;#8221;14. Personal attacks&amp;#8221;の第3項&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.apple.com/app-store/review/guidelines/#personal-attacks&#34;&gt;App Store Review Guidelines&lt;/a&gt; からリジェクト理由として挙げられた箇所を引用します。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;14.3: Apps that display user generated content must include a method for filtering objectionable material, a mechanism for users to flag offensive content, and the ability to block abusive users from the service&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ざっくり要約すると「ユーザーが投稿を行うなら、ヤバい投稿をフィルタリングさせる、通報できる、ブロックできるようにしろ」ということですね。&lt;/p&gt;
+
+&lt;p&gt;つまり、「未成年者がエロいコンテンツを見ることを防ぐ」や「不愉快で見たくない投稿を行うユーザーをブロックする」ことを目的にユーザーを保護しようという目的があるようです。&lt;/p&gt;
+
+&lt;h2 id=&#34;twitter-や-facebook-はどうしてる:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Twitter や Facebook はどうしてる？&lt;/h2&gt;
+
+&lt;p&gt;ユーザー投稿型のサービスとして、今ならば Twitter と Facebook が双璧をなしていますね。&lt;/p&gt;
+
+&lt;p&gt;それぞれのサービスでも iOS アプリがありますが、どのように対応しているかを確認してみます。&lt;/p&gt;
+
+&lt;h3 id=&#34;twitter:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Twitter&lt;/h3&gt;
+
+&lt;p&gt;特定のユーザーをブロックすること、特定のツイートをスパムなどとして報告できるようになっています。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_629&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3070.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3070-300x266.jpg&#34; alt=&#34;ツイートに問題があることを報告できる。またユーザーをブロックできる。&#34; width=&#34;300&#34; height=&#34;266&#34; class=&#34;size-medium wp-image-629&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    ツイートに問題があることを報告できる。またユーザーをブロックできる。
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;また、ウェブサイトでは、自分の投稿が不適切な内容を含むと宣言すること、そして他人の不適切な内容を含む投稿を表示しないことを設定可能です。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_630&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/twitter-settings.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/twitter-settings-300x145.png&#34; alt=&#34;「不適切な内容を含む可能性のある画像/動画を表示する前に警告を表示しない」と 「ツイートする画像/動画を不適切な内容を含むものとして設定する」の設定でユーザーを保護している&#34; width=&#34;300&#34; height=&#34;145&#34; class=&#34;size-medium wp-image-630&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    「不適切な内容を含む可能性のある画像/動画を表示する前に警告を表示しない」と&lt;br /&gt;「ツイートする画像/動画を不適切な内容を含むものとして設定する」の設定でユーザーを保護している
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;facebook:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Facebook&lt;/h3&gt;
+
+&lt;p&gt;投稿に対して「この投稿を報告する」として問題があることを報告できるようにしています。&lt;/p&gt;
+
+&lt;p&gt;また、ユーザーに対してもブロックできるようになっています。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_632&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3074.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3074-300x177.jpg&#34; alt=&#34;投稿に対して問題を報告でき雨r。また、ユーザーをブロックすることもできる&#34; width=&#34;300&#34; height=&#34;177&#34; class=&#34;size-medium wp-image-632&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    投稿に対して問題を報告できる。また、ユーザーをブロックすることもできる
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;dailyshot-はどう対応した:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Dailyshot はどう対応した？&lt;/h2&gt;
+
+&lt;p&gt;Dailyshot では、以下の二つの機能を実装しました。&lt;/p&gt;
+
+&lt;h3 id=&#34;ショットの問題を報告する機能:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;ショットの問題を報告する機能&lt;/h3&gt;
+
+&lt;p&gt;ショットを表示した時、左下に「報告」のボタンが現れます。ここからそのショットの問題点を報告できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;報告する内容はユーザーに選択させ、性的、暴力的、権利、その他の問題を簡単に報告できるようにしました。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_633&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3080.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3080-300x177.jpg&#34; alt=&#34;4種類の問題のどれかを簡単に報告できる&#34; width=&#34;300&#34; height=&#34;177&#34; class=&#34;size-medium wp-image-633&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    4種類の問題のどれかを簡単に報告できる
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;特定ユーザーのテーマをブロックする機能:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;特定ユーザーのテーマをブロックする機能&lt;/h3&gt;
+
+&lt;p&gt;ユーザのプロフィールを表示した時、画面の一番下に「〜さんをブロックする」ボタンが表示されます。これを使って、ユーザーをブロックすることができます。&lt;/p&gt;
+
+&lt;p&gt;ブロックすると、そのユーザーのテーマがパブリックタイムラインに表示されなくなります。ただし、自分でそのユーザーのタイムラインを見に行った場合にはテーマが表示されます。また、ブロックしたユーザーは自分のタイムラインを見ることができます。&lt;/p&gt;
+
+&lt;p&gt;あくまで「見たくないものが急に表示される」事態を防ぐ機能です。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_634&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3081.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3081-300x266.jpg&#34; alt=&#34;特定のユーザーをブロックし、表示されないようにする&#34; width=&#34;300&#34; height=&#34;266&#34; class=&#34;size-medium wp-image-634&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    特定のユーザーをブロックし、表示されないようにする
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;これら二つの機能を実装し、Dailyshot v1.1.0 は審査を通過することができました。&lt;/p&gt;
+
+&lt;h2 id=&#34;最後に:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;14.3項は&lt;a href=&#34;https://github.com/jaredsinclair/AppStoreReviewGuidelines/commit/46ed21b844473343680282b40800304e28381e5f#diff-1b07cb2ba52400b236afd363c871579e&#34;&gt;2014年9月1日のガイドライン&lt;/a&gt;更新で追加されたようです。&lt;/p&gt;
+
+&lt;p&gt;相変わらずのアップルさんの急な審査基準の変更には毎度ながら手を焼きますが、ユーザーを保護するための変更ならば真摯に対応するべきです。&lt;/p&gt;
+
+&lt;p&gt;また、今回はこの対応で審査を通過することができましたが、これが完全な対応かどうかは分かりません。現在の審査基準を満たしてはいるももの、将来ではもっと厳密な対応が求められるかもしれません。本記事はあくまで一例としてご参考までにご提供致します。&lt;/p&gt;
+
+&lt;p&gt;Dailyshot のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Node Express でそこまで取り上げられていないあれこれ</title>
+      <link>http://staff.feedtailor.jp/2014/07/28/267</link>
+      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/07/28/267</guid>
+      <description>
+
+&lt;p&gt;くまくらです。&lt;/p&gt;
+
+&lt;p&gt;私は API サーバを実装する際に Node の Express を利用する事が多いので、今回は使っていて知った事のうち、世間的にはポツポツ程度にしか取り上げられていない事柄をいくつかあげていきます。簡単に Express を利用している初心者レベルを主な対象としています。&lt;/p&gt;
+
+&lt;h2 id=&#34;前置き:55c6b702dfb0305052c66ef6e950d392&#34;&gt;前置き&lt;/h2&gt;
+
+&lt;p&gt;以後の文中にて登場する名称／変数値は、&lt;a href=&#34;http://expressjs.com/4x/api.html&#34;&gt;Express API リファレンス&lt;/a&gt; を始めとした各種ドキュメント内でも扱われているものと同等に、以下のインスタンスを指すこととします。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;app: Application インスタンス&lt;/li&gt;
+&lt;li&gt;req: Request インスタンス&lt;/li&gt;
+&lt;li&gt;res: Response インスタンス&lt;/li&gt;
+&lt;li&gt;routes: Application インスタンスによるURLルート定義にてマッピングされた Middleware&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;app-req-res-のライフサイクルについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app, req, res のライフサイクルについて&lt;/h2&gt;
+
+&lt;p&gt;本当に基本的なことですが、Express による Web アプリケーションの根幹となる app インスタンスは、インスタンス作成時から各種セットアップ、サーバ Listen を行い始めた後も永続し、Listen を終了（Express アプリケーションを終了）させるまでは残り続けます。&lt;/p&gt;
+
+&lt;p&gt;一方、Middleware の引数として用いられる req, res の両インスタンスは、クライアントからのリクエストを受信し処理を開始した時点で生成、初期化され、Middleware による遷移処理が終了したあとに消滅します。&lt;/p&gt;
+
+&lt;p&gt;以上のことから、app インスタンスは Web アプリケーション全体に関わるグローバル／汎用的な情報を保持すること、req, res インスタンスはクライアント固有の情報を保持する存在である捉えたほうがよさそうです。従って app インスタンスは Listen 時点ではもう情報が完成しており、req, res インスタンスはリクエスト受信時から応答結果を返すまで如何様にも情報操作を行うことができる対象であると言えます。&lt;/p&gt;
+
+&lt;h2 id=&#34;app-request-app-response:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app.request, app.response&lt;/h2&gt;
+
+&lt;p&gt;req, res の両インスタンスは最初の Middleware へ与えられる直前（厳密には内部で実行される最初の暗黙の Middleware で）app.request, app.response を prototype として設定されます。この app.request, app.response はそれぞれ Express モジュールが提供する Request, Response インスタンスを prototype とするオブジェクトです。&lt;/p&gt;
+
+&lt;p&gt;app.request, app.response 共に app インスタンスを生成した時点で用意されるため、例えば Web アプリケーション固有のリクエスト処理やレスポンス処理をメンバ関数に定義しておけば、Middleware、あるいは routes でそれらを利用することができます。&lt;/p&gt;
+
+&lt;pre&gt;var app = express();
+
+app.request.getAwesomeHeader = function () {
+    return this.headers[‘x-awesome&#39;] || null;
+};
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;任意の値に-middleware-でアクセスしたい話:55c6b702dfb0305052c66ef6e950d392&#34;&gt;任意の値に Middleware でアクセスしたい話&lt;/h2&gt;
+
+&lt;p&gt;Express を利用しはじめた人が行き当たる話で、任意の値（変数）を Middleware、特に routes 以下で利用するにはどうすればよいかというのものがあります。例えば app インスタンスの set() した値を参照したい、あるいは app.js で作成した値を routes 以下で参照したいなどです。基本的には好きなようにやってよいと思っていますので、いくつかの手段を紹介します。用途あるいは好みとしてフィットする方法を選んで使ってみてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-req-app-res-app:55c6b702dfb0305052c66ef6e950d392&#34;&gt;1. req.app, res.app&lt;/h3&gt;
+
+&lt;p&gt;実は req, res それぞれは app インスタンスをメンバとして保持していますので、それを利用することができます。&lt;/p&gt;
+
+&lt;pre&gt;exports.view = function (req, res) {
+    var app = req.app;
+    var title = app.get(&#34;title&#34;);
+    // ....
+};
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-前面にある-middleware-で仕込む:55c6b702dfb0305052c66ef6e950d392&#34;&gt;2. 前面にある Middleware で仕込む&lt;/h3&gt;
+
+&lt;p&gt;利用したい値を比較的早い段階の Middleware で req などに予め設定しておきます。前述したように req インスタンスはリクエスト毎のライフサイクルを持っているので、リクエストクライアント固有の情報などを扱う場合はこちらの方法がよさそうです。&lt;/p&gt;
+
+&lt;pre&gt;app.use( function (req, res, next) {
+    req.domains = {
+        flow : “awesome&#34;
+    }
+});
+app.use(&#34;/users&#34;, routes.users);
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-middleware-routes-作成時の引数として任意の変数を与える:55c6b702dfb0305052c66ef6e950d392&#34;&gt;3. Middleware / routes 作成時の引数として任意の変数を与える&lt;/h3&gt;
+
+&lt;p&gt;Middleware, routes の実装時、それらを作成する関数として exports する体制にしておけば、require() 時に引数を与えてインスタンスを作成しつつ、Middleware 側で与えられた引数を用いた処理ができるようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;routes/items.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;module.exports = function (services) {
+    return {
+        index: function (req, res, next) {
+           if (services.is_awesome) {
+               res.send(200, “Success !!”);
+           }
+        }
+    };
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;app.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;app.use(“/items”, require(“./routes/items”)(services));
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;view-のキャッシュについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;view のキャッシュについて&lt;/h2&gt;
+
+&lt;p&gt;Production 環境で稼働している、あるいは res.render() のオプションに cache = true を付与することで、view に対してキャッシュが有効となりますが、これはレンダリング処理に関わる各種情報のキャッシュであり、ページキャッシュではありません。&lt;/p&gt;
+
+&lt;p&gt;Express で HTML ページをレンダリングするシチュエーションは大抵動的ページになると思いますが、ほんの僅かな時間でもページキャッシュをして処理を軽くしたいケースはありそうです。res.render() の第３引数にコールバック関数を設定すれば HTML ページの実体が得られるので、これを利用することでページキャッシュの振る舞いを自前で用意することができます。なお res.render() にコールバック関数を与えるとクライアントへの送出処理が省略されるため、自分で res.send() する必要があります。&lt;/p&gt;
+
+&lt;pre&gt;var caches = {};  // ※ Middleware スコープ外
+
+
+/// 注釈, 以下 middleware 内の処理
+
+if (caches[id]) {
+    res.send(caches[id]);
+} else {
+    res.render(“view.jade”, values, function (err, content) {
+        if (err) {
+            next(err);
+        } else {
+            caches[id] = content;
+            res.send(content);
+        }
+    });
+}
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;おまけ-routes-以下に設置したファイルの読み込みを楽にする:55c6b702dfb0305052c66ef6e950d392&#34;&gt;おまけ: routes 以下に設置したファイルの読み込みを楽にする&lt;/h2&gt;
+
+&lt;p&gt;Express 固有の話ではありませんが、いくつかの routes 定義ファイルを１つずつ require() していくのは若干面倒です。そこで &lt;a href=&#34;https://github.com/troygoode/node-require-directory&#34;&gt;require-directory&lt;/a&gt; モジュールを利用すると、指定するディレクトリ以下にある全てのファイルを１つのオブジェクトへまとめて exports オブジェクトへ再帰的にマッピングしてくれるため、ルーティング定義時が少し楽になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;routes/index.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;var requireDirectory = require(&#39;require-directory&#39;);
+module.exports = requireDirectory(module);
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;app.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;var routes = require(&#39;./routes&#39;);
+
+app.use(&#39;/users&#39;,    routes.users);
+app.use(&#39;/blogs&#39;,    routes.blogs);
+app.use(&#39;/login&#39;,    routes.auth.login);
+app.use(&#39;/register&#39;, routes.auth.register);
+&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

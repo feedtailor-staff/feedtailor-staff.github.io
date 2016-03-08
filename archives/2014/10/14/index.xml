@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/10/14 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/10/14/</link>
+    <description>Recent content in 2014/10/14 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 14 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/10/14/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CodeScanner v2.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/14/501</link>
+      <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/14/501</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id352276408&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/3a32a3262646918bc6b4c57662b6c293.png&#34; alt=&#34;Icon-60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-502&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;またまた1年半ぶりに更新したアプリの紹介です。&lt;/p&gt;
+
+&lt;h4 id=&#34;更新内容:4d7100dff5a21b1a99c37bddfc34b88a&#34;&gt;更新内容&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;iOS7/8対応&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS7以降のみの対応となります&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;デコードをiOS標準ライブラリに置き換え（1/2次元の切り替えを廃止）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ネットワーク連携を廃止&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;対応ブラウザの整理&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id352276408&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前バージョンまでは1/2次元のコード読み取りにZxingというオープンソースのライブラリを使用していたのですが、iOS7よりOS標準で対応しましたので、全面的に差し替えました。&lt;/p&gt;
+
+&lt;p&gt;対応コードはOSの仕様に準じますが、いまのところ以下の通りです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1次元
+
+&lt;ul&gt;
+&lt;li&gt;UPC-E&lt;/li&gt;
+&lt;li&gt;EAN-8, EAN-13&lt;/li&gt;
+&lt;li&gt;CODE 39&lt;/li&gt;
+&lt;li&gt;CODE 93&lt;/li&gt;
+&lt;li&gt;CODE 128&lt;/li&gt;
+&lt;li&gt;ITF&lt;/li&gt;
+&lt;li&gt;PDF417&lt;/li&gt;
+&lt;li&gt;Interleaved 2 of 5&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;2次元
+
+&lt;ul&gt;
+&lt;li&gt;QR Code&lt;/li&gt;
+&lt;li&gt;Data Matrix&lt;/li&gt;
+&lt;li&gt;Aztec&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;簡単なアプリ紹介:4d7100dff5a21b1a99c37bddfc34b88a&#34;&gt;簡単なアプリ紹介&lt;/h3&gt;
+
+&lt;p&gt;さて、久しぶりのアップデートなのでざっくりとですがアプリの紹介も。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;CodeScannerはバーコードやQRコードをはじめとする 1次元 or 2次元コードを連続して読み取る事のできるリーダーアプリです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ということで、よくあるコードリーダーなのですが、&lt;strong&gt;連続して読み取る事のできる&lt;/strong&gt;というところがキモになっております。&lt;/p&gt;
+
+&lt;p&gt;起動すると、スキャン画面です。シャッターボタンとかはないので、カメラに写ったコードを片っ端からどんどん読み込んでいきます。一番下に表示されているのが、直近の読み取り結果になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_1.png&#34; alt=&#34;20141014_1&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-505&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;スキャン履歴一覧です。読み込んだコードに応じた処理がいろいろできます。複数の読み込み結果を連結してコピー、なんてこともできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_2.png&#34; alt=&#34;20141014_2&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-506&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;たとえば、読み込んだコードがURLならブラウザを開きます。Safari以外のブラウザアプリが入っている場合も設定次第で、直接呼び出せるようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141014_3.png&#34; alt=&#34;20141014_3&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-507&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ほかにも、住所登録や電話はもちろん、バーコードからアマゾン・Googleショッピングへのアクセスも可能です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;あるとなにかと便利なコードリーダー。是非使ってみてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id352276408&#34; target=&#34;blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

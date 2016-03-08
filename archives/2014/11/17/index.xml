@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/11/17 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/11/17/</link>
+    <description>Recent content in 2014/11/17 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 17 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/11/17/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法</title>
+      <link>http://staff.feedtailor.jp/2014/11/17/627</link>
+      <pubDate>Mon, 17 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/17/627</guid>
+      <description>
+
+&lt;p&gt;めっきり寒くなりました。熱燗が美味しい季節がようやくやってきましたね。&lt;/p&gt;
+
+&lt;p&gt;feedtailor Inc. で一番ののんだくれ、&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2014/11/17/613&#34;&gt;Dailyshot v1.1.0 をリリース&lt;/a&gt;しました。&lt;/p&gt;
+
+&lt;p&gt;2014年11月5日にファーストバージョンをリリースしましたがいくつかの不具合を含んでおり、即座に修正を行った v1.0.1 の申請を行ったのですが結果としてリジェクトされリリースできずにいました。&lt;/p&gt;
+
+&lt;p&gt;結局は v1.0.1 でのリリースを諦め、 v1.0.1 でリジェクトされた条項に抜本的対策を施し、 v1.1.0 としてリリースするに至りました。&lt;/p&gt;
+
+&lt;p&gt;Dailyshot のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;リジェクト理由は-8221-14-personal-attacks-8221-の第3項:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;リジェクト理由は&amp;#8221;14. Personal attacks&amp;#8221;の第3項&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.apple.com/app-store/review/guidelines/#personal-attacks&#34;&gt;App Store Review Guidelines&lt;/a&gt; からリジェクト理由として挙げられた箇所を引用します。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;14.3: Apps that display user generated content must include a method for filtering objectionable material, a mechanism for users to flag offensive content, and the ability to block abusive users from the service&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ざっくり要約すると「ユーザーが投稿を行うなら、ヤバい投稿をフィルタリングさせる、通報できる、ブロックできるようにしろ」ということですね。&lt;/p&gt;
+
+&lt;p&gt;つまり、「未成年者がエロいコンテンツを見ることを防ぐ」や「不愉快で見たくない投稿を行うユーザーをブロックする」ことを目的にユーザーを保護しようという目的があるようです。&lt;/p&gt;
+
+&lt;h2 id=&#34;twitter-や-facebook-はどうしてる:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Twitter や Facebook はどうしてる？&lt;/h2&gt;
+
+&lt;p&gt;ユーザー投稿型のサービスとして、今ならば Twitter と Facebook が双璧をなしていますね。&lt;/p&gt;
+
+&lt;p&gt;それぞれのサービスでも iOS アプリがありますが、どのように対応しているかを確認してみます。&lt;/p&gt;
+
+&lt;h3 id=&#34;twitter:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Twitter&lt;/h3&gt;
+
+&lt;p&gt;特定のユーザーをブロックすること、特定のツイートをスパムなどとして報告できるようになっています。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_629&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3070.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3070-300x266.jpg&#34; alt=&#34;ツイートに問題があることを報告できる。またユーザーをブロックできる。&#34; width=&#34;300&#34; height=&#34;266&#34; class=&#34;size-medium wp-image-629&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    ツイートに問題があることを報告できる。またユーザーをブロックできる。
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;また、ウェブサイトでは、自分の投稿が不適切な内容を含むと宣言すること、そして他人の不適切な内容を含む投稿を表示しないことを設定可能です。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_630&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/twitter-settings.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/twitter-settings-300x145.png&#34; alt=&#34;「不適切な内容を含む可能性のある画像/動画を表示する前に警告を表示しない」と 「ツイートする画像/動画を不適切な内容を含むものとして設定する」の設定でユーザーを保護している&#34; width=&#34;300&#34; height=&#34;145&#34; class=&#34;size-medium wp-image-630&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    「不適切な内容を含む可能性のある画像/動画を表示する前に警告を表示しない」と&lt;br /&gt;「ツイートする画像/動画を不適切な内容を含むものとして設定する」の設定でユーザーを保護している
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;facebook:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Facebook&lt;/h3&gt;
+
+&lt;p&gt;投稿に対して「この投稿を報告する」として問題があることを報告できるようにしています。&lt;/p&gt;
+
+&lt;p&gt;また、ユーザーに対してもブロックできるようになっています。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_632&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3074.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3074-300x177.jpg&#34; alt=&#34;投稿に対して問題を報告でき雨r。また、ユーザーをブロックすることもできる&#34; width=&#34;300&#34; height=&#34;177&#34; class=&#34;size-medium wp-image-632&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    投稿に対して問題を報告できる。また、ユーザーをブロックすることもできる
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;dailyshot-はどう対応した:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Dailyshot はどう対応した？&lt;/h2&gt;
+
+&lt;p&gt;Dailyshot では、以下の二つの機能を実装しました。&lt;/p&gt;
+
+&lt;h3 id=&#34;ショットの問題を報告する機能:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;ショットの問題を報告する機能&lt;/h3&gt;
+
+&lt;p&gt;ショットを表示した時、左下に「報告」のボタンが現れます。ここからそのショットの問題点を報告できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;報告する内容はユーザーに選択させ、性的、暴力的、権利、その他の問題を簡単に報告できるようにしました。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_633&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3080.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3080-300x177.jpg&#34; alt=&#34;4種類の問題のどれかを簡単に報告できる&#34; width=&#34;300&#34; height=&#34;177&#34; class=&#34;size-medium wp-image-633&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    4種類の問題のどれかを簡単に報告できる
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;特定ユーザーのテーマをブロックする機能:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;特定ユーザーのテーマをブロックする機能&lt;/h3&gt;
+
+&lt;p&gt;ユーザのプロフィールを表示した時、画面の一番下に「〜さんをブロックする」ボタンが表示されます。これを使って、ユーザーをブロックすることができます。&lt;/p&gt;
+
+&lt;p&gt;ブロックすると、そのユーザーのテーマがパブリックタイムラインに表示されなくなります。ただし、自分でそのユーザーのタイムラインを見に行った場合にはテーマが表示されます。また、ブロックしたユーザーは自分のタイムラインを見ることができます。&lt;/p&gt;
+
+&lt;p&gt;あくまで「見たくないものが急に表示される」事態を防ぐ機能です。&lt;/p&gt;
+
+&lt;div id=&#34;attachment_634&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3081.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3081-300x266.jpg&#34; alt=&#34;特定のユーザーをブロックし、表示されないようにする&#34; width=&#34;300&#34; height=&#34;266&#34; class=&#34;size-medium wp-image-634&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    特定のユーザーをブロックし、表示されないようにする
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;これら二つの機能を実装し、Dailyshot v1.1.0 は審査を通過することができました。&lt;/p&gt;
+
+&lt;h2 id=&#34;最後に:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;14.3項は&lt;a href=&#34;https://github.com/jaredsinclair/AppStoreReviewGuidelines/commit/46ed21b844473343680282b40800304e28381e5f#diff-1b07cb2ba52400b236afd363c871579e&#34;&gt;2014年9月1日のガイドライン&lt;/a&gt;更新で追加されたようです。&lt;/p&gt;
+
+&lt;p&gt;相変わらずのアップルさんの急な審査基準の変更には毎度ながら手を焼きますが、ユーザーを保護するための変更ならば真摯に対応するべきです。&lt;/p&gt;
+
+&lt;p&gt;また、今回はこの対応で審査を通過することができましたが、これが完全な対応かどうかは分かりません。現在の審査基準を満たしてはいるももの、将来ではもっと厳密な対応が求められるかもしれません。本記事はあくまで一例としてご参考までにご提供致します。&lt;/p&gt;
+
+&lt;p&gt;Dailyshot のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新しいライフログサービス Dailyshot の ver1.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/11/17/613</link>
+      <pubDate>Mon, 17 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/17/613</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。Dailyshotに投稿するために肉のネタを探し回る毎日です。ウラナンバにはいい店が多いですね。&lt;/p&gt;
+
+&lt;p&gt;先日、 &lt;a href=&#34;http://staff.feedtailor.jp/2014/11/05/565&#34;&gt;新サービス Dailyshot をリリース&lt;/a&gt; しましたが、本日はその Dailyshot のアップデート v1.1.0 のご紹介です。&lt;/p&gt;
+
+&lt;p&gt;あ、ご紹介が遅れました。 Dailyshot は企画とサーバ側を &lt;a href=&#34;http://twitter.com/kumatch&#34;&gt;くまくら&lt;/a&gt; が担当し、クライアントは私 &lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt; が担当しています。&lt;/p&gt;
+
+&lt;p&gt;Dailyshot のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;アップデートの内容:6b7179e6bd6088eeb2747536c25e0fa6&#34;&gt;アップデートの内容&lt;/h2&gt;
+
+&lt;p&gt;今回のアップデートの内容は以下の通りです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;カラムの呼び方をテーマに変更&lt;/li&gt;
+&lt;li&gt;ショットをシェアできるようになりました。ショットをTwitterやFacebbokに投稿することができます&lt;/li&gt;
+&lt;li&gt;テーマのタイトルが変更できるようになりました&lt;/li&gt;
+&lt;li&gt;テーマの削除時に確認が入るようになりました&lt;/li&gt;
+&lt;li&gt;利用規約とプライバシーポリシーへのショートカットを追加しました&lt;/li&gt;
+&lt;li&gt;iPodで流れている曲をそのまま流したままにできるようになりました&lt;/li&gt;
+&lt;li&gt;受け取る通知を選択できるようになりました&lt;/li&gt;
+&lt;li&gt;URLスキームが追加されました。 &amp;#8220;dailyshot://shot/[テーマID]/[ショットID]&amp;#8221; でショットを外部から表示させることができます。例えばこのようなURLを使用します。 dailyshot://shot/1433449752001009/12991889726942045&lt;/li&gt;
+&lt;li&gt;サービスにそぐわないショットを運営に報告できるようになりました&lt;/li&gt;
+&lt;li&gt;特定のユーザーのテーマがパブリックタイムラインに表示されないようにブロックできるようになりました&lt;/li&gt;
+&lt;li&gt;その他、多くの不具合の修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;いくつかピックアップして、詳しくご紹介します。&lt;/p&gt;
+
+&lt;h2 id=&#34;カラムの呼び方をテーマに変更:6b7179e6bd6088eeb2747536c25e0fa6&#34;&gt;カラムの呼び方をテーマに変更&lt;/h2&gt;
+
+&lt;p&gt;Dailyshot は表計算ソフトのように行と列で構成されています。&lt;/p&gt;
+
+&lt;p&gt;行と列の組み合わせを「タイムライン」、それぞれの列を「カラム」と呼んでいましたが、今回のバージョンより「カラム」は「テーマ」という呼び方に変更されました。&lt;/p&gt;
+
+&lt;p&gt;機能的には変化はありませんが、一続きの写真を「テーマ」と呼ぶことによってより親しみが湧くのではないでしょうか。&lt;/p&gt;
+
+&lt;h2 id=&#34;ショットをシェアできるようになりました-ショットをtwitterやfacebbokに投稿することができます:6b7179e6bd6088eeb2747536c25e0fa6&#34;&gt;ショットをシェアできるようになりました。ショットをTwitterやFacebbokに投稿することができます&lt;/h2&gt;
+
+&lt;p&gt;今まではあまり表に出ていませんでしたが、 Dailyshot はブラウザから見ることもできます。&lt;/p&gt;
+
+&lt;p&gt;例えば、私のショットはこのページで見ることができました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dailyshot.me/sumihiro&#34;&gt;http://dailyshot.me/sumihiro&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;見事に食欲の塊ですね。&lt;/p&gt;
+
+&lt;p&gt;今回のアップデートでは Twitter や Facebook にショットをシェアすることができるようになりました。&lt;/p&gt;
+
+&lt;p&gt;使い方は簡単。シェアしたいショットを表示させ、「シェア」ボタンを押せばシェアする方法を選ぶことができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3064.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3064-300x266.jpg&#34; alt=&#34;IMG_3064&#34; width=&#34;300&#34; height=&#34;266&#34; class=&#34;alignnone size-medium wp-image-620&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitter や Facebook にシェアする場合には iOS の設定でそれぞれのアカウントの設定が必要ですのでご注意くださいね。&lt;/p&gt;
+
+&lt;h2 id=&#34;受け取る通知を選択できるようになりました:6b7179e6bd6088eeb2747536c25e0fa6&#34;&gt;受け取る通知を選択できるようになりました&lt;/h2&gt;
+
+&lt;p&gt;Dailyshot は「フォローしているユーザーがショットを投稿した時」と「自分のショットにLikeがついた時」に通知を行います。&lt;/p&gt;
+
+&lt;p&gt;1日に1個しかショットを投稿できない Dailyshot で友達のショットを見逃さないように通知が行われますが、時には煩わしいこともあります。&lt;/p&gt;
+
+&lt;p&gt;そのような時には通知をオフにしてしまうことが可能になりました。&lt;/p&gt;
+
+&lt;p&gt;また、「新しいショットはすぐには見なくてもいいけど、Likeされた時はすぐに知りたい！」にも対応します。&lt;/p&gt;
+
+&lt;p&gt;「フォローしているユーザーがショットを投稿した時」と「自分のショットにLikeがついた時」の通知をそれぞれ別にオンオフの設定ができますので、必要に応じて使い分けましょう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3067.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/IMG_3067-300x266.jpg&#34; alt=&#34;IMG_3067&#34; width=&#34;300&#34; height=&#34;266&#34; class=&#34;alignnone size-medium wp-image-621&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;お詫び： v1.1.0 現在、通知の設定を表示した時に、すでに設定されたされた状態ではなく両方ともオフで表示されてしまう不具合が確認されています。次のリリースで修正される予定です。表示がオフになっていても、最後にオンに設定した状態では通知は正しく行われます。&lt;/p&gt;
+
+&lt;h2 id=&#34;urlスキームが追加されました-8220-dailyshot-shot-テーマid-ショットid-8221-でショットを外部から表示させることができます:6b7179e6bd6088eeb2747536c25e0fa6&#34;&gt;URLスキームが追加されました。 &amp;#8220;dailyshot://shot/[テーマID]/[ショットID]&amp;#8221; でショットを外部から表示させることができます。&lt;/h2&gt;
+
+&lt;p&gt;一部のユーザーさんに熱望される URL スキームに対応しました。&lt;/p&gt;
+
+&lt;p&gt;例えばこのようなURLを使用します。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;dailyshot://shot/1433449752001009/12991889726942045&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;今回は「ショットを表示する URL スキーム」のみの対応ですが「ユーザーのタイムラインを表示する URL スキーム」も今後のアップデートで対応する予定です。&lt;/p&gt;
+
+&lt;h2 id=&#34;サービスにそぐわないショットを運営に報告できるようになりました:6b7179e6bd6088eeb2747536c25e0fa6&#34;&gt;サービスにそぐわないショットを運営に報告できるようになりました&lt;/h2&gt;
+
+&lt;h2 id=&#34;特定のユーザーのテーマがパブリックタイムラインに表示されないようにブロックできるようになりました:6b7179e6bd6088eeb2747536c25e0fa6&#34;&gt;特定のユーザーのテーマがパブリックタイムラインに表示されないようにブロックできるようになりました&lt;/h2&gt;
+
+&lt;p&gt;Dailyshot では &lt;a href=&#34;http://dailyshot.me/legal/terms.html&#34;&gt;利用規約&lt;/a&gt; の第9条 (禁止事項)にていくつかの行為を禁止しています。&lt;/p&gt;
+
+&lt;p&gt;禁止されている投稿を見かけられた場合は運営に報告をお願いいたします。&lt;/p&gt;
+
+&lt;p&gt;また、禁止されている投稿ではなくとも、ご自身が見たくない投稿を行っているユーザーをブロックすることも可能になりました。&lt;/p&gt;
+
+&lt;p&gt;ブロックすると、そのユーザーの投稿がパブリックタイムラインに流れてこなくなります。ただし、ブロックしたユーザーがご自身のショットを見ることは引き続き可能です。&lt;/p&gt;
+
+&lt;h3 id=&#34;最後に:6b7179e6bd6088eeb2747536c25e0fa6&#34;&gt;最後に&lt;/h3&gt;
+
+&lt;p&gt;「報告」と「ブロック」の機能ですが、実は Apple の新しいレビューガイドラインの 14.3 項にて実装が必要とされている機能です。&lt;/p&gt;
+
+&lt;p&gt;この機能のために何度かリジェクトを受けてしまったためにアップデートのリリースが遅れてしまいました。&lt;/p&gt;
+
+&lt;p&gt;該当するサービスを運営する方はご注意を。&lt;/p&gt;
+
+&lt;p&gt;&lt;a herf=&#34;/2014/11/17/627&#34;&gt;14.3項のリジェクトに対応する方法&lt;/a&gt;を別記事でご用意しています。&lt;/p&gt;
+
+&lt;p&gt;Dailyshot のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>雨雲予測アプリ そらレーダー v1.1.1 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/11/17/608</link>
+      <pubDate>Mon, 17 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/17/608</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/3a32a3262646918bc6b4c57662b6c293.png&#34; alt=&#34;Icon-60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-305&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲予測アプリ「そらレーダー」の v1.1.1 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;通知設定から通知のテストができるように&lt;/li&gt;
+&lt;li&gt;外部ライブラリ更新&lt;/li&gt;
+&lt;li&gt;細かいバグ修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;予測通知の設定がサーバに反映されているかどうかを確認するための「通知テスト」という項目が追加されました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/a51bdbc758f6c0f77d5f24fba4e1a6e6.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/a51bdbc758f6c0f77d5f24fba4e1a6e6.png&#34; alt=&#34;20141117_Screen Shot 2014-11-17 at 10.09.25 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-610&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この「成功」ダイアログがでればOKです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/f4e8d841ec6fa74bc85277c13d7737a8.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/f4e8d841ec6fa74bc85277c13d7737a8.png&#34; alt=&#34;20141117_Screen Shot 2014-11-17 at 10.09.34 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-611&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「成功」ダイアログがでない場合は以下をお試しください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;設定アプリ→通知→そらレーダーの設定確認&lt;/li&gt;
+&lt;li&gt;アプリの再起動&lt;/li&gt;
+&lt;li&gt;通知設定をオフ→オン&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;「成功」ダイアログがでるのに、降雨予測が通知されない場合は、お手数をおかけして申し訳ありませんがフィードバックからログをお送りください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方も是非どうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

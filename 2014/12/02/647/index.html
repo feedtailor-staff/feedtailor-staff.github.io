@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！ &middot; feedtailor Inc. スタッフブログ</title>
+    <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="feedtailor Inc.">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="icon" href="http://staff.feedtailor.jp/favicon.ico">
+    <link rel="apple-touch-icon" href="http://staff.feedtailor.jp/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/style.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/monokai.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！" />
+<meta property="og:description" content="フィードテイラーの赤魔道士すみひろです。 今日からめっきり寒くなりました。昨日の最高気温は20度ほどまで行き最低気温が10度ほどでしたのが、今" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://staff.feedtailor.jp/2014/12/02/647" />
+
+
+<meta property="og:updated_time" content="2014-12-02T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！">
+<meta itemprop="description" content="フィードテイラーの赤魔道士すみひろです。 今日からめっきり寒くなりました。昨日の最高気温は20度ほどまで行き最低気温が10度ほどでしたのが、今">
+
+
+<meta itemprop="dateModified" content="2014-12-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1947">
+
+
+
+<meta itemprop="keywords" content="2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,node,アプリご紹介,全般,技術情報,未分類,8bitter,bgtube,book,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！"/>
+<meta name="twitter:description" content="フィードテイラーの赤魔道士すみひろです。 今日からめっきり寒くなりました。昨日の最高気温は20度ほどまで行き最低気温が10度ほどでしたのが、今"/>
+<meta name="twitter:site" content="@feedtailor"/>
+
+
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://staff.feedtailor.jp/" id="logo"><span class="site-title">feedtailor Inc. スタッフブログ</span></a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/categories/">Categories</a>
+          
+          
+      </nav>
+        
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+		
+	    <section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+
+            <header class="article-header">
+    <a href="http://staff.feedtailor.jp/2014/12/02/647">
+    <h1 class="article-title" itemprop="name">
+        玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2014-12-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-12-02</time>
+            
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">アプリご紹介</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e7%94%a8%e5%bf%83">そら用心</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>フィードテイラーの赤魔道士<a href="http://twitter.com/sumihiro">すみひろ</a>です。</p>
+
+<p>今日からめっきり寒くなりました。昨日の最高気温は20度ほどまで行き最低気温が10度ほどでしたのが、今日は最高気温が10度ほどと一気に冬になりました。</p>
+
+<p>皆さんも体調には十分とご注意くださいな。</p>
+
+<p>さて、そろそろ雪もちらついてきそうなこのタイミングで、新しいアプリをみなさんにご紹介することができました。</p>
+
+<p>今回のアプリは既存のアプリとは一線を画す画期的なアプリ、<strong>玄関に行けば降水確率を声でお知らせするiPhoneアプリ「<a href="http://sorayoujin.feedtailor.jp/">そら用心</a>」</strong>です！</p>
+
+<p>これからの雪の季節、傘を持って出ることを忘れることが多い方は必携のアプリです。</p>
+
+<p>(ちなみに、そら用心は家庭向けにiBeacon技術を利用した本格的なアプリとしては国内初です。詳しくは後述。)</p>
+
+<p>忙しい方向けにプレスリリースはこちら。 <a href="http://feedtailor.jp/press_sorayoujin">http://feedtailor.jp/press_sorayoujin</a></p>
+
+<p>公式サイトはこちらです。 <a href="http://sorayoujin.feedtailor.jp/">http://sorayoujin.feedtailor.jp/</a></p>
+
+<h3 id="なにが新しいの:3ed6f8f241a7241860983ab17ac49bc6">なにが新しいの？</h3>
+
+<p>そら用心は今いる場所の降水確率をみなさんに通知します。このように。</p>
+
+<p><a href="/images/2014/12/sorayoujin_screenshot.2.png"><img src="/images/2014/12/sorayoujin_screenshot.2-168x300.png" alt="sorayoujin_screenshot.2" width="168" height="300" class="alignnone size-medium wp-image-651" /></a></p>
+
+<p><a href="/images/2014/12/sorayoujin_screenshot.1.png"><img src="/images/2014/12/sorayoujin_screenshot.1-168x300.png" alt="sorayoujin_screenshot.1" width="168" height="300" class="alignnone size-medium wp-image-652" /></a></p>
+
+<p>降水確率が高い場合は5回に分けて通知、降水確率が低い場合は2回に分けて通知します。これによって<strong>サイレントモードでポケットの中に入っている状態でも傘を持っていくかどうかを判断できる</strong>のです。</p>
+
+<p>また、降水確率を個別に通知する場合は<strong>音声で降水確率を読み上げます</strong>。目の不自由な方にも優しい作りになっています。</p>
+
+<h3 id="玄関で:3ed6f8f241a7241860983ab17ac49bc6">玄関で？</h3>
+
+<p>ただ単に降水確率をお知らせするだけではそんなに目新しくはありません。でもそら用心はこの記事のタイトルにあるように、<strong>玄関に来れば勝手に降水確率をお知らせしてくれる</strong>のです。もちろん、<strong>アプリを操作する必要は一切ありません</strong>。</p>
+
+<p>玄関で自動的にお知らせできる秘密のキーワードは<strong>iBeacon</strong>。そら用心はiBeaconと連携することにより玄関に来た時だけに自動的に降水確率をお知らせすることができるのです！</p>
+
+<p>セットアップは簡単3ステップ。</p>
+
+<ol>
+<li><strong>そら用心に最適なiBeaconデバイス「<a href="http://sorabeacon.theshop.jp/items/924428">そらビーコン</a>」を買う</strong></li>
+<li><strong>そらビーコンを玄関に置く</strong></li>
+<li><strong>そら用心にそらビーコンを登録する</strong></li>
+</ol>
+
+<p>これで、あなたはもう傘を忘れずに家を出るようになります。</p>
+
+<p>詳しいセットアップ手順は<a href="http://sorayoujin.feedtailor.jp/setup.html">公式サイトのビーコンの購入と設置</a>をご覧ください。</p>
+
+<h2 id="そらビーコン:3ed6f8f241a7241860983ab17ac49bc6">そらビーコン</h2>
+
+<p><a href="/images/2014/12/sorabeacon_for_press.jpg"><img src="/images/2014/12/sorabeacon_for_press-300x300.jpg" alt="そらビーコン" width="300" height="300" class="alignnone size-medium wp-image-668" /></a></p>
+
+<p>そら用心に最適なiBeaconデバイス「<a href="http://sorabeacon.theshop.jp/items/924428">そらビーコン</a>」をご用意しています。</p>
+
+<p>そらビーコンは大きく二つのそら用心に最適な理由があります。</p>
+
+<h4 id="1-そら用心にセットアップするのが簡単:3ed6f8f241a7241860983ab17ac49bc6">1. そら用心にセットアップするのが簡単</h4>
+
+<p>iBeaconデバイスをそら用心に登録する場合には「UUID」「メジャー番号」「マイナー番号」という3個の値を設定する必要があります。</p>
+
+<p>特にUUIDは例えば「550e8400-e29b-41d4-a716-446655440000」のようなとても長い文字列で、これを間違えずに設定するのはスマホを使いなれた人でも難しい手順です。</p>
+
+<p>しかし、そらビーコンでは簡単に設定できるQRコードが付いており、それを<strong>iPhoneのカメラで撮影するだけで簡単に設定</strong>できます！</p>
+
+<p><a href="/images/2014/12/IMG_1912.png"><img src="/images/2014/12/IMG_1912-169x300.png" alt="IMG_1912" width="169" height="300" class="alignnone size-medium wp-image-660" /></a></p>
+
+<h4 id="2-ibeaconの電波の届く範囲を設定できる:3ed6f8f241a7241860983ab17ac49bc6">2. iBeaconの電波の届く範囲を設定できる</h4>
+
+<p>そら用心はiBeaconデバイスの発する電波を見つけたときに降水確率をお知らせします。</p>
+
+<p>もちろん、他の市販されているiBeaconデバイスを利用することができます。</p>
+
+<p>しかし、通常のiBeaconデバイスではおおよそ数メートルから数十メートル程度ほどが電波の届く距離になっています。玄関にiBeaconデバイスを置いても、これではリビングやキッチンまで電波が届く範囲になってしまい、そら用心は狙った場所で降水確率のお知らせができなくなってしまいます。</p>
+
+<p>しかし、<strong>そらビーコンは電波の届く距離を調整することができます</strong>。</p>
+
+<p>最短でおおよそ1m、最大でおおよそ100mまで段階的に設定できます。</p>
+
+<p><strong>玄関に1mもしくは2mに設定したそらビーコンを設置</strong>しましょう。そら用心とそらビーコンを組み合わせることで狙った場所で確実に降水確率をお知らせする&gt;ことができます。</p>
+
+<h2 id="そら用心とフィードテイラーがこの先に向かうところ:3ed6f8f241a7241860983ab17ac49bc6">そら用心とフィードテイラーがこの先に向かうところ</h2>
+
+<p>さて、冒頭にもさらっと記述しましたが、<strong>そら用心は家庭向けにiBeacon技術を利用した本格的なアプリとしては国内初</strong>です。</p>
+
+<p>振り返ってみますと、iBeaconは<a href="http://www.appbank.net/2013/09/13/iphone-news/667015.php">2013年のWWDCにてApple社が発表</a>し、それから1年半で<a href="http://dev.classmethod.jp/smartphone/ibeacon-example/">B2Bやイベントなどのシーンでは多く利用されるように</a>なってきました。</p>
+
+<p>しかし、家庭に目を向けてみるとiBeaconの導入は全く行われていません。フィードテイラーは<strong>家庭にiBeaconが導入されることにより確実な位置情報を得ることができ、その情報は新たな社会インフラとなる</strong>と考えています。その目標と研究の成果の第一弾としてそら用心を発表しました。</p>
+
+<p>今後もこの研究を推し進め、2015年中には第二弾となるアプリを発表する予定です。</p>
+
+<p>プレスリリースはこちら。 <a href="http://feedtailor.jp/press_sorayoujin">http://feedtailor.jp/press_sorayoujin</a></p>
+
+<p>そら用心のダウンロードは公式サイトから。 <a href="http://sorayoujin.feedtailor.jp/">http://sorayoujin.feedtailor.jp/</a></p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://staff.feedtailor.jp/2014/12/02/647" data-id="3ed6f8f241a7241860983ab17ac49bc6" class="article-share-link">
+        Share
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://staff.feedtailor.jp/2014/11/17/627" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">AppStoreの審査で14.3項を理由にリジェクトされました。そしてその対応方法</div>
+    </a>
+    
+
+    
+    <a href="http://staff.feedtailor.jp/2014/12/10/681" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">ネタキーボードアプリ「富豪Keyboard」が審査を通過できないのでソースを公開します</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+    <section id="comments">
+        <div id="disqus_thread">
+            
+        </div>
+    </section>
+
+</section>
+
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/11/1083" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                        技術情報
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/11/1083" class="title">超聖域: iOSアプリのビルドツール</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-11</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/10/1013" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/javafx_gradle_screenshot-450x184.png)" alt="玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                        技術情報
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/10/1013" class="title">超聖域：JavaFXのGradleビルド</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-10</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/06/1041" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/launch-bg-450x200.png)" alt="玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">
+                        アプリご紹介
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/06/1041" class="title">顔写真にTwitterのアイコンをかぶせる iMasks を公開しました</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-06</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/05/1003" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/08/cocos2dx-450x200.png)" alt="玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                        未分類
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/05/1003" class="title">超聖域：Cocos2d-xでスライドパズルを作った</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-05</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2015/08/03/965" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2015/07/F8EE9162-5D47-48DC-B63D-47FEC8D17C54-450x200.png)" alt="玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                        未分類
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2015/08/03/965" class="title">超聖域: Unityでゲームを作ろうとした話</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-08-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-08-03</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/node">
+                    node
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">
+                    アプリご紹介
+                </a>
+                <span class="category-list-count">49</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e5%85%a8%e8%88%ac">
+                    全般
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                    技術情報
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                    未分類
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/04">
+                    2014/04
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/05">
+                    2014/05
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/06">
+                    2014/06
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/07">
+                    2014/07
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/08">
+                    2014/08
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/09">
+                    2014/09
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/10">
+                    2014/10
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/11">
+                    2014/11
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/12">
+                    2014/12
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/01">
+                    2015/01
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/02">
+                    2015/02
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/03">
+                    2015/03
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/04">
+                    2015/04
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/05">
+                    2015/05
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/07">
+                    2015/07
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/08">
+                    2015/08
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://staff.feedtailor.jp/tags/8bitter" style="font-size: 12px;">8bitter</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/bgtube" style="font-size: 12px;">bgtube</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/book" style="font-size: 12px;">book</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/cocos2d-x" style="font-size: 12px;">cocos2d-x</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/codescanner" style="font-size: 12px;">codescanner</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/cwnotify" style="font-size: 12px;">cwnotify</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/dailyshot" style="font-size: 12px;">dailyshot</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/express" style="font-size: 12px;">express</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/groups" style="font-size: 12px;">groups</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/imasks" style="font-size: 12px;">imasks</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/node" style="font-size: 12px;">node</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/nyatter" style="font-size: 12px;">nyatter</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/php" style="font-size: 12px;">php</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/qr%e7%9b%ae%e8%a6%9a%e3%81%be%e3%81%97" style="font-size: 12px;">qr目覚まし</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/sora" style="font-size: 12px;">sora</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/sunshine" style="font-size: 12px;">sunshine</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/tailsearch" style="font-size: 12px;">tailsearch</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%8b%e3%82%93%e3%81%98%e3%81%8b%e3%81%aa" style="font-size: 12px;">かんじかな</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e3%82%a2%e3%83%ab%e3%83%90%e3%83%a0" style="font-size: 12px;">そらアルバム</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e3%83%ac%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">そらレーダー</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e6%a1%88%e5%86%85" style="font-size: 12px;">そら案内</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e6%b0%97%e6%b8%a9" style="font-size: 12px;">そら気温</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e7%94%a8%e5%bf%83" style="font-size: 12px;">そら用心</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%82%a2%e3%83%97%e3%83%aa%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9" style="font-size: 12px;">アプリリリース</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e5%af%8c%e8%b1%aakeyboard" style="font-size: 12px;">富豪keyboard</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e8%b6%85%e8%81%96%e5%9f%9f" style="font-size: 12px;">超聖域</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://staff.feedtailor.jp/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://staff.feedtailor.jp/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

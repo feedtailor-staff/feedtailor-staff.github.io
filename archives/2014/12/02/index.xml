@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/12/02 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/12/02/</link>
+    <description>Recent content in 2014/12/02 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 02 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/12/02/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！</title>
+      <link>http://staff.feedtailor.jp/2014/12/02/647</link>
+      <pubDate>Tue, 02 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/12/02/647</guid>
+      <description>
+
+&lt;p&gt;フィードテイラーの赤魔道士&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;今日からめっきり寒くなりました。昨日の最高気温は20度ほどまで行き最低気温が10度ほどでしたのが、今日は最高気温が10度ほどと一気に冬になりました。&lt;/p&gt;
+
+&lt;p&gt;皆さんも体調には十分とご注意くださいな。&lt;/p&gt;
+
+&lt;p&gt;さて、そろそろ雪もちらついてきそうなこのタイミングで、新しいアプリをみなさんにご紹介することができました。&lt;/p&gt;
+
+&lt;p&gt;今回のアプリは既存のアプリとは一線を画す画期的なアプリ、&lt;strong&gt;玄関に行けば降水確率を声でお知らせするiPhoneアプリ「&lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;そら用心&lt;/a&gt;」&lt;/strong&gt;です！&lt;/p&gt;
+
+&lt;p&gt;これからの雪の季節、傘を持って出ることを忘れることが多い方は必携のアプリです。&lt;/p&gt;
+
+&lt;p&gt;(ちなみに、そら用心は家庭向けにiBeacon技術を利用した本格的なアプリとしては国内初です。詳しくは後述。)&lt;/p&gt;
+
+&lt;p&gt;忙しい方向けにプレスリリースはこちら。 &lt;a href=&#34;http://feedtailor.jp/press_sorayoujin&#34;&gt;http://feedtailor.jp/press_sorayoujin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;公式サイトはこちらです。 &lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;http://sorayoujin.feedtailor.jp/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;なにが新しいの:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;なにが新しいの？&lt;/h3&gt;
+
+&lt;p&gt;そら用心は今いる場所の降水確率をみなさんに通知します。このように。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/sorayoujin_screenshot.2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/sorayoujin_screenshot.2-168x300.png&#34; alt=&#34;sorayoujin_screenshot.2&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-651&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/sorayoujin_screenshot.1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/sorayoujin_screenshot.1-168x300.png&#34; alt=&#34;sorayoujin_screenshot.1&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-652&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;降水確率が高い場合は5回に分けて通知、降水確率が低い場合は2回に分けて通知します。これによって&lt;strong&gt;サイレントモードでポケットの中に入っている状態でも傘を持っていくかどうかを判断できる&lt;/strong&gt;のです。&lt;/p&gt;
+
+&lt;p&gt;また、降水確率を個別に通知する場合は&lt;strong&gt;音声で降水確率を読み上げます&lt;/strong&gt;。目の不自由な方にも優しい作りになっています。&lt;/p&gt;
+
+&lt;h3 id=&#34;玄関で:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;玄関で？&lt;/h3&gt;
+
+&lt;p&gt;ただ単に降水確率をお知らせするだけではそんなに目新しくはありません。でもそら用心はこの記事のタイトルにあるように、&lt;strong&gt;玄関に来れば勝手に降水確率をお知らせしてくれる&lt;/strong&gt;のです。もちろん、&lt;strong&gt;アプリを操作する必要は一切ありません&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;玄関で自動的にお知らせできる秘密のキーワードは&lt;strong&gt;iBeacon&lt;/strong&gt;。そら用心はiBeaconと連携することにより玄関に来た時だけに自動的に降水確率をお知らせすることができるのです！&lt;/p&gt;
+
+&lt;p&gt;セットアップは簡単3ステップ。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;そら用心に最適なiBeaconデバイス「&lt;a href=&#34;http://sorabeacon.theshop.jp/items/924428&#34;&gt;そらビーコン&lt;/a&gt;」を買う&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;そらビーコンを玄関に置く&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;そら用心にそらビーコンを登録する&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;これで、あなたはもう傘を忘れずに家を出るようになります。&lt;/p&gt;
+
+&lt;p&gt;詳しいセットアップ手順は&lt;a href=&#34;http://sorayoujin.feedtailor.jp/setup.html&#34;&gt;公式サイトのビーコンの購入と設置&lt;/a&gt;をご覧ください。&lt;/p&gt;
+
+&lt;h2 id=&#34;そらビーコン:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;そらビーコン&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/sorabeacon_for_press.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/sorabeacon_for_press-300x300.jpg&#34; alt=&#34;そらビーコン&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-668&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そら用心に最適なiBeaconデバイス「&lt;a href=&#34;http://sorabeacon.theshop.jp/items/924428&#34;&gt;そらビーコン&lt;/a&gt;」をご用意しています。&lt;/p&gt;
+
+&lt;p&gt;そらビーコンは大きく二つのそら用心に最適な理由があります。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-そら用心にセットアップするのが簡単:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;1. そら用心にセットアップするのが簡単&lt;/h4&gt;
+
+&lt;p&gt;iBeaconデバイスをそら用心に登録する場合には「UUID」「メジャー番号」「マイナー番号」という3個の値を設定する必要があります。&lt;/p&gt;
+
+&lt;p&gt;特にUUIDは例えば「550e8400-e29b-41d4-a716-446655440000」のようなとても長い文字列で、これを間違えずに設定するのはスマホを使いなれた人でも難しい手順です。&lt;/p&gt;
+
+&lt;p&gt;しかし、そらビーコンでは簡単に設定できるQRコードが付いており、それを&lt;strong&gt;iPhoneのカメラで撮影するだけで簡単に設定&lt;/strong&gt;できます！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/IMG_1912.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/IMG_1912-169x300.png&#34; alt=&#34;IMG_1912&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-660&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-ibeaconの電波の届く範囲を設定できる:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;2. iBeaconの電波の届く範囲を設定できる&lt;/h4&gt;
+
+&lt;p&gt;そら用心はiBeaconデバイスの発する電波を見つけたときに降水確率をお知らせします。&lt;/p&gt;
+
+&lt;p&gt;もちろん、他の市販されているiBeaconデバイスを利用することができます。&lt;/p&gt;
+
+&lt;p&gt;しかし、通常のiBeaconデバイスではおおよそ数メートルから数十メートル程度ほどが電波の届く距離になっています。玄関にiBeaconデバイスを置いても、これではリビングやキッチンまで電波が届く範囲になってしまい、そら用心は狙った場所で降水確率のお知らせができなくなってしまいます。&lt;/p&gt;
+
+&lt;p&gt;しかし、&lt;strong&gt;そらビーコンは電波の届く距離を調整することができます&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;最短でおおよそ1m、最大でおおよそ100mまで段階的に設定できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;玄関に1mもしくは2mに設定したそらビーコンを設置&lt;/strong&gt;しましょう。そら用心とそらビーコンを組み合わせることで狙った場所で確実に降水確率をお知らせする&amp;gt;ことができます。&lt;/p&gt;
+
+&lt;h2 id=&#34;そら用心とフィードテイラーがこの先に向かうところ:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;そら用心とフィードテイラーがこの先に向かうところ&lt;/h2&gt;
+
+&lt;p&gt;さて、冒頭にもさらっと記述しましたが、&lt;strong&gt;そら用心は家庭向けにiBeacon技術を利用した本格的なアプリとしては国内初&lt;/strong&gt;です。&lt;/p&gt;
+
+&lt;p&gt;振り返ってみますと、iBeaconは&lt;a href=&#34;http://www.appbank.net/2013/09/13/iphone-news/667015.php&#34;&gt;2013年のWWDCにてApple社が発表&lt;/a&gt;し、それから1年半で&lt;a href=&#34;http://dev.classmethod.jp/smartphone/ibeacon-example/&#34;&gt;B2Bやイベントなどのシーンでは多く利用されるように&lt;/a&gt;なってきました。&lt;/p&gt;
+
+&lt;p&gt;しかし、家庭に目を向けてみるとiBeaconの導入は全く行われていません。フィードテイラーは&lt;strong&gt;家庭にiBeaconが導入されることにより確実な位置情報を得ることができ、その情報は新たな社会インフラとなる&lt;/strong&gt;と考えています。その目標と研究の成果の第一弾としてそら用心を発表しました。&lt;/p&gt;
+
+&lt;p&gt;今後もこの研究を推し進め、2015年中には第二弾となるアプリを発表する予定です。&lt;/p&gt;
+
+&lt;p&gt;プレスリリースはこちら。 &lt;a href=&#34;http://feedtailor.jp/press_sorayoujin&#34;&gt;http://feedtailor.jp/press_sorayoujin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そら用心のダウンロードは公式サイトから。 &lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;http://sorayoujin.feedtailor.jp/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

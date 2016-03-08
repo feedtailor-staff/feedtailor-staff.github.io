@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015/02 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2015/02/</link>
+    <description>Recent content in 2015/02 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 04 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2015/02/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（Android版）v2.0.3 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/02/04/763</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/02/04/763</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/app-icon_144x144.png&#34; alt=&#34;app-icon_144x144&#34; width=&#34;144&#34; height=&#34;144&#34; class=&#34;alignnone size-full wp-image-714&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;花粉シーズン到来ということで花粉情報の表示に対応しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:20822b0f47e5f23b132b1163e069b53c&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;花粉情報表示（花粉アイコンをタップすると詳細が表示されます）&lt;/li&gt;
+&lt;li&gt;文字サイズの調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;花粉の予報飛散量を各予報の日付横の花粉アイコンでお知らせします。&lt;/p&gt;
+
+&lt;p&gt;その花粉アイコンをタップするとより詳細が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/02/fce40214074c7dc9125b4265d98796c5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/02/fce40214074c7dc9125b4265d98796c5.png&#34; alt=&#34;20150204_device-2015-02-04-150538 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-764&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;すでに飛び始めているようで、花粉対策にぜひお使いください。&lt;/p&gt;
+
+&lt;p&gt;また、以前ブログでお知らせしたv2.0.0からの進化としては横向きにも対応しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/02/b7ad71130f4c86809ced52e40ed1e5ec.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/02/b7ad71130f4c86809ced52e40ed1e5ec.png&#34; alt=&#34;20150204_device-2015-02-04-150606 のコピー&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-766&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

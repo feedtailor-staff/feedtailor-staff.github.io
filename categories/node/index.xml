@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/categories/node/</link>
+    <description>Recent content in Node on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 31 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>超聖域：SYNCNEL KAIZEN</title>
+      <link>http://staff.feedtailor.jp/2015/07/31/988</link>
+      <pubDate>Fri, 31 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/07/31/988</guid>
+      <description>
+
+&lt;p&gt;サーバサイド担当のくまくら (&lt;a href=&#34;https://twitter.com/kumatch&#34;&gt;@kumatch&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;7/1 から 7/7 まで社内で行われた&lt;a href=&#34;http://feedtailor.jp/wp/?p=14425&#34;&gt;「超聖域」&lt;/a&gt; の成果報告のブログ記事となります。&lt;/p&gt;
+
+&lt;p&gt;私はこれまで &lt;a href=&#34;https://www.syncnel.biz/&#34;&gt;SYNCNEL&lt;/a&gt; のサーバサイドの実装と構築を担当し続けているのですが、今回自由に使っていい一週間あるということで、その SYNCNEL サービスの運用のなか Issue として挙げられている事柄のうち個人的に関心あるものをピックアップして、ある程度の方針決定、あるいは解決に至るまでできるかに時間を充てることにしました。&lt;/p&gt;
+
+&lt;h2 id=&#34;1-サブドメインベースアプリケーション:17417599a4aa11ab0744475e5dd75780&#34;&gt;1. サブドメインベースアプリケーション&lt;/h2&gt;
+
+&lt;p&gt;SYNCNEL では、サービス契約されたお客様ごとに固有の名前を持った識別子を発行して運用しているのですが、この識別子をサービスのサブドメイン部分に据えてより良いサービス提供ができないかという機能案がありましたので、その可能性について調査と仮実装を行ってみました。&lt;/p&gt;
+
+&lt;h3 id=&#34;ドメインをワイルドカードで運用する:17417599a4aa11ab0744475e5dd75780&#34;&gt;ドメインをワイルドカードで運用する&lt;/h3&gt;
+
+&lt;p&gt;何はともあれ、任意のサブドメインを持つドメインアドレスで特定のエントリサーバへリクエストしてもらう必要がありますので、ドメインはワイルドカードで運用することになります。&lt;/p&gt;
+
+&lt;p&gt;たとえば Amazon Route53 では &lt;a href=&#34;http://aws.amazon.com/jp/route53/faqs/#Support_for_wildcard_entries&#34;&gt;全てのレコードタイプによるワイルドカードエントリがサポートされている&lt;/a&gt; ので、これを利用すれば簡単に実現可能です。&lt;/p&gt;
+
+&lt;p&gt;www.example.com という A レコードと *.example.com というワイルドカードな CNAME レコードが存在している場合でも、www.example.com の解決はきちんと A レコードの方になりますので、公式サイトサーバとアプリケーションサーバとを区別して備えるといったことも容易ではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;ただ、利用している DNS サービスによってはワイルドカードエントリが定義不可能なものもあるようです。&lt;/p&gt;
+
+&lt;h3 id=&#34;アクセスコントロール-と-サービスコントロール:17417599a4aa11ab0744475e5dd75780&#34;&gt;「アクセスコントロール」と「サービスコントロール」&lt;/h3&gt;
+
+&lt;p&gt;リクエストを受け付けるサーバ側はどんな構成になるべきかと考えた際に、結論として「サブドメイン部分にあたる会社識別子を用いて会社を特定した上で、どのような問題を解決したいのか」という点でやるべきことが異なるということに至りました。&lt;/p&gt;
+
+&lt;p&gt;たとえば、特定した会社によってシャーディングしたり、リクエスト元の制限や認証方式の切り替えなどを統括して行いたいというのであれば、エントリサーバでそれらの処理を行った上で後ろに控えるアプリケーションサーバへ Proxy するといった体制が考えられます。この体制のポイントとしてアプリケーションサーバで備えているサービス固有の振る舞いとは切り離されていて、アプリケーションレイヤには直接関係のないインフラストラクチャやセキュリティの解決が行えているというところです。アクセスコントロールが主たる目的となります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/07/3e571536dc03bb3a152da5af748424e2.png&#34; alt=&#34;access control&#34; width=&#34;743&#34; height=&#34;490&#34; class=&#34;alignnone size-full wp-image-993&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一方、アプリケーション内で特定した会社ごとに固有な内容に基づく振る舞いを行いたい場合は、アプリケーションサーバ上で直接サブドメイン名による会社の特定と処理を行う必要があります。たとえば簡単な例だとページトップのロゴを変更したりですとか、特定した会社による名前空間内でサービスのための処理を施すなどが考えられます。こういったケースだと、この振る舞いそのものはアプリケーションレイヤに組み込まれるべき実装になっていくことでしょう。こちらは実際のサービス内容を決定する、サービスコントロールが主の目的になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/07/009c9f7a4c31e2ce5119767977c90e13.png&#34; alt=&#34;service control&#34; width=&#34;775&#34; height=&#34;388&#34; class=&#34;alignnone size-full wp-image-994&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;以上で目的がはっきりとしました。&lt;/p&gt;
+
+&lt;p&gt;今回私は、前者のアクセスコントロールのパターンのためのサーバを Node を使って実装してみました。HTTP アクセスしてきたクライアントのリクエストソースからサブドメイン部を抽出して、サーバプロセス内で保持しているルーティング情報に基づいて転送を行うというものです。転送には &lt;a href=&#34;https://github.com/nodejitsu/node-http-proxy&#34;&gt;http-proxy&lt;/a&gt; や &lt;a href=&#34;https://github.com/substack/bouncy&#34;&gt;bouncy&lt;/a&gt; などを利用して、同じことを行ういくつかのサーバプログラムコードを書きました。&lt;/p&gt;
+
+&lt;p&gt;以下のコードは http-proxy を使った例です。ここでは静的に持った情報を元に転送先を決定する処理のみを行っていますが、前述したとおり転送前に個別に設けられたアクセス制限処理を合わせて行うこともできます。またここでは会社情報自体がコードに埋め込まれていますが、別途任意のデータベースに保持しておいてそこから参照すれば情報更新後もサーバの再起動なしに反映、利用することができることでしょう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;br /&amp;gt;var http = require(&amp;quot;http&amp;quot;);
+var httpProxy = require(&amp;quot;http-proxy&amp;quot;);
+var headerHostname = require(&amp;quot;header-hostname&amp;quot;);
+
+var routes = {
+    foo: {
+        host: &amp;quot;172.16.0.1&amp;quot;, port: 8000
+    },
+    bar: {
+        host: &amp;quot;172.16.10.1&amp;quot;, port: 8000
+    }
+};
+
+
+var proxy = httpProxy.createProxyServer({ xfwd: true });
+var server = http.createServer(function(req, res) {
+    var hostname = headerHostname(req.headers);
+    var company = hostname.match(/^([a-z0-9-]+).example.com$/);
+    var route = routes[company] || undefined;
+
+    if (route) {
+        proxy.web(req, res, route);
+    } else {
+        res.writeHead(404, {&#39;Content-Type&#39;: &#39;text/plain&#39;});
+        res.end();
+    }
+});
+
+server.listen(80);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;後者のサービスコントロールパターンの方も実際のアプリケーションサーバ側のコードとして実装して、初アクセス時に会社名を表示したりなどの会社固有の振る舞いを実装してみました。こちらはコード例は割愛します。&lt;/p&gt;
+
+&lt;h2 id=&#34;2-php-5-3-から-php-5-6-への環境移行テスト:17417599a4aa11ab0744475e5dd75780&#34;&gt;2. PHP 5.3 から PHP 5.6 への環境移行テスト&lt;/h2&gt;
+
+&lt;p&gt;SYNCNEL のアプリケーションサーバの一部は PHP で書かれているのですが、その箇所は古い実装体系から継続的に進めてきたため、内部の一部ではより古い PHP コードが残っています。その都合上 PHP 5.3 へのアップグレードを最後に、それ以上のアップグレードを行うことをこれまで行うことができていませんでした。&lt;/p&gt;
+
+&lt;p&gt;今回まとまった時間が用意されたということで、現行のコードを PHP 5.4 以降のものへアップグレードするための考慮点の調査と、実際にアップグレードしてみての移行テストを行いました。やはり古いコードがベースになっているということもあり、PHP の設定値および直接コード側の改変が若干必要でしたが、ひとまずは最新バージョンである PHP 5.6 でアプリケーションサーバの稼働やテストコードによる動作（green）に成功しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://php.net/manual/ja/migration54.new-features.php&#34;&gt;PHP 5.4 の新機能&lt;/a&gt;でコードが比較的楽に書けるようになる（配列は言わずもがなですが、個人的にはクロージャ内での $this 参照が嬉しい）恩恵もありますが、セキュリティアップデートの考慮や、最近では Composer で管理している各 module が requirement している PHP バージョンが 5.4 以降になりはじめていたりなどもあり、すみやかにバージョンアップを行いたいところです。&lt;/p&gt;
+
+&lt;p&gt;表面上動いているように見えるだけという可能性はまだまだ捨てきれないので、今後継続して動作確認を行った上で是非とも本番系への反映を済ませたいと考えています。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Node Express でそこまで取り上げられていないあれこれ</title>
+      <link>http://staff.feedtailor.jp/2014/07/28/267</link>
+      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/07/28/267</guid>
+      <description>
+
+&lt;p&gt;くまくらです。&lt;/p&gt;
+
+&lt;p&gt;私は API サーバを実装する際に Node の Express を利用する事が多いので、今回は使っていて知った事のうち、世間的にはポツポツ程度にしか取り上げられていない事柄をいくつかあげていきます。簡単に Express を利用している初心者レベルを主な対象としています。&lt;/p&gt;
+
+&lt;h2 id=&#34;前置き:55c6b702dfb0305052c66ef6e950d392&#34;&gt;前置き&lt;/h2&gt;
+
+&lt;p&gt;以後の文中にて登場する名称／変数値は、&lt;a href=&#34;http://expressjs.com/4x/api.html&#34;&gt;Express API リファレンス&lt;/a&gt; を始めとした各種ドキュメント内でも扱われているものと同等に、以下のインスタンスを指すこととします。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;app: Application インスタンス&lt;/li&gt;
+&lt;li&gt;req: Request インスタンス&lt;/li&gt;
+&lt;li&gt;res: Response インスタンス&lt;/li&gt;
+&lt;li&gt;routes: Application インスタンスによるURLルート定義にてマッピングされた Middleware&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;app-req-res-のライフサイクルについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app, req, res のライフサイクルについて&lt;/h2&gt;
+
+&lt;p&gt;本当に基本的なことですが、Express による Web アプリケーションの根幹となる app インスタンスは、インスタンス作成時から各種セットアップ、サーバ Listen を行い始めた後も永続し、Listen を終了（Express アプリケーションを終了）させるまでは残り続けます。&lt;/p&gt;
+
+&lt;p&gt;一方、Middleware の引数として用いられる req, res の両インスタンスは、クライアントからのリクエストを受信し処理を開始した時点で生成、初期化され、Middleware による遷移処理が終了したあとに消滅します。&lt;/p&gt;
+
+&lt;p&gt;以上のことから、app インスタンスは Web アプリケーション全体に関わるグローバル／汎用的な情報を保持すること、req, res インスタンスはクライアント固有の情報を保持する存在である捉えたほうがよさそうです。従って app インスタンスは Listen 時点ではもう情報が完成しており、req, res インスタンスはリクエスト受信時から応答結果を返すまで如何様にも情報操作を行うことができる対象であると言えます。&lt;/p&gt;
+
+&lt;h2 id=&#34;app-request-app-response:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app.request, app.response&lt;/h2&gt;
+
+&lt;p&gt;req, res の両インスタンスは最初の Middleware へ与えられる直前（厳密には内部で実行される最初の暗黙の Middleware で）app.request, app.response を prototype として設定されます。この app.request, app.response はそれぞれ Express モジュールが提供する Request, Response インスタンスを prototype とするオブジェクトです。&lt;/p&gt;
+
+&lt;p&gt;app.request, app.response 共に app インスタンスを生成した時点で用意されるため、例えば Web アプリケーション固有のリクエスト処理やレスポンス処理をメンバ関数に定義しておけば、Middleware、あるいは routes でそれらを利用することができます。&lt;/p&gt;
+
+&lt;pre&gt;var app = express();
+
+app.request.getAwesomeHeader = function () {
+    return this.headers[‘x-awesome&#39;] || null;
+};
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;任意の値に-middleware-でアクセスしたい話:55c6b702dfb0305052c66ef6e950d392&#34;&gt;任意の値に Middleware でアクセスしたい話&lt;/h2&gt;
+
+&lt;p&gt;Express を利用しはじめた人が行き当たる話で、任意の値（変数）を Middleware、特に routes 以下で利用するにはどうすればよいかというのものがあります。例えば app インスタンスの set() した値を参照したい、あるいは app.js で作成した値を routes 以下で参照したいなどです。基本的には好きなようにやってよいと思っていますので、いくつかの手段を紹介します。用途あるいは好みとしてフィットする方法を選んで使ってみてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-req-app-res-app:55c6b702dfb0305052c66ef6e950d392&#34;&gt;1. req.app, res.app&lt;/h3&gt;
+
+&lt;p&gt;実は req, res それぞれは app インスタンスをメンバとして保持していますので、それを利用することができます。&lt;/p&gt;
+
+&lt;pre&gt;exports.view = function (req, res) {
+    var app = req.app;
+    var title = app.get(&#34;title&#34;);
+    // ....
+};
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-前面にある-middleware-で仕込む:55c6b702dfb0305052c66ef6e950d392&#34;&gt;2. 前面にある Middleware で仕込む&lt;/h3&gt;
+
+&lt;p&gt;利用したい値を比較的早い段階の Middleware で req などに予め設定しておきます。前述したように req インスタンスはリクエスト毎のライフサイクルを持っているので、リクエストクライアント固有の情報などを扱う場合はこちらの方法がよさそうです。&lt;/p&gt;
+
+&lt;pre&gt;app.use( function (req, res, next) {
+    req.domains = {
+        flow : “awesome&#34;
+    }
+});
+app.use(&#34;/users&#34;, routes.users);
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-middleware-routes-作成時の引数として任意の変数を与える:55c6b702dfb0305052c66ef6e950d392&#34;&gt;3. Middleware / routes 作成時の引数として任意の変数を与える&lt;/h3&gt;
+
+&lt;p&gt;Middleware, routes の実装時、それらを作成する関数として exports する体制にしておけば、require() 時に引数を与えてインスタンスを作成しつつ、Middleware 側で与えられた引数を用いた処理ができるようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;routes/items.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;module.exports = function (services) {
+    return {
+        index: function (req, res, next) {
+           if (services.is_awesome) {
+               res.send(200, “Success !!”);
+           }
+        }
+    };
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;app.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;app.use(“/items”, require(“./routes/items”)(services));
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;view-のキャッシュについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;view のキャッシュについて&lt;/h2&gt;
+
+&lt;p&gt;Production 環境で稼働している、あるいは res.render() のオプションに cache = true を付与することで、view に対してキャッシュが有効となりますが、これはレンダリング処理に関わる各種情報のキャッシュであり、ページキャッシュではありません。&lt;/p&gt;
+
+&lt;p&gt;Express で HTML ページをレンダリングするシチュエーションは大抵動的ページになると思いますが、ほんの僅かな時間でもページキャッシュをして処理を軽くしたいケースはありそうです。res.render() の第３引数にコールバック関数を設定すれば HTML ページの実体が得られるので、これを利用することでページキャッシュの振る舞いを自前で用意することができます。なお res.render() にコールバック関数を与えるとクライアントへの送出処理が省略されるため、自分で res.send() する必要があります。&lt;/p&gt;
+
+&lt;pre&gt;var caches = {};  // ※ Middleware スコープ外
+
+
+/// 注釈, 以下 middleware 内の処理
+
+if (caches[id]) {
+    res.send(caches[id]);
+} else {
+    res.render(“view.jade”, values, function (err, content) {
+        if (err) {
+            next(err);
+        } else {
+            caches[id] = content;
+            res.send(content);
+        }
+    });
+}
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;おまけ-routes-以下に設置したファイルの読み込みを楽にする:55c6b702dfb0305052c66ef6e950d392&#34;&gt;おまけ: routes 以下に設置したファイルの読み込みを楽にする&lt;/h2&gt;
+
+&lt;p&gt;Express 固有の話ではありませんが、いくつかの routes 定義ファイルを１つずつ require() していくのは若干面倒です。そこで &lt;a href=&#34;https://github.com/troygoode/node-require-directory&#34;&gt;require-directory&lt;/a&gt; モジュールを利用すると、指定するディレクトリ以下にある全てのファイルを１つのオブジェクトへまとめて exports オブジェクトへ再帰的にマッピングしてくれるため、ルーティング定義時が少し楽になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;routes/index.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;var requireDirectory = require(&#39;require-directory&#39;);
+module.exports = requireDirectory(module);
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;app.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;var routes = require(&#39;./routes&#39;);
+
+app.use(&#39;/users&#39;,    routes.users);
+app.use(&#39;/blogs&#39;,    routes.blogs);
+app.use(&#39;/login&#39;,    routes.auth.login);
+app.use(&#39;/register&#39;, routes.auth.register);
+&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cocos2d X on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/tags/cocos2d-x/</link>
+    <description>Recent content in Cocos2d X on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 05 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/tags/cocos2d-x/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>超聖域：Cocos2d-xでスライドパズルを作った</title>
+      <link>http://staff.feedtailor.jp/2015/08/05/1003</link>
+      <pubDate>Wed, 05 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/08/05/1003</guid>
+      <description>
+
+&lt;p&gt;ブログを投稿するのは初めてになります。フィードテイラーでは今一番新入りのアンコウテルオ（通称アンテル）です。&lt;/p&gt;
+
+&lt;p&gt;さて、入社して間もなく&lt;a href=&#34;http://feedtailor.jp/wp/?p=14425&#34;&gt;社内1週間ハッカソン「超聖域」を行うことにしました (7月1日 〜 7月7日)&lt;/a&gt;というイベントが開催されました。&lt;/p&gt;
+
+&lt;p&gt;タイトルにもある通り、私はスライドパズルというカジュアルゲームを作ってみました。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;作ったもの-スライドパズル:959da355a9770454b841293ecd8b7966&#34;&gt;作ったもの -&amp;gt; スライドパズル&lt;/h2&gt;
+
+&lt;p&gt;スライドパズルって何？って方はGoogle画像検索してもらえれば「あーこれね！」ってなるんじゃないでしょうか。そうです、よくお土産物屋なんかで見かけるパズルの玩具ですね。15パズルとも呼ばれます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.google.co.jp/search?q=%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%83%91%E3%82%BA%E3%83%AB&amp;amp;es_sm=91&amp;amp;qscrl=1&amp;amp;source=lnms&amp;amp;tbm=isch&amp;amp;sa=X&amp;amp;ved=0CAcQ_AUoAWoVChMI17uC9KD_xgIVgaSUCh2qiQSV&amp;amp;biw=1609&amp;amp;bih=1318&#34;&gt;スライドパズル &amp;#8211; Google 検索&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;で、少々殺風景ながら実際の画面がこんな感じ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3223.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-1008&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3223-168x300.png&#34; alt=&#34;IMG_3223&#34; width=&#34;168&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;デバッグ表示なんかも出たまんまでありますが、デモということでご了承ください。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;使ったもの-cocos2d-x-c:959da355a9770454b841293ecd8b7966&#34;&gt;使ったもの -&amp;gt; Cocos2d-x(C++)&lt;/h2&gt;
+
+&lt;p&gt;Cocos2d-xとは、クロスプラットフォームでの2Dゲーム開発に特化したゲーム開発フレームワークです。国内でもモンストなど数々のヒットゲームアプリでも使用されています。&lt;/p&gt;
+
+&lt;p&gt;クロスプラットフォーム対応ということで、iOS、AndroidなどOSの垣根を越えた開発が容易なため、個人で開発されてる方々にも人気が高い印象。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jp.cocos.com/&#34;&gt;Cocos2d-x: オープンソースゲーム開発プラットフォーム&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このCocos2d-x、言語としては以下の言語で開発できます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C++&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Javascript&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Lua&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今回はC++で開発しました。理由はC++を書いてみたかった！というだけです。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;個人的な超聖域に対してのコンセプト:959da355a9770454b841293ecd8b7966&#34;&gt;個人的な超聖域に対してのコンセプト&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;――未習得技術を使って一週間（5日間）でどこまでできるか？&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;実際まったく新しいことを、これだけの期間取って1から習得（学習）するというのは、最近ではなかなか無かったので、久しぶりにどこまで出来るか試してみたいという気持ちがありました。&lt;/p&gt;
+
+&lt;p&gt;ちなみに私は普段Webエンジニアとして働いています。なのでC++を触る機会は普段0です。&lt;/p&gt;
+
+&lt;p&gt;もちろん基本的な文法はWebの言語にも通じるところは多々ありますが、画像を表示-&amp;gt;アニメーション-&amp;gt;その結果を判定して……など、普段Webのバックエンドの開発とは実装する内容が違うので、まっさらな感覚です。&lt;/p&gt;
+
+&lt;p&gt;果たして動くデモまで作ることが出来るのか……という不安を抱えながらでしたが、最低限デモ出来るまでに作ることができました。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;成果物:959da355a9770454b841293ecd8b7966&#34;&gt;成果物&lt;/h2&gt;
+
+&lt;p&gt;ではどんな感じで出来上がったかというのがこちら。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3222.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-1010&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3222-168x300.png&#34; alt=&#34;IMG_3222&#34; width=&#34;168&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一応それっぽく形だけタイトル画面も用意。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3223.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-1008&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3223-168x300.png&#34; alt=&#34;IMG_3223&#34; width=&#34;168&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;隣り合ったマスが空いているパネルをタップすると、空いている方向へスライドアニメーション。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3224.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-1011&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3224-168x300.png&#34; alt=&#34;IMG_3224&#34; width=&#34;168&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「15」を動かせば完成というクリア間近の状態。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3225.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-1012&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/IMG_3225-168x300.png&#34; alt=&#34;IMG_3225&#34; width=&#34;168&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;すべて然るべき位置に揃えると「16」のパネルが埋まってクリア表示。&lt;/p&gt;
+
+&lt;p&gt;この後もう一度プレイする or タイトル画面に戻るというだけ。お土産物の玩具の要件を満たしたくらいの感じですね。&lt;/p&gt;
+
+&lt;p&gt;やはりデジタルなゲームとして作る以上はちょっと寂しいので、タイマーを付けたり、パズルのバリエーションを増やしたり、あとはもっと見た目をリッチにしたりと色々やり残した感はあります。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;拘ったポイントとしては、初期のパネル配置。これは完全にランダムで配置してしまうとクリアできない詰みの状態が発生しまので、ちゃんとパネルが揃った状態で配置してから、辻褄が合うようにシャッフルしています。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;さいごに:959da355a9770454b841293ecd8b7966&#34;&gt;さいごに&lt;/h2&gt;
+
+&lt;p&gt;一週間まるまる「業務以外で何してもいいよ」というのは、楽しみな反面いざ直面すると、何をするかの選択など、なかなかに戸惑うこともありました。&lt;/p&gt;
+
+&lt;p&gt;今となっては、ここはもっと準備しておけば！といった反省点もありますが、新しいことを1からやってみてリフレッシュにもなったし、自分の幅も少しは広がったと感じています。&lt;/p&gt;
+
+&lt;p&gt;そして、こういった取り組みを業務の時間を使ってチャレンジさせてもらえる環境が非常にありがたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

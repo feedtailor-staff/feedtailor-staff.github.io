@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/09/03 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/09/03/</link>
+    <description>Recent content in 2014/09/03 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 03 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/09/03/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>雨雲予測アプリ そらレーダー v1.0.2 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/09/03/361</link>
+      <pubDate>Wed, 03 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/09/03/361</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/3a32a3262646918bc6b4c57662b6c293.png&#34; alt=&#34;Icon-60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-305&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ご好評いただいている雨雲予測アプリ「そらレーダー」の v1.0.2 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;起動時やツールバーダブルタップで表示される情報を「直前の実況」にできる設定を追加&lt;/li&gt;
+&lt;li&gt;バックグランドで位置情報が更新されないことがある問題を修正&lt;/li&gt;
+&lt;li&gt;そのほか安定性の向上&lt;/li&gt;
+&lt;li&gt;広告SDK更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;冒頭の設定ですが、こういう項目が追加されました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/146c228c2cc3e1bfbc29ead442bc1d56.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/146c228c2cc3e1bfbc29ead442bc1d56-168x300.png&#34; alt=&#34;20140903_iOSシミュレータのスクリーンショット 2014.09.03 10.27.26 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-362&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この設定を「直前の実況」にすると、アプリ起動時やツールバーダブルタップ時に表示される情報が文字通り直前の実況データになります。（v1.0.1までは常に直後の予測データが表示されていました）&lt;/p&gt;
+
+&lt;p&gt;今から雨が降るのか、今雨が降っているのか、どちらをメインにしりたいかというのがユーザさんによってそれぞれだと思いますので、こちらの設定で切り替えてお使いください。&lt;/p&gt;
+
+&lt;p&gt;また、その他にもいくつかのバグ修正を行っています。フィードバックをいただいたユーザのみなさんどうもありがとうございました。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方も是非どうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

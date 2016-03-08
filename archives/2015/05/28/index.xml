@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015/05/28 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2015/05/28/</link>
+    <description>Recent content in 2015/05/28 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 28 May 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2015/05/28/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内 Windows Phone版を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/05/28/933</link>
+      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/05/28/933</guid>
+      <description>&lt;p&gt;最近XAMLばかり書いていたせいでたまにAutoLayoutをみてナニソレ的な感じで戸惑ってばかり（もうすくWWDCなのに）の itok です。&lt;/p&gt;
+
+&lt;p&gt;さて、ついに公開します。そら案内のWindow Phone版。&lt;/p&gt;
+
+&lt;p&gt;いやこれもほんとの話。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34; alt=&#34;Square150x150Logo-100&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-full wp-image-801&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.windowsphone.com/s?appid=3c58bc49-0e28-4f1d-9e4c-2fea72a8990e&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/Japanese_wphone_black_258x67.png&#34; alt=&#34;Japanese_wphone_black_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-934&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらは Windows版と違って、iPhone/Android版と類似のインターフェースでまとめてみました。機能的にはもちろんWindows版と同じです。&lt;/p&gt;
+
+&lt;p&gt;今日・明日の予報。地域切り替えは左右フリックで。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_1.png&#34; alt=&#34;20150527_1&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-935&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;週間予報と、注警報表示。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_3.png&#34; alt=&#34;20150527_3&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-936&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気概況。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_2.png&#34; alt=&#34;20150527_2&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-937&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;右上のメニューから各種天気画像も表示できます。これは気象衛星。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_4.png&#34; alt=&#34;20150527_4&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-938&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アメダスももちろん各種情報を表示。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_5.png&#34; alt=&#34;20150527_5&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-939&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PM2.5や黄砂予測も搭載。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_6.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_6.png&#34; alt=&#34;20150527_6&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-940&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;同じくメニューから生物季節情報も。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_7.png&#34; alt=&#34;20150527_7&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-941&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もちろんですが、これで天気に関する情報は一通り見ることができるのではないかと思います&lt;/p&gt;
+
+&lt;p&gt;無料ですので皆さんぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.windowsphone.com/s?appid=3c58bc49-0e28-4f1d-9e4c-2fea72a8990e&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/Japanese_wphone_black_258x67.png&#34; alt=&#34;Japanese_wphone_black_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-934&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;といいたいところですが、なかなか国内で Windows Phone の販売って始まらないですね・・・（開発もVMにのったWindows上でのシミュレータで行われました）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/2056095f12de3800c932439480761d2f.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/2056095f12de3800c932439480761d2f-300x281.png&#34; alt=&#34;20150527_スクリーンショット 2015-05-27 9.37.49 のコピー&#34; width=&#34;300&#34; height=&#34;281&#34; class=&#34;alignnone size-medium wp-image-944&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このあたり楽しみですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.mouse-jp.co.jp/phone/madosma/&#34; target=&#34;_blank&#34;&gt;&amp;lt;窓&amp;gt;とあなたが、もっとつながる。 Windows OS搭載スマートフォン「MADOSMA」 | BTOパソコン・PC通販ショップのマウスコンピューター&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あとはここも。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.freetel.jp/eshop/pdf_data/WindowsPhone_pressrelease_jp.pdf&#34; target=&#34;_blank&#34;&gt;最新 Windows Phone OS 搭載スマートフォン、 2015 年夏までに国内発売予定のお知らせ | freetel（フリーテル）&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なんにしても早く出てーってことで。そら案内もぜひよろしくお願いします。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

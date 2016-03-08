@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015/03/31 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2015/03/31/</link>
+    <description>Recent content in 2015/03/31 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 31 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2015/03/31/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内 for Windows を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/03/31/798</link>
+      <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/03/31/798</guid>
+      <description>
+
+&lt;p&gt;iOS/Mac/Androidでの定番お天気アプリ「そら案内」がついにWindows ストアにも登場しました！&lt;/p&gt;
+
+&lt;p&gt;いやこれほんとの話です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34; alt=&#34;Square150x150Logo-100&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-full wp-image-801&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;基本的な機能としては既存の「そら案内」を踏襲していますが、Windows ストアアプリたるべく、インターフェースは一から検討し直しました。&lt;/p&gt;
+
+&lt;p&gt;その結果、こうなりました。どんっ！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_1.png&#34; alt=&#34;20150326_1&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-803&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一画面でほとんどすべての主要な情報を網羅しています。左から、今日明日の天気、注警報、週間予報、ですね。&lt;/p&gt;
+
+&lt;p&gt;今日明日の天気では、3時間ごとの予報も一緒に表示されます。背景のグラフは気温の変化グラフ。&lt;/p&gt;
+
+&lt;p&gt;これを横にスクロールすると、概況や生物季節情報もまとめて表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_2.png&#34; alt=&#34;20150326_2&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-804&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;地域切り替えはWindowsのアプリバーを表示する要領で上からスワイプ、あるいは、右上の日本地図アイコンをタップしてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/4b91d3648e08868e7a5cda349a7443ca.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/4b91d3648e08868e7a5cda349a7443ca.png&#34; alt=&#34;20150326_screenshot_03262015_135122 のコピー&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-805&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;注警報の有無もこの一覧で把握できるようになっています。右端の「+」ボタンで地域の追加削除が可能です。位置情報を元にした「現在地の天気」も設定可能です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/screenshot_03272015_103128.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/screenshot_03272015_103128.png&#34; alt=&#34;screenshot_03272015_103128&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-821&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、タイル表示にも対応しておりますので、スタート画面にて現在地の天気予報を簡単に確認することもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_4.png&#34; alt=&#34;20150326_4&#34; width=&#34;600&#34; height=&#34;400&#34; class=&#34;alignnone size-full wp-image-810&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ただ、残念ながら、現時点（v1.0）では既存の「そら案内」にある天気画像（アメダスや雨雲レーダなど）の表示には対応しておりません。こちらは4月中の公開（v1.1）に向けて今もがりがりとコードを書いているところですので、今しばらくお待ちください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;余談:183109533a870edef8e0bf84d13f407c&#34;&gt;余談&lt;/h4&gt;
+
+&lt;p&gt;このWindowsアプリ、Mac歴27年の私itokがつくりました。いやこれほんとに。&lt;/p&gt;
+
+&lt;p&gt;C#とXAML、Visual Studioでつくったネイティブアプリです。Android版も作っているのでXamarinを使うという選択肢もあるにはあったんですが、Android版を作り始めたのとWindows版の話がでてきた時期がずれていたことと、Windows版はタブレット用だったので共通化して作るというより個別にやったほうがいいものが早くできるのではないかという判断でこうなりました。&lt;/p&gt;
+
+&lt;p&gt;Objective-C、Swift、Java、C#、それからたまにJavaScript（node.js用）を転々とする日々はなかなかスリリングでしたけれども、とりあえず一段落できてよかったです。Visual StudioとAndroid StudioとXcodeが一つの画面に共存していることもしばしばでしたね。もちろん、v1.1に向けて今も熱意実装中ですけれども。&lt;/p&gt;
+
+&lt;p&gt;特に&lt;a href=&#34;http://meta-glamour.com&#34; target=&#34;_blank&#34;&gt;メタ・グラマー様&lt;/a&gt;にはまさかのWindows版のデザイン依頼という無理難題をお願いしましたが、本当にご協力ありがとうございました。&lt;/p&gt;
+
+&lt;p&gt;永遠のWindows初心者のつもりだったのに、まさか終礼で.NETやXAMLについての新発見を話す日が来るとはね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/4bbbfc3d2e2e905a903b352b067132261.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/4bbbfc3d2e2e905a903b352b067132261.jpg&#34; alt=&#34;20150327_IMG_7212 のコピー&#34; width=&#34;600&#34; height=&#34;450&#34; class=&#34;alignnone size-full wp-image-824&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これでitokもWindowsのアプリをどんどん作るのかというと決してそういうわけではなく、じゃあなんで作ったのかといえばいうまでもなく「&lt;strong&gt;それは『そら案内』だから&lt;/strong&gt;」なのです。これ一番大事。C#は結構好きになりましたけどね。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そら案内 for Windows、もちろん&lt;strong&gt;無料&lt;/strong&gt;です。Windowsユーザの皆さん、ぜひお使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

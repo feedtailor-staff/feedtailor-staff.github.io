@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015/04 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2015/04/</link>
+    <description>Recent content in 2015/04 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 30 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2015/04/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（Android版）v2.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/04/30/901</link>
+      <pubDate>Thu, 30 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/30/901</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/app-icon_144x144.png&#34; alt=&#34;app-icon_144x144&#34; width=&#34;144&#34; height=&#34;144&#34; class=&#34;alignnone size-full wp-image-714&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Windows版やiOS版のアップデートが続いていましたが、今度はAndroid版のアップデートです。&lt;/p&gt;
+
+&lt;p&gt;夏に備えて台風情報に対応しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:65e048ce73dc0ffa8599ca83bbe04f24&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;台風表示への対応&lt;/li&gt;
+&lt;li&gt;日付変更直後に翌日の予報が空になることがある問題を修正&lt;/li&gt;
+&lt;li&gt;レーダ画像表示時に自動更新されないことがある問題を修正&lt;/li&gt;
+&lt;li&gt;黄砂表示の修正&lt;/li&gt;
+&lt;li&gt;安定性の向上&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;台風はまだそれほど発生しておりませんが（とはいえ、この記事を書いている時点ですでに5号まで発生しています）、夏に向けては気になる情報になってくるのではないかと。&lt;/p&gt;
+
+&lt;p&gt;ほかにもユーザの皆様からいただいたフィードバックを元にいろいろと改善しておりますので、まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>フィードテイラーのここが変わってる！「今日の新発見」編</title>
+      <link>http://staff.feedtailor.jp/2015/04/30/908</link>
+      <pubDate>Thu, 30 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/30/908</guid>
+      <description>
+
+&lt;p&gt;はじめまして、&lt;a href=&#34;http://feedtailor.jp&#34;&gt;フィードテイラー&lt;/a&gt;の新人／最年長の tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;新人と言っても既に4ヶ月経ってしまいました。世間の新入社員は4ヶ月でどれくらい成長するんでしょうか。&lt;/p&gt;
+
+&lt;p&gt;それはともかくとして、今回は弊社の一日の流れをご紹介したいと思います。&lt;/p&gt;
+
+&lt;p&gt;このブログをご覧になっている方でしたらご存じかもしれませんが、&lt;a href=&#34;http://feedtailor.jp/wp/&#34;&gt;弊社代表の大石&lt;/a&gt;はかなり就労環境に対して先進的な考えを持っており、各所で&lt;a href=&#34;http://gmba.jp/2015-02-19-15-20-41/44-opinions/1219-opinion-oishi-vol2.html&#34;&gt;情報発信&lt;/a&gt;したりメディアに取り上げられています。&lt;/p&gt;
+
+&lt;p&gt;変わった制度は色々ありますが、&lt;strong&gt;残業禁止&lt;/strong&gt;、&lt;strong&gt;副業推奨&lt;/strong&gt;、&lt;strong&gt;SNS推奨&lt;/strong&gt;、&lt;strong&gt;エンジニアの電話／メール禁止&lt;/strong&gt;、&lt;a href=&#34;http://feedtailor.jp/wp/?p=178&#34;&gt;Mac&lt;/a&gt;や[iPad]()、最近では&lt;a href=&#34;http://feedtailor.jp/wp/?p=14361&#34;&gt;&lt;strong&gt;Apple Watchの購入支援&lt;/strong&gt;&lt;/a&gt;など。Windows禁止の時期もあったようです（今も？）。&lt;/p&gt;
+
+&lt;h4 id=&#34;残業禁止:06bfe9762bf86195123d9bef496e49fe&#34;&gt;残業禁止&lt;/h4&gt;
+
+&lt;p&gt;最近、耳にする機会が増えたIT系での残業禁止ですが、弊社ではかなり前から取り組んでいます。&lt;/p&gt;
+
+&lt;p&gt;実際に（緊急時を除き）ほとんど&lt;strong&gt;毎日 17:50 には誰もいません！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;残業禁止といっても残業代が支払われないだけでサービス残業しているケースはよくありますが、本当に帰ってます。&lt;/p&gt;
+
+&lt;p&gt;それを支えているのが、&lt;strong&gt;毎日朝夕２回のミーティング&lt;/strong&gt;です。&lt;/p&gt;
+
+&lt;h4 id=&#34;朝ミーティング:06bfe9762bf86195123d9bef496e49fe&#34;&gt;朝ミーティング〜&lt;/h4&gt;
+
+&lt;p&gt;毎朝9:00から5分程度全員でその日やるべき事、御客様からのフィードバックや打合せの時間調整／報告などを確認します。&lt;/p&gt;
+
+&lt;p&gt;終わったら直ぐに各自仕事を始めます。社内の会話は slack や twitter、場合によっては Redmine のチケット上で行われるのでほとんど会話はありません。当然電話もメールも来ないのでひたすらコードを書き続けています。&lt;/p&gt;
+
+&lt;p&gt;12:00〜12:45 の昼休みを挟んで午後ももくもくと作業を続けます。&lt;/p&gt;
+
+&lt;p&gt;その後、17:00 頃から各自日報を slack に投げ始め、17:15 から夕方ミーティング。終わったら定時に帰るという流れです。&lt;/p&gt;
+
+&lt;h4 id=&#34;夕方ミーティング:06bfe9762bf86195123d9bef496e49fe&#34;&gt;夕方ミーティング&lt;/h4&gt;
+
+&lt;p&gt;入社して一番驚いたのがこの夕方ミーティングです。&lt;/p&gt;
+
+&lt;p&gt;各自3分間程度、その日の作業内容を報告（発表）します。日報を出すことは普通にあると思いますが、&lt;strong&gt;発表&lt;/strong&gt;というのが肝で。&lt;/p&gt;
+
+&lt;p&gt;その日の作業でこんな物作りましたとか、ここまで動くようになりましたとか、画面に映して発表します。ほぼ毎日、みんな動く物を出してくるのであまり作業が進まなかった日はなかなかつらいです。16:00頃から何を発表しようか考え出して、何もなければ何とか見せられるものを作ろうと追い込みを掛けます。もしかしたら15:00〜17:00が一番集中している時間帯かも知れません。&lt;/p&gt;
+
+&lt;h4 id=&#34;今日の新発見:06bfe9762bf86195123d9bef496e49fe&#34;&gt;今日の新発見&lt;/h4&gt;
+
+&lt;p&gt;夕方ミーティングではもう一つ「&lt;a href=&#34;http://feedtailor.jp/wp/?p=8384&#34;&gt;今日の新発見&lt;/a&gt;」というものを発表しなければいけません。&lt;/p&gt;
+
+&lt;p&gt;発表する内容は技術的な事柄であれば何でもいいのですが、みなさん&lt;strong&gt;毎日発見はありますか？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;毎日はないですよね。私もないです。&lt;/p&gt;
+
+&lt;p&gt;作業中に気づいたちょっとしたTipsでもあればいいのですが、そんなもの毎日は見つかりません。なのでSNS、技術系ポータルサイトやブログを普段から見まくって話すネタを探しています。&lt;/p&gt;
+
+&lt;p&gt;これだけ書くとなんだか面倒くさいことをやっているようにしか聞こえませんが、なれてくると案外コレが楽しくって。むしろすごく重要な事ではないかと思えてきます。&lt;/p&gt;
+
+&lt;p&gt;同僚と話題がかぶらないように、&lt;strong&gt;自分の得意分野を探すきっかけ&lt;/strong&gt;にもなります。&lt;/p&gt;
+
+&lt;p&gt;毎日同じ物を作り続けていると、どうしても頭の中がソレだけになったりしませんか?&lt;/p&gt;
+
+&lt;p&gt;今使っている技術や手法に縛られて視野が狭くなってしまいがちです。私は以前そうでした。&lt;/p&gt;
+
+&lt;p&gt;が、技術は日々進歩しています。&lt;/p&gt;
+
+&lt;p&gt;一度遅れをとると、追いつくには相当な努力が必要だと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;普段からアンテナを張っておくと自然と色々なことに興味がわいてきて、作りたいモノや試したいことが増えます&lt;/strong&gt;（たぶん）。&lt;/p&gt;
+
+&lt;p&gt;こうなるともはや発表は関係ないです。見事に術中にはまってます(?)。&lt;/p&gt;
+
+&lt;p&gt;弊社が&lt;a href=&#34;https://itunes.apple.com/us/app/sora-youjin/id910413680?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;アレ&lt;/a&gt;や&lt;a href=&#34;https://itunes.apple.com/jp/app/8bitter/id600772761?mt=8&#34;&gt;コレ&lt;/a&gt;や&lt;a href=&#34;https://itunes.apple.com/jp/app/fu-haobukku-zhenno-jian-kaiki/id576560440?mt=8&#34;&gt;ソレ&lt;/a&gt;や幾つもネタアプリを作っている源の一つはコレかも知れません。&lt;/p&gt;
+
+&lt;p&gt;長くなりましたが、技術のフォローアップはもちろん、就労時間にメリハリを付けるためにも、朝／夕方ミーティングや「今日の新発見」を導入してみてはいかがでしょうか？&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>玄関に行けば降水確率を声でお知らせする「そら用心」のver1.2.2をリリースしました!通知する時間帯の設定でより便利に</title>
+      <link>http://staff.feedtailor.jp/2015/04/28/890</link>
+      <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/28/890</guid>
+      <description>
+
+&lt;p&gt;フィードテイラーの赤魔道士&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。こんにちは。&lt;/p&gt;
+
+&lt;p&gt;Apple Watchの発売開始から数日が経ちました。みなさんはもう入手されましたか？&lt;/p&gt;
+
+&lt;p&gt;私は…入手できるのはまだ少しだけ先になりそうです。とても待ち遠しいですね。やはり、手首で通知を受け取れるのはとても便利そうです。&lt;/p&gt;
+
+&lt;p&gt;そら用心がApple Watchに完全対応したしたことは先週お伝えした通りです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2015/04/23/866&#34; title=&#34;玄関に行けば降水確率を声でお知らせする「そら用心」のver1.2.0をリリースしました!Apple Watch対応とOne more thingは…おばちゃん？&#34;&gt;玄関に行けば降水確率を声でお知らせする「そら用心」のver1.2.0をリリースしました!Apple Watch対応とOne more thingは…おばちゃん？&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;新しい「お知らせボイス」で私の一番の推しメンは「よしえ」なのですが、みなさんは誰が一番好みでしょうか？&lt;/p&gt;
+
+&lt;h3 id=&#34;通知する時間帯の設定ができるようになりました:94ebfe3e20f54a68a23fa8b176153f83&#34;&gt;通知する時間帯の設定ができるようになりました&lt;/h3&gt;
+
+&lt;p&gt;そら用心のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://appsto.re/i6Ld6Zk&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今までのそら用心ではビーコンの近くに行くといつでも通知を行っていました。しかし、ビーコンに近い場所で寝ている場合などでは夜中でも通知が来て非常に煩わしいというお声をいただいておりました。できるだけ確実に降水確率をお伝えすべく努力していましたが、それが仇となり利便性を下げている結果となり、残念に思います。&lt;/p&gt;
+
+&lt;p&gt;今回、そら用心のver1.2.2では通知する時間帯の設定ができるようになりました！&lt;/p&gt;
+
+&lt;p&gt;これで、「朝出かける時間の7時から9時まで」や「夜に遊びに行く時の20時から21時まで」などのようにご自身のスタイルに合わせてカスタマイズできるようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/schedule5.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/schedule5-175x300.jpg&#34; alt=&#34;そら用心 通知する時間帯の設定&#34; width=&#34;175&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-892&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;通知する時間帯の設定の方法:94ebfe3e20f54a68a23fa8b176153f83&#34;&gt;通知する時間帯の設定の方法&lt;/h3&gt;
+
+&lt;p&gt;ビーコンの通知の設定画面から設定が可能です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/home2.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/home2-175x300.jpg&#34; alt=&#34;home2&#34; width=&#34;175&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-893&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/schedule1.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/schedule1-175x300.jpg&#34; alt=&#34;schedule1&#34; width=&#34;175&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-894&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;詳しい設定方法は&lt;a href=&#34;http://sorayoujin.feedtailor.jp/notification.html#timezone&#34;&gt;公式サイトの「通知の設定」&lt;/a&gt;をごらんください。&lt;/p&gt;
+
+&lt;h3 id=&#34;おわりに:94ebfe3e20f54a68a23fa8b176153f83&#34;&gt;おわりに&lt;/h3&gt;
+
+&lt;p&gt;そら用心はより便利に、そしてより身近に溶け込んでいくように進化していきます。これからもご期待ください。&lt;/p&gt;
+
+&lt;p&gt;そらビーコンの電池が切れている場合は近所のコンビニやAmazonなどで&lt;a href=&#34;http://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;amp;url=search-alias%3Delectronics&amp;amp;field-keywords=CR-2450&#34;&gt;CR-2450&lt;/a&gt;の電池をお買い求めください。&lt;/p&gt;
+
+&lt;p&gt;そら用心のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://appsto.re/i6Ld6Zk&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そらビーコンのご購入はこちらから。&lt;a href=&#34;http://sorabeacon.theshop.jp/items/924428&#34;&gt;http://sorabeacon.theshop.jp/items/924428&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そら用心の公式サイトはこちら。 &lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;http://sorayoujin.feedtailor.jp/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>玄関に行けば降水確率を声でお知らせする「そら用心」のver1.2.0をリリースしました!Apple Watch対応とOne more thingは…おばちゃん？</title>
+      <link>http://staff.feedtailor.jp/2015/04/23/866</link>
+      <pubDate>Thu, 23 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/23/866</guid>
+      <description>
+
+&lt;p&gt;フィードテイラーの赤魔道士&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。こんにちは。&lt;/p&gt;
+
+&lt;p&gt;いよいよApple Watchの発売日が近づいてきました。みなさんはどのモデルを買いますか？&lt;/p&gt;
+
+&lt;p&gt;私は&lt;a href=&#34;http://store.apple.com/jp/buy-watch/apple-watch?product=MJ432J/A&amp;amp;step=detail#&#34;&gt;42mmステンレススチールケースとストーンレザーループ&lt;/a&gt;モデルを買います。&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/w42ss-llst-detail.jpg&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-868&#34; src=&#34;http://staff.feedtailor.jp/images/2015/04/w42ss-llst-detail-300x300.jpg&#34; alt=&#34;w42ss-llst-detail&#34; width=&#34;300&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最初はレザーループのモデルは全然眼中になかったのですが、実際に試着してみると素晴らしい質感と肌触り。Appleが推しているミラネーゼループの金属なのに布のような感触も良かったのですが、やはりレザーループの質感にはかないませんでした。&lt;/p&gt;
+
+&lt;p&gt;ただ、残念なのは発売開始後すぐに購入手続きをしたにも関わらず、商品到着予定が2015/5/10なこと。やはりレザーベルトは在庫が少なかったのでしょうか？今から到着が楽しみです。&lt;/p&gt;
+
+&lt;p&gt;さて、そら用心はもちろんApple Watchに対応します！&lt;/p&gt;
+
+&lt;p&gt;玄関でお知らせするそら用心、そしてiPhoneを出す必要なく通知を表示できるApple Watch。この二つの相性は最高です！&lt;/p&gt;
+
+&lt;h3 id=&#34;そら用心はapple-watchに対応しました:9a2be673c3cd7981979a7eb2537ae804&#34;&gt;そら用心はApple Watchに対応しました&lt;/h3&gt;
+
+&lt;p&gt;そら用心のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://appsto.re/i6Ld6Zk&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;まずはグランスからご紹介。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/14.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-867&#34; src=&#34;http://staff.feedtailor.jp/images/2015/04/14-240x300.png&#34; alt=&#34;そら用心 Apple Watch グランス&#34; width=&#34;240&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;グランスは1画面で情報を一覧できる表示方法です。&lt;/p&gt;
+
+&lt;p&gt;中央に天気予報、周囲にはそれぞれ6時間ごとの降水確率を表示します。&lt;/p&gt;
+
+&lt;p&gt;次はみなさんが一番目にするでしょう、通知をご紹介。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/sorayoujin_notification.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-871&#34; src=&#34;http://staff.feedtailor.jp/images/2015/04/sorayoujin_notification-240x300.png&#34; alt=&#34;そら用心 Apple Watch 通知&#34; width=&#34;240&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そらビーコンに近づいた時に表示される通知はメッセージと6時間ごとの降水確率でお知らせ。&lt;/p&gt;
+
+&lt;p&gt;こちらも1画面で降水確率を簡単に確認できるようになっています。&lt;/p&gt;
+
+&lt;p&gt;そして最後にWatch App画面。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/sorayoujin_watchapp.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-872&#34; src=&#34;http://staff.feedtailor.jp/images/2015/04/sorayoujin_watchapp-108x300.png&#34; alt=&#34;そら用心 Apple Watch App&#34; width=&#34;108&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらでは6時間ごとの降水確率と天気予報が全て表示されています。&lt;/p&gt;
+
+&lt;p&gt;画面が少し長いですが、必要な情報を全て手に入れることができます。&lt;/p&gt;
+
+&lt;h3 id=&#34;apple-watchにおすすめの設定:9a2be673c3cd7981979a7eb2537ae804&#34;&gt;Apple Watchにおすすめの設定&lt;/h3&gt;
+
+&lt;p&gt;そら用心は通知を送る回数でポケットの中にiPhoneが入っていてもおおよその降水確率がわかるようになっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/4-169x300.png&#34; alt=&#34;そら用心 通知する回数&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-876&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;しかし、Apple Watchは手首に必ず着けられているためすぐに通知を確認できますし、何回も通知が来ることがうるさく感じられるでしょう。&lt;/p&gt;
+
+&lt;p&gt;その場合には「通知をまとめる」設定をお試しください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/compact1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/compact1-169x300.png&#34; alt=&#34;そら用心 通知をまとめる設定&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-875&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この設定を有効にすると全ての通知が一度に送られるようになります。これならばうるさくありませんね。&lt;/p&gt;
+
+&lt;p&gt;さらに、雨が降りそうな場合にだけ通知をするには「通知の判断」の設定を有効にしてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/threshold1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/threshold1-169x300.png&#34; alt=&#34;そら用心 通知の判断&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-878&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こうすれば、降水確率が高い場合だけ通知を受け取ることができることができます。&lt;/p&gt;
+
+&lt;p&gt;少々設定がややこしいですが、より便利に快適にそら用心をご利用ください！&lt;/p&gt;
+
+&lt;h3 id=&#34;one-more-thing-8230:9a2be673c3cd7981979a7eb2537ae804&#34;&gt;One more thing&amp;#8230;&lt;/h3&gt;
+
+&lt;p&gt;そら用心は今回のバージョンから&lt;strong&gt;通知の声が大阪のおばちゃんに変わります&lt;/strong&gt;！&lt;/p&gt;
+
+&lt;p&gt;雨の日には「傘持って行きや〜」と優しく、でも元気良く教えてくれます！！&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;これ、半分本当で半分は冗談です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/voice3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/voice3-169x300.png&#34; alt=&#34;そら用心 お知らせボイス&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-880&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そら用心は「お知らせボイス」機能を持ちました！&lt;/p&gt;
+
+&lt;p&gt;今までも声で通知していましたが、無機質な感情のない声は今ひとつ評判がよろしくありませんでした。&lt;/p&gt;
+
+&lt;p&gt;ならばと今回は通知する声をお好きなキャラに変更できるようにしました。&lt;/p&gt;
+
+&lt;p&gt;今回は5人(?)のキャラクターが登場。それぞれ個性的なキャラですので、お気に入りのキャラを選んでみてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;個性豊かなキャラたち:9a2be673c3cd7981979a7eb2537ae804&#34;&gt;個性豊かなキャラたち&lt;/h3&gt;
+
+&lt;p&gt;それぞれのキャラを簡単にご紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/voice-characters.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/voice-characters-300x151.jpg&#34; alt=&#34;そら用心 お知らせボイス&#34; width=&#34;300&#34; height=&#34;151&#34; class=&#34;alignnone size-medium wp-image-888&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;あやめ&lt;/p&gt;
+
+&lt;p&gt;今までのバージョンでの通知と同じように、落ち着いた声とチャイムで降水確率をお知らせします。&lt;/p&gt;
+
+&lt;p&gt;可もなく不可もなく、無難なキャラですね。&lt;/p&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;よしえ&lt;/p&gt;
+
+&lt;p&gt;全長2.6km、日本一長いと有名な&lt;a href=&#34;http://www.tenjin123.com/&#34;&gt;天神橋筋商店街&lt;/a&gt;がナワバリのおばちゃんです。&lt;/p&gt;
+
+&lt;p&gt;大阪のおばちゃんといえばパンチパーマでヒョウ柄の服を着て…まさにそのようなイメージです。&lt;/p&gt;
+
+&lt;p&gt;ちょっとぐらい落ち込んでいてもよしえちゃんの声を聞けば元気が出るかもしれません！&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ここな&lt;/p&gt;
+
+&lt;p&gt;日本橋（にっぽんばし）の電気屋街の横、&lt;a href=&#34;http://www.otamap.com/map/otamap_ponbashi.html&#34;&gt;オタロード&lt;/a&gt;にあるメイド喫茶「SORA」の人気No.2のメイドさん。&lt;/p&gt;
+
+&lt;p&gt;よしえちゃんとは違い、こちらは可愛らしく元気一杯！&lt;/p&gt;
+
+&lt;p&gt;*「SORA」は架空の設定です。残念ながら。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;セバスチャン&lt;/p&gt;
+
+&lt;p&gt;執事です。執事といえばセバスチャンです。なぜか執事と聞くとセバスチャンの名前がでてきますね。なんででしょうね。&lt;/p&gt;
+
+&lt;p&gt;まだ若いですが優しくあなたにささやきかけてくれます。セクシーに。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;せいじ&lt;/p&gt;
+
+&lt;p&gt;犬。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今回は以上5人(?)のキャラをご用意しました。今後はさらにキャラを追加予定ですのでどうぞご期待ください。&lt;/p&gt;
+
+&lt;p&gt;また、近日中にさらなるバージョンアップを行い、より便利にそら用心をご利用になれます。こちらもご期待ください。&lt;/p&gt;
+
+&lt;p&gt;そら用心のダウンロードはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://appsto.re/i6Ld6Zk&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そら用心の公式サイトはこちら。 &lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;http://sorayoujin.feedtailor.jp/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内 for Windows v1.1 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/04/21/853</link>
+      <pubDate>Tue, 21 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/21/853</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34; alt=&#34;Square150x150Logo-100&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-full wp-image-801&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;好評いただいているそら案内のWindows版、以前のお知らせ通り天気画像の表示に対応した v1.1 を公開します。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:4e1d283f16707d8c0505900fc511839f&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;天気画像（気象衛星、天気図、雨雲の動き、アメダス各種情報、XバンドMPレーダ予測、台風、黄砂予測、PM2.5予測）の表示に対応しました&lt;/li&gt;
+&lt;li&gt;細かいバグを修正しました&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;天気画像の表示に対応:4e1d283f16707d8c0505900fc511839f&#34;&gt;天気画像の表示に対応&lt;/h3&gt;
+
+&lt;p&gt;iOS/Mac/Android版と同等の機能を持ちました。&lt;/p&gt;
+
+&lt;p&gt;画面右上、右から2つ目の衛星ボタンをタップすると天気画像画面が開きます。&lt;/p&gt;
+
+&lt;p&gt;気象衛星&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164954.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164954.png&#34; alt=&#34;20150420_screenshot_04202015_164954&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-857&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気図&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_5.png&#34; alt=&#34;20150420_5&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-856&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲の動き（1kmメッシュの降雨レーダ）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_6.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_6.png&#34; alt=&#34;20150420_6&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-858&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;直近5分後の雨予想、XバンドMPレーダ（250mメッシュの高精度レーダ）予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164950.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164950.png&#34; alt=&#34;20150420_screenshot_04202015_164950&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-859&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;　&lt;/p&gt;
+
+&lt;p&gt;アメダス各種&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_7.png&#34; alt=&#34;20150420_7&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-860&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PM2.5予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_8.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_8.png&#34; alt=&#34;20150420_8&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-861&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;黄砂予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_165005.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_165005.png&#34; alt=&#34;20150420_screenshot_04202015_165005&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-862&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あとは台風にも対応しています（執筆時点で発生している台風はありませんでしたが）&lt;/p&gt;
+
+&lt;p&gt;これで一通り必要な天気情報には簡単にアクセスできるようになったのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;まだお使いでない方もぜひどうぞ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（iOS版） v4.1.0 を公開しました – AppleWatch対応</title>
+      <link>http://staff.feedtailor.jp/2015/04/17/835</link>
+      <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/17/835</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v4.1.0 が来週発売の AppleWatch に対応しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AppleWatchに対応&lt;/li&gt;
+&lt;li&gt;外部ライブラリの更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;AppleWatchでのそら案内はこんな感じです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150417_sora-annai-promotion-02.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150417_sora-annai-promotion-02.png&#34; alt=&#34;20150417_sora-annai-promotion-02&#34; width=&#34;800&#34; height=&#34;707&#34; class=&#34;alignnone size-full wp-image-841&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Watch 上での操作を減らして、天気予報が一目でわかるシンプルさを重視しました。&lt;/p&gt;
+
+&lt;p&gt;Watch 上には以下の情報が表示されます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;現在地の天気予報、降水確率、気温&lt;/li&gt;
+&lt;li&gt;3時間ごとの天気と気温予想をグラフで表示&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Glance では直近12時間分の天気予報を表示します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/3.png&#34; alt=&#34;3&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-837&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;WatchApp では2ページで合計24時間分の天気予報を表示します。ページは横フリックで切り替えてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/12.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/12.png&#34; alt=&#34;1&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-848&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/22.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/22.png&#34; alt=&#34;2&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-851&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;普段は Glance でちらりと天気を確認し、もう少し先の予報が気になる場合はそこから WatchApp を立ち上げる、という使い方ができます。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

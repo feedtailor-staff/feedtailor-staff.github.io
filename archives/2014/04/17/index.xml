@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/04/17 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/04/17/</link>
+    <description>Recent content in 2014/04/17 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 17 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/04/17/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>feedtailor スタッフブログを始めます</title>
+      <link>http://staff.feedtailor.jp/2014/04/18/45</link>
+      <pubDate>Thu, 17 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/04/18/45</guid>
+      <description>&lt;p&gt;feedtailor代表の oishi です。&lt;/p&gt;
+
+&lt;p&gt;これまで&lt;a href=&#34;http://feedtailor.jp/&#34;&gt;(株)フィードテイラー&lt;/a&gt;のブログは僕の個人ブログ的(?)な&lt;a href=&#34;http://feedtailor.jp/wp/&#34;&gt;社長ブログ&lt;/a&gt;のみだったのですが、この度、エンジニアを含む弊社スタッフが自ら発信する場として別ブログを立ち上げる事にしました。名付けて &lt;strong&gt;feedtailor スタッフブログ&lt;/strong&gt; &amp;#8230;ってそのままですね  &lt;img src=&#34;http://staff.feedtailor.jp/images/smilies/icon_smile.gif&#34; alt=&#34;:-)&#34; class=&#34;wp-smiley&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;例えばアプリの話。これまでは僕が社長ブログでアプリ紹介を書いていたのですが、アップデートには余り言及出来ていなかったりとか、あるアプリの実は面白い機能や活用方が紹介しきれていなかったりとか、ちょっと勿体ない事になっていたのです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/feedtailor&#34;&gt;github&lt;/a&gt;に公開しているモノの話とかもそうですね。実は超便利なツールが密やかに追加されているのですが一切言及してなかったりとか、ライブラリの&lt;a href=&#34;https://github.com/feedtailor/FTFoundation&#34;&gt;FTFoundation&lt;/a&gt;に便利なクラスが追加されてます&amp;#8230;的な話とか。このへんはエンジニアの生の声が外にでる方が良いと思ってたのです、前々から。&lt;/p&gt;
+
+&lt;p&gt;他にもウチの社内の雑多なネタ、今週のお菓子とか(笑)、&lt;a href=&#34;http://feedtailor.jp/wp/?p=8384&#34;&gt;毎日夕方にやってる新発見&lt;/a&gt;ネタとか、そんな話題もありかも知れないですね。まぁまぁ色々考えられるのでいわゆる開発ブログ的な位置付けではなく、緩い感じでスタッフブログとしました。&lt;/p&gt;
+
+&lt;p&gt;基本的に執筆陣は僕以外がメインになると思います。月に数回更新できれば&amp;#8230;ぐらいの頻度でやっていく予定ですので御覧頂ければ幸いです。そんな訳で &lt;a href=&#34;http://staff.feedtailor.jp/&#34;&gt;feedtailorスタッフブログ&lt;/a&gt; をどうぞ宜しくお願い致します。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

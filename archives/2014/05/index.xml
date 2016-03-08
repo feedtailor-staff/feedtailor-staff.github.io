@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/05 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/05/</link>
+    <description>Recent content in 2014/05 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 26 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/05/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（iOS版） v3.3.0 を公開しました – XバンドMPレーダーの予測表示に対応！</title>
+      <link>http://staff.feedtailor.jp/2014/05/26/194</link>
+      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/05/26/194</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v3.3.0 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;XバンドMPレーダーの予測情報表示に対応&lt;/p&gt;
+
+&lt;p&gt;*「天気画像」にて直近5分の予測情報を表示できます（XバンドMPレーダーの配信範囲に限ります）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;画面下部の地域ドット長押しでの地域切り替え機能を追加&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今回はなんといってもこれ↓&lt;/p&gt;
+
+&lt;h3 id=&#34;xバンドmpレーダー:f56af7edcee090d203c61ccf324ee9e3&#34;&gt;XバンドMPレーダー&lt;/h3&gt;
+
+&lt;p&gt;XバンドMPレーダーの詳しい話は&lt;a href=&#34;http://www.mlit.go.jp/river/gijutsu/gijutsukaihatsu/xband/haisin.html&#34; target=&#34;_blank&#34; title=&#34;新型高性能レーダ（ＸバンドＭＰレーダ）の降雨観測情報（ＷＥＢ画像）の一般配信について: 国土交通省&#34;&gt;こちら&lt;/a&gt;あたりを見ていただくとして、要するに今までより精度の高い雨情報をお届けできるようになったのです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/20140526_Screenshot-2014.05.26-09.31.48.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/20140526_Screenshot-2014.05.26-09.31.48-300x225.png&#34; alt=&#34;20140526_Screenshot 2014.05.26 09.31.48&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;alignnone size-medium wp-image-205&#34; /&gt;&lt;/a&gt;（「天気画像」の中に追加されました）&lt;/p&gt;
+
+&lt;p&gt;従来のレーダーでは1km単位での表示だったんですが、今回は最大250m単位。まさに自分が今いる場所で雨が降るかどうかがわかる感じです。&lt;/p&gt;
+
+&lt;p&gt;また既存の雨レーダー情報表示アプリですと「今降ってるかどうか」を表示してるものが多いですが、そら案内では「これから降るかどうか」に重点を置きました。5分ごとの更新で直近5分以内の雨予測情報を表示します。&lt;/p&gt;
+
+&lt;p&gt;たとえば、これがそら案内既存の雨雲レーダーです。1kmメッシュで5分ごとの観測結果（実際に降った量）を表示しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/433863f07844c0648392db87b6a859d1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/433863f07844c0648392db87b6a859d1-253x300.png&#34; alt=&#34;iOSシミュレータのスクリーンショット 2014.05.22 17.32.36&#34; width=&#34;253&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-197&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;同じ場所を新しいXバンドMPレーダーで表示するとこうなります。5分未来の予測情報（これから降る予測量）を250mメッシュの細かい単位で表示します。わかりやすいですねえ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/136934292c91ec525cc482e929b53746.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/136934292c91ec525cc482e929b53746-253x300.png&#34; alt=&#34;iOSシミュレータのスクリーンショット 2014.05.22 17.32.38&#34; width=&#34;253&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-198&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なんとこの情報が拡張パックなしでだれでも見られるんですよ！つまり無料です。&lt;strong&gt;無料！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;＊残念ながら、XバンドMPレーダーは日本全国をカバーしているわけではないのでお住まいの地域で使えるかどうかはわかりません。その点はご了承ください。↓のサイトの四角で囲まれた地域がレーダーの有効範囲です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.river.go.jp/xbandradar/index.html&#34; target=&#34;_blank&#34;&gt;ＸＲＡＩＮ雨量情報 地域選択&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;梅雨も近づき、雨情報が気になる季節になってきました。そら案内で雨情報をチェックしましょう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;追記: 2014.5.27&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;今回のアップデートで「天気画像」を頻繁に表示するようになったという人は「設定」→「左上のボタン」→「天気画像」を選択すると、予報ページから1タップで「天気画像」が表示できるようになって便利ですので、お試しくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/31b48dfafbe3142aa0ab44cf7c331aa8.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/31b48dfafbe3142aa0ab44cf7c331aa8-300x177.png&#34; alt=&#34;20140527_名称未設定 のコピー&#34; width=&#34;300&#34; height=&#34;177&#34; class=&#34;alignnone size-medium wp-image-212&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;参考＞&lt;a href=&#34;http://note.meta-glamour.com/2014/05/27/xバンドmpレーダー予報情報搭載のそら案内/&#34; target=&#34;_blank&#34;&gt;XバンドMPレーダー予報情報が追加搭載された「そら案内」を少し便利に使う設定方法 | メタ・ノート&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;さて、話は変わってもう一つの変更点ですが、旧Classicで搭載されていた機能をようやく復活させました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/7f373e549fa953211880b193aea68c5f.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/7f373e549fa953211880b193aea68c5f-192x300.jpg&#34; alt=&#34;iOSシミュレータのスクリーンショット 2014.05.23 16.05.59 2014-05-23 16-06-48 2014-05-23 16-07-20&#34; width=&#34;192&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-195&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下部にあるページ位置を表示するドット部分を長押しすることで、ページフリックなしに地域をジャンプして切り替えることができます。多数の地域を登録されているという方はぜひお使いください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そら案内はまだまだ進化します。まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（Mac版）v1.1.3 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/05/22/187</link>
+      <pubDate>Thu, 22 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/05/22/187</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/icon_128x1281.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-188&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Macの超定番お天気アプリ「そら案内」の v1.1.3 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;予報が更新されなくなる問題を修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちょっとした修正ですが、ざっと半年ぶりの更新となりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/20140522_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/20140522_1-300x187.png&#34; alt=&#34;20140522_1&#34; width=&#34;300&#34; height=&#34;187&#34; class=&#34;alignnone size-medium wp-image-190&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mac版も公開してもう1年以上が経ちますね。早いものですねえ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://feedtailor.jp/wp/?p=10873&#34;&gt;あの天気予報アプリがOSXに！ 〜Mac版「そら案内」をリリースします〜&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;意外にアプリの存在を知られていないこともあるようですけれど、Macユーザならめちゃ便利なアプリですので、ぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iPhone用YouTube再生リスト専用プレーヤー BGTube を公開します</title>
+      <link>http://staff.feedtailor.jp/2014/05/21/161</link>
+      <pubDate>Wed, 21 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/05/21/161</guid>
+      <description>
+
+&lt;p&gt;新作続きですけれども、またまた新作iPhoneアプリが公開されましたのでお知らせします。&lt;/p&gt;
+
+&lt;p&gt;その名も、&lt;/p&gt;
+
+&lt;h2 id=&#34;bgtube:37407b1697df7755906ac01825fdb8db&#34;&gt;BGTube&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id876208185&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-162&#34; src=&#34;http://staff.feedtailor.jp/images/2014/05/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いつものようにストアから引用しますと&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;BGTubeはYouTubeの再生リスト専用のプレーヤーアプリです。シンプルなインターフェースで再生リストを再生させることに特化しました。バックグランド再生にも対応しているので作業用BGMなどにお使いください。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id876208185&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-58&#34; src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;というアプリです。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;さて、そもそも、&lt;/p&gt;
+
+&lt;h3 id=&#34;再生リストってなに:37407b1697df7755906ac01825fdb8db&#34;&gt;再生リストってなに？&lt;/h3&gt;
+
+&lt;p&gt;YouTubeのアカウント（つまりはGoogleのアカウント）でログインすると動画を自分用のリスト（再生リスト）にまとめることができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/6dec9a86c42f0c0678127730d290e9eb.jpg&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-163&#34; src=&#34;http://staff.feedtailor.jp/images/2014/05/6dec9a86c42f0c0678127730d290e9eb-300x216.jpg&#34; alt=&#34;スクリーンショット 2014-05-21 9.11.19 2014-05-21 09-14-34 2014-05-21 09-16-18&#34; width=&#34;300&#34; height=&#34;216&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このアプリはこのリストを再生することに特化したアプリです。（ですので、Googleのアカウントが必要です）&lt;/p&gt;
+
+&lt;h3 id=&#34;主な機能:37407b1697df7755906ac01825fdb8db&#34;&gt;主な機能&lt;/h3&gt;
+
+&lt;p&gt;再生リスト専用のプレーヤーということなので、機能はいたってシンプルです。シンプルですがプレーヤーとしての押さえ所はおさえてあるのではないかと。&lt;/p&gt;
+
+&lt;h4 id=&#34;再生リスト-お気に入り-後で見る-履歴-などに対応:37407b1697df7755906ac01825fdb8db&#34;&gt;再生リスト、お気に入り、後で見る、履歴、などに対応&lt;/h4&gt;
+
+&lt;p&gt;再生リスト専用といいつつ、わざわざリストを作らなくても、お気に入りに入れたり、後で見るにチェックすることでこのアプリで再生できるようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/2.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-168&#34; src=&#34;http://staff.feedtailor.jp/images/2014/05/2-169x300.png&#34; alt=&#34;2&#34; width=&#34;169&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;たとえば、ブラウザ上で面白そうな動画を見つけて、右下の「後で見る」をクリックすると&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/dfac6e43e015d44b8be85f62c00c348d.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/dfac6e43e015d44b8be85f62c00c348d-300x168.jpg&#34; alt=&#34;スクリーンショット 2014-05-21 10.08.14（2） 2014-05-21 10-08-51 2014-05-21 10-09-36&#34; width=&#34;300&#34; height=&#34;168&#34; class=&#34;alignnone size-medium wp-image-180&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アプリの「後で見る」に表示されますので、アプリ内でそのまま再生できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/625b2c6ba702af75ac188421b1d06d5a.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/625b2c6ba702af75ac188421b1d06d5a-169x300.png&#34; alt=&#34;iOSシミュレータのスクリーンショット 2014.05.21 10.13.30&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-181&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;リピート再生-シャッフル再生:37407b1697df7755906ac01825fdb8db&#34;&gt;リピート再生、シャッフル再生&lt;/h4&gt;
+
+&lt;p&gt;順番繰り返しだけじゃ物足りない、自分リストをシャッフルしてBGMにどうぞ。（シャッフルは「すべて再生」したときだけ有効になります）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/1_2014-05-21-09-29-40.jpg&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-167&#34; src=&#34;http://staff.feedtailor.jp/images/2014/05/1_2014-05-21-09-29-40-169x300.jpg&#34; alt=&#34;1_2014-05-21 09-29-40&#34; width=&#34;169&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;バックグランド再生:37407b1697df7755906ac01825fdb8db&#34;&gt;バックグランド再生&lt;/h4&gt;
+
+&lt;p&gt;作業用BGMにっていうくらいなのでもちろん搭載してます、バックグランド再生。ロックしてても再生できますよ。（バックグランド移行時に一瞬音切れする可能性がありますのでご了承ください）&lt;/p&gt;
+
+&lt;h4 id=&#34;フルスクリーン対応:37407b1697df7755906ac01825fdb8db&#34;&gt;フルスクリーン対応&lt;/h4&gt;
+
+&lt;p&gt;純粋に動画を見る、という目的では必要ですよね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/4.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-169&#34; src=&#34;http://staff.feedtailor.jp/images/2014/05/4-300x169.png&#34; alt=&#34;4&#34; width=&#34;300&#34; height=&#34;169&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;airplay対応:37407b1697df7755906ac01825fdb8db&#34;&gt;AirPlay対応&lt;/h4&gt;
+
+&lt;p&gt;AppleTVやBluetoothヘッドセットなんかにも出力可能です。お気に入り動画をリビングのTVでどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/3.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-170&#34; src=&#34;http://staff.feedtailor.jp/images/2014/05/3-169x300.png&#34; alt=&#34;3&#34; width=&#34;169&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;リモコン対応:37407b1697df7755906ac01825fdb8db&#34;&gt;リモコン対応&lt;/h4&gt;
+
+&lt;p&gt;一部のリモコン操作に対応しています。再生・一時停止、曲送りなどが可能です。&lt;/p&gt;
+
+&lt;p&gt;というわけで、コントロールセンターでの操作も可能になってます。ロック画面にもアートワーク（サムネイル）が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/5.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-171&#34; src=&#34;http://staff.feedtailor.jp/images/2014/05/5-169x300.png&#34; alt=&#34;5&#34; width=&#34;169&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;（なお、コントロールセンターへの表示は設定でOFFにすることもできます）&lt;/p&gt;
+
+&lt;h3 id=&#34;注意事項:37407b1697df7755906ac01825fdb8db&#34;&gt;注意事項&lt;/h3&gt;
+
+&lt;p&gt;シンプルなプレーヤーですので、以下のような機能は搭載しておりません。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;動画の検索&lt;/li&gt;
+&lt;li&gt;再生リストの編集&lt;/li&gt;
+&lt;li&gt;公開されている他の再生リストの再生&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また動画再生というアプリの性質上、携帯回線で使われる場合には通信量に注意してください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id876208185&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-58&#34; src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;余談-開発経緯:37407b1697df7755906ac01825fdb8db&#34;&gt;余談：開発経緯&lt;/h4&gt;
+
+&lt;p&gt;毎週行われる社内ミーティングでこの企画が提出されました。もちろん発案者は私itokです。&lt;/p&gt;
+
+&lt;p&gt;当時（といっても発案は3週間前ですが）作業用BGMとして再生リストを作ったものの、満足に再生できるプレーヤーを見つけられませんでした。バックグランドで再生できなかったり、シャッフル機能がなかったり。。。&lt;/p&gt;
+
+&lt;p&gt;そんなこんなで企画をあげてアプリを作ってみました。毎日使ってますけれど、すこぶるいい感じです。&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;（あ、ちなみに、当初アプリ名候補としてアシュラとかサンシャインとかそのへんにからませようかとも思ったんですが、、、諸般の事情により普通の名前に落ち着きました）&lt;/small&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;最後に:37407b1697df7755906ac01825fdb8db&#34;&gt;最後に&lt;/h3&gt;
+
+&lt;p&gt;大事なことですが、無料アプリです。無料です。&lt;/p&gt;
+
+&lt;p&gt;ぜひ使ってみてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id876208185&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-58&#34; src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nyatterに機能追加！ v1.2.3を公開しました。それと検索のTipsをどうぞ。</title>
+      <link>http://staff.feedtailor.jp/2014/05/15/151</link>
+      <pubDate>Thu, 15 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/05/15/151</guid>
+      <description>
+
+&lt;h2 id=&#34;ごあいさつ:369d3fe1d29016ca95a353a3ea58d82a&#34;&gt;ごあいさつ&lt;/h2&gt;
+
+&lt;p&gt;最近、「フルスタック」がバズワード化してきて、なんとなく残念な気分になっています。&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;Twitterに流れる画像を集めるアプリの決定版、&lt;a href=&#34;https://itunes.apple.com/jp/app/nyatter/id768455397?mt=8&#34;&gt;Nyatter&lt;/a&gt;の新しいバージョン v1.2.3 を公開しました！&lt;/p&gt;
+
+&lt;p&gt;今回はちょっとした機能追加がメインです。&lt;/p&gt;
+
+&lt;p&gt;(Nyatterの基本的な使い方は&lt;a href=&#34;http://feedtailor.jp/wp/?p=13172&#34;&gt;社長ブログ&lt;/a&gt;をご覧ください。)&lt;/p&gt;
+
+&lt;h2 id=&#34;タイムラインが使用するtwitterアカウントが変更できます:369d3fe1d29016ca95a353a3ea58d82a&#34;&gt;タイムラインが使用するTwitterアカウントが変更できます&lt;/h2&gt;
+
+&lt;p&gt;「今まで何でできなかったのか？」とお叱りを受けるかもしれませんが、ようやくTwitterアカウントを変更することができるようになりました。&lt;/p&gt;
+
+&lt;p&gt;いままではTwitterのアカウントを変更した場合や削除した場合にはタイムラインを新しいアカウントで引き継ぐことができず、そのまま読み込みを休止させておくしかありませんでした。&lt;/p&gt;
+
+&lt;p&gt;今回の機能追加により、上記のような場合でも新しいアカウントで継続して画像を集め続けることができます。&lt;/p&gt;
+
+&lt;h2 id=&#34;使用方法:369d3fe1d29016ca95a353a3ea58d82a&#34;&gt;使用方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/nyatter_account_select.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/nyatter_account_select.jpg&#34; alt=&#34;nyatter_account_select&#34; width=&#34;640&#34; height=&#34;568&#34; class=&#34;alignnone size-full wp-image-152&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;タイムラインの一覧でiボタンを押して、タイムラインの設定へ。&lt;/li&gt;
+&lt;li&gt;「Twitterアカウント」の項目を選択して、読み込みに使用するアカウントを選択する。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;簡単ですね。&lt;/p&gt;
+
+&lt;p&gt;ただし、非公開のリストを使用したタイムラインの場合、そのリストにアクセスできるユーザー以外を設定すると正しく読み込めずにエラーになるのでご注意ください。&lt;/p&gt;
+
+&lt;h2 id=&#34;ついでに検索のtipsも:369d3fe1d29016ca95a353a3ea58d82a&#34;&gt;ついでに検索のTipsも&lt;/h2&gt;
+
+&lt;p&gt;みなさんはNyatterでは検索キーワードを使用したタイムラインの場合、検索するツイートの言語を指定することができるのはご存知ですか？&lt;/p&gt;
+
+&lt;p&gt;タイムラインの設定画面をもう一度見てみましょう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/nyatter_search.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/nyatter_search.jpg&#34; alt=&#34;nyatter_search&#34; width=&#34;640&#34; height=&#34;568&#34; class=&#34;alignnone size-full wp-image-154&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;タイムラインの設定画面の一番下に「検索」の項目があります。これは検索キーワードを使用した場合にのみ出現する設定で、検索キーワードの変更、あるいは検索に使用する言語を設定することが可能です。&lt;/p&gt;
+
+&lt;p&gt;ここで言語を設定するとタイムラインにはその言語設定のユーザーからのツイートしか表示されなくなります。&lt;/p&gt;
+
+&lt;p&gt;「instagram」を検索キーワードに、「ロシア語」を言語に設定すると、ロシア美女や美しい建物の写真が簡単に集められます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/nyatter_search_russian.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/nyatter_search_russian.png&#34; alt=&#34;nyatter_search_russian&#34; width=&#34;320&#34; height=&#34;568&#34; class=&#34;alignnone size-full wp-image-155&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;逆に、言語を「日本語」に設定することで日本の写真を集中的に集めることもできますね。&lt;/p&gt;
+
+&lt;p&gt;ただし、Twitter側で言語判定を行なっており、その精度は高くありません。ポルトガル語を指定したのに英語が混ざってくることも大いに有り得ます。あらかじめご了承ください。&lt;/p&gt;
+
+&lt;p&gt;「&lt;strong&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/nyatter/id768455397?mt=8&#34;&gt;Nyatter&lt;/a&gt;&lt;/strong&gt;」はこちらからダウンロードできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/nyatter/id768455397?mt=8&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Twitterエゴサーチ用のMacアプリ「TailSearch」を公開します</title>
+      <link>http://staff.feedtailor.jp/2014/05/13/129</link>
+      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/05/13/129</guid>
+      <description>
+
+&lt;p&gt;久しぶりのMac新作アプリを公開します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id870299267&#34; target=_blank &gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/icon_128x128.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-130&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;その名も &lt;strong&gt;TailSearch&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;MacAppStoreから引用しますと、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;TailSearchは頻度の少ないキーワード用のTwitterエゴサーチアプリです。&lt;/p&gt;
+
+&lt;p&gt;「Twitterで○○に関するエゴサーチをしたいけど、あまりツイートがないのでつい検索確認するのを忘れてしまう」そういう方にぜひオススメです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Macユーザの方も以前に比べれば多くなってきたことだと思います。普段、Macの前にいることが多いという人もそれなりにおられるのではないかと。&lt;/p&gt;
+
+&lt;p&gt;自社製品とか、自作アプリとか、自分のブログの評判が気になるけれど、その都度Twitterの検索画面を開くのは面倒。そもそも、そんなにツイートされているわけでもないから、検索自体が面倒になって・・・ということもあるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;Twitterクライアントで検索結果だけを通知してくれるアプリもあまりないですし、、、というわけで、作ってみました。検索専用。通知センター対応。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id870299267&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;使い方:d1b259ded2af407582f9cc5dbae46d83&#34;&gt;使い方&lt;/h3&gt;
+
+&lt;p&gt;使い方は簡単です。基本的にはキーワードを登録するだけ。（検索オプションについてはTwitterの&lt;a href=&#34;https://support.twitter.com/articles/249059-&#34;&gt;ヘルプ&lt;/a&gt;をご覧ください）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_setting.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_setting-300x249.png&#34; alt=&#34;tailsearch_setting&#34; width=&#34;300&#34; height=&#34;249&#34; class=&#34;alignnone size-medium wp-image-136&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定期的に検索を実行し、新しいツイートがあれば通知センターでお知らせします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_notify.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_notify-300x91.png&#34; alt=&#34;tailsearch_notify&#34; width=&#34;300&#34; height=&#34;91&#34; class=&#34;alignnone size-medium wp-image-142&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;直近の検索結果はメニューバーから確認可能。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_menu.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_menu-166x300.png&#34; alt=&#34;tailsearch_menu&#34; width=&#34;166&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-137&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このメニューですが、普通にクリックするとツイートのWebページを開きます。&lt;/p&gt;
+
+&lt;p&gt;が、それだけじゃなくて、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;⌘+クリック: ツイート内のリンクをブラウザで開く&lt;/li&gt;
+&lt;li&gt;option+クリック: リツイート&lt;/li&gt;
+&lt;li&gt;control+クリック: お気に入りに登録&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;なんてこともできるのです。これは便利。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch.gif&#34; alt=&#34;tailsearch&#34; width=&#34;470&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-139&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;↑このように、キーを押すと右上にテキスト表示されます&lt;/p&gt;
+
+&lt;h4 id=&#34;注意事項:d1b259ded2af407582f9cc5dbae46d83&#34;&gt;注意事項&lt;/h4&gt;
+
+&lt;p&gt;このアプリでは1日に数ツイートあるかないか、という頻度のキーワードを想定しています。&lt;/p&gt;
+
+&lt;p&gt;更新頻度の高いキーワードを検索対象にしていると、通知センターもあふれますし、なにより大事な情報を取りこぼしてしまうかもしれません。&lt;/p&gt;
+
+&lt;p&gt;普段は頻度が低いキーワードでも一時的にバズると、他の登録キーワードを押しのけて更新通知が適切に受け取れない可能性がありますので、その場合は検索条件を変えるか、キーワード一覧左端のチェックボックスで一時的に検索対象から外してみてください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;アイコンはいつもお世話になっている&lt;a href=&#34;http://www.meta-glamour.com/&#34; target=_blank&gt;メタ・グラマー様&lt;/a&gt;作。&lt;/p&gt;
+
+&lt;p&gt;というわけで、新作Macアプリの紹介でした。ぜひ使ってみてください&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id870299267&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（iOS版） v3.2.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/05/07/115</link>
+      <pubDate>Wed, 07 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/05/07/115</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v3.2.0 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS7のフラットデザインに完全対応&lt;/li&gt;
+&lt;li&gt;[iPad] 投稿機能の不具合を修正&lt;/li&gt;
+&lt;li&gt;64bitサポート追加&lt;/li&gt;
+&lt;li&gt;外部SDKの更新&lt;/li&gt;
+&lt;li&gt;細かいバグ修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今回の目玉はフラットデザイン対応です。といっても、もともとフラットっぽいデザインなところもありましたし、天気アイコンはすでにフラット化していますので、ぱっと見た感じではそれほど違いに気がつかないかもしれません。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/soraannai_v31.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/soraannai_v31-200x300.png&#34; alt=&#34;soraannai_v31&#34; width=&#34;200&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-120&#34; /&gt;&lt;/a&gt;　&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/soraannai_v32.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/soraannai_v32-200x300.png&#34; alt=&#34;soraannai_v32&#34; width=&#34;200&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-119&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;（左が旧、右が今回）&lt;/p&gt;
+
+&lt;p&gt;iOS7が公開されて約8ヶ月、そろそろ全面的に移行してもいいかなということで今回のアップデートとなりました。（iOS6でお使いの方は旧来のデザインのままです）&lt;/p&gt;
+
+&lt;p&gt;GWも終わり、そろそろ梅雨や台風のシーズンがやってきます。天気予報アプリとして更なる進化を予定しておりますので今後のアップデートもお楽しみに。&lt;/p&gt;
+
+&lt;p&gt;というわけで、まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015/04/21 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2015/04/21/</link>
+    <description>Recent content in 2015/04/21 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 21 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2015/04/21/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内 for Windows v1.1 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/04/21/853</link>
+      <pubDate>Tue, 21 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/21/853</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34; alt=&#34;Square150x150Logo-100&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-full wp-image-801&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;好評いただいているそら案内のWindows版、以前のお知らせ通り天気画像の表示に対応した v1.1 を公開します。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:4e1d283f16707d8c0505900fc511839f&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;天気画像（気象衛星、天気図、雨雲の動き、アメダス各種情報、XバンドMPレーダ予測、台風、黄砂予測、PM2.5予測）の表示に対応しました&lt;/li&gt;
+&lt;li&gt;細かいバグを修正しました&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;天気画像の表示に対応:4e1d283f16707d8c0505900fc511839f&#34;&gt;天気画像の表示に対応&lt;/h3&gt;
+
+&lt;p&gt;iOS/Mac/Android版と同等の機能を持ちました。&lt;/p&gt;
+
+&lt;p&gt;画面右上、右から2つ目の衛星ボタンをタップすると天気画像画面が開きます。&lt;/p&gt;
+
+&lt;p&gt;気象衛星&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164954.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164954.png&#34; alt=&#34;20150420_screenshot_04202015_164954&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-857&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気図&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_5.png&#34; alt=&#34;20150420_5&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-856&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲の動き（1kmメッシュの降雨レーダ）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_6.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_6.png&#34; alt=&#34;20150420_6&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-858&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;直近5分後の雨予想、XバンドMPレーダ（250mメッシュの高精度レーダ）予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164950.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164950.png&#34; alt=&#34;20150420_screenshot_04202015_164950&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-859&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;　&lt;/p&gt;
+
+&lt;p&gt;アメダス各種&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_7.png&#34; alt=&#34;20150420_7&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-860&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PM2.5予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_8.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_8.png&#34; alt=&#34;20150420_8&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-861&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;黄砂予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_165005.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_165005.png&#34; alt=&#34;20150420_screenshot_04202015_165005&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-862&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あとは台風にも対応しています（執筆時点で発生している台風はありませんでしたが）&lt;/p&gt;
+
+&lt;p&gt;これで一通り必要な天気情報には簡単にアクセスできるようになったのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;まだお使いでない方もぜひどうぞ。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

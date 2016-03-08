@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/10/10 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/10/10/</link>
+    <description>Recent content in 2014/10/10 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 10 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/10/10/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Groups for facebook. v1.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/10/486</link>
+      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/10/486</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id561836613&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/icon_120.png&#34; alt=&#34;icon_120&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-487&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最終更新が1年前という古いアプリですが、久しぶりのアップデートです。&lt;/p&gt;
+
+&lt;h4 id=&#34;更新内容:8808999dea43598bfb6da1720d39ad82&#34;&gt;更新内容&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;iOS7/8対応&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本バージョンからiOS7以降のみの対応となります&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iPhone6/6Plus対応&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;システムのFacebookアカウントと連携&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;外部ライブラリ更新&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id561836613&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iOS7がでたときはそのままにしていたのですが、iOS8を機に7/8対応ということで整理しました。&lt;/p&gt;
+
+&lt;p&gt;ついでに大画面にも対応したので、従来の4inchが&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_1_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_1_4.png&#34; alt=&#34;20141010_1_4&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-492&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;6Plusではこうなります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_1.png&#34; alt=&#34;20141010_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-493&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;ちょっと紹介:8808999dea43598bfb6da1720d39ad82&#34;&gt;ちょっと紹介&lt;/h3&gt;
+
+&lt;p&gt;1年ぶりのアップデートということなので、アプリ自身の紹介も少し。&lt;/p&gt;
+
+&lt;p&gt;AppStoreから引用すると、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Groups for facebook (通称 Groups) は facebook のグループ閲覧や投稿に特化したアプリケーションです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;というわけで、Facebookのグループを見るのに特化したアプリです。&lt;/p&gt;
+
+&lt;p&gt;グループの数が増えてくると、注目したいグループだけを表示させたい、とか、気になるスレッドを常にチェックしておきたい、とかそういう要望が出てきます。もちろん、公式でも設定を使いこなせばある程度のことはできるんですが、そこは専用アプリでシンプルにいきましょうよ、と。&lt;/p&gt;
+
+&lt;p&gt;起動してアカウントと連携させると、所属しているグループがざっと一覧で表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_2.png&#34; alt=&#34;20141010_2&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-495&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;で、これ、必要なグループだけを残して、それ以外を非表示にすることもできるんです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_5.png&#34; alt=&#34;20141010_5&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-496&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;各グループの中は上記のスクリーンショットの通りですが、スレッドをのぞくとこんな感じ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_3.png&#34; alt=&#34;20141010_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-497&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;スレッドの右下にある☆マークをタップすることで、そのスレッドをお気に入りとして登録できます。お気に入りしたスレッドには簡単にアクセスできるようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141010_4.png&#34; alt=&#34;20141010_4&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-498&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このようにシンプルながらにグループ使いとしては最低限の機能がそろっているのではないかと。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;無料&lt;/strong&gt;ですし、Facebookなみなさま、一度お試しくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id561836613&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

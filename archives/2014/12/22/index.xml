@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/12/22 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/12/22/</link>
+    <description>Recent content in 2014/12/22 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 22 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/12/22/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（Android版）v2.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/12/22/710</link>
+      <pubDate>Mon, 22 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/12/22/710</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/app-icon_144x144.png&#34; alt=&#34;app-icon_144x144&#34; width=&#34;144&#34; height=&#34;144&#34; class=&#34;alignnone size-full wp-image-714&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」のAndroid版がフルリニューアルされました。&lt;/p&gt;
+
+&lt;p&gt;一から作り直しまして、見た目・機能的には最新のiOS版に近い感じになりました。（Android v4.0.3 以降の対応となりましたのでご了承ください）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いくつかの機能を見ていきましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;今日-明日の予報-週間予報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;今日／明日の予報・週間予報&lt;/h3&gt;
+
+&lt;p&gt;地域の登録は市区町村単位でのみ行うようになりました。（旧バージョンをお使いの方はお手数ですが、再度地域設定を行ってください）&lt;/p&gt;
+
+&lt;p&gt;一つの画面で、今日／明日の予報と1週間先までの予報が表示されます。&lt;/p&gt;
+
+&lt;p&gt;今日／明日の予報の行をタップすることで、3時間ごとの時間別予報も表示できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_1.png&#34; alt=&#34;20141218_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-717&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;時間別予報には、天気・温度・降水量・湿度・風が表示されています。背景のグラフは気温の変化グラフで、細い線は前日の気温を表しています。&lt;/p&gt;
+
+&lt;p&gt;地域の切り替えは左右方向へフリックしてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;天気概況-注警報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気概況／注警報&lt;/h3&gt;
+
+&lt;p&gt;下にスクロールすると天気概況が表示されます。文字でさらに天気の様子がわかるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_2.png&#34; alt=&#34;20141218_2&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-718&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上部バーに「！」アイコンが表示されるとそれは注警報のお知らせです。「！」アイコンをタップして、注警報をチェックしましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;生物季節情報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;生物季節情報&lt;/h3&gt;
+
+&lt;p&gt;右上メニューから、その地域での生物季節情報を閲覧できます。季節の移ろいを感じていただければと。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34; alt=&#34;20141218_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-721&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;天気画像:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気画像&lt;/h3&gt;
+
+&lt;p&gt;ここが大幅リニューアルポイントです。&lt;/p&gt;
+
+&lt;p&gt;天気画像として、気象衛星・天気図・雨雲レーダー・XバンドMPレーダー予測・アメダス各種・PM2.5予測・黄砂予測、に対応しました。（天気画像も右上のメニューから表示できます）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_7.png&#34; alt=&#34;20141218_7&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-722&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アメダスも気温だけではなく、降水量・風向風速・日照時間・積雪深を切り替えて表示できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;各地点をタップすると詳細情報を一望できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_4.png&#34; alt=&#34;20141219_4&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-725&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲レーダーも GoogleMap に重ねることで自由に全国の様子を見ることが出来るようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_5.png&#34; alt=&#34;20141219_5&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-726&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲レーダーは1kmメッシュで5分以内の雨の&lt;strong&gt;実況&lt;/strong&gt;を表示しています。それに対して、XバンドMPレーダーは250mメッシュで直近5分後の雨の&lt;strong&gt;予測&lt;/strong&gt;を表示します。用途に応じて使い分けてください。&lt;/p&gt;
+
+&lt;p&gt;他にも気になる黄砂やPM2.5の予測表示にも対応しています。来夏までには台風情報の表示にも対応する予定です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;大幅リニューアルされて生まれ変わった「そら案内」。是非お使いください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最後になりますが、ベータテストに参加していただいたユーザのみなさんどうもありがとうございました。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;余談:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;余談&lt;/h4&gt;
+
+&lt;p&gt;以上、さらっと紹介してきましたが、このAndroid版、私itokがつくりました。いや、これ、ほんとに。&lt;/p&gt;
+
+&lt;p&gt;もともとのAndroid版は外部委託して（シーリスの有山さんに）作ってもらっていたのですが、このたび自社初のAndroidアプリとして開発しました。&lt;/p&gt;
+
+&lt;p&gt;ちょうどAndroid Studioも正式版が出たり（開発は主にv0.8系で）ということで、タイミング的なものもあって開発は思ったよりやりやすかったです。iOSの画面サイズが複雑になったことでViewに対するレイアウトの考え方が似てきたこともあるでしょうね。&lt;/p&gt;
+
+&lt;p&gt;一応秘密プロジェクトということで進んでいましたので、世間のAndroidの話題にはなるべく近づかないようにし、最近も「Androidどうです？」なんていうフリに「どうですかねえ〜」なんてあいまいな返事をしていました（その節はほんとすいません）。これで晴れて「Android Studio v1.0 きたー」とかつぶやけますねw（うずうずしていたので社内チャットには投下してましたけれど）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/83a2b178a01dace64df5dbcc9c63f5e1-e1418952557532.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/83a2b178a01dace64df5dbcc9c63f5e1-e1418952557532.jpg&#34; alt=&#34;20141219_IMG_6939 のコピー&#34; width=&#34;600&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-731&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これでAndroidもガンガンいくのかといえば、それはなんともいえないですが、じゃあなぜAndroidなのかといえば、&lt;strong&gt;それは「そら案内」だからです&lt;/strong&gt;、ということでご了承ください。&lt;/p&gt;
+
+&lt;p&gt;なんにしても新しくなった「そら案内 for Android」みなさん是非お使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

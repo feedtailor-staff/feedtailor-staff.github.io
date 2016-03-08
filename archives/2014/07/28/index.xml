@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/07/28 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/07/28/</link>
+    <description>Recent content in 2014/07/28 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 28 Jul 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/07/28/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Node Express でそこまで取り上げられていないあれこれ</title>
+      <link>http://staff.feedtailor.jp/2014/07/28/267</link>
+      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/07/28/267</guid>
+      <description>
+
+&lt;p&gt;くまくらです。&lt;/p&gt;
+
+&lt;p&gt;私は API サーバを実装する際に Node の Express を利用する事が多いので、今回は使っていて知った事のうち、世間的にはポツポツ程度にしか取り上げられていない事柄をいくつかあげていきます。簡単に Express を利用している初心者レベルを主な対象としています。&lt;/p&gt;
+
+&lt;h2 id=&#34;前置き:55c6b702dfb0305052c66ef6e950d392&#34;&gt;前置き&lt;/h2&gt;
+
+&lt;p&gt;以後の文中にて登場する名称／変数値は、&lt;a href=&#34;http://expressjs.com/4x/api.html&#34;&gt;Express API リファレンス&lt;/a&gt; を始めとした各種ドキュメント内でも扱われているものと同等に、以下のインスタンスを指すこととします。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;app: Application インスタンス&lt;/li&gt;
+&lt;li&gt;req: Request インスタンス&lt;/li&gt;
+&lt;li&gt;res: Response インスタンス&lt;/li&gt;
+&lt;li&gt;routes: Application インスタンスによるURLルート定義にてマッピングされた Middleware&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;app-req-res-のライフサイクルについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app, req, res のライフサイクルについて&lt;/h2&gt;
+
+&lt;p&gt;本当に基本的なことですが、Express による Web アプリケーションの根幹となる app インスタンスは、インスタンス作成時から各種セットアップ、サーバ Listen を行い始めた後も永続し、Listen を終了（Express アプリケーションを終了）させるまでは残り続けます。&lt;/p&gt;
+
+&lt;p&gt;一方、Middleware の引数として用いられる req, res の両インスタンスは、クライアントからのリクエストを受信し処理を開始した時点で生成、初期化され、Middleware による遷移処理が終了したあとに消滅します。&lt;/p&gt;
+
+&lt;p&gt;以上のことから、app インスタンスは Web アプリケーション全体に関わるグローバル／汎用的な情報を保持すること、req, res インスタンスはクライアント固有の情報を保持する存在である捉えたほうがよさそうです。従って app インスタンスは Listen 時点ではもう情報が完成しており、req, res インスタンスはリクエスト受信時から応答結果を返すまで如何様にも情報操作を行うことができる対象であると言えます。&lt;/p&gt;
+
+&lt;h2 id=&#34;app-request-app-response:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app.request, app.response&lt;/h2&gt;
+
+&lt;p&gt;req, res の両インスタンスは最初の Middleware へ与えられる直前（厳密には内部で実行される最初の暗黙の Middleware で）app.request, app.response を prototype として設定されます。この app.request, app.response はそれぞれ Express モジュールが提供する Request, Response インスタンスを prototype とするオブジェクトです。&lt;/p&gt;
+
+&lt;p&gt;app.request, app.response 共に app インスタンスを生成した時点で用意されるため、例えば Web アプリケーション固有のリクエスト処理やレスポンス処理をメンバ関数に定義しておけば、Middleware、あるいは routes でそれらを利用することができます。&lt;/p&gt;
+
+&lt;pre&gt;var app = express();
+
+app.request.getAwesomeHeader = function () {
+    return this.headers[‘x-awesome&#39;] || null;
+};
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;任意の値に-middleware-でアクセスしたい話:55c6b702dfb0305052c66ef6e950d392&#34;&gt;任意の値に Middleware でアクセスしたい話&lt;/h2&gt;
+
+&lt;p&gt;Express を利用しはじめた人が行き当たる話で、任意の値（変数）を Middleware、特に routes 以下で利用するにはどうすればよいかというのものがあります。例えば app インスタンスの set() した値を参照したい、あるいは app.js で作成した値を routes 以下で参照したいなどです。基本的には好きなようにやってよいと思っていますので、いくつかの手段を紹介します。用途あるいは好みとしてフィットする方法を選んで使ってみてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-req-app-res-app:55c6b702dfb0305052c66ef6e950d392&#34;&gt;1. req.app, res.app&lt;/h3&gt;
+
+&lt;p&gt;実は req, res それぞれは app インスタンスをメンバとして保持していますので、それを利用することができます。&lt;/p&gt;
+
+&lt;pre&gt;exports.view = function (req, res) {
+    var app = req.app;
+    var title = app.get(&#34;title&#34;);
+    // ....
+};
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-前面にある-middleware-で仕込む:55c6b702dfb0305052c66ef6e950d392&#34;&gt;2. 前面にある Middleware で仕込む&lt;/h3&gt;
+
+&lt;p&gt;利用したい値を比較的早い段階の Middleware で req などに予め設定しておきます。前述したように req インスタンスはリクエスト毎のライフサイクルを持っているので、リクエストクライアント固有の情報などを扱う場合はこちらの方法がよさそうです。&lt;/p&gt;
+
+&lt;pre&gt;app.use( function (req, res, next) {
+    req.domains = {
+        flow : “awesome&#34;
+    }
+});
+app.use(&#34;/users&#34;, routes.users);
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-middleware-routes-作成時の引数として任意の変数を与える:55c6b702dfb0305052c66ef6e950d392&#34;&gt;3. Middleware / routes 作成時の引数として任意の変数を与える&lt;/h3&gt;
+
+&lt;p&gt;Middleware, routes の実装時、それらを作成する関数として exports する体制にしておけば、require() 時に引数を与えてインスタンスを作成しつつ、Middleware 側で与えられた引数を用いた処理ができるようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;routes/items.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;module.exports = function (services) {
+    return {
+        index: function (req, res, next) {
+           if (services.is_awesome) {
+               res.send(200, “Success !!”);
+           }
+        }
+    };
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;app.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;app.use(“/items”, require(“./routes/items”)(services));
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;view-のキャッシュについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;view のキャッシュについて&lt;/h2&gt;
+
+&lt;p&gt;Production 環境で稼働している、あるいは res.render() のオプションに cache = true を付与することで、view に対してキャッシュが有効となりますが、これはレンダリング処理に関わる各種情報のキャッシュであり、ページキャッシュではありません。&lt;/p&gt;
+
+&lt;p&gt;Express で HTML ページをレンダリングするシチュエーションは大抵動的ページになると思いますが、ほんの僅かな時間でもページキャッシュをして処理を軽くしたいケースはありそうです。res.render() の第３引数にコールバック関数を設定すれば HTML ページの実体が得られるので、これを利用することでページキャッシュの振る舞いを自前で用意することができます。なお res.render() にコールバック関数を与えるとクライアントへの送出処理が省略されるため、自分で res.send() する必要があります。&lt;/p&gt;
+
+&lt;pre&gt;var caches = {};  // ※ Middleware スコープ外
+
+
+/// 注釈, 以下 middleware 内の処理
+
+if (caches[id]) {
+    res.send(caches[id]);
+} else {
+    res.render(“view.jade”, values, function (err, content) {
+        if (err) {
+            next(err);
+        } else {
+            caches[id] = content;
+            res.send(content);
+        }
+    });
+}
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;おまけ-routes-以下に設置したファイルの読み込みを楽にする:55c6b702dfb0305052c66ef6e950d392&#34;&gt;おまけ: routes 以下に設置したファイルの読み込みを楽にする&lt;/h2&gt;
+
+&lt;p&gt;Express 固有の話ではありませんが、いくつかの routes 定義ファイルを１つずつ require() していくのは若干面倒です。そこで &lt;a href=&#34;https://github.com/troygoode/node-require-directory&#34;&gt;require-directory&lt;/a&gt; モジュールを利用すると、指定するディレクトリ以下にある全てのファイルを１つのオブジェクトへまとめて exports オブジェクトへ再帰的にマッピングしてくれるため、ルーティング定義時が少し楽になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;routes/index.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;var requireDirectory = require(&#39;require-directory&#39;);
+module.exports = requireDirectory(module);
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;app.js&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;var routes = require(&#39;./routes&#39;);
+
+app.use(&#39;/users&#39;,    routes.users);
+app.use(&#39;/blogs&#39;,    routes.blogs);
+app.use(&#39;/login&#39;,    routes.auth.login);
+app.use(&#39;/register&#39;, routes.auth.register);
+&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

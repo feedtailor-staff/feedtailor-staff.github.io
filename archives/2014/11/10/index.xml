@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/11/10 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/11/10/</link>
+    <description>Recent content in 2014/11/10 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 10 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/11/10/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（iOS版） v4.0.0 を公開しました – iOS8 &amp; iPhone6/6Plus対応</title>
+      <link>http://staff.feedtailor.jp/2014/11/10/595</link>
+      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/10/595</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;お待たせしました。定番お天気アプリ「そら案内」の v4.0.0 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS8対応&lt;/li&gt;
+&lt;li&gt;iPhone6/6Plus対応&lt;/li&gt;
+&lt;li&gt;iOS8の通知センターウィジェットに対応（現在地の天気予報、降水確率、気温を表示）&lt;/li&gt;
+&lt;li&gt;雨雲レーダー・XバンドMPレーダーの描画を改善&lt;/li&gt;
+&lt;li&gt;外部SDKの更新&lt;/li&gt;
+&lt;li&gt;投稿機能に「すもうトリとコトリ」フレームを追加&lt;/li&gt;
+&lt;li&gt;細かい調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今回もいろいろと盛りだくさんです。&lt;/p&gt;
+
+&lt;h3 id=&#34;iphone6-6plus対応:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;iPhone6/6Plus対応&lt;/h3&gt;
+
+&lt;p&gt;画面が広いってすごいです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/20141106_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/20141106_1.png&#34; alt=&#34;20141106_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-596&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これは6Plusですが、6でも十分な広さで天気予報を一望できます。&lt;/p&gt;
+
+&lt;h3 id=&#34;ios8の通知センターウィジェットに対応:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;iOS8の通知センターウィジェットに対応&lt;/h3&gt;
+
+&lt;p&gt;まさに待望。&lt;/p&gt;
+
+&lt;p&gt;現在地の天気予報と降水確率、気温を表示します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/20141106_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/20141106_5.png&#34; alt=&#34;20141106_5&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-597&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アプリへのショートカットも付いているので詳細はそこからアプリを起動してお使いください。&lt;/p&gt;
+
+&lt;p&gt;iPadや6Plusの横画面だとこんなふうに表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/7578fe1f076a390fa092888f42f0e891.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/7578fe1f076a390fa092888f42f0e891.png&#34; alt=&#34;20141106_Screen Shot 2014-11-06 at 10.17.13 のコピー&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-598&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;すもうトリとコトリ-フレームを追加:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;「すもうトリとコトリ」フレームを追加&lt;/h3&gt;
+
+&lt;p&gt;新しいフレームが追加されました。&lt;/p&gt;
+
+&lt;p&gt;メタ・グラマー様作のLINEスタンプ「&lt;a href=&#34;https://store.line.me/stickershop/product/1012021/ja&#34; target=&#34;_blank&#34;&gt;すもうトリとコトリ&lt;/a&gt;」がそのままそら案内のフレームになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/bc4c3b2c302a67b89cf94b0dbd55b839.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/bc4c3b2c302a67b89cf94b0dbd55b839.png&#34; alt=&#34;20141106_Screen Shot 2014-11-06 at 10.19.57 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-599&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;会話しているかのようなフレームの写真を投稿できます。&lt;/p&gt;
+
+&lt;p&gt;もちろんこのフレームも無料です。&lt;/p&gt;
+
+&lt;h3 id=&#34;大事なお知らせ:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;大事なお知らせ&lt;/h3&gt;
+
+&lt;p&gt;最後に大事なお知らせを一つ。&lt;/p&gt;
+
+&lt;p&gt;iOS 版のそら案内は iOS 6 以降で動作するように作られていましたが、この v4.0.0 を最後に iOS 6 のサポートを終了することになりました。（v4.0.0 は iOS 6 に対応しています）&lt;/p&gt;
+
+&lt;p&gt;iOS 6 といえば2年以上前の OS で、ユーザの割合もそれ相応にかなり少なくなっており、3世代の OS をサポートし続けることが困難であると判断しました。ご理解をいただければと思います。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

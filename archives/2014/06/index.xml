@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/06 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/06/</link>
+    <description>Recent content in 2014/06 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 30 Jun 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/06/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（iOS版） v3.4.0 を公開しました – PM2.5/黄砂の予測表示に対応</title>
+      <link>http://staff.feedtailor.jp/2014/06/30/236</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/06/30/236</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v3.4.0 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;黄砂の予測情報表示に対応&lt;/li&gt;
+&lt;li&gt;PM2.5の予測情報表示に対応&lt;/li&gt;
+&lt;li&gt;投稿機能に「Rody」のフレームを追加&lt;/li&gt;
+&lt;li&gt;投稿機能の「ナチュラル」「コンパクト」のフレームを更新&lt;/li&gt;
+&lt;li&gt;着信中などにレイアウトが崩れる問題を修正&lt;/li&gt;
+&lt;li&gt;その他細かい調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いろいろと盛りだくさんですけれど、ざっと順番に見ていきましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;黄砂-pm2-5の予測表示に対応:9bf18b52e3505eab583515769ec80737&#34;&gt;黄砂・PM2.5の予測表示に対応&lt;/h3&gt;
+
+&lt;p&gt;まず、iPadでは普通に天気画像に「PM2.5」と「黄砂」のタブが増えています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/5df59251b2afb8f2d5491533d9df8b29.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/5df59251b2afb8f2d5491533d9df8b29-225x300.png&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.01.45 のコピー&#34; width=&#34;225&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-238&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iPhoneの場合は左上のボタンから&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/f0b458c7722e56bf0a7ecdd52955f304.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/f0b458c7722e56bf0a7ecdd52955f304-168x300.jpg&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.14 のコピー 2014-06-30 10-11-50 2014-06-30 10-12-10&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-239&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一覧を表示できて、そこから&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/210a523fb50472f528bd50e3637eb4a5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/210a523fb50472f528bd50e3637eb4a5-168x300.png&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.21 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-240&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;切り替えることができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/94fdb9f8d32755724b4ddc2614acb9bf.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/94fdb9f8d32755724b4ddc2614acb9bf-168x300.png&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.23 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-241&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、先ほどの一覧の画面で「編集」をタップすると、タブの並び替えができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/5cf1c81631122ea63049f6ea1001091b.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/5cf1c81631122ea63049f6ea1001091b-168x300.png&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.42 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-242&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみに、黄砂は、、、ここのところ飛散予測がないようなのでなにも表示されないことが多いですけれど、「地表付近」と「大気中」の2種類の情報を表示できます。それぞれ、以下のような数値になってます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;地表付近：地表面から高さ約1000mまでの間の黄砂濃度&lt;/li&gt;
+&lt;li&gt;大気中：地表面から高さ約23kmまでの間の1平方メートルあたりに含まれる黄砂総量&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;rody-のフレームを追加:9bf18b52e3505eab583515769ec80737&#34;&gt;「Rody」のフレームを追加&lt;/h3&gt;
+
+&lt;p&gt;投稿機能に新しいフレームが追加されました。子供用品などでおなじみRodyのフレームです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/2babc6c3da44963807d9655e8241592b.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/2babc6c3da44963807d9655e8241592b-261x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.46.59&#34; width=&#34;261&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-258&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;有料フレームですが、かわいいフレームが16種類と豊富ですので是非どうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/f385dec5edb6219ddd693b28147fbd3a.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/f385dec5edb6219ddd693b28147fbd3a-300x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.30.50&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-247&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;ナチュラル-コンパクト-のフレームを更新:9bf18b52e3505eab583515769ec80737&#34;&gt;「ナチュラル」「コンパクト」のフレームを更新&lt;/h3&gt;
+
+&lt;p&gt;人気の「ナチュラル」「コンパクト」フレームがさらに増えました。それぞれ8種類になりました。&lt;/p&gt;
+
+&lt;p&gt;「ナチュラル」はこんな感じで、&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/23e0a59839e3f2941ca87ff4177120a6.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/23e0a59839e3f2941ca87ff4177120a6-261x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.47.44&#34; width=&#34;261&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-256&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/c7faf7770ef753b6d7e977b749e5ab72.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/c7faf7770ef753b6d7e977b749e5ab72-300x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.35.07&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-252&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「コンパクト」はこんな感じです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/a9b48b7b1c045c47ef2e1bd33716c69e.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/a9b48b7b1c045c47ef2e1bd33716c69e-261x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.47.25&#34; width=&#34;261&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-257&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/755a4c9997d0d9d886fd35e50910f2eb.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/755a4c9997d0d9d886fd35e50910f2eb-300x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.35.43&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-250&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;新しいフレームも是非使ってみてください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そら案内はまだまだ進化します。まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>デザイン重視の天気予報アプリ SORA v1.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/06/12/222</link>
+      <pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/06/12/222</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/sora/id836464812?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-230&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;日本全体（梅雨の無い北海道以外）が梅雨入りしたということで、毎日の天気が気になるところですね。&lt;/p&gt;
+
+&lt;p&gt;というわけで、好評いただいているデザイン重視な天気予報アプリ「SORA」のアップデートを公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:72da8a6b9103c20f5d65183c1d06093c&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スクリーンショットの投稿機能を追加&lt;/li&gt;
+&lt;li&gt;一部地域でエラーが出る問題を修正&lt;/li&gt;
+&lt;li&gt;そのほか細かいバグ修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/sora/id836464812?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;投稿機能、開発当初は不要なんじゃないかと思っていたわけですが、意外にスクリーンショットをわざわざ投稿してくれるユーザさんをちらほらと見かけましたので、それじゃ本家として対応しようかということで追加することになりました。&lt;/p&gt;
+
+&lt;h4 id=&#34;投稿方法-graph:72da8a6b9103c20f5d65183c1d06093c&#34;&gt;投稿方法：GRAPH&lt;/h4&gt;
+
+&lt;p&gt;GRAPH テーマの場合は、そのまま、左上に投稿ボタンが増えてますので、こちらをポチッと。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/5a01071344eedbd654b45f21c7d17165.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/5a01071344eedbd654b45f21c7d17165-168x300.png&#34; alt=&#34;20140612_iOSシミュレータのスクリーンショット 2014.06.12 9.42.39 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-223&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;投稿方法-gradient:72da8a6b9103c20f5d65183c1d06093c&#34;&gt;投稿方法：gradient&lt;/h4&gt;
+
+&lt;p&gt;gradient テーマの場合は、もともと画面上にボタンがありませんので、更新操作と同じように下に引っ張ります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/fe040ff1ec0c8b2beed64d337b11fdc9.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/fe040ff1ec0c8b2beed64d337b11fdc9-168x300.png&#34; alt=&#34;20140612_iOSシミュレータのスクリーンショット 2014.06.12 9.36.30 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-224&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ある程度のところまで引っ張って放すと「更新」になりますが、さらに引っ張ると、、、&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/aa5fc039f56d80dfd860cb747229d470.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/aa5fc039f56d80dfd860cb747229d470-168x300.png&#34; alt=&#34;20140612_iOSシミュレータのスクリーンショット 2014.06.12 9.36.35 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-225&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここで放すと「投稿」になります。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、さらにさらに引っ張ると・・・&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/a3afcc50d34cb04989853055c7b821e5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/a3afcc50d34cb04989853055c7b821e5-168x300.png&#34; alt=&#34;20140612_iOSシミュレータのスクリーンショット 2014.06.12 9.36.50 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-226&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ん？なにか文字が？・・・続きは自分の目でお確かめくださいませ。&lt;/p&gt;
+
+&lt;h4 id=&#34;投稿結果:72da8a6b9103c20f5d65183c1d06093c&#34;&gt;投稿結果&lt;/h4&gt;
+
+&lt;p&gt;たとえば Twitter に投稿した場合は、こんな感じになります。&lt;/p&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;
+  &lt;p&gt;
+    6月6日(金) 大阪府大阪市 雨後曇 22ºC 50% &lt;a href=&#34;https://twitter.com/search?q=%23SORA&amp;src=hash&#34;&gt;#SORA&lt;/a&gt; 短時間にめちゃ降ったみたい &lt;a href=&#34;http://t.co/7pbYywEWaM&#34;&gt;http://t.co/7pbYywEWaM&lt;/a&gt; &lt;a href=&#34;http://t.co/eEJNoKGfhy&#34;&gt;pic.twitter.com/eEJNoKGfhy&lt;/a&gt;
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    &amp;mdash; itok@いとーけー (@itok_twit) &lt;a href=&#34;https://twitter.com/itok_twit/statuses/474834838143242240&#34;&gt;2014, 6月 6&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;
+  &lt;p&gt;
+    6月12日(木) 京都府京都市 曇後雨 21ºC 50% &lt;a href=&#34;https://twitter.com/search?q=%23SORA&amp;src=hash&#34;&gt;#SORA&lt;/a&gt; 今日は降ったり止んだり &lt;a href=&#34;http://t.co/7pbYywEWaM&#34;&gt;http://t.co/7pbYywEWaM&lt;/a&gt; &lt;a href=&#34;http://t.co/7sJepcbXwk&#34;&gt;pic.twitter.com/7sJepcbXwk&lt;/a&gt;
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    &amp;mdash; itok@いとーけー (@itok_twit) &lt;a href=&#34;https://twitter.com/itok_twit/statuses/476855915274964993&#34;&gt;2014, 6月 11&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;冒頭に書いたように、毎日の天気が気になるシーズン。デザイン重視な国産天気予報アプリで日々の天気をチェックしましょう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://soraapp.jp&#34; target=&#34;_blank&#34;&gt;SORA&lt;/a&gt;（専用サイト）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/sora/id836464812?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;まだの方もぜひどうぞ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iPhone用YouTube再生リスト専用プレーヤー BGTube v1.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/06/06/216</link>
+      <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/06/06/216</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id876208185&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-162&#34; src=&#34;http://staff.feedtailor.jp/images/2014/05/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;バックグランド再生にも対応している、YouTube 再生リスト専用プレーヤー BGTube v1.1.0 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:5ff0019b13fafcc4b579d4df7a0ed299&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;前後の曲へ移動するボタンを追加&lt;/li&gt;
+&lt;li&gt;細かいバグ修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id876208185&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-58&#34; src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;実は、もともとリモコン経由では前後の曲へ移動できたのですが、アプリ上にもちゃんとボタンを設置しました。&lt;/p&gt;
+
+&lt;p&gt;こんな感じですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/20140605_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/20140605_4-300x168.png&#34; alt=&#34;20140605_4&#34; width=&#34;300&#34; height=&#34;168&#34; class=&#34;alignnone size-medium wp-image-217&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;使い方など、詳しく配膳のブログを参照してもらえればと。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2014/05/21/161&#34; target=&#34;_block&#34;&gt;iPhone用YouTube再生リスト専用プレーヤー BGTube を公開します&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ほぼ毎日のように作業用BGMを再生するときに使っていますが、ほんと便利ですので、皆さんもぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;大事なことですが、無料アプリです。無料。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id876208185&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-58&#34; src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

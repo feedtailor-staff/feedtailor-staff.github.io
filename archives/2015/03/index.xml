@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015/03 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2015/03/</link>
+    <description>Recent content in 2015/03 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 31 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2015/03/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内 for Windows を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/03/31/798</link>
+      <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/03/31/798</guid>
+      <description>
+
+&lt;p&gt;iOS/Mac/Androidでの定番お天気アプリ「そら案内」がついにWindows ストアにも登場しました！&lt;/p&gt;
+
+&lt;p&gt;いやこれほんとの話です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34; alt=&#34;Square150x150Logo-100&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-full wp-image-801&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;基本的な機能としては既存の「そら案内」を踏襲していますが、Windows ストアアプリたるべく、インターフェースは一から検討し直しました。&lt;/p&gt;
+
+&lt;p&gt;その結果、こうなりました。どんっ！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_1.png&#34; alt=&#34;20150326_1&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-803&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一画面でほとんどすべての主要な情報を網羅しています。左から、今日明日の天気、注警報、週間予報、ですね。&lt;/p&gt;
+
+&lt;p&gt;今日明日の天気では、3時間ごとの予報も一緒に表示されます。背景のグラフは気温の変化グラフ。&lt;/p&gt;
+
+&lt;p&gt;これを横にスクロールすると、概況や生物季節情報もまとめて表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_2.png&#34; alt=&#34;20150326_2&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-804&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;地域切り替えはWindowsのアプリバーを表示する要領で上からスワイプ、あるいは、右上の日本地図アイコンをタップしてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/4b91d3648e08868e7a5cda349a7443ca.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/4b91d3648e08868e7a5cda349a7443ca.png&#34; alt=&#34;20150326_screenshot_03262015_135122 のコピー&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-805&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;注警報の有無もこの一覧で把握できるようになっています。右端の「+」ボタンで地域の追加削除が可能です。位置情報を元にした「現在地の天気」も設定可能です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/screenshot_03272015_103128.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/screenshot_03272015_103128.png&#34; alt=&#34;screenshot_03272015_103128&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-821&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、タイル表示にも対応しておりますので、スタート画面にて現在地の天気予報を簡単に確認することもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_4.png&#34; alt=&#34;20150326_4&#34; width=&#34;600&#34; height=&#34;400&#34; class=&#34;alignnone size-full wp-image-810&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ただ、残念ながら、現時点（v1.0）では既存の「そら案内」にある天気画像（アメダスや雨雲レーダなど）の表示には対応しておりません。こちらは4月中の公開（v1.1）に向けて今もがりがりとコードを書いているところですので、今しばらくお待ちください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;余談:183109533a870edef8e0bf84d13f407c&#34;&gt;余談&lt;/h4&gt;
+
+&lt;p&gt;このWindowsアプリ、Mac歴27年の私itokがつくりました。いやこれほんとに。&lt;/p&gt;
+
+&lt;p&gt;C#とXAML、Visual Studioでつくったネイティブアプリです。Android版も作っているのでXamarinを使うという選択肢もあるにはあったんですが、Android版を作り始めたのとWindows版の話がでてきた時期がずれていたことと、Windows版はタブレット用だったので共通化して作るというより個別にやったほうがいいものが早くできるのではないかという判断でこうなりました。&lt;/p&gt;
+
+&lt;p&gt;Objective-C、Swift、Java、C#、それからたまにJavaScript（node.js用）を転々とする日々はなかなかスリリングでしたけれども、とりあえず一段落できてよかったです。Visual StudioとAndroid StudioとXcodeが一つの画面に共存していることもしばしばでしたね。もちろん、v1.1に向けて今も熱意実装中ですけれども。&lt;/p&gt;
+
+&lt;p&gt;特に&lt;a href=&#34;http://meta-glamour.com&#34; target=&#34;_blank&#34;&gt;メタ・グラマー様&lt;/a&gt;にはまさかのWindows版のデザイン依頼という無理難題をお願いしましたが、本当にご協力ありがとうございました。&lt;/p&gt;
+
+&lt;p&gt;永遠のWindows初心者のつもりだったのに、まさか終礼で.NETやXAMLについての新発見を話す日が来るとはね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/4bbbfc3d2e2e905a903b352b067132261.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/4bbbfc3d2e2e905a903b352b067132261.jpg&#34; alt=&#34;20150327_IMG_7212 のコピー&#34; width=&#34;600&#34; height=&#34;450&#34; class=&#34;alignnone size-full wp-image-824&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これでitokもWindowsのアプリをどんどん作るのかというと決してそういうわけではなく、じゃあなんで作ったのかといえばいうまでもなく「&lt;strong&gt;それは『そら案内』だから&lt;/strong&gt;」なのです。これ一番大事。C#は結構好きになりましたけどね。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そら案内 for Windows、もちろん&lt;strong&gt;無料&lt;/strong&gt;です。Windowsユーザの皆さん、ぜひお使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>漢字学習用「漢字→かな変換」アプリ – 「かんじかな」 v1.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/03/18/771</link>
+      <pubDate>Wed, 18 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/03/18/771</guid>
+      <description>
+
+&lt;p&gt;こんにちは、おとーさんエンジニアのitokです。&lt;/p&gt;
+
+&lt;p&gt;さて feedtailor としては初、教育アプリ「かんじかな」を公開します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id975403451&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/3a32a3262646918bc6b4c57662b6c293.png&#34; alt=&#34;Icon-60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-774&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あれ？普通は「かな→漢字変換」ですよね？このアプリは違います。逆なんです。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;「かんじかな」は入力された日本語文章の漢字をひらがなに変換し、ふりがなをつけるアプリです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Webなどで拾ってきた文章（たとえはWikipediaとか）を小学生に読んでもらおうと思ったとき、読めない漢字がたくさんあって・・・ということってありませんか？そんな時にこのアプリが活躍します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id975403451&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;大事なお話:e0023e966e78e8705d4f18cc229217f8&#34;&gt;大事なお話&lt;/h4&gt;
+
+&lt;p&gt;本アプリは、漢字→かな変換のために、入力された文章をネットワーク経由で変換サーバに送信しますが、通信内容は暗号化されており、また送信された文章をサーバに保存することはありません。&lt;/p&gt;
+
+&lt;h4 id=&#34;使い方:e0023e966e78e8705d4f18cc229217f8&#34;&gt;使い方&lt;/h4&gt;
+
+&lt;p&gt;アプリを起動すると、最初は文章の入力画面です。コピーした文章を張り付けたり、直接入力してください。（閲覧中のWebページを直接変換する方法もありますが、それは後ほど）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/0ea085e8be3002857f983953b89ba1c2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/0ea085e8be3002857f983953b89ba1c2.png&#34; alt=&#34;20150317_iOS Simulator Screen Shot 2015.03.17 14.41.04 のコピー&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-775&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;変換ボタンをタップすると、文章をサーバに送信し、変換結果が返ってきます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/b033d86881554db4b5b0b72182d9dbcf.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/b033d86881554db4b5b0b72182d9dbcf.png&#34; alt=&#34;20150317_iOS Simulator Screen Shot 2015.03.17 14.41.36 のコピー&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-777&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これはすべての漢字にふりがなをつけた状態。タイトルにあるように「ひらがなのみ」のモードです。&lt;/p&gt;
+
+&lt;p&gt;下の「使用漢字」をタップすることで、小学校の学年に応じて漢字を選択できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150317_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150317_2.png&#34; alt=&#34;20150317_2&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-778&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここから「1年生でならうかん字」を選択するとこうなります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150317_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150317_1.png&#34; alt=&#34;20150317_1&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-779&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;青色が学習済みの漢字（=「使用漢字」に含まれる漢字）。オレンジが未学習の漢字（=「使用漢字」に含まれない漢字）になります。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、熟語中に「使用漢字」に含まれない漢字が一つでも含まれている場合は、熟語全体を「使用漢字」に含まれない漢字として表示します。↑の例ですと「学習」などが相当します。&lt;/p&gt;
+
+&lt;p&gt;漢字は文脈に応じていろんな読み方がありますので、機械的におこなわれている変換は残念ながら完璧ではありません。オレンジの文字をタップするとふりがなを編集できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150317_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150317_3.png&#34; alt=&#34;20150317_3&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-780&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これで準備完了。最終的に「結果表示」から、全画面での表示に切り替えることができます。この時、ふりがなをつけたままにするか、漢字をひらがなで置き換えるかを選択することができます。&lt;/p&gt;
+
+&lt;p&gt;ひらがなで置き換えるとこんな表示になります。画面をタップすると上下バーがなくなって全画面になり、読んでもらいやすくなります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150317_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150317_4.png&#34; alt=&#34;20150317_4&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-782&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この結果をPDFに出力することもできます。出力されたPDFはほかのアプリで開けますし、iTunes経由で取り出すことも可能です。&lt;/p&gt;
+
+&lt;h4 id=&#34;webページから直接変換:e0023e966e78e8705d4f18cc229217f8&#34;&gt;Webページから直接変換&lt;/h4&gt;
+
+&lt;p&gt;iOS8で追加されたエクステンションの仕組みを使うと、Safariで表示しているページの文章を「かんじかな」に渡すことができます。&lt;/p&gt;
+
+&lt;p&gt;まずは、以下の手順で「かんじかな」アクティビティを有効にします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Untitled1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Untitled1.png&#34; alt=&#34;Untitled&#34; width=&#34;800&#34; height=&#34;312&#34; class=&#34;alignnone size-full wp-image-786&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あとは、見ているページで上記「かんじかな」アクティビティを選択するだけです。&lt;/p&gt;
+
+&lt;p&gt;詳しくは動画をごらんください。&lt;/p&gt;
+
+&lt;p&gt;小学生あるいは非日本語圏の方の漢字学習用にぜひご活用くださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id975403451&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;余談:e0023e966e78e8705d4f18cc229217f8&#34;&gt;余談&lt;/h4&gt;
+
+&lt;p&gt;このアプリの肝となる「漢字→かな」変換部分はオープンソースの&lt;a href=&#34;http://kakasi.namazu.org&#34; target=&#34;_blank&#34;&gt;KAKASI（kanji kana simple inverter）&lt;/a&gt;を使用しています。このエンジンを外部サーバに設置し、iOS側からネットワークごしに呼び出すことで変換を実現しています。&lt;/p&gt;
+
+&lt;p&gt;過去に変換した文章を履歴として蓄積しているのですが、ここには最近話題の&lt;a href=&#34;http://realm.io/&#34; target=&#34;_blank&#34;&gt;Realm&lt;/a&gt;を初めて使用してみました。今までならこの程度の履歴管理はplist直接編集とかでしたが、導入が簡単だったのですんなりと使うことができました。&lt;/p&gt;
+
+&lt;p&gt;Webからの文章抽出には&lt;a href=&#34;https://github.com/hatena/extract-content-javascript/&#34; target=&#34;_blank&#34;&gt;はてなの「ExtractContentJS」&lt;/a&gt;を使用しています。UIなしなので、このAction ExtensionはJavaScriptによる実装です。&lt;/p&gt;
+
+&lt;h4 id=&#34;セールのお知らせ:e0023e966e78e8705d4f18cc229217f8&#34;&gt;セールのお知らせ&lt;/h4&gt;
+
+&lt;p&gt;最後にもう一つ大事なお話を。&lt;/p&gt;
+
+&lt;p&gt;季節は春。まさに進級進学シーズンまっただ中ということで、&lt;strong&gt;3月いっぱい半額セール&lt;/strong&gt;を実施します。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3月いっぱい半額セール&lt;/strong&gt;です。&lt;/p&gt;
+
+&lt;p&gt;この機会にぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id975403451&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

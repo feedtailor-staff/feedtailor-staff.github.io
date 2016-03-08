@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/09/29 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/09/29/</link>
+    <description>Recent content in 2014/09/29 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 29 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/09/29/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>止めにくい目覚ましアプリ QR目覚まし v1.1 を公開しました – ヘルスケア連携追加</title>
+      <link>http://staff.feedtailor.jp/2014/09/29/460</link>
+      <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/09/29/460</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-106&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;QR目覚ましがiOS8のヘルスケア（HealthKit）に対応しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS8対応&lt;/li&gt;
+&lt;li&gt;睡眠ログをヘルスケアに保存する設定を追加（iOS8のみ）&lt;/li&gt;
+&lt;li&gt;外部ライブラリの更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;QR目覚ましはもともと睡眠時間を記録として残すことができます。（ナイトモードの時間を睡眠時間としています）&lt;/p&gt;
+
+&lt;p&gt;で、当初より他のフィットネス系のサービスと連携できたら楽しいだろうなと思っておりまして、たとえば Withings とかは API があるのですが睡眠時間については対応しておらず、あきらめていたわけです。&lt;/p&gt;
+
+&lt;p&gt;そこに iOS8 の登場です。&lt;/p&gt;
+
+&lt;p&gt;HealthKit、これはやるしかない。&lt;/p&gt;
+
+&lt;p&gt;というわけで、睡眠時間を記録するだけですけれど連携してみました。本来であれば、睡眠の質も記録できる仕様になっているのですが、QR目覚まし自体がそういう機能を持ってないので、単に睡眠時間の記録としてお使いください。&lt;/p&gt;
+
+&lt;h3 id=&#34;連携方法:04acabc5a096a7c8fa0636ab37dc456c&#34;&gt;連携方法&lt;/h3&gt;
+
+&lt;p&gt;まず最初に、確認のダイアログが表示されます。これは設定タブの「ログはHealthに保存」からもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/53c1275df7eae129e69d303a59e57b76.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/53c1275df7eae129e69d303a59e57b76-168x300.png&#34; alt=&#34;20140929_iOS Simulator Screen Shot 2014.09.29 9.36.55 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-461&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「ヘルスケアを使用」を選択すると、ヘルスケア側の確認画面が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/ba52108e610704d1bd180ad2a9a0841c.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/ba52108e610704d1bd180ad2a9a0841c-168x300.png&#34; alt=&#34;20140929_iOS Simulator Screen Shot 2014.09.29 9.38.14 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-462&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここでは、スイッチを「オン」にしてください。これで連携完了です。既存の睡眠ログがある場合は、自動で移行されます。&lt;/p&gt;
+
+&lt;p&gt;ヘルスケアアプリを見てみると、連携アプリとして「QR目覚まし」が確認できると思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/3bc91d5e4a4700f58725d175c1192e3a.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/3bc91d5e4a4700f58725d175c1192e3a-168x300.png&#34; alt=&#34;20140929_iOS Simulator Screen Shot 2014.09.29 9.38.42 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-467&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;移行したログはこのように表示されます。先述のように睡眠の質（睡眠中の時間経過）は記録されないので単に毎回の睡眠合計時間だけが記録されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/832b709b1ee8fc599fe7552b41c4d406.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/832b709b1ee8fc599fe7552b41c4d406-168x300.png&#34; alt=&#34;20140929_Screen Shot 2014-09-29 at 9.40.38 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-464&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;個別の詳細はこんな感じで。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/eb9bdd2ed221007d731a55ca15488b44.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/eb9bdd2ed221007d731a55ca15488b44-168x300.png&#34; alt=&#34;20140929_Screen Shot 2014-09-29 at 9.48.27 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-465&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以後は今まで通りにアプリを使っていただくと、睡眠ログがヘルスケア側に保存されていきます。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;朝しっかり起きられて、睡眠ログもヘルスケアに保存できて、しかも&lt;strong&gt;無料&lt;/strong&gt;、なQR目覚まし。一度お試しくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id766097130&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

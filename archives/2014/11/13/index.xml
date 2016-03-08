@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/11/13 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/11/13/</link>
+    <description>Recent content in 2014/11/13 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 13 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/11/13/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（Mac版）v2.0.4 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/11/13/604</link>
+      <pubDate>Thu, 13 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/13/604</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/icon_128x128.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-529&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mac用お天気予報アプリ「そら案内」の v2.0.4 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:a3c5ef4c21de67e66d5fc6f04ad79fb7&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;10.8 で正常に起動しない問題を修正&lt;/li&gt;
+&lt;li&gt;バグ修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;10.8 Mountain Lion において、メニューバーに天気が表示されずクリックしても何も起きないという問題が発生しまして、それを修正しました。10.8ユーザのみなさま、ご迷惑をおかけして申し訳ありませんでした。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;デスクトップの片隅で天気をお知らせしてくれるそら案内。みなさん是非お使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

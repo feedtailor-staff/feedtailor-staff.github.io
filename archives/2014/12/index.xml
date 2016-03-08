@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/12 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/12/</link>
+    <description>Recent content in 2014/12 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 22 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/12/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（Android版）v2.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/12/22/710</link>
+      <pubDate>Mon, 22 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/12/22/710</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/app-icon_144x144.png&#34; alt=&#34;app-icon_144x144&#34; width=&#34;144&#34; height=&#34;144&#34; class=&#34;alignnone size-full wp-image-714&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」のAndroid版がフルリニューアルされました。&lt;/p&gt;
+
+&lt;p&gt;一から作り直しまして、見た目・機能的には最新のiOS版に近い感じになりました。（Android v4.0.3 以降の対応となりましたのでご了承ください）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いくつかの機能を見ていきましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;今日-明日の予報-週間予報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;今日／明日の予報・週間予報&lt;/h3&gt;
+
+&lt;p&gt;地域の登録は市区町村単位でのみ行うようになりました。（旧バージョンをお使いの方はお手数ですが、再度地域設定を行ってください）&lt;/p&gt;
+
+&lt;p&gt;一つの画面で、今日／明日の予報と1週間先までの予報が表示されます。&lt;/p&gt;
+
+&lt;p&gt;今日／明日の予報の行をタップすることで、3時間ごとの時間別予報も表示できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_1.png&#34; alt=&#34;20141218_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-717&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;時間別予報には、天気・温度・降水量・湿度・風が表示されています。背景のグラフは気温の変化グラフで、細い線は前日の気温を表しています。&lt;/p&gt;
+
+&lt;p&gt;地域の切り替えは左右方向へフリックしてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;天気概況-注警報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気概況／注警報&lt;/h3&gt;
+
+&lt;p&gt;下にスクロールすると天気概況が表示されます。文字でさらに天気の様子がわかるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_2.png&#34; alt=&#34;20141218_2&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-718&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上部バーに「！」アイコンが表示されるとそれは注警報のお知らせです。「！」アイコンをタップして、注警報をチェックしましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;生物季節情報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;生物季節情報&lt;/h3&gt;
+
+&lt;p&gt;右上メニューから、その地域での生物季節情報を閲覧できます。季節の移ろいを感じていただければと。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34; alt=&#34;20141218_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-721&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;天気画像:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気画像&lt;/h3&gt;
+
+&lt;p&gt;ここが大幅リニューアルポイントです。&lt;/p&gt;
+
+&lt;p&gt;天気画像として、気象衛星・天気図・雨雲レーダー・XバンドMPレーダー予測・アメダス各種・PM2.5予測・黄砂予測、に対応しました。（天気画像も右上のメニューから表示できます）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_7.png&#34; alt=&#34;20141218_7&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-722&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アメダスも気温だけではなく、降水量・風向風速・日照時間・積雪深を切り替えて表示できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;各地点をタップすると詳細情報を一望できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_4.png&#34; alt=&#34;20141219_4&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-725&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲レーダーも GoogleMap に重ねることで自由に全国の様子を見ることが出来るようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_5.png&#34; alt=&#34;20141219_5&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-726&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲レーダーは1kmメッシュで5分以内の雨の&lt;strong&gt;実況&lt;/strong&gt;を表示しています。それに対して、XバンドMPレーダーは250mメッシュで直近5分後の雨の&lt;strong&gt;予測&lt;/strong&gt;を表示します。用途に応じて使い分けてください。&lt;/p&gt;
+
+&lt;p&gt;他にも気になる黄砂やPM2.5の予測表示にも対応しています。来夏までには台風情報の表示にも対応する予定です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;大幅リニューアルされて生まれ変わった「そら案内」。是非お使いください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最後になりますが、ベータテストに参加していただいたユーザのみなさんどうもありがとうございました。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;余談:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;余談&lt;/h4&gt;
+
+&lt;p&gt;以上、さらっと紹介してきましたが、このAndroid版、私itokがつくりました。いや、これ、ほんとに。&lt;/p&gt;
+
+&lt;p&gt;もともとのAndroid版は外部委託して（シーリスの有山さんに）作ってもらっていたのですが、このたび自社初のAndroidアプリとして開発しました。&lt;/p&gt;
+
+&lt;p&gt;ちょうどAndroid Studioも正式版が出たり（開発は主にv0.8系で）ということで、タイミング的なものもあって開発は思ったよりやりやすかったです。iOSの画面サイズが複雑になったことでViewに対するレイアウトの考え方が似てきたこともあるでしょうね。&lt;/p&gt;
+
+&lt;p&gt;一応秘密プロジェクトということで進んでいましたので、世間のAndroidの話題にはなるべく近づかないようにし、最近も「Androidどうです？」なんていうフリに「どうですかねえ〜」なんてあいまいな返事をしていました（その節はほんとすいません）。これで晴れて「Android Studio v1.0 きたー」とかつぶやけますねw（うずうずしていたので社内チャットには投下してましたけれど）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/83a2b178a01dace64df5dbcc9c63f5e1-e1418952557532.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/83a2b178a01dace64df5dbcc9c63f5e1-e1418952557532.jpg&#34; alt=&#34;20141219_IMG_6939 のコピー&#34; width=&#34;600&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-731&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これでAndroidもガンガンいくのかといえば、それはなんともいえないですが、じゃあなぜAndroidなのかといえば、&lt;strong&gt;それは「そら案内」だからです&lt;/strong&gt;、ということでご了承ください。&lt;/p&gt;
+
+&lt;p&gt;なんにしても新しくなった「そら案内 for Android」みなさん是非お使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>天気写真閲覧専用アプリ「そらアルバム」v1.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/12/12/701</link>
+      <pubDate>Fri, 12 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/12/12/701</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id658139582&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/2b24d9a0abccbdd84364b466cc9680e3.png&#34; alt=&#34;Icon60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-702&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気予報アプリ「そら案内」で投稿した写真を閲覧する専用アプリ「そらアルバム」の v1.1.0 を公開しました&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;iOS8対応&lt;/p&gt;
+
+&lt;p&gt;＊本バージョンからiOS7以降の対応となります&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iPhone6/6Plus対応&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;フラットデザイン化&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id658139582&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1年以上ぶりのアップデートですが、そらシリーズ唯一フラット化されていない本アプリもようやくフラット化されました。&lt;/p&gt;
+
+&lt;p&gt;ここでの紹介は始めてなので、例によってざっくりとアプリの解説を。&lt;/p&gt;
+
+&lt;h2 id=&#34;そらアルバム:4e1199c835af647d12f69f57cd5af678&#34;&gt;そらアルバム&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;そらアルバムは、そら案内アプリを使って Twitter 投稿された写真（スクリーンショット除く）を軽快に閲覧するためのアプリケーションです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;起動すると、直近の投稿一覧がサムネイルで表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_1.png&#34; alt=&#34;20141212_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-704&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;サムネイルタップで拡大表示できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/8686462e14c223b70eb82312a91d0988.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/8686462e14c223b70eb82312a91d0988.png&#34; alt=&#34;20141212_iOS Simulator Screen Shot 2014.12.12 9.20.37 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-705&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;投稿された都道府県の文字列を元に（画像に位置情報が含まれているわけではありません）地図に並べて表示することもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_2.png&#34; alt=&#34;20141212_2&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-706&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ランダムに表示し続けるスライドショーもあります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_4.png&#34; alt=&#34;20141212_4&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-707&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ほんと、これだけのシンプルなアプリですが、そら案内ユーザのみなさんが日々投稿している写真をのんびり眺めてみるのもいいものです。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方も是非どうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id658139582&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ネタキーボードアプリ「富豪Keyboard」が審査を通過できないのでソースを公開します</title>
+      <link>http://staff.feedtailor.jp/2014/12/10/681</link>
+      <pubDate>Wed, 10 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/12/10/681</guid>
+      <description>
+
+&lt;p&gt;いつでもネタに全力投球のfeedtailorです。&lt;/p&gt;
+
+&lt;p&gt;今日は残念なお知らせがあります。&lt;/p&gt;
+
+&lt;p&gt;10月上旬に開発し、そこから2ヶ月間レビュワーとのやり取りを経て、残念ながら公開を見送ったアプリがあります。&lt;/p&gt;
+
+&lt;p&gt;その名も&lt;/p&gt;
+
+&lt;h1 id=&#34;富豪keyboard:27e07b9d6d1e2cfea3137ad27030af33&#34;&gt;富豪Keyboard&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/35cc1d4d54b50cfb678b99e1a604b8be.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/35cc1d4d54b50cfb678b99e1a604b8be.png&#34; alt=&#34;AppIcon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-682&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;せっかく作ったのにという思いもあるので、せめてもの痕跡として、そのアプリの主要機能のソースコードを公開することにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/feedtailor/RichKeyboard&#34; target=_blank&gt;GitHub : feedtailor/RichKeyboard&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;富豪keyboardとは:27e07b9d6d1e2cfea3137ad27030af33&#34;&gt;富豪Keyboardとは&lt;/h2&gt;
+
+&lt;p&gt;「富豪」ときいて、思い当たるものがある方もおられるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;そう「富豪ブック」です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/53394b992df5454fdee0c605c1cb73a2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;114&#34; height=&#34;114&#34; class=&#34;alignnone size-full wp-image-685&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://feedtailor.jp/wp/?p=9404&#34; target=_blank&gt;iPad mini 2枚を使った見開きPDFビュワー『富豪ブック』を公開します&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今回の富豪Keyboardはその流れを受け継いだアプリのはずでした。&lt;/p&gt;
+
+&lt;p&gt;そもそもの発端は、いつものアイディア会議。&lt;/p&gt;
+
+&lt;p&gt;「6Plusになってからフリック入力がしにくくなった」&lt;/p&gt;
+
+&lt;p&gt;「keyboard extensionが作れるから、たとえばiPhone5で入力した文字を6Plusで受け取れるんじゃないか」&lt;/p&gt;
+
+&lt;p&gt;そんなノリで始まったこの企画。ええ、もう、その日の夕方にはプロトタイプできてましたよ。&lt;/p&gt;
+
+&lt;p&gt;つまり、2台のデバイスを用いて文字入力を行うというまさに富豪なキーボードアプリなのです。（とはいえ、上記「富豪ブック」の時はBLE対応のデバイスがそんなになかったのでまさに富豪的でしたが、今やiPhone/iPad2台持ちで両方ともBLE対応っていうのはよくありそうな・・・）&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方:27e07b9d6d1e2cfea3137ad27030af33&#34;&gt;使い方&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;＊注：以下、実際に申請したアプリとは異なるところがありますのでご了承ください。また、今回公開したソースコードには広告表示は含まれていません。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最初にこちらをご覧ください。&lt;/p&gt;
+
+&lt;p&gt;まず準備として、keyboard extension を追加します。 設定アプリ→「一般」→「キーボード」→「キーボード」→「新しいキーボードを追加」ですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.30.29.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.30.29.png&#34; alt=&#34;20141210_Screen Shot 2014-12-10 at 14.30.29&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-686&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bluetoothを使うので「フルアクセスを許可」を「オン」にしてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.30.39.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.30.39.png&#34; alt=&#34;20141210_Screen Shot 2014-12-10 at 14.30.39&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-687&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここからは説明のためにiPadとiPhoneを使用します。iPadで「メモ」アプリを使用し、iPhoneからiPadの「メモ」アプリに入力したいと思います。（もちろん、iPhone同士でも構いません）&lt;/p&gt;
+
+&lt;p&gt;iPadで「メモ」アプリを起動、キーボードを「富豪Keyboard」に切り替えます。デバイス検索画面が出てきます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.31.49.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.31.49.png&#34; alt=&#34;20141210_Screen Shot 2014-12-10 at 14.31.49&#34; width=&#34;600&#34; height=&#34;450&#34; class=&#34;alignnone size-full wp-image-688&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この状態で、iPhoneで「富豪Keyboard」アプリを起動。ほぼ真っ白で何も出来ません。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.33.10.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.33.10.png&#34; alt=&#34;20141210_Screen Shot 2014-12-10 at 14.33.10&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-689&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iPadのキーボードにはiPhoneのデバイス名が表示されました。タップして接続しましょう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.37.28.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.37.28.png&#34; alt=&#34;20141210_Screen Shot 2014-12-10 at 14.37.28&#34; width=&#34;600&#34; height=&#34;450&#34; class=&#34;alignnone size-full wp-image-690&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;すると、iPhoneにキーボードが現れます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.42.50.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.42.50.png&#34; alt=&#34;20141210_Screen Shot 2014-12-10 at 14.42.50&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-691&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここでiPhoneで文字を入力する（ここはなんのキーボードでもOKです）と、&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.37.54.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.37.54.png&#34; alt=&#34;20141210_Screen Shot 2014-12-10 at 14.37.54&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-692&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あら不思議、それがiPadのメモアプリに入力されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.37.59.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141210_Screen-Shot-2014-12-10-at-14.37.59.png&#34; alt=&#34;20141210_Screen Shot 2014-12-10 at 14.37.59&#34; width=&#34;600&#34; height=&#34;450&#34; class=&#34;alignnone size-full wp-image-693&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;とまあ、こういうアプリです。一応、iPhoneから文字の削除や、カーソル移動もできます。&lt;/p&gt;
+
+&lt;h2 id=&#34;審査とのやり取り:27e07b9d6d1e2cfea3137ad27030af33&#34;&gt;審査とのやり取り&lt;/h2&gt;
+
+&lt;p&gt;結果的に、何度やり取りをしても埒が明かず、ネタにそこまで消耗するのも、ということで断念したわけですが、ざっくりとこういう経緯でした。&lt;/p&gt;
+
+&lt;h4 id=&#34;キーボードで文字入力できない:27e07b9d6d1e2cfea3137ad27030af33&#34;&gt;キーボードで文字入力できない&lt;/h4&gt;
+
+&lt;p&gt;公開しているソースコードはほぼこの状態ですが、キーボード単体で全く使えないというのは問題でしたので、英字フルキーボードっぽいものを作って（AutoLayoutの勉強になりました）、そこに接続ボタンを載せました。&lt;/p&gt;
+
+&lt;h4 id=&#34;普通のキーボードとの違いがわからない:27e07b9d6d1e2cfea3137ad27030af33&#34;&gt;普通のキーボードとの違いがわからない&lt;/h4&gt;
+
+&lt;p&gt;フルキーボードはやりすぎた感があったのでしょうか。。。というわけで、数字とちょっとしたプチ機能（たとえば、現在時刻を一発で入力できるとか）に絞り込み、もちろん接続ボタンを併設しました。&lt;/p&gt;
+
+&lt;p&gt;このころから、25.1 に準拠していない、ということをしきりにいわれるようになります。&lt;/p&gt;
+
+&lt;h4 id=&#34;デバイス間で通信させて入力させるのダメ:27e07b9d6d1e2cfea3137ad27030af33&#34;&gt;デバイス間で通信させて入力させるのダメ&lt;/h4&gt;
+
+&lt;p&gt;最後の鉄槌キタコレ。結局そういうことですか、と。わざわざ電話がかかってきたようです。&lt;/p&gt;
+
+&lt;p&gt;フィードバックにはあいかわらず 25.1 の文言が。。。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;もちろん、こうやったらいけるんじゃないかとか、そういう話もあるとは思いますが、とりあえずはここで一段落させたいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;最後に:27e07b9d6d1e2cfea3137ad27030af33&#34;&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;なぜ「富豪『Keyboard』」なのか。『富豪キーボード」ではないのか。と思われる方もあるかもしれませんので、最後に。&lt;/p&gt;
+
+&lt;p&gt;理由は簡単「富豪キーボード」だとiPhoneのホーム画面に表示し切れないからです。ほんとそれだけです。半角カナにするくらいなら英字でということで。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;興味のある方は是非ビルドしてインストールしてみてください。もちろん自己責任でお願いします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/feedtailor/RichKeyboard&#34; target=_blank&gt;GitHub : feedtailor/RichKeyboard&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！</title>
+      <link>http://staff.feedtailor.jp/2014/12/02/647</link>
+      <pubDate>Tue, 02 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/12/02/647</guid>
+      <description>
+
+&lt;p&gt;フィードテイラーの赤魔道士&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;今日からめっきり寒くなりました。昨日の最高気温は20度ほどまで行き最低気温が10度ほどでしたのが、今日は最高気温が10度ほどと一気に冬になりました。&lt;/p&gt;
+
+&lt;p&gt;皆さんも体調には十分とご注意くださいな。&lt;/p&gt;
+
+&lt;p&gt;さて、そろそろ雪もちらついてきそうなこのタイミングで、新しいアプリをみなさんにご紹介することができました。&lt;/p&gt;
+
+&lt;p&gt;今回のアプリは既存のアプリとは一線を画す画期的なアプリ、&lt;strong&gt;玄関に行けば降水確率を声でお知らせするiPhoneアプリ「&lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;そら用心&lt;/a&gt;」&lt;/strong&gt;です！&lt;/p&gt;
+
+&lt;p&gt;これからの雪の季節、傘を持って出ることを忘れることが多い方は必携のアプリです。&lt;/p&gt;
+
+&lt;p&gt;(ちなみに、そら用心は家庭向けにiBeacon技術を利用した本格的なアプリとしては国内初です。詳しくは後述。)&lt;/p&gt;
+
+&lt;p&gt;忙しい方向けにプレスリリースはこちら。 &lt;a href=&#34;http://feedtailor.jp/press_sorayoujin&#34;&gt;http://feedtailor.jp/press_sorayoujin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;公式サイトはこちらです。 &lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;http://sorayoujin.feedtailor.jp/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;なにが新しいの:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;なにが新しいの？&lt;/h3&gt;
+
+&lt;p&gt;そら用心は今いる場所の降水確率をみなさんに通知します。このように。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/sorayoujin_screenshot.2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/sorayoujin_screenshot.2-168x300.png&#34; alt=&#34;sorayoujin_screenshot.2&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-651&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/sorayoujin_screenshot.1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/sorayoujin_screenshot.1-168x300.png&#34; alt=&#34;sorayoujin_screenshot.1&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-652&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;降水確率が高い場合は5回に分けて通知、降水確率が低い場合は2回に分けて通知します。これによって&lt;strong&gt;サイレントモードでポケットの中に入っている状態でも傘を持っていくかどうかを判断できる&lt;/strong&gt;のです。&lt;/p&gt;
+
+&lt;p&gt;また、降水確率を個別に通知する場合は&lt;strong&gt;音声で降水確率を読み上げます&lt;/strong&gt;。目の不自由な方にも優しい作りになっています。&lt;/p&gt;
+
+&lt;h3 id=&#34;玄関で:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;玄関で？&lt;/h3&gt;
+
+&lt;p&gt;ただ単に降水確率をお知らせするだけではそんなに目新しくはありません。でもそら用心はこの記事のタイトルにあるように、&lt;strong&gt;玄関に来れば勝手に降水確率をお知らせしてくれる&lt;/strong&gt;のです。もちろん、&lt;strong&gt;アプリを操作する必要は一切ありません&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;玄関で自動的にお知らせできる秘密のキーワードは&lt;strong&gt;iBeacon&lt;/strong&gt;。そら用心はiBeaconと連携することにより玄関に来た時だけに自動的に降水確率をお知らせすることができるのです！&lt;/p&gt;
+
+&lt;p&gt;セットアップは簡単3ステップ。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;そら用心に最適なiBeaconデバイス「&lt;a href=&#34;http://sorabeacon.theshop.jp/items/924428&#34;&gt;そらビーコン&lt;/a&gt;」を買う&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;そらビーコンを玄関に置く&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;そら用心にそらビーコンを登録する&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;これで、あなたはもう傘を忘れずに家を出るようになります。&lt;/p&gt;
+
+&lt;p&gt;詳しいセットアップ手順は&lt;a href=&#34;http://sorayoujin.feedtailor.jp/setup.html&#34;&gt;公式サイトのビーコンの購入と設置&lt;/a&gt;をご覧ください。&lt;/p&gt;
+
+&lt;h2 id=&#34;そらビーコン:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;そらビーコン&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/sorabeacon_for_press.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/sorabeacon_for_press-300x300.jpg&#34; alt=&#34;そらビーコン&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-668&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そら用心に最適なiBeaconデバイス「&lt;a href=&#34;http://sorabeacon.theshop.jp/items/924428&#34;&gt;そらビーコン&lt;/a&gt;」をご用意しています。&lt;/p&gt;
+
+&lt;p&gt;そらビーコンは大きく二つのそら用心に最適な理由があります。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-そら用心にセットアップするのが簡単:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;1. そら用心にセットアップするのが簡単&lt;/h4&gt;
+
+&lt;p&gt;iBeaconデバイスをそら用心に登録する場合には「UUID」「メジャー番号」「マイナー番号」という3個の値を設定する必要があります。&lt;/p&gt;
+
+&lt;p&gt;特にUUIDは例えば「550e8400-e29b-41d4-a716-446655440000」のようなとても長い文字列で、これを間違えずに設定するのはスマホを使いなれた人でも難しい手順です。&lt;/p&gt;
+
+&lt;p&gt;しかし、そらビーコンでは簡単に設定できるQRコードが付いており、それを&lt;strong&gt;iPhoneのカメラで撮影するだけで簡単に設定&lt;/strong&gt;できます！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/IMG_1912.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/IMG_1912-169x300.png&#34; alt=&#34;IMG_1912&#34; width=&#34;169&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-660&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-ibeaconの電波の届く範囲を設定できる:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;2. iBeaconの電波の届く範囲を設定できる&lt;/h4&gt;
+
+&lt;p&gt;そら用心はiBeaconデバイスの発する電波を見つけたときに降水確率をお知らせします。&lt;/p&gt;
+
+&lt;p&gt;もちろん、他の市販されているiBeaconデバイスを利用することができます。&lt;/p&gt;
+
+&lt;p&gt;しかし、通常のiBeaconデバイスではおおよそ数メートルから数十メートル程度ほどが電波の届く距離になっています。玄関にiBeaconデバイスを置いても、これではリビングやキッチンまで電波が届く範囲になってしまい、そら用心は狙った場所で降水確率のお知らせができなくなってしまいます。&lt;/p&gt;
+
+&lt;p&gt;しかし、&lt;strong&gt;そらビーコンは電波の届く距離を調整することができます&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;最短でおおよそ1m、最大でおおよそ100mまで段階的に設定できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;玄関に1mもしくは2mに設定したそらビーコンを設置&lt;/strong&gt;しましょう。そら用心とそらビーコンを組み合わせることで狙った場所で確実に降水確率をお知らせする&amp;gt;ことができます。&lt;/p&gt;
+
+&lt;h2 id=&#34;そら用心とフィードテイラーがこの先に向かうところ:3ed6f8f241a7241860983ab17ac49bc6&#34;&gt;そら用心とフィードテイラーがこの先に向かうところ&lt;/h2&gt;
+
+&lt;p&gt;さて、冒頭にもさらっと記述しましたが、&lt;strong&gt;そら用心は家庭向けにiBeacon技術を利用した本格的なアプリとしては国内初&lt;/strong&gt;です。&lt;/p&gt;
+
+&lt;p&gt;振り返ってみますと、iBeaconは&lt;a href=&#34;http://www.appbank.net/2013/09/13/iphone-news/667015.php&#34;&gt;2013年のWWDCにてApple社が発表&lt;/a&gt;し、それから1年半で&lt;a href=&#34;http://dev.classmethod.jp/smartphone/ibeacon-example/&#34;&gt;B2Bやイベントなどのシーンでは多く利用されるように&lt;/a&gt;なってきました。&lt;/p&gt;
+
+&lt;p&gt;しかし、家庭に目を向けてみるとiBeaconの導入は全く行われていません。フィードテイラーは&lt;strong&gt;家庭にiBeaconが導入されることにより確実な位置情報を得ることができ、その情報は新たな社会インフラとなる&lt;/strong&gt;と考えています。その目標と研究の成果の第一弾としてそら用心を発表しました。&lt;/p&gt;
+
+&lt;p&gt;今後もこの研究を推し進め、2015年中には第二弾となるアプリを発表する予定です。&lt;/p&gt;
+
+&lt;p&gt;プレスリリースはこちら。 &lt;a href=&#34;http://feedtailor.jp/press_sorayoujin&#34;&gt;http://feedtailor.jp/press_sorayoujin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そら用心のダウンロードは公式サイトから。 &lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;http://sorayoujin.feedtailor.jp/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

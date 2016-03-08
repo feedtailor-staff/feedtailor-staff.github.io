@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>そら案内 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/tags/%E3%81%9D%E3%82%89%E6%A1%88%E5%86%85/</link>
+    <description>Recent content in そら案内 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 30 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/tags/%E3%81%9D%E3%82%89%E6%A1%88%E5%86%85/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>超聖域：そら案内</title>
+      <link>http://staff.feedtailor.jp/2015/07/30/950</link>
+      <pubDate>Thu, 30 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/07/30/950</guid>
+      <description>&lt;p&gt;こんにちは、そら案内担当のitokです。&lt;/p&gt;
+
+&lt;p&gt;超聖域ということで私が選んだ題材は「そら案内」でした。WWDCで発表されたiOS9 / watchOS2 / Swift2.0、これらをふんだんに使った新しい「そら案内」を、ということで調査含めてがっつりと時間を使わせてもらいました。&lt;/p&gt;
+
+&lt;p&gt;ものすごくざっくりというともともとiOS6で書かれていた現行のそら案内をiOS8で、そしてもちろんSwift2.0で書き直そうという取り組みです。&lt;/p&gt;
+
+&lt;p&gt;さて、そら案内は予報を取り扱う共通ライブラリ的なものがありまして、それでもってiOS/Mac版、あるいはほかのそらシリーズのアプリとの共通化を図っています。&lt;/p&gt;
+
+&lt;p&gt;というわけで、まずはその部分の作り直しです。もともと後付けの機能やらなにやらでごちゃごちゃしてきたところもあって、そのあたりをすっきりとさせました。そのあたりはAndroid / Windows版を新規に作ってきた上でのフィードバックって感じですね。&lt;/p&gt;
+
+&lt;p&gt;データベースにはRealmを採用し、予報のパースにはHimotokiを。JSONマッパーは初めて使う（面倒そうで躊躇していた）のですが、定義さえしてしまえばすごくすっきりしたので大満足です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://realm.io/&#34; target=&#34;_blank&#34;&gt;Realm is a mobile database: a replacement for SQLite &amp;amp; Core Data&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ikesyo/Himotoki&#34; target=&#34;_blank&#34;&gt;ikesyo/Himotoki · GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;通信部分はもともとAFNetworkingだったんですが、そもそも単純なGETくらいしか使っていないので、素でNSURLSessionを使うことにしました。&lt;/p&gt;
+
+&lt;p&gt;日程の前半を使って共通部分を書き直し、後半でちょっとした動作デモでも、、、と思ってwatchOS2に手を出したのですが・・・&lt;/p&gt;
+
+&lt;p&gt;当時はそもそもCocoaPodsがwatchOS2に対応していなかったり（週をまたぐと対応されていた）、ほかのライブラリ群が対応していなかったりということであえなく断念。このあたりがβ環境を突き進んでいるときの弊害ですね。仕方ない。（2015.7.29時点ではおおむね対応されているようです。ライブラリ作者の皆様ありがとうございます）&lt;/p&gt;
+
+&lt;p&gt;そのかわりといってはなんですが、watchOS2のcomplicationまわりをいろいろと触っていまして、各CLKComplicationTemplateで必要とされているアイコンのサイズが複雑過ぎたので一覧を作ってみました。参考までにどうぞ。（外にお見せできる成果はこのくらいなんで）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/CLKComplication_list.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/07/CLKComplication_list-300x174.png&#34; alt=&#34;CLKComplication_list&#34; width=&#34;300&#34; height=&#34;174&#34; class=&#34;alignnone size-medium wp-image-954&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;全体として、こういう大がかりな作り込みはまとまった時間をしっかり使わないと難しい（いつものように複数プロジェクトを平行して作業していると難しい）ので、ちょうどいい機会でした。1本に集中しきれなかったのは残念でしたがそれはそれとしてそれだけ手間取ることができたのも時間があったからというところもありますし、もし次の機会があればそれに生かしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;さてさて、次期バージョンのそら案内、iOS9に間に合わせるべく熱意作業中ですのでお楽しみに。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内 Windows Phone版を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/05/28/933</link>
+      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/05/28/933</guid>
+      <description>&lt;p&gt;最近XAMLばかり書いていたせいでたまにAutoLayoutをみてナニソレ的な感じで戸惑ってばかり（もうすくWWDCなのに）の itok です。&lt;/p&gt;
+
+&lt;p&gt;さて、ついに公開します。そら案内のWindow Phone版。&lt;/p&gt;
+
+&lt;p&gt;いやこれもほんとの話。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34; alt=&#34;Square150x150Logo-100&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-full wp-image-801&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.windowsphone.com/s?appid=3c58bc49-0e28-4f1d-9e4c-2fea72a8990e&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/Japanese_wphone_black_258x67.png&#34; alt=&#34;Japanese_wphone_black_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-934&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらは Windows版と違って、iPhone/Android版と類似のインターフェースでまとめてみました。機能的にはもちろんWindows版と同じです。&lt;/p&gt;
+
+&lt;p&gt;今日・明日の予報。地域切り替えは左右フリックで。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_1.png&#34; alt=&#34;20150527_1&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-935&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;週間予報と、注警報表示。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_3.png&#34; alt=&#34;20150527_3&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-936&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気概況。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_2.png&#34; alt=&#34;20150527_2&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-937&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;右上のメニューから各種天気画像も表示できます。これは気象衛星。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_4.png&#34; alt=&#34;20150527_4&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-938&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アメダスももちろん各種情報を表示。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_5.png&#34; alt=&#34;20150527_5&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-939&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PM2.5や黄砂予測も搭載。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_6.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_6.png&#34; alt=&#34;20150527_6&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-940&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;同じくメニューから生物季節情報も。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/20150527_7.png&#34; alt=&#34;20150527_7&#34; width=&#34;360&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-941&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もちろんですが、これで天気に関する情報は一通り見ることができるのではないかと思います&lt;/p&gt;
+
+&lt;p&gt;無料ですので皆さんぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.windowsphone.com/s?appid=3c58bc49-0e28-4f1d-9e4c-2fea72a8990e&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/Japanese_wphone_black_258x67.png&#34; alt=&#34;Japanese_wphone_black_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-934&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;といいたいところですが、なかなか国内で Windows Phone の販売って始まらないですね・・・（開発もVMにのったWindows上でのシミュレータで行われました）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/05/2056095f12de3800c932439480761d2f.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/05/2056095f12de3800c932439480761d2f-300x281.png&#34; alt=&#34;20150527_スクリーンショット 2015-05-27 9.37.49 のコピー&#34; width=&#34;300&#34; height=&#34;281&#34; class=&#34;alignnone size-medium wp-image-944&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このあたり楽しみですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.mouse-jp.co.jp/phone/madosma/&#34; target=&#34;_blank&#34;&gt;&amp;lt;窓&amp;gt;とあなたが、もっとつながる。 Windows OS搭載スマートフォン「MADOSMA」 | BTOパソコン・PC通販ショップのマウスコンピューター&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あとはここも。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.freetel.jp/eshop/pdf_data/WindowsPhone_pressrelease_jp.pdf&#34; target=&#34;_blank&#34;&gt;最新 Windows Phone OS 搭載スマートフォン、 2015 年夏までに国内発売予定のお知らせ | freetel（フリーテル）&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なんにしても早く出てーってことで。そら案内もぜひよろしくお願いします。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（Android版）v2.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/04/30/901</link>
+      <pubDate>Thu, 30 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/30/901</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/app-icon_144x144.png&#34; alt=&#34;app-icon_144x144&#34; width=&#34;144&#34; height=&#34;144&#34; class=&#34;alignnone size-full wp-image-714&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Windows版やiOS版のアップデートが続いていましたが、今度はAndroid版のアップデートです。&lt;/p&gt;
+
+&lt;p&gt;夏に備えて台風情報に対応しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:65e048ce73dc0ffa8599ca83bbe04f24&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;台風表示への対応&lt;/li&gt;
+&lt;li&gt;日付変更直後に翌日の予報が空になることがある問題を修正&lt;/li&gt;
+&lt;li&gt;レーダ画像表示時に自動更新されないことがある問題を修正&lt;/li&gt;
+&lt;li&gt;黄砂表示の修正&lt;/li&gt;
+&lt;li&gt;安定性の向上&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;台風はまだそれほど発生しておりませんが（とはいえ、この記事を書いている時点ですでに5号まで発生しています）、夏に向けては気になる情報になってくるのではないかと。&lt;/p&gt;
+
+&lt;p&gt;ほかにもユーザの皆様からいただいたフィードバックを元にいろいろと改善しておりますので、まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内 for Windows v1.1 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/04/21/853</link>
+      <pubDate>Tue, 21 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/21/853</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34; alt=&#34;Square150x150Logo-100&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-full wp-image-801&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;好評いただいているそら案内のWindows版、以前のお知らせ通り天気画像の表示に対応した v1.1 を公開します。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:4e1d283f16707d8c0505900fc511839f&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;天気画像（気象衛星、天気図、雨雲の動き、アメダス各種情報、XバンドMPレーダ予測、台風、黄砂予測、PM2.5予測）の表示に対応しました&lt;/li&gt;
+&lt;li&gt;細かいバグを修正しました&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;天気画像の表示に対応:4e1d283f16707d8c0505900fc511839f&#34;&gt;天気画像の表示に対応&lt;/h3&gt;
+
+&lt;p&gt;iOS/Mac/Android版と同等の機能を持ちました。&lt;/p&gt;
+
+&lt;p&gt;画面右上、右から2つ目の衛星ボタンをタップすると天気画像画面が開きます。&lt;/p&gt;
+
+&lt;p&gt;気象衛星&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164954.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164954.png&#34; alt=&#34;20150420_screenshot_04202015_164954&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-857&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気図&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_5.png&#34; alt=&#34;20150420_5&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-856&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲の動き（1kmメッシュの降雨レーダ）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_6.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_6.png&#34; alt=&#34;20150420_6&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-858&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;直近5分後の雨予想、XバンドMPレーダ（250mメッシュの高精度レーダ）予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164950.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_164950.png&#34; alt=&#34;20150420_screenshot_04202015_164950&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-859&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;　&lt;/p&gt;
+
+&lt;p&gt;アメダス各種&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_7.png&#34; alt=&#34;20150420_7&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-860&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PM2.5予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_8.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_8.png&#34; alt=&#34;20150420_8&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-861&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;黄砂予測&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_165005.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150420_screenshot_04202015_165005.png&#34; alt=&#34;20150420_screenshot_04202015_165005&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-862&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あとは台風にも対応しています（執筆時点で発生している台風はありませんでしたが）&lt;/p&gt;
+
+&lt;p&gt;これで一通り必要な天気情報には簡単にアクセスできるようになったのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;まだお使いでない方もぜひどうぞ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（iOS版） v4.1.0 を公開しました – AppleWatch対応</title>
+      <link>http://staff.feedtailor.jp/2015/04/17/835</link>
+      <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/04/17/835</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v4.1.0 が来週発売の AppleWatch に対応しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AppleWatchに対応&lt;/li&gt;
+&lt;li&gt;外部ライブラリの更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;AppleWatchでのそら案内はこんな感じです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150417_sora-annai-promotion-02.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150417_sora-annai-promotion-02.png&#34; alt=&#34;20150417_sora-annai-promotion-02&#34; width=&#34;800&#34; height=&#34;707&#34; class=&#34;alignnone size-full wp-image-841&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Watch 上での操作を減らして、天気予報が一目でわかるシンプルさを重視しました。&lt;/p&gt;
+
+&lt;p&gt;Watch 上には以下の情報が表示されます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;現在地の天気予報、降水確率、気温&lt;/li&gt;
+&lt;li&gt;3時間ごとの天気と気温予想をグラフで表示&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Glance では直近12時間分の天気予報を表示します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/3.png&#34; alt=&#34;3&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-837&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;WatchApp では2ページで合計24時間分の天気予報を表示します。ページは横フリックで切り替えてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/12.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/12.png&#34; alt=&#34;1&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-848&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/22.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/22.png&#34; alt=&#34;2&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-851&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;普段は Glance でちらりと天気を確認し、もう少し先の予報が気になる場合はそこから WatchApp を立ち上げる、という使い方ができます。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内 for Windows を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/03/31/798</link>
+      <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/03/31/798</guid>
+      <description>
+
+&lt;p&gt;iOS/Mac/Androidでの定番お天気アプリ「そら案内」がついにWindows ストアにも登場しました！&lt;/p&gt;
+
+&lt;p&gt;いやこれほんとの話です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/Square150x150Logo-100.png&#34; alt=&#34;Square150x150Logo-100&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignnone size-full wp-image-801&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;基本的な機能としては既存の「そら案内」を踏襲していますが、Windows ストアアプリたるべく、インターフェースは一から検討し直しました。&lt;/p&gt;
+
+&lt;p&gt;その結果、こうなりました。どんっ！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_1.png&#34; alt=&#34;20150326_1&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-803&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一画面でほとんどすべての主要な情報を網羅しています。左から、今日明日の天気、注警報、週間予報、ですね。&lt;/p&gt;
+
+&lt;p&gt;今日明日の天気では、3時間ごとの予報も一緒に表示されます。背景のグラフは気温の変化グラフ。&lt;/p&gt;
+
+&lt;p&gt;これを横にスクロールすると、概況や生物季節情報もまとめて表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_2.png&#34; alt=&#34;20150326_2&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-804&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;地域切り替えはWindowsのアプリバーを表示する要領で上からスワイプ、あるいは、右上の日本地図アイコンをタップしてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/4b91d3648e08868e7a5cda349a7443ca.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/4b91d3648e08868e7a5cda349a7443ca.png&#34; alt=&#34;20150326_screenshot_03262015_135122 のコピー&#34; width=&#34;800&#34; height=&#34;449&#34; class=&#34;alignnone size-full wp-image-805&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;注警報の有無もこの一覧で把握できるようになっています。右端の「+」ボタンで地域の追加削除が可能です。位置情報を元にした「現在地の天気」も設定可能です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/screenshot_03272015_103128.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/screenshot_03272015_103128.png&#34; alt=&#34;screenshot_03272015_103128&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-821&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、タイル表示にも対応しておりますので、スタート画面にて現在地の天気予報を簡単に確認することもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/20150326_4.png&#34; alt=&#34;20150326_4&#34; width=&#34;600&#34; height=&#34;400&#34; class=&#34;alignnone size-full wp-image-810&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ただ、残念ながら、現時点（v1.0）では既存の「そら案内」にある天気画像（アメダスや雨雲レーダなど）の表示には対応しておりません。こちらは4月中の公開（v1.1）に向けて今もがりがりとコードを書いているところですので、今しばらくお待ちください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;余談:183109533a870edef8e0bf84d13f407c&#34;&gt;余談&lt;/h4&gt;
+
+&lt;p&gt;このWindowsアプリ、Mac歴27年の私itokがつくりました。いやこれほんとに。&lt;/p&gt;
+
+&lt;p&gt;C#とXAML、Visual Studioでつくったネイティブアプリです。Android版も作っているのでXamarinを使うという選択肢もあるにはあったんですが、Android版を作り始めたのとWindows版の話がでてきた時期がずれていたことと、Windows版はタブレット用だったので共通化して作るというより個別にやったほうがいいものが早くできるのではないかという判断でこうなりました。&lt;/p&gt;
+
+&lt;p&gt;Objective-C、Swift、Java、C#、それからたまにJavaScript（node.js用）を転々とする日々はなかなかスリリングでしたけれども、とりあえず一段落できてよかったです。Visual StudioとAndroid StudioとXcodeが一つの画面に共存していることもしばしばでしたね。もちろん、v1.1に向けて今も熱意実装中ですけれども。&lt;/p&gt;
+
+&lt;p&gt;特に&lt;a href=&#34;http://meta-glamour.com&#34; target=&#34;_blank&#34;&gt;メタ・グラマー様&lt;/a&gt;にはまさかのWindows版のデザイン依頼という無理難題をお願いしましたが、本当にご協力ありがとうございました。&lt;/p&gt;
+
+&lt;p&gt;永遠のWindows初心者のつもりだったのに、まさか終礼で.NETやXAMLについての新発見を話す日が来るとはね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/03/4bbbfc3d2e2e905a903b352b067132261.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/4bbbfc3d2e2e905a903b352b067132261.jpg&#34; alt=&#34;20150327_IMG_7212 のコピー&#34; width=&#34;600&#34; height=&#34;450&#34; class=&#34;alignnone size-full wp-image-824&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これでitokもWindowsのアプリをどんどん作るのかというと決してそういうわけではなく、じゃあなんで作ったのかといえばいうまでもなく「&lt;strong&gt;それは『そら案内』だから&lt;/strong&gt;」なのです。これ一番大事。C#は結構好きになりましたけどね。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そら案内 for Windows、もちろん&lt;strong&gt;無料&lt;/strong&gt;です。Windowsユーザの皆さん、ぜひお使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（Android版）v2.0.3 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2015/02/04/763</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2015/02/04/763</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/app-icon_144x144.png&#34; alt=&#34;app-icon_144x144&#34; width=&#34;144&#34; height=&#34;144&#34; class=&#34;alignnone size-full wp-image-714&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;花粉シーズン到来ということで花粉情報の表示に対応しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:20822b0f47e5f23b132b1163e069b53c&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;花粉情報表示（花粉アイコンをタップすると詳細が表示されます）&lt;/li&gt;
+&lt;li&gt;文字サイズの調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;花粉の予報飛散量を各予報の日付横の花粉アイコンでお知らせします。&lt;/p&gt;
+
+&lt;p&gt;その花粉アイコンをタップするとより詳細が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/02/fce40214074c7dc9125b4265d98796c5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/02/fce40214074c7dc9125b4265d98796c5.png&#34; alt=&#34;20150204_device-2015-02-04-150538 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-764&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;すでに飛び始めているようで、花粉対策にぜひお使いください。&lt;/p&gt;
+
+&lt;p&gt;また、以前ブログでお知らせしたv2.0.0からの進化としては横向きにも対応しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/02/b7ad71130f4c86809ced52e40ed1e5ec.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/02/b7ad71130f4c86809ced52e40ed1e5ec.png&#34; alt=&#34;20150204_device-2015-02-04-150606 のコピー&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-766&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（Android版）v2.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/12/22/710</link>
+      <pubDate>Mon, 22 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/12/22/710</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/app-icon_144x144.png&#34; alt=&#34;app-icon_144x144&#34; width=&#34;144&#34; height=&#34;144&#34; class=&#34;alignnone size-full wp-image-714&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」のAndroid版がフルリニューアルされました。&lt;/p&gt;
+
+&lt;p&gt;一から作り直しまして、見た目・機能的には最新のiOS版に近い感じになりました。（Android v4.0.3 以降の対応となりましたのでご了承ください）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いくつかの機能を見ていきましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;今日-明日の予報-週間予報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;今日／明日の予報・週間予報&lt;/h3&gt;
+
+&lt;p&gt;地域の登録は市区町村単位でのみ行うようになりました。（旧バージョンをお使いの方はお手数ですが、再度地域設定を行ってください）&lt;/p&gt;
+
+&lt;p&gt;一つの画面で、今日／明日の予報と1週間先までの予報が表示されます。&lt;/p&gt;
+
+&lt;p&gt;今日／明日の予報の行をタップすることで、3時間ごとの時間別予報も表示できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_1.png&#34; alt=&#34;20141218_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-717&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;時間別予報には、天気・温度・降水量・湿度・風が表示されています。背景のグラフは気温の変化グラフで、細い線は前日の気温を表しています。&lt;/p&gt;
+
+&lt;p&gt;地域の切り替えは左右方向へフリックしてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;天気概況-注警報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気概況／注警報&lt;/h3&gt;
+
+&lt;p&gt;下にスクロールすると天気概況が表示されます。文字でさらに天気の様子がわかるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_2.png&#34; alt=&#34;20141218_2&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-718&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上部バーに「！」アイコンが表示されるとそれは注警報のお知らせです。「！」アイコンをタップして、注警報をチェックしましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;生物季節情報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;生物季節情報&lt;/h3&gt;
+
+&lt;p&gt;右上メニューから、その地域での生物季節情報を閲覧できます。季節の移ろいを感じていただければと。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34; alt=&#34;20141218_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-721&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;天気画像:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気画像&lt;/h3&gt;
+
+&lt;p&gt;ここが大幅リニューアルポイントです。&lt;/p&gt;
+
+&lt;p&gt;天気画像として、気象衛星・天気図・雨雲レーダー・XバンドMPレーダー予測・アメダス各種・PM2.5予測・黄砂予測、に対応しました。（天気画像も右上のメニューから表示できます）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_7.png&#34; alt=&#34;20141218_7&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-722&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アメダスも気温だけではなく、降水量・風向風速・日照時間・積雪深を切り替えて表示できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;各地点をタップすると詳細情報を一望できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_4.png&#34; alt=&#34;20141219_4&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-725&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲レーダーも GoogleMap に重ねることで自由に全国の様子を見ることが出来るようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141219_5.png&#34; alt=&#34;20141219_5&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-726&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;雨雲レーダーは1kmメッシュで5分以内の雨の&lt;strong&gt;実況&lt;/strong&gt;を表示しています。それに対して、XバンドMPレーダーは250mメッシュで直近5分後の雨の&lt;strong&gt;予測&lt;/strong&gt;を表示します。用途に応じて使い分けてください。&lt;/p&gt;
+
+&lt;p&gt;他にも気になる黄砂やPM2.5の予測表示にも対応しています。来夏までには台風情報の表示にも対応する予定です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;大幅リニューアルされて生まれ変わった「そら案内」。是非お使いください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最後になりますが、ベータテストに参加していただいたユーザのみなさんどうもありがとうございました。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;余談:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;余談&lt;/h4&gt;
+
+&lt;p&gt;以上、さらっと紹介してきましたが、このAndroid版、私itokがつくりました。いや、これ、ほんとに。&lt;/p&gt;
+
+&lt;p&gt;もともとのAndroid版は外部委託して（シーリスの有山さんに）作ってもらっていたのですが、このたび自社初のAndroidアプリとして開発しました。&lt;/p&gt;
+
+&lt;p&gt;ちょうどAndroid Studioも正式版が出たり（開発は主にv0.8系で）ということで、タイミング的なものもあって開発は思ったよりやりやすかったです。iOSの画面サイズが複雑になったことでViewに対するレイアウトの考え方が似てきたこともあるでしょうね。&lt;/p&gt;
+
+&lt;p&gt;一応秘密プロジェクトということで進んでいましたので、世間のAndroidの話題にはなるべく近づかないようにし、最近も「Androidどうです？」なんていうフリに「どうですかねえ〜」なんてあいまいな返事をしていました（その節はほんとすいません）。これで晴れて「Android Studio v1.0 きたー」とかつぶやけますねw（うずうずしていたので社内チャットには投下してましたけれど）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/83a2b178a01dace64df5dbcc9c63f5e1-e1418952557532.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/83a2b178a01dace64df5dbcc9c63f5e1-e1418952557532.jpg&#34; alt=&#34;20141219_IMG_6939 のコピー&#34; width=&#34;600&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-731&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これでAndroidもガンガンいくのかといえば、それはなんともいえないですが、じゃあなぜAndroidなのかといえば、&lt;strong&gt;それは「そら案内」だからです&lt;/strong&gt;、ということでご了承ください。&lt;/p&gt;
+
+&lt;p&gt;なんにしても新しくなった「そら案内 for Android」みなさん是非お使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（Mac版）v2.0.4 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/11/13/604</link>
+      <pubDate>Thu, 13 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/13/604</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/icon_128x128.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-529&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mac用お天気予報アプリ「そら案内」の v2.0.4 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:a3c5ef4c21de67e66d5fc6f04ad79fb7&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;10.8 で正常に起動しない問題を修正&lt;/li&gt;
+&lt;li&gt;バグ修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;10.8 Mountain Lion において、メニューバーに天気が表示されずクリックしても何も起きないという問題が発生しまして、それを修正しました。10.8ユーザのみなさま、ご迷惑をおかけして申し訳ありませんでした。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;デスクトップの片隅で天気をお知らせしてくれるそら案内。みなさん是非お使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（iOS版） v4.0.0 を公開しました – iOS8 &amp; iPhone6/6Plus対応</title>
+      <link>http://staff.feedtailor.jp/2014/11/10/595</link>
+      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/10/595</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;お待たせしました。定番お天気アプリ「そら案内」の v4.0.0 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS8対応&lt;/li&gt;
+&lt;li&gt;iPhone6/6Plus対応&lt;/li&gt;
+&lt;li&gt;iOS8の通知センターウィジェットに対応（現在地の天気予報、降水確率、気温を表示）&lt;/li&gt;
+&lt;li&gt;雨雲レーダー・XバンドMPレーダーの描画を改善&lt;/li&gt;
+&lt;li&gt;外部SDKの更新&lt;/li&gt;
+&lt;li&gt;投稿機能に「すもうトリとコトリ」フレームを追加&lt;/li&gt;
+&lt;li&gt;細かい調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今回もいろいろと盛りだくさんです。&lt;/p&gt;
+
+&lt;h3 id=&#34;iphone6-6plus対応:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;iPhone6/6Plus対応&lt;/h3&gt;
+
+&lt;p&gt;画面が広いってすごいです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/20141106_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/20141106_1.png&#34; alt=&#34;20141106_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-596&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これは6Plusですが、6でも十分な広さで天気予報を一望できます。&lt;/p&gt;
+
+&lt;h3 id=&#34;ios8の通知センターウィジェットに対応:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;iOS8の通知センターウィジェットに対応&lt;/h3&gt;
+
+&lt;p&gt;まさに待望。&lt;/p&gt;
+
+&lt;p&gt;現在地の天気予報と降水確率、気温を表示します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/20141106_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/20141106_5.png&#34; alt=&#34;20141106_5&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-597&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アプリへのショートカットも付いているので詳細はそこからアプリを起動してお使いください。&lt;/p&gt;
+
+&lt;p&gt;iPadや6Plusの横画面だとこんなふうに表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/7578fe1f076a390fa092888f42f0e891.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/7578fe1f076a390fa092888f42f0e891.png&#34; alt=&#34;20141106_Screen Shot 2014-11-06 at 10.17.13 のコピー&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-598&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;すもうトリとコトリ-フレームを追加:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;「すもうトリとコトリ」フレームを追加&lt;/h3&gt;
+
+&lt;p&gt;新しいフレームが追加されました。&lt;/p&gt;
+
+&lt;p&gt;メタ・グラマー様作のLINEスタンプ「&lt;a href=&#34;https://store.line.me/stickershop/product/1012021/ja&#34; target=&#34;_blank&#34;&gt;すもうトリとコトリ&lt;/a&gt;」がそのままそら案内のフレームになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/bc4c3b2c302a67b89cf94b0dbd55b839.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/bc4c3b2c302a67b89cf94b0dbd55b839.png&#34; alt=&#34;20141106_Screen Shot 2014-11-06 at 10.19.57 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-599&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;会話しているかのようなフレームの写真を投稿できます。&lt;/p&gt;
+
+&lt;p&gt;もちろんこのフレームも無料です。&lt;/p&gt;
+
+&lt;h3 id=&#34;大事なお知らせ:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;大事なお知らせ&lt;/h3&gt;
+
+&lt;p&gt;最後に大事なお知らせを一つ。&lt;/p&gt;
+
+&lt;p&gt;iOS 版のそら案内は iOS 6 以降で動作するように作られていましたが、この v4.0.0 を最後に iOS 6 のサポートを終了することになりました。（v4.0.0 は iOS 6 に対応しています）&lt;/p&gt;
+
+&lt;p&gt;iOS 6 といえば2年以上前の OS で、ユーザの割合もそれ相応にかなり少なくなっており、3世代の OS をサポートし続けることが困難であると判断しました。ご理解をいただければと思います。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（Mac版）v2.0.2 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/11/06/590</link>
+      <pubDate>Thu, 06 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/11/06/590</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/icon_128x128.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-529&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Macの超定番お天気アプリ「そら案内」の v2.0.2 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:38b0e3cd595d70c67d8f615f64b0ddb0&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;極端にバッテリを消費することがある問題を修正&lt;/li&gt;
+&lt;li&gt;ダークモードへの対応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;バッテリ消費問題については、ユーザのみなさんにご迷惑をおかけして申し訳ありませんでした。&lt;/p&gt;
+
+&lt;p&gt;ダークモードというのは、システム環境設定の「一般」にYosemiteから追加された項目で、メニューバーやDockの背景を白ベースから黒ベースにすることができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/8e3ac31ee5a53ff6c9271190ebf4acc3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/8e3ac31ee5a53ff6c9271190ebf4acc3.png&#34; alt=&#34;スクリーンショット 2014-11-06 9.08.42&#34; width=&#34;346&#34; height=&#34;109&#34; class=&#34;alignnone size-full wp-image-591&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そら案内のメニューバー表示は黒文字だったり黒アイコンを使用していたので、このモードの時には反転するようにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/e62c895234f11a79df2465ee479a7ded.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/e62c895234f11a79df2465ee479a7ded.png&#34; alt=&#34;スクリーンショット 2014-11-06 9.08.16&#34; width=&#34;127&#34; height=&#34;81&#34; class=&#34;alignnone size-full wp-image-592&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;デスクトップの片隅で天気をお知らせしてくれるそら案内。みなさん是非お使いくださいませ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（Mac版）v2.0.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/22/527</link>
+      <pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/22/527</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/icon_128x128.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-529&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Macの超定番お天気アプリ「そら案内」の v2.0.0 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;デザインの一新&lt;/li&gt;
+&lt;li&gt;天気画像の一新（10.9以降のみ）
+
+&lt;ul&gt;
+&lt;li&gt;アメダス各種情報追加&lt;/li&gt;
+&lt;li&gt;XバンドMPレーダ予測追加&lt;/li&gt;
+&lt;li&gt;PM2.5予測追加&lt;/li&gt;
+&lt;li&gt;黄砂予測追加&lt;/li&gt;
+&lt;li&gt;台風情報追加&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;予報をカレンダーに重複して書き出す問題を修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;追記2014.10.23&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;v2.0.0にアップデート後、表示されなくなったという方はお手数ですが、一度データの初期化を試してみてください。ご迷惑をおかけして申し訳ありません。（地域設定など全部消えてしまいます）&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;そら案内を終了&lt;/li&gt;
+&lt;li&gt;Finderでoptionキー押しながら「移動」メニュー→「ライブラリ」を選択&lt;/li&gt;
+&lt;li&gt;ライブラリ/Containers/jp.feedtailor.osx.SoraAnnai のフォルダを削除&lt;/li&gt;
+&lt;li&gt;そら案内を起動&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;デザインの一新:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;デザインの一新&lt;/h4&gt;
+
+&lt;p&gt;まずは見た目そのものですけれど、冒頭のアプリアイコンからもわかるようにデザインを一新しました。ちょうどiOS版がiOS7からフラットデザイン化されたように、先日公開された OS X 10.10 Yosemite を意識してMac版もフラット的なデザインになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/5e6b7c9c3a010930b29cbfc74c7876a61.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/5e6b7c9c3a010930b29cbfc74c7876a61.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-21 午後4.32.48&#34; width=&#34;600&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-534&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気アイコンなども一式フラット化されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/44bc451ed574ab46b48fbd29c50c1396.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/44bc451ed574ab46b48fbd29c50c1396.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-21 午後4.33.28 のコピー&#34; width=&#34;565&#34; height=&#34;436&#34; class=&#34;alignnone size-full wp-image-535&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;天気画像の一新:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;天気画像の一新&lt;/h4&gt;
+
+&lt;p&gt;さて、今回の目玉はデザインではなく「天気画像」。いままで、数枚の画像を切り替えて表示できるだけだったんですが、地図を用いてiOS版と同等の情報量になりました（＊Macの標準地図を使っているため「天気画像」の機能追加は OS X 10.9 Mavericks 以降のみとなります）&lt;/p&gt;
+
+&lt;p&gt;おなじみ「天気図」。各情報は右のメニューで切り替えます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/3f2aa7be6c01d66915924e811383a4ee.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/3f2aa7be6c01d66915924e811383a4ee.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.36 のコピー&#34; width=&#34;514&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-537&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「アメダス」もこの通り。詳細はマウスオーバーで表示。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/fe5e88e201c384783968e00bb2504994.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/fe5e88e201c384783968e00bb2504994.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.12 のコピー&#34; width=&#34;470&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-538&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「XバンドMPレーダー予測」もつきました。Macを使いながら直近の雨予想をチェックしましょう。（XバンドMPレーダーは直近5分後の降雨予測を表示します）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/bdea89a808430b9614ea377ce306f87d.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/bdea89a808430b9614ea377ce306f87d.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.29.59 のコピー&#34; width=&#34;470&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-539&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もちろん、黄砂やPM2.5、台風なども一通りそろっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/9535af33d3f9288887d46eaada023421.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/9535af33d3f9288887d46eaada023421.png&#34; alt=&#34;20141022_スクリーンショット 2014-10-22 午前9.30.27 のコピー&#34; width=&#34;471&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-540&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;おおよそ必要な天気情報はそら案内で確認することができるようになったのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id599799247&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;デスクトップの片隅で天気をお知らせしてくれるそら案内。みなさん是非お使いくださいませ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（iOS版） v3.5.0 を公開しました – 台風情報対応</title>
+      <link>http://staff.feedtailor.jp/2014/09/08/366</link>
+      <pubDate>Mon, 08 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/09/08/366</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v3.5.0 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;台風情報の表示に対応&lt;/li&gt;
+&lt;li&gt;外部SDKの更新&lt;/li&gt;
+&lt;li&gt;細かい調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なんといっても目玉はこれですね&lt;/p&gt;
+
+&lt;h3 id=&#34;台風情報の表示に対応:79df492b9790361c15d6008b379c9610&#34;&gt;台風情報の表示に対応&lt;/h3&gt;
+
+&lt;p&gt;天気画像画面に台風タブが追加されています（以下、先日の台風11号・13号をサンプルとして表示しています）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/80fec018d425ca7cc6a6606d5b96f20b.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/80fec018d425ca7cc6a6606d5b96f20b-225x300.png&#34; alt=&#34;20140905_iOSシミュレータのスクリーンショット 2014.09.05 9.26.40 のコピー&#34; width=&#34;225&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-367&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iPhoneの場合は黄砂やPM2.5と同じく左上のボタンからアクセスしてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/f0b458c7722e56bf0a7ecdd52955f304.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/f0b458c7722e56bf0a7ecdd52955f304-168x300.jpg&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.14 のコピー 2014-06-30 10-11-50 2014-06-30 10-12-10&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-239&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;台風シーズンにはタブを編集して並び替えておくといいかもしれません。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/63852daa8ff34811834c15e9cddd869f.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/63852daa8ff34811834c15e9cddd869f-168x300.png&#34; alt=&#34;20140905_iOSシミュレータのスクリーンショット 2014.09.05 9.32.17 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-369&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;さて、画像としては、広域と日本付近、それぞれの台風にフォーカスしたもの、が表示されるわけですが、それだけではありません。&lt;/p&gt;
+
+&lt;p&gt;各台風のタイトル部分（iマークのあるところ）をタップすると詳細が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/79e05a4a2833b252d89b78f5d2c81ad8.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/79e05a4a2833b252d89b78f5d2c81ad8-300x225.png&#34; alt=&#34;20140905_iOSシミュレータのスクリーンショット 2014.09.05 9.27.16 のコピー&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;alignnone size-medium wp-image-371&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iPhoneではこんな感じ&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/285fd9439eb9af7ddd609c16bc3246e7.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/285fd9439eb9af7ddd609c16bc3246e7-168x300.png&#34; alt=&#34;20140905_iOSシミュレータのスクリーンショット 2014.09.05 9.43.33 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-372&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;予想の時間ごとに予想円や暴風域などを個別に表示するようにしてみました。&lt;/p&gt;
+
+&lt;p&gt;配布されている画像だけではわからない細かい時間の変化もこれでわかるようになるんじゃないかと。たとえば「画像ではxx日yy時には瀬戸内海にいて、24時間後には日本海にいるってなってるけど、その間の時間は具体的にどうなってるの？緯度経度書かれてもどこを通っているのやら・・・」みたいなところがわかりやすくなるかも。&lt;/p&gt;
+
+&lt;p&gt;時系列にそって円も動くので↓こんなふうに台風の予想経路を確認できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/09/soraannai_v350.gif&#34; alt=&#34;soraannai_v350&#34; width=&#34;1024&#34; height=&#34;768&#34; class=&#34;alignnone size-full wp-image-379&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;台風シーズンは現在進行中ですので、生活のおともに是非ご活用ください。あ、もちろん、台風情報も&lt;strong&gt;無料&lt;/strong&gt;ですよ。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（iOS版） v3.4.1 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/07/31/297</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/07/31/297</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v3.4.1 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;天気画像で表示中の地図の位置を保存する設定を追加（その他設定）&lt;/li&gt;
+&lt;li&gt;投稿画面でカーソルを文頭に移動する設定を追加（その他設定→投稿設定）&lt;/li&gt;
+&lt;li&gt;外部SDKの更新&lt;/li&gt;
+&lt;li&gt;細かい調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ユーザさんからの要望を取り入れた更新となります。&lt;/p&gt;
+
+&lt;p&gt;天気画像で地図表示をしたときに、通常はみている都道府県が一望できるように表示されるのですが、その表示位置を保存できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/07/20140731_soraannai_v341_1.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/07/20140731_soraannai_v341_1-168x300.jpg&#34; alt=&#34;20140731_soraannai_v341_1&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-298&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、投稿画面では、テキストフィールドをタップしたときに強制的にカーソルを文頭に移動させることができるようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/07/20140731_soraannai_v341_2.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/07/20140731_soraannai_v341_2-168x300.jpg&#34; alt=&#34;20140731_soraannai_v341_2&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-299&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;どちらも初期値はオフになっていますので、必要に応じて設定してください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そら案内はまだまだ進化します。まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そうそう、「そら」シリーズの新作アプリが近日公開予定ですのでお楽しみに。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>そら案内（iOS版） v3.4.0 を公開しました – PM2.5/黄砂の予測表示に対応</title>
+      <link>http://staff.feedtailor.jp/2014/06/30/236</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/06/30/236</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v3.4.0 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;黄砂の予測情報表示に対応&lt;/li&gt;
+&lt;li&gt;PM2.5の予測情報表示に対応&lt;/li&gt;
+&lt;li&gt;投稿機能に「Rody」のフレームを追加&lt;/li&gt;
+&lt;li&gt;投稿機能の「ナチュラル」「コンパクト」のフレームを更新&lt;/li&gt;
+&lt;li&gt;着信中などにレイアウトが崩れる問題を修正&lt;/li&gt;
+&lt;li&gt;その他細かい調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いろいろと盛りだくさんですけれど、ざっと順番に見ていきましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;黄砂-pm2-5の予測表示に対応:9bf18b52e3505eab583515769ec80737&#34;&gt;黄砂・PM2.5の予測表示に対応&lt;/h3&gt;
+
+&lt;p&gt;まず、iPadでは普通に天気画像に「PM2.5」と「黄砂」のタブが増えています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/5df59251b2afb8f2d5491533d9df8b29.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/5df59251b2afb8f2d5491533d9df8b29-225x300.png&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.01.45 のコピー&#34; width=&#34;225&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-238&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iPhoneの場合は左上のボタンから&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/f0b458c7722e56bf0a7ecdd52955f304.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/f0b458c7722e56bf0a7ecdd52955f304-168x300.jpg&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.14 のコピー 2014-06-30 10-11-50 2014-06-30 10-12-10&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-239&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一覧を表示できて、そこから&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/210a523fb50472f528bd50e3637eb4a5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/210a523fb50472f528bd50e3637eb4a5-168x300.png&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.21 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-240&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;切り替えることができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/94fdb9f8d32755724b4ddc2614acb9bf.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/94fdb9f8d32755724b4ddc2614acb9bf-168x300.png&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.23 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-241&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、先ほどの一覧の画面で「編集」をタップすると、タブの並び替えができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/5cf1c81631122ea63049f6ea1001091b.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/5cf1c81631122ea63049f6ea1001091b-168x300.png&#34; alt=&#34;20140630_iOSシミュレータのスクリーンショット 2014.06.30 10.03.42 のコピー&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-242&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみに、黄砂は、、、ここのところ飛散予測がないようなのでなにも表示されないことが多いですけれど、「地表付近」と「大気中」の2種類の情報を表示できます。それぞれ、以下のような数値になってます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;地表付近：地表面から高さ約1000mまでの間の黄砂濃度&lt;/li&gt;
+&lt;li&gt;大気中：地表面から高さ約23kmまでの間の1平方メートルあたりに含まれる黄砂総量&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;rody-のフレームを追加:9bf18b52e3505eab583515769ec80737&#34;&gt;「Rody」のフレームを追加&lt;/h3&gt;
+
+&lt;p&gt;投稿機能に新しいフレームが追加されました。子供用品などでおなじみRodyのフレームです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/2babc6c3da44963807d9655e8241592b.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/2babc6c3da44963807d9655e8241592b-261x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.46.59&#34; width=&#34;261&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-258&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;有料フレームですが、かわいいフレームが16種類と豊富ですので是非どうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/f385dec5edb6219ddd693b28147fbd3a.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/f385dec5edb6219ddd693b28147fbd3a-300x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.30.50&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-247&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;ナチュラル-コンパクト-のフレームを更新:9bf18b52e3505eab583515769ec80737&#34;&gt;「ナチュラル」「コンパクト」のフレームを更新&lt;/h3&gt;
+
+&lt;p&gt;人気の「ナチュラル」「コンパクト」フレームがさらに増えました。それぞれ8種類になりました。&lt;/p&gt;
+
+&lt;p&gt;「ナチュラル」はこんな感じで、&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/23e0a59839e3f2941ca87ff4177120a6.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/23e0a59839e3f2941ca87ff4177120a6-261x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.47.44&#34; width=&#34;261&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-256&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/c7faf7770ef753b6d7e977b749e5ab72.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/c7faf7770ef753b6d7e977b749e5ab72-300x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.35.07&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-252&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「コンパクト」はこんな感じです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/a9b48b7b1c045c47ef2e1bd33716c69e.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/a9b48b7b1c045c47ef2e1bd33716c69e-261x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.47.25&#34; width=&#34;261&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-257&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;http://staff.feedtailor.jp/images/2014/06/755a4c9997d0d9d886fd35e50910f2eb.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/06/755a4c9997d0d9d886fd35e50910f2eb-300x300.png&#34; alt=&#34;スクリーンショット 2014-06-30 10.35.43&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-250&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;新しいフレームも是非使ってみてください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そら案内はまだまだ進化します。まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

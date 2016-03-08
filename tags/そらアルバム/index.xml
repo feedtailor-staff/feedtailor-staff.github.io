@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>そらアルバム on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/tags/%E3%81%9D%E3%82%89%E3%82%A2%E3%83%AB%E3%83%90%E3%83%A0/</link>
+    <description>Recent content in そらアルバム on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 12 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/tags/%E3%81%9D%E3%82%89%E3%82%A2%E3%83%AB%E3%83%90%E3%83%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>天気写真閲覧専用アプリ「そらアルバム」v1.1.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/12/12/701</link>
+      <pubDate>Fri, 12 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/12/12/701</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id658139582&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/2b24d9a0abccbdd84364b466cc9680e3.png&#34; alt=&#34;Icon60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-702&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;天気予報アプリ「そら案内」で投稿した写真を閲覧する専用アプリ「そらアルバム」の v1.1.0 を公開しました&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;iOS8対応&lt;/p&gt;
+
+&lt;p&gt;＊本バージョンからiOS7以降の対応となります&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iPhone6/6Plus対応&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;フラットデザイン化&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id658139582&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1年以上ぶりのアップデートですが、そらシリーズ唯一フラット化されていない本アプリもようやくフラット化されました。&lt;/p&gt;
+
+&lt;p&gt;ここでの紹介は始めてなので、例によってざっくりとアプリの解説を。&lt;/p&gt;
+
+&lt;h2 id=&#34;そらアルバム:4e1199c835af647d12f69f57cd5af678&#34;&gt;そらアルバム&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;そらアルバムは、そら案内アプリを使って Twitter 投稿された写真（スクリーンショット除く）を軽快に閲覧するためのアプリケーションです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;起動すると、直近の投稿一覧がサムネイルで表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_1.png&#34; alt=&#34;20141212_1&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-704&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;サムネイルタップで拡大表示できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/8686462e14c223b70eb82312a91d0988.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/8686462e14c223b70eb82312a91d0988.png&#34; alt=&#34;20141212_iOS Simulator Screen Shot 2014.12.12 9.20.37 のコピー&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-705&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;投稿された都道府県の文字列を元に（画像に位置情報が含まれているわけではありません）地図に並べて表示することもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_2.png&#34; alt=&#34;20141212_2&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-706&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ランダムに表示し続けるスライドショーもあります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_4.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141212_4.png&#34; alt=&#34;20141212_4&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-707&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ほんと、これだけのシンプルなアプリですが、そら案内ユーザのみなさんが日々投稿している写真をのんびり眺めてみるのもいいものです。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まだお使いでないという方も是非どうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id658139582&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

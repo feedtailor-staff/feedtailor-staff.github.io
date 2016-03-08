@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/07/31 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/07/31/</link>
+    <description>Recent content in 2014/07/31 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 31 Jul 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/07/31/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら案内（iOS版） v3.4.1 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/07/31/297</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/07/31/297</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定番お天気アプリ「そら案内」の v3.4.1 を公開しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;天気画像で表示中の地図の位置を保存する設定を追加（その他設定）&lt;/li&gt;
+&lt;li&gt;投稿画面でカーソルを文頭に移動する設定を追加（その他設定→投稿設定）&lt;/li&gt;
+&lt;li&gt;外部SDKの更新&lt;/li&gt;
+&lt;li&gt;細かい調整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ユーザさんからの要望を取り入れた更新となります。&lt;/p&gt;
+
+&lt;p&gt;天気画像で地図表示をしたときに、通常はみている都道府県が一望できるように表示されるのですが、その表示位置を保存できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/07/20140731_soraannai_v341_1.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/07/20140731_soraannai_v341_1-168x300.jpg&#34; alt=&#34;20140731_soraannai_v341_1&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-298&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、投稿画面では、テキストフィールドをタップしたときに強制的にカーソルを文頭に移動させることができるようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/07/20140731_soraannai_v341_2.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/07/20140731_soraannai_v341_2-168x300.jpg&#34; alt=&#34;20140731_soraannai_v341_2&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-299&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;どちらも初期値はオフになっていますので、必要に応じて設定してください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そら案内はまだまだ進化します。まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;そうそう、「そら」シリーズの新作アプリが近日公開予定ですのでお楽しみに。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

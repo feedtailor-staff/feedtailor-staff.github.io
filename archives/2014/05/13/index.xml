@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/05/13 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/05/13/</link>
+    <description>Recent content in 2014/05/13 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 13 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/05/13/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Twitterエゴサーチ用のMacアプリ「TailSearch」を公開します</title>
+      <link>http://staff.feedtailor.jp/2014/05/13/129</link>
+      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/05/13/129</guid>
+      <description>
+
+&lt;p&gt;久しぶりのMac新作アプリを公開します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id870299267&#34; target=_blank &gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/icon_128x128.png&#34; alt=&#34;icon_128x128&#34; width=&#34;128&#34; height=&#34;128&#34; class=&#34;alignnone size-full wp-image-130&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;その名も &lt;strong&gt;TailSearch&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;MacAppStoreから引用しますと、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;TailSearchは頻度の少ないキーワード用のTwitterエゴサーチアプリです。&lt;/p&gt;
+
+&lt;p&gt;「Twitterで○○に関するエゴサーチをしたいけど、あまりツイートがないのでつい検索確認するのを忘れてしまう」そういう方にぜひオススメです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Macユーザの方も以前に比べれば多くなってきたことだと思います。普段、Macの前にいることが多いという人もそれなりにおられるのではないかと。&lt;/p&gt;
+
+&lt;p&gt;自社製品とか、自作アプリとか、自分のブログの評判が気になるけれど、その都度Twitterの検索画面を開くのは面倒。そもそも、そんなにツイートされているわけでもないから、検索自体が面倒になって・・・ということもあるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;Twitterクライアントで検索結果だけを通知してくれるアプリもあまりないですし、、、というわけで、作ってみました。検索専用。通知センター対応。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id870299267&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;使い方:d1b259ded2af407582f9cc5dbae46d83&#34;&gt;使い方&lt;/h3&gt;
+
+&lt;p&gt;使い方は簡単です。基本的にはキーワードを登録するだけ。（検索オプションについてはTwitterの&lt;a href=&#34;https://support.twitter.com/articles/249059-&#34;&gt;ヘルプ&lt;/a&gt;をご覧ください）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_setting.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_setting-300x249.png&#34; alt=&#34;tailsearch_setting&#34; width=&#34;300&#34; height=&#34;249&#34; class=&#34;alignnone size-medium wp-image-136&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;定期的に検索を実行し、新しいツイートがあれば通知センターでお知らせします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_notify.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_notify-300x91.png&#34; alt=&#34;tailsearch_notify&#34; width=&#34;300&#34; height=&#34;91&#34; class=&#34;alignnone size-medium wp-image-142&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;直近の検索結果はメニューバーから確認可能。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_menu.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch_menu-166x300.png&#34; alt=&#34;tailsearch_menu&#34; width=&#34;166&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-137&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このメニューですが、普通にクリックするとツイートのWebページを開きます。&lt;/p&gt;
+
+&lt;p&gt;が、それだけじゃなくて、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;⌘+クリック: ツイート内のリンクをブラウザで開く&lt;/li&gt;
+&lt;li&gt;option+クリック: リツイート&lt;/li&gt;
+&lt;li&gt;control+クリック: お気に入りに登録&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;なんてこともできるのです。これは便利。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/tailsearch.gif&#34; alt=&#34;tailsearch&#34; width=&#34;470&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-139&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;↑このように、キーを押すと右上にテキスト表示されます&lt;/p&gt;
+
+&lt;h4 id=&#34;注意事項:d1b259ded2af407582f9cc5dbae46d83&#34;&gt;注意事項&lt;/h4&gt;
+
+&lt;p&gt;このアプリでは1日に数ツイートあるかないか、という頻度のキーワードを想定しています。&lt;/p&gt;
+
+&lt;p&gt;更新頻度の高いキーワードを検索対象にしていると、通知センターもあふれますし、なにより大事な情報を取りこぼしてしまうかもしれません。&lt;/p&gt;
+
+&lt;p&gt;普段は頻度が低いキーワードでも一時的にバズると、他の登録キーワードを押しのけて更新通知が適切に受け取れない可能性がありますので、その場合は検索条件を変えるか、キーワード一覧左端のチェックボックスで一時的に検索対象から外してみてください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;アイコンはいつもお世話になっている&lt;a href=&#34;http://www.meta-glamour.com/&#34; target=_blank&gt;メタ・グラマー様&lt;/a&gt;作。&lt;/p&gt;
+
+&lt;p&gt;というわけで、新作Macアプリの紹介でした。ぜひ使ってみてください&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/app/id870299267&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/Download_on_the_Mac_App_Store_Badge_JP_165x40_1004.png&#34; alt=&#34;Download_on_the_Mac_App_Store_Badge_JP_165x40_1004&#34; width=&#34;165&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-145&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

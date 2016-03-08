@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/10/09 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/10/09/</link>
+    <description>Recent content in 2014/10/09 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 09 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/10/09/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>そら気温 v1.2.0 を公開しました</title>
+      <link>http://staff.feedtailor.jp/2014/10/09/473</link>
+      <pubDate>Thu, 09 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/10/09/473</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/53394b992df5454fdee0c605c1cb73a2.png&#34; alt=&#34;Icon@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-474&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ホーム画面に現在地（に最も近いアメダス観測地点）の気温を表示する、そら気温の v1.2.0 を公開しました。&lt;/p&gt;
+
+&lt;h4 id=&#34;変更点:336febdd9469bc5ebe477024e50d0dd4&#34;&gt;変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS8への対応&lt;/li&gt;
+&lt;li&gt;iPhone6/6Plusへの対応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;特に新機能があるわけではありませんが、最新の環境に対応しました。&lt;/p&gt;
+
+&lt;h3 id=&#34;ちょっと紹介:336febdd9469bc5ebe477024e50d0dd4&#34;&gt;ちょっと紹介&lt;/h3&gt;
+
+&lt;p&gt;当スタッフブログで取り上げるのは初めてなので、少しだけアプリの紹介を。&lt;/p&gt;
+
+&lt;p&gt;冒頭に書いたままなのですが、ホーム画面のアプリのバッジとして直近のアメダス観測地点の気温を表示します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_31.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_31.png&#34; alt=&#34;20141009_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-481&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これ↑、247度ではなくて、24.7度です。小数を表示するかどうかは設定で切り替えられます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_2.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_2.png&#34; alt=&#34;20141009_2&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-477&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;また、マイナスの時は9が先頭の4桁数字になります。0もバッジの仕様としては表示できませんので、0度のときは9000という表示になります。&lt;/p&gt;
+
+&lt;p&gt;アプリを開くと、もう少し詳しい情報が見られます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_1.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_1.png&#34; alt=&#34;20141009_1&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-478&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;青いマークが現在地で、赤いピンが観測地点です。観測値の更新は10分ごとで、だいたい10-20分以内の観測値が表示されます。&lt;/p&gt;
+
+&lt;p&gt;現在地に直近の観測地点、と書きましたが、直近の観測地点が山の中にあったりと参考にならない場合は、観測地点を地図から選択することもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_5.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/10/20141009_5.png&#34; alt=&#34;20141009_5&#34; width=&#34;338&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-479&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;注意事項:336febdd9469bc5ebe477024e50d0dd4&#34;&gt;注意事項&lt;/h4&gt;
+
+&lt;p&gt;アプリを立ち上げることなく、バックグランドで動くことを前提としたアプリなので、いくつかの注意事項があります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;更新タイミングはまちまちです。iOSがよろしくバックグランドで動かしてくれるようなのでその点ご了承ください。ただ、あまりにアプリを立ち上げていないと「このアプリ使わないのかな？」と更新が止まることがあるようなので、たまにはアプリを立ち上げてください。&lt;/li&gt;
+&lt;li&gt;バックグラウンドで更新されない場合は設定アプリの「一般」-「Appのバックグラウンド更新」で「そら気温」が「オン」になっているか確認してください。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;普段はほとんど立ち上げる必要もないですが、ホーム画面の片隅において、気温をチェックしてみてはいかがでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id700330781?mt=8&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/08/04 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2014/08/04/</link>
+    <description>Recent content in 2014/08/04 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 04 Aug 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2014/08/04/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>雨雲予測アプリ そらレーダーを公開します</title>
+      <link>http://staff.feedtailor.jp/2014/08/04/303</link>
+      <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2014/08/04/303</guid>
+      <description>
+
+&lt;p&gt;「そら」シリーズ最新作のご紹介です。&lt;/p&gt;
+
+&lt;p&gt;その名も「そらレーダー」&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/3a32a3262646918bc6b4c57662b6c293.png&#34; alt=&#34;Icon-60@2x&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-305&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;そらレーダーは付近の雨雲の様子を表示するアプリです。直近の実況データと、日本気象協会様提供のXバンドMPレーダーによる予測を表示します。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ざっくりといえば定番アプリ「そら案内」の雨雲レーダー表示部分を取り出して単体アプリ化した感じなのですが、それだけではありません！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;と、アプリの詳細を説明する前に大事な注意事項を。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;本アプリは無料でダウンロードできますが、アプリの機能を十分に活用するためには有料課金「そらレーダー予測購読（月額）」が必要です。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;さて、詳細をみていきましょう。&lt;/p&gt;
+
+&lt;h3 id=&#34;主な機能:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;主な機能&lt;/h3&gt;
+
+&lt;p&gt;まずは無料のままで使える基本的な機能の紹介です。&lt;/p&gt;
+
+&lt;h4 id=&#34;直前の雨雲の様子を表示:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;直前の雨雲の様子を表示&lt;/h4&gt;
+
+&lt;p&gt;これはそら案内の「雨雲レーダー」に相当します。XバンドMPレーダーではないので日本全域をカバーしていますが、1km単位の表示なので多少粗い感じです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.29.25.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.29.25-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 09.29.25&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-340&#34; /&gt;&lt;/a&gt;　&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.41.37.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.41.37-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 09.41.37&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-347&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;直近5分間の雨雲予測を表示:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;直近5分間の雨雲予測を表示&lt;/h4&gt;
+
+&lt;p&gt;こちらはXバンドMPレーダーに基づく予測表示ですので250m単位で細かいです。黒い部分は残念ながらレーダーの範囲外になりますので、課金をされる場合はお使いの地域がレーダーの範囲内かどうかを確認してください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.29.30.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.29.30-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 09.29.30&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-341&#34; /&gt;&lt;/a&gt;　&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.41.42.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.41.42-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 09.41.42&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-348&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記二つの切り替えは画面下部のツールバー両脇にある矢印をタップするか、ツールバーをスワイプすることで行えます。&lt;/p&gt;
+
+&lt;h4 id=&#34;レーダー画像のシェア-twitter-facebook:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;レーダー画像のシェア（Twitter/Facebook）&lt;/h4&gt;
+
+&lt;p&gt;画面にうつる地図画像をそのままシェアできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.29.53.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.29.53-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 09.29.53&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-344&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;（注：v1.0では表記がおかしかったり、キャンセルボタンが押しにくかったりしますが、申請中のv1.0.1で修正予定です→&lt;strong&gt;追記:2014/8/5 v1.0.1公開により修正されました&lt;/strong&gt;）&lt;/p&gt;
+
+&lt;h4 id=&#34;ユニバーサル対応:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;ユニバーサル対応&lt;/h4&gt;
+
+&lt;p&gt;ユニバーサルアプリですので、iPadでも同じことができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.34.26.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.34.26-300x225.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 09.34.26&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;alignnone size-medium wp-image-345&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これらの主な機能はおおよそ「そら案内」でできることと同じになっています。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;そらレーダー予測購読-月額-でできること:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;そらレーダー予測購読（月額）でできること&lt;/h3&gt;
+
+&lt;p&gt;さて、ここからが本題なのですが、月100円の課金をすると、、、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;5分単位で最大1時間後までの雨雲予測を表示&lt;/li&gt;
+&lt;li&gt;現在地や登録した地点（合計3点まで）の1時間以内の降雨情報をプッシュ通知&lt;/li&gt;
+&lt;li&gt;広告非表示&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;が可能になります。&lt;/p&gt;
+
+&lt;h4 id=&#34;5分単位で最大1時間後までの雨雲予測を表示:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;5分単位で最大1時間後までの雨雲予測を表示&lt;/h4&gt;
+
+&lt;p&gt;先ほどの、ツールバーによる表示切り替えは、直近の実況か予測しか表示できませんでしたが、さらに未来の予測も表示できるようになります。&lt;/p&gt;
+
+&lt;p&gt;たとえば、9:33ごろに表示させた場合。直近の予測はもちろんですが、&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.33.34.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.33.34-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 09.33.34&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-342&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;10:25までの予測を5分単位でみることができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.33.48.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-09.33.48-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 09.33.48&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-343&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この後、空模様がどのように変化していくのかという予測が5分単位で確認できるので、外出時にはとても便利ですね。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、ツールバーの時間表示部分をダブルタップで直近の予測表示に戻ります。&lt;/p&gt;
+
+&lt;h4 id=&#34;現在地や登録した地点-合計3点まで-の1時間以内の降雨情報をプッシュ通知:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;現在地や登録した地点（合計3点まで）の1時間以内の降雨情報をプッシュ通知&lt;/h4&gt;
+
+&lt;p&gt;これがまさに目玉といっても過言ではないでしょう。みなさんお待ちかねのプッシュ通知です。&lt;/p&gt;
+
+&lt;p&gt;設定画面の通知設定から、こんな感じで設定をしておきますと、&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-10.19.32.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-10.19.32-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 10.19.32&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-354&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;降雨が予測された場合に、プッシュ通知が飛んできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-10.01.00.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-10.01.00-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 10.01.00&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-355&#34; /&gt;&lt;/a&gt;　&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-10.30.23.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140804_Screenshot-2014.08.04-10.30.23-168x300.png&#34; alt=&#34;20140804_Screenshot 2014.08.04 10.30.23&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-357&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;通知設定は、課金直後はオフになっていますので必ず設定を確認してください。また、設定中にエラーが表示される場合は一度アプリを再起動して再度お試しください。&lt;/p&gt;
+
+&lt;p&gt;たとえば現在地と自宅と職場とを登録しておけば「今から帰るところなのに家の最寄り駅では雨降りそうなのかー」とかそんな感じでとても便利です。&lt;/p&gt;
+
+&lt;p&gt;現在地をオンにしていると、バックグランドでも位置情報の更新が行われますので、バッテリーの残量には注意してください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;そらレーダー予測購読-月額-について:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;そらレーダー予測購読（月額）について&lt;/h3&gt;
+
+&lt;p&gt;課金に関する注意事項を。&lt;/p&gt;
+
+&lt;p&gt;そらレーダー予測購読は1ヶ月単位の自動継続課金です。一度課金すると、キャンセルしない限り1月後に自動更新され、自動で再課金されてしまうので注意してください。&lt;/p&gt;
+
+&lt;p&gt;使い続けていただく場合には全然問題ないのですが、一時的に利用をやめたい場合は、自動更新処理が始まる前（有効期限の約24時間前）までにキャンセルしてください。&lt;/p&gt;
+
+&lt;h4 id=&#34;自動更新の解除方法-iphone-ipadの場合:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;自動更新の解除方法（iPhone/iPadの場合）&lt;/h4&gt;
+
+&lt;p&gt;「設定」アプリ→「iTunes &amp;amp; App Store」→「Apple ID」→「Apple IDを表示」&lt;/p&gt;
+
+&lt;p&gt;「管理」タップ&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140801_Screenshot-2014.08.01-11.13.09.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140801_Screenshot-2014.08.01-11.13.09-168x300.png&#34; alt=&#34;20140801_Screenshot 2014.08.01 11.13.09&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-322&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一覧から「そらレーダー」を選択&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140801_Screenshot-2014.08.01-11.13.28.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140801_Screenshot-2014.08.01-11.13.28-168x300.png&#34; alt=&#34;20140801_Screenshot 2014.08.01 11.13.28&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-323&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここからキャンセルできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/20140801_Screenshot-2014.08.01-11.13.21.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/20140801_Screenshot-2014.08.01-11.13.21-168x300.png&#34; alt=&#34;20140801_Screenshot 2014.08.01 11.13.21&#34; width=&#34;168&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-324&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;自動更新の解除方法-mac-pcの場合:f28a92a2ec4770774cb509dc23dbbc49&#34;&gt;自動更新の解除方法（Mac/PCの場合）&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iTunesを起動して、iTunes Storeを開きます&lt;/li&gt;
+&lt;li&gt;「サインイン」クリック&lt;/li&gt;
+&lt;li&gt;「サインイン」ボタンがApple IDに変わるので、再度Apple IDをクリック&lt;/li&gt;
+&lt;li&gt;設定→購読→管理よりキャンセルできます&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;アプリアイコンはいつもお世話になっているメタ・グラマー様製です。「そら案内的カラー（青、白、オレンジ）を使ってレーダー or 雨予報っぽいものをお願いします」という振りに、かわいい傘のアイコンが返ってきました。&lt;/p&gt;
+
+&lt;p&gt;そら気温と3つ並べていい感じです。ありがとうございます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/08/Screenshot-2014.08.01-11.44.50.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/08/Screenshot-2014.08.01-11.44.50-300x116.png&#34; alt=&#34;Screenshot 2014.08.01 11.44.50&#34; width=&#34;300&#34; height=&#34;116&#34; class=&#34;alignnone size-medium wp-image-329&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;梅雨はすぎましたけれど、台風や夕立など油断できない空模様な毎日です。そんなみなさんのお役に立てればと。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id892264357&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;日々の生活やレジャー時のおともに是非お試しください。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
