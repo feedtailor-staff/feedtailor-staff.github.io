@@ -57,7 +57,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;余談:183109533a870edef8e0bf84d13f407c&#34;&gt;余談&lt;/h4&gt;
+&lt;h4 id=&#34;余談:e82ca378332e1f7dcc51201ccfb1e798&#34;&gt;余談&lt;/h4&gt;
 
 &lt;p&gt;このWindowsアプリ、Mac歴27年の私itokがつくりました。いやこれほんとに。&lt;/p&gt;
 
@@ -105,11 +105,11 @@
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id975403451&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;大事なお話:e0023e966e78e8705d4f18cc229217f8&#34;&gt;大事なお話&lt;/h4&gt;
+&lt;h4 id=&#34;大事なお話:57eb1a7339f0d4a7f1a1f4a878826746&#34;&gt;大事なお話&lt;/h4&gt;
 
 &lt;p&gt;本アプリは、漢字→かな変換のために、入力された文章をネットワーク経由で変換サーバに送信しますが、通信内容は暗号化されており、また送信された文章をサーバに保存することはありません。&lt;/p&gt;
 
-&lt;h4 id=&#34;使い方:e0023e966e78e8705d4f18cc229217f8&#34;&gt;使い方&lt;/h4&gt;
+&lt;h4 id=&#34;使い方:57eb1a7339f0d4a7f1a1f4a878826746&#34;&gt;使い方&lt;/h4&gt;
 
 &lt;p&gt;アプリを起動すると、最初は文章の入力画面です。コピーした文章を張り付けたり、直接入力してください。（閲覧中のWebページを直接変換する方法もありますが、それは後ほど）&lt;/p&gt;
 
@@ -145,7 +145,7 @@
 
 &lt;p&gt;この結果をPDFに出力することもできます。出力されたPDFはほかのアプリで開けますし、iTunes経由で取り出すことも可能です。&lt;/p&gt;
 
-&lt;h4 id=&#34;webページから直接変換:e0023e966e78e8705d4f18cc229217f8&#34;&gt;Webページから直接変換&lt;/h4&gt;
+&lt;h4 id=&#34;webページから直接変換:57eb1a7339f0d4a7f1a1f4a878826746&#34;&gt;Webページから直接変換&lt;/h4&gt;
 
 &lt;p&gt;iOS8で追加されたエクステンションの仕組みを使うと、Safariで表示しているページの文章を「かんじかな」に渡すことができます。&lt;/p&gt;
 
@@ -161,7 +161,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id975403451&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;余談:e0023e966e78e8705d4f18cc229217f8&#34;&gt;余談&lt;/h4&gt;
+&lt;h4 id=&#34;余談:57eb1a7339f0d4a7f1a1f4a878826746&#34;&gt;余談&lt;/h4&gt;
 
 &lt;p&gt;このアプリの肝となる「漢字→かな」変換部分はオープンソースの&lt;a href=&#34;http://kakasi.namazu.org&#34; target=&#34;_blank&#34;&gt;KAKASI（kanji kana simple inverter）&lt;/a&gt;を使用しています。このエンジンを外部サーバに設置し、iOS側からネットワークごしに呼び出すことで変換を実現しています。&lt;/p&gt;
 
@@ -169,7 +169,7 @@
 
 &lt;p&gt;Webからの文章抽出には&lt;a href=&#34;https://github.com/hatena/extract-content-javascript/&#34; target=&#34;_blank&#34;&gt;はてなの「ExtractContentJS」&lt;/a&gt;を使用しています。UIなしなので、このAction ExtensionはJavaScriptによる実装です。&lt;/p&gt;
 
-&lt;h4 id=&#34;セールのお知らせ:e0023e966e78e8705d4f18cc229217f8&#34;&gt;セールのお知らせ&lt;/h4&gt;
+&lt;h4 id=&#34;セールのお知らせ:57eb1a7339f0d4a7f1a1f4a878826746&#34;&gt;セールのお知らせ&lt;/h4&gt;
 
 &lt;p&gt;最後にもう一つ大事なお話を。&lt;/p&gt;
 

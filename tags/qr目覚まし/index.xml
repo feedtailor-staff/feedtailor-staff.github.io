@@ -21,7 +21,7 @@
 
 &lt;p&gt;QR目覚ましがiPhone6/6Plusに対応しました。&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:83d7f39c6a36c84a36d899cdcb42a275&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点:386ef7dce750d1aec66e381525990885&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;iPhone6/6Plusへの対応&lt;/li&gt;
@@ -75,7 +75,7 @@
 
 &lt;p&gt;というわけで、睡眠時間を記録するだけですけれど連携してみました。本来であれば、睡眠の質も記録できる仕様になっているのですが、QR目覚まし自体がそういう機能を持ってないので、単に睡眠時間の記録としてお使いください。&lt;/p&gt;
 
-&lt;h3 id=&#34;連携方法:04acabc5a096a7c8fa0636ab37dc456c&#34;&gt;連携方法&lt;/h3&gt;
+&lt;h3 id=&#34;連携方法:60d80ac7337ee252627628cc535fc7a5&#34;&gt;連携方法&lt;/h3&gt;
 
 &lt;p&gt;まず最初に、確認のダイアログが表示されます。これは設定タブの「ログはHealthに保存」からもできます。&lt;/p&gt;
 
@@ -117,11 +117,11 @@
       <guid>http://staff.feedtailor.jp/2014/04/24/102</guid>
       <description>
 
-&lt;h3 id=&#34;ごあいさつ:3a9ba9a578aa5498e92c38517633f2e7&#34;&gt;ごあいさつ&lt;/h3&gt;
+&lt;h3 id=&#34;ごあいさつ:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;ごあいさつ&lt;/h3&gt;
 
 &lt;p&gt;まずはじめにということで、はじめましてです。&lt;a href=&#34;https://twitter.com/itok\_twit&#34; target=\_blank&gt;itok&lt;/a&gt;です。feedtailorの古参エンジニアです。iOS/Macがメインですが、たまにサーバサイドもちょっとだけ触ったりします。うちの代表作「&lt;a href=&#34;http://sora-annai.jp/&#34; target=_blank&gt;そら案内&lt;/a&gt;」の中の人ということで今後ともよろしくお願いします。（個人の&lt;a href=&#34;http://itok.jp/&#34; target=_blank&gt;ブログ&lt;/a&gt;と文体変わらない感じですけれど、その点はご了承ください）&lt;/p&gt;
 
-&lt;h3 id=&#34;本題:3a9ba9a578aa5498e92c38517633f2e7&#34;&gt;本題&lt;/h3&gt;
+&lt;h3 id=&#34;本題:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;本題&lt;/h3&gt;
 
 &lt;p&gt;さてさて、というわけで表題の通り「QR目覚まし」の v1.0.2 を公開しました。&lt;/p&gt;
 
@@ -138,7 +138,7 @@
 
 &lt;p&gt;変更点自体はそれほどたいしたことはないのですけれど、せっかくスタッフブログも始まったことですので、開発者によるアプリ紹介などを。&lt;/p&gt;
 
-&lt;h3 id=&#34;qr目覚ましとは:3a9ba9a578aa5498e92c38517633f2e7&#34;&gt;QR目覚ましとは&lt;/h3&gt;
+&lt;h3 id=&#34;qr目覚ましとは:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;QR目覚ましとは&lt;/h3&gt;
 
 &lt;p&gt;僕自身の生活習慣から生まれたアプリです。&lt;/p&gt;
 
@@ -162,7 +162,7 @@
 
 &lt;p&gt;と、まあそういうわけで、なにかiPhoneを使って操作をしたら止まるようなもの（でもiPhone単体では成り立たないような操作）を考えていて、結果的にそれがQRコードをスキャンすると止まる、っていうところに行き着いたのでした。&lt;/p&gt;
 
-&lt;h3 id=&#34;itok的使い方:3a9ba9a578aa5498e92c38517633f2e7&#34;&gt;itok的使い方&lt;/h3&gt;
+&lt;h3 id=&#34;itok的使い方:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;itok的使い方&lt;/h3&gt;
 
 &lt;p&gt;僕自身の設定はこんな感じです（普段、開発機であるtouchをアラーム用に使っているので英語環境のまんまですが）&lt;/p&gt;
 

@@ -131,7 +131,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:65e048ce73dc0ffa8599ca83bbe04f24&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点:01cfb783007d19b614641a1007608b27&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;台風表示への対応&lt;/li&gt;
@@ -163,7 +163,7 @@
 
 &lt;p&gt;好評いただいているそら案内のWindows版、以前のお知らせ通り天気画像の表示に対応した v1.1 を公開します。&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:4e1d283f16707d8c0505900fc511839f&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点:60944f85d9681b5089273075f760e551&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;天気画像（気象衛星、天気図、雨雲の動き、アメダス各種情報、XバンドMPレーダ予測、台風、黄砂予測、PM2.5予測）の表示に対応しました&lt;/li&gt;
@@ -172,7 +172,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;天気画像の表示に対応:4e1d283f16707d8c0505900fc511839f&#34;&gt;天気画像の表示に対応&lt;/h3&gt;
+&lt;h3 id=&#34;天気画像の表示に対応:60944f85d9681b5089273075f760e551&#34;&gt;天気画像の表示に対応&lt;/h3&gt;
 
 &lt;p&gt;iOS/Mac/Android版と同等の機能を持ちました。&lt;/p&gt;
 
@@ -318,7 +318,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;余談:183109533a870edef8e0bf84d13f407c&#34;&gt;余談&lt;/h4&gt;
+&lt;h4 id=&#34;余談:e82ca378332e1f7dcc51201ccfb1e798&#34;&gt;余談&lt;/h4&gt;
 
 &lt;p&gt;このWindowsアプリ、Mac歴27年の私itokがつくりました。いやこれほんとに。&lt;/p&gt;
 
@@ -356,7 +356,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:20822b0f47e5f23b132b1163e069b53c&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点:058b38fd4571fc997ffaaf2de4c855e8&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;花粉情報表示（花粉アイコンをタップすると詳細が表示されます）&lt;/li&gt;
@@ -403,7 +403,7 @@
 
 &lt;p&gt;いくつかの機能を見ていきましょう。&lt;/p&gt;
 
-&lt;h3 id=&#34;今日-明日の予報-週間予報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;今日／明日の予報・週間予報&lt;/h3&gt;
+&lt;h3 id=&#34;今日-明日の予報-週間予報:d3705da740e106662dd8a106bcd1863e&#34;&gt;今日／明日の予報・週間予報&lt;/h3&gt;
 
 &lt;p&gt;地域の登録は市区町村単位でのみ行うようになりました。（旧バージョンをお使いの方はお手数ですが、再度地域設定を行ってください）&lt;/p&gt;
 
@@ -417,7 +417,7 @@
 
 &lt;p&gt;地域の切り替えは左右方向へフリックしてください。&lt;/p&gt;
 
-&lt;h3 id=&#34;天気概況-注警報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気概況／注警報&lt;/h3&gt;
+&lt;h3 id=&#34;天気概況-注警報:d3705da740e106662dd8a106bcd1863e&#34;&gt;天気概況／注警報&lt;/h3&gt;
 
 &lt;p&gt;下にスクロールすると天気概況が表示されます。文字でさらに天気の様子がわかるのではないでしょうか。&lt;/p&gt;
 
@@ -425,13 +425,13 @@
 
 &lt;p&gt;上部バーに「！」アイコンが表示されるとそれは注警報のお知らせです。「！」アイコンをタップして、注警報をチェックしましょう。&lt;/p&gt;
 
-&lt;h3 id=&#34;生物季節情報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;生物季節情報&lt;/h3&gt;
+&lt;h3 id=&#34;生物季節情報:d3705da740e106662dd8a106bcd1863e&#34;&gt;生物季節情報&lt;/h3&gt;
 
 &lt;p&gt;右上メニューから、その地域での生物季節情報を閲覧できます。季節の移ろいを感じていただければと。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34; alt=&#34;20141218_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-721&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;天気画像:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気画像&lt;/h3&gt;
+&lt;h3 id=&#34;天気画像:d3705da740e106662dd8a106bcd1863e&#34;&gt;天気画像&lt;/h3&gt;
 
 &lt;p&gt;ここが大幅リニューアルポイントです。&lt;/p&gt;
 
@@ -463,7 +463,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;余談:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;余談&lt;/h4&gt;
+&lt;h4 id=&#34;余談:d3705da740e106662dd8a106bcd1863e&#34;&gt;余談&lt;/h4&gt;
 
 &lt;p&gt;以上、さらっと紹介してきましたが、このAndroid版、私itokがつくりました。いや、これ、ほんとに。&lt;/p&gt;
 
@@ -495,7 +495,7 @@
 
 &lt;p&gt;Mac用お天気予報アプリ「そら案内」の v2.0.4 を公開しました。&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:a3c5ef4c21de67e66d5fc6f04ad79fb7&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点:f15ed5caf19405eb3b31dce1c417935a&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;10.8 で正常に起動しない問題を修正&lt;/li&gt;
@@ -542,7 +542,7 @@
 
 &lt;p&gt;今回もいろいろと盛りだくさんです。&lt;/p&gt;
 
-&lt;h3 id=&#34;iphone6-6plus対応:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;iPhone6/6Plus対応&lt;/h3&gt;
+&lt;h3 id=&#34;iphone6-6plus対応:2fc6e12b18f3b5ad1eee8a0711f942de&#34;&gt;iPhone6/6Plus対応&lt;/h3&gt;
 
 &lt;p&gt;画面が広いってすごいです。&lt;/p&gt;
 
@@ -550,7 +550,7 @@
 
 &lt;p&gt;これは6Plusですが、6でも十分な広さで天気予報を一望できます。&lt;/p&gt;
 
-&lt;h3 id=&#34;ios8の通知センターウィジェットに対応:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;iOS8の通知センターウィジェットに対応&lt;/h3&gt;
+&lt;h3 id=&#34;ios8の通知センターウィジェットに対応:2fc6e12b18f3b5ad1eee8a0711f942de&#34;&gt;iOS8の通知センターウィジェットに対応&lt;/h3&gt;
 
 &lt;p&gt;まさに待望。&lt;/p&gt;
 
@@ -564,7 +564,7 @@
 
 &lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/11/7578fe1f076a390fa092888f42f0e891.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/11/7578fe1f076a390fa092888f42f0e891.png&#34; alt=&#34;20141106_Screen Shot 2014-11-06 at 10.17.13 のコピー&#34; width=&#34;600&#34; height=&#34;337&#34; class=&#34;alignnone size-full wp-image-598&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;すもうトリとコトリ-フレームを追加:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;「すもうトリとコトリ」フレームを追加&lt;/h3&gt;
+&lt;h3 id=&#34;すもうトリとコトリ-フレームを追加:2fc6e12b18f3b5ad1eee8a0711f942de&#34;&gt;「すもうトリとコトリ」フレームを追加&lt;/h3&gt;
 
 &lt;p&gt;新しいフレームが追加されました。&lt;/p&gt;
 
@@ -576,7 +576,7 @@
 
 &lt;p&gt;もちろんこのフレームも無料です。&lt;/p&gt;
 
-&lt;h3 id=&#34;大事なお知らせ:b9d673e033cf630d234e719ef98d2fe2&#34;&gt;大事なお知らせ&lt;/h3&gt;
+&lt;h3 id=&#34;大事なお知らせ:2fc6e12b18f3b5ad1eee8a0711f942de&#34;&gt;大事なお知らせ&lt;/h3&gt;
 
 &lt;p&gt;最後に大事なお知らせを一つ。&lt;/p&gt;
 
@@ -604,7 +604,7 @@
 
 &lt;p&gt;Macの超定番お天気アプリ「そら案内」の v2.0.2 を公開しました。&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:38b0e3cd595d70c67d8f615f64b0ddb0&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点:9d860d0c4007d16e0e3464a090da843d&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;極端にバッテリを消費することがある問題を修正&lt;/li&gt;
@@ -643,7 +643,7 @@
 
 &lt;p&gt;Macの超定番お天気アプリ「そら案内」の v2.0.0 を公開しました。&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点:2fef25df2f0fd4203e15a423a16ddce3&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;デザインの一新&lt;/li&gt;
@@ -674,7 +674,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;デザインの一新:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;デザインの一新&lt;/h4&gt;
+&lt;h4 id=&#34;デザインの一新:2fef25df2f0fd4203e15a423a16ddce3&#34;&gt;デザインの一新&lt;/h4&gt;
 
 &lt;p&gt;まずは見た目そのものですけれど、冒頭のアプリアイコンからもわかるようにデザインを一新しました。ちょうどiOS版がiOS7からフラットデザイン化されたように、先日公開された OS X 10.10 Yosemite を意識してMac版もフラット的なデザインになりました。&lt;/p&gt;
 
@@ -686,7 +686,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;天気画像の一新:5afa5e57434d6ec787e62a88ada212a9&#34;&gt;天気画像の一新&lt;/h4&gt;
+&lt;h4 id=&#34;天気画像の一新:2fef25df2f0fd4203e15a423a16ddce3&#34;&gt;天気画像の一新&lt;/h4&gt;
 
 &lt;p&gt;さて、今回の目玉はデザインではなく「天気画像」。いままで、数枚の画像を切り替えて表示できるだけだったんですが、地図を用いてiOS版と同等の情報量になりました（＊Macの標準地図を使っているため「天気画像」の機能追加は OS X 10.9 Mavericks 以降のみとなります）&lt;/p&gt;
 
@@ -740,7 +740,7 @@
 
 &lt;p&gt;なんといっても目玉はこれですね&lt;/p&gt;
 
-&lt;h3 id=&#34;台風情報の表示に対応:79df492b9790361c15d6008b379c9610&#34;&gt;台風情報の表示に対応&lt;/h3&gt;
+&lt;h3 id=&#34;台風情報の表示に対応:8e7f112373da111b9d8ba97b8d1afe56&#34;&gt;台風情報の表示に対応&lt;/h3&gt;
 
 &lt;p&gt;天気画像画面に台風タブが追加されています（以下、先日の台風11号・13号をサンプルとして表示しています）&lt;/p&gt;
 
@@ -854,7 +854,7 @@
 
 &lt;p&gt;いろいろと盛りだくさんですけれど、ざっと順番に見ていきましょう。&lt;/p&gt;
 
-&lt;h3 id=&#34;黄砂-pm2-5の予測表示に対応:9bf18b52e3505eab583515769ec80737&#34;&gt;黄砂・PM2.5の予測表示に対応&lt;/h3&gt;
+&lt;h3 id=&#34;黄砂-pm2-5の予測表示に対応:ffd24ff6c0f9eaa766589616c24cf5fd&#34;&gt;黄砂・PM2.5の予測表示に対応&lt;/h3&gt;
 
 &lt;p&gt;まず、iPadでは普通に天気画像に「PM2.5」と「黄砂」のタブが増えています。&lt;/p&gt;
 
@@ -885,7 +885,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;rody-のフレームを追加:9bf18b52e3505eab583515769ec80737&#34;&gt;「Rody」のフレームを追加&lt;/h3&gt;
+&lt;h3 id=&#34;rody-のフレームを追加:ffd24ff6c0f9eaa766589616c24cf5fd&#34;&gt;「Rody」のフレームを追加&lt;/h3&gt;
 
 &lt;p&gt;投稿機能に新しいフレームが追加されました。子供用品などでおなじみRodyのフレームです。&lt;/p&gt;
 
@@ -897,7 +897,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;ナチュラル-コンパクト-のフレームを更新:9bf18b52e3505eab583515769ec80737&#34;&gt;「ナチュラル」「コンパクト」のフレームを更新&lt;/h3&gt;
+&lt;h3 id=&#34;ナチュラル-コンパクト-のフレームを更新:ffd24ff6c0f9eaa766589616c24cf5fd&#34;&gt;「ナチュラル」「コンパクト」のフレームを更新&lt;/h3&gt;
 
 &lt;p&gt;人気の「ナチュラル」「コンパクト」フレームがさらに増えました。それぞれ8種類になりました。&lt;/p&gt;
 

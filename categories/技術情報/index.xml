@@ -27,7 +27,7 @@
 
 &lt;p&gt;日々細かい改良を施すというよりは、必要な時に少しまとまった時間をとって最低限の改良を行うにとどまる事が多かったのですが、超聖域という事で今まで気になりつつも放置していた部分に大きく手を入れよう試みを行いました。&lt;/p&gt;
 
-&lt;h2 id=&#34;これまでの状況:cebb9691144de1cb2625562fdc24a012&#34;&gt;これまでの状況&lt;/h2&gt;
+&lt;h2 id=&#34;これまでの状況:2926f8c19f0245e326fdd9f67904d277&#34;&gt;これまでの状況&lt;/h2&gt;
 
 &lt;p&gt;これまでの状況はざっくりと以下のような感じです。&lt;/p&gt;
 
@@ -42,7 +42,7 @@
 
 &lt;p&gt;社内のRakefileでは、xcodebuildを直接触って動作確認しつつ、ネット上の各種情報や既存の実装を参考に必要なエッセンスを取り込むような事をしていました。&lt;/p&gt;
 
-&lt;h2 id=&#34;fastlane:cebb9691144de1cb2625562fdc24a012&#34;&gt;fastlane&lt;/h2&gt;
+&lt;h2 id=&#34;fastlane:2926f8c19f0245e326fdd9f67904d277&#34;&gt;fastlane&lt;/h2&gt;
 
 &lt;p&gt;先にあげましたが、新しめのツールとして &lt;a href=&#34;https://github.com/KrauseFx/fastlane&#34;&gt;fastlane&lt;/a&gt;があります。iOSアプリ開発にまつわる様々なタスクをなんでも自動化してしまおうという壮大なプロジェクト。試してみる価値大では？という印象を受けました。&lt;/p&gt;
 
@@ -56,7 +56,7 @@
 
 &lt;p&gt;(fastlane自体はやりたい事にうまくはまると良いツールだと思いますので今後も注目していきたいと思っています)&lt;/p&gt;
 
-&lt;h2 id=&#34;gem化したコマンドラインツールへの置き換え:cebb9691144de1cb2625562fdc24a012&#34;&gt;Gem化したコマンドラインツールへの置き換え&lt;/h2&gt;
+&lt;h2 id=&#34;gem化したコマンドラインツールへの置き換え:2926f8c19f0245e326fdd9f67904d277&#34;&gt;Gem化したコマンドラインツールへの置き換え&lt;/h2&gt;
 
 &lt;p&gt;社内Rakefileは必要最低限の機能しかない規模の小さいもので見通しは良い状態にあります。ただ、いくつか問題があったのでそれを潰していく事にしました。&lt;/p&gt;
 
@@ -79,7 +79,7 @@
 
 &lt;p&gt;作ったコマンドは&amp;#8221;ftbuild&amp;#8221;と命名しました。(今の所一般公開予定はありません)&lt;/p&gt;
 
-&lt;h2 id=&#34;gemの作成:cebb9691144de1cb2625562fdc24a012&#34;&gt;Gemの作成&lt;/h2&gt;
+&lt;h2 id=&#34;gemの作成:2926f8c19f0245e326fdd9f67904d277&#34;&gt;Gemの作成&lt;/h2&gt;
 
 &lt;p&gt;bundlerでGemのひな形を作成することができるのでこれを利用。(&lt;a href=&#34;http://bundler.io/v1.10/bundle_gem.html&#34;&gt;&lt;code&gt;bundle gem&lt;/code&gt;&lt;/a&gt;)&lt;/p&gt;
 
@@ -126,7 +126,7 @@
 
 &lt;p&gt;あとは元のRakefileに実装していた諸々機能をThorベースでコマンド化していきます。&lt;/p&gt;
 
-&lt;h2 id=&#34;dsl:cebb9691144de1cb2625562fdc24a012&#34;&gt;DSL&lt;/h2&gt;
+&lt;h2 id=&#34;dsl:2926f8c19f0245e326fdd9f67904d277&#34;&gt;DSL&lt;/h2&gt;
 
 &lt;p&gt;昨今の開発シーンでは、RubyベースのDSLを設定ファイルとして利用する事がよくあります。(Gemfile、Podfile、Rakefile、Fastfile、etc..)&lt;/p&gt;
 
@@ -166,7 +166,7 @@ hogehoge dir_path + &amp;quot;_2&amp;quot;
 
 &lt;p&gt;のような記述が可能になり、YAMLの設定ファイルより記述力が格段に増します。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:cebb9691144de1cb2625562fdc24a012&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ:2926f8c19f0245e326fdd9f67904d277&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;fastlaneは要注目。&lt;/li&gt;
@@ -194,7 +194,7 @@ hogehoge dir_path + &amp;quot;_2&amp;quot;
 
 &lt;p&gt;で、何をやったかというと以前から着手していた &lt;a href=&#34;http://www.syncnel.biz&#34;&gt;SYNCNEL&lt;/a&gt; のJavaFXアプリケーションのGradleビルドスクリプトを書いてました。&lt;/p&gt;
 
-&lt;h1 id=&#34;javafx:487d6aeeb1d45f9fa3b6f695d13cfb66&#34;&gt;JavaFX&lt;/h1&gt;
+&lt;h1 id=&#34;javafx:c72476a69a59a5330d1bc20d52986ca9&#34;&gt;JavaFX&lt;/h1&gt;
 
 &lt;p&gt;JavaFXとはJavaのGUIツールキットでJDK8からは標準で提供されています。&lt;/p&gt;
 
@@ -204,7 +204,7 @@ hogehoge dir_path + &amp;quot;_2&amp;quot;
 
 &lt;p&gt;簡単とは言いましたが、はまるポイントは幾つもあったので、今回はその内のビルドスクリプトについてご紹介します。&lt;/p&gt;
 
-&lt;h1 id=&#34;gradleビルドスクリプト:487d6aeeb1d45f9fa3b6f695d13cfb66&#34;&gt;Gradleビルドスクリプト&lt;/h1&gt;
+&lt;h1 id=&#34;gradleビルドスクリプト:c72476a69a59a5330d1bc20d52986ca9&#34;&gt;Gradleビルドスクリプト&lt;/h1&gt;
 
 &lt;p&gt;アプリ自体はコードが書ければできあがるんですが、それを公開するとなるといろいろやることがあります。&lt;/p&gt;
 
@@ -312,11 +312,11 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;私はこれまで &lt;a href=&#34;https://www.syncnel.biz/&#34;&gt;SYNCNEL&lt;/a&gt; のサーバサイドの実装と構築を担当し続けているのですが、今回自由に使っていい一週間あるということで、その SYNCNEL サービスの運用のなか Issue として挙げられている事柄のうち個人的に関心あるものをピックアップして、ある程度の方針決定、あるいは解決に至るまでできるかに時間を充てることにしました。&lt;/p&gt;
 
-&lt;h2 id=&#34;1-サブドメインベースアプリケーション:17417599a4aa11ab0744475e5dd75780&#34;&gt;1. サブドメインベースアプリケーション&lt;/h2&gt;
+&lt;h2 id=&#34;1-サブドメインベースアプリケーション:69c13cf2501e6a6e3a3cc4f993b3b343&#34;&gt;1. サブドメインベースアプリケーション&lt;/h2&gt;
 
 &lt;p&gt;SYNCNEL では、サービス契約されたお客様ごとに固有の名前を持った識別子を発行して運用しているのですが、この識別子をサービスのサブドメイン部分に据えてより良いサービス提供ができないかという機能案がありましたので、その可能性について調査と仮実装を行ってみました。&lt;/p&gt;
 
-&lt;h3 id=&#34;ドメインをワイルドカードで運用する:17417599a4aa11ab0744475e5dd75780&#34;&gt;ドメインをワイルドカードで運用する&lt;/h3&gt;
+&lt;h3 id=&#34;ドメインをワイルドカードで運用する:69c13cf2501e6a6e3a3cc4f993b3b343&#34;&gt;ドメインをワイルドカードで運用する&lt;/h3&gt;
 
 &lt;p&gt;何はともあれ、任意のサブドメインを持つドメインアドレスで特定のエントリサーバへリクエストしてもらう必要がありますので、ドメインはワイルドカードで運用することになります。&lt;/p&gt;
 
@@ -326,7 +326,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;ただ、利用している DNS サービスによってはワイルドカードエントリが定義不可能なものもあるようです。&lt;/p&gt;
 
-&lt;h3 id=&#34;アクセスコントロール-と-サービスコントロール:17417599a4aa11ab0744475e5dd75780&#34;&gt;「アクセスコントロール」と「サービスコントロール」&lt;/h3&gt;
+&lt;h3 id=&#34;アクセスコントロール-と-サービスコントロール:69c13cf2501e6a6e3a3cc4f993b3b343&#34;&gt;「アクセスコントロール」と「サービスコントロール」&lt;/h3&gt;
 
 &lt;p&gt;リクエストを受け付けるサーバ側はどんな構成になるべきかと考えた際に、結論として「サブドメイン部分にあたる会社識別子を用いて会社を特定した上で、どのような問題を解決したいのか」という点でやるべきことが異なるということに至りました。&lt;/p&gt;
 
@@ -377,7 +377,7 @@ server.listen(80);
 
 &lt;p&gt;後者のサービスコントロールパターンの方も実際のアプリケーションサーバ側のコードとして実装して、初アクセス時に会社名を表示したりなどの会社固有の振る舞いを実装してみました。こちらはコード例は割愛します。&lt;/p&gt;
 
-&lt;h2 id=&#34;2-php-5-3-から-php-5-6-への環境移行テスト:17417599a4aa11ab0744475e5dd75780&#34;&gt;2. PHP 5.3 から PHP 5.6 への環境移行テスト&lt;/h2&gt;
+&lt;h2 id=&#34;2-php-5-3-から-php-5-6-への環境移行テスト:69c13cf2501e6a6e3a3cc4f993b3b343&#34;&gt;2. PHP 5.3 から PHP 5.6 への環境移行テスト&lt;/h2&gt;
 
 &lt;p&gt;SYNCNEL のアプリケーションサーバの一部は PHP で書かれているのですが、その箇所は古い実装体系から継続的に進めてきたため、内部の一部ではより古い PHP コードが残っています。その都合上 PHP 5.3 へのアップグレードを最後に、それ以上のアップグレードを行うことをこれまで行うことができていませんでした。&lt;/p&gt;
 
@@ -449,7 +449,7 @@ server.listen(80);
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;リジェクト理由は-8221-14-personal-attacks-8221-の第3項:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;リジェクト理由は&amp;#8221;14. Personal attacks&amp;#8221;の第3項&lt;/h2&gt;
+&lt;h2 id=&#34;リジェクト理由は-8221-14-personal-attacks-8221-の第3項:167d0ed2667e622b37792095d8f962a5&#34;&gt;リジェクト理由は&amp;#8221;14. Personal attacks&amp;#8221;の第3項&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developer.apple.com/app-store/review/guidelines/#personal-attacks&#34;&gt;App Store Review Guidelines&lt;/a&gt; からリジェクト理由として挙げられた箇所を引用します。&lt;/p&gt;
 
@@ -461,13 +461,13 @@ server.listen(80);
 
 &lt;p&gt;つまり、「未成年者がエロいコンテンツを見ることを防ぐ」や「不愉快で見たくない投稿を行うユーザーをブロックする」ことを目的にユーザーを保護しようという目的があるようです。&lt;/p&gt;
 
-&lt;h2 id=&#34;twitter-や-facebook-はどうしてる:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Twitter や Facebook はどうしてる？&lt;/h2&gt;
+&lt;h2 id=&#34;twitter-や-facebook-はどうしてる:167d0ed2667e622b37792095d8f962a5&#34;&gt;Twitter や Facebook はどうしてる？&lt;/h2&gt;
 
 &lt;p&gt;ユーザー投稿型のサービスとして、今ならば Twitter と Facebook が双璧をなしていますね。&lt;/p&gt;
 
 &lt;p&gt;それぞれのサービスでも iOS アプリがありますが、どのように対応しているかを確認してみます。&lt;/p&gt;
 
-&lt;h3 id=&#34;twitter:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Twitter&lt;/h3&gt;
+&lt;h3 id=&#34;twitter:167d0ed2667e622b37792095d8f962a5&#34;&gt;Twitter&lt;/h3&gt;
 
 &lt;p&gt;特定のユーザーをブロックすること、特定のツイートをスパムなどとして報告できるようになっています。&lt;/p&gt;
 
@@ -489,7 +489,7 @@ server.listen(80);
   &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;facebook:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Facebook&lt;/h3&gt;
+&lt;h3 id=&#34;facebook:167d0ed2667e622b37792095d8f962a5&#34;&gt;Facebook&lt;/h3&gt;
 
 &lt;p&gt;投稿に対して「この投稿を報告する」として問題があることを報告できるようにしています。&lt;/p&gt;
 
@@ -503,11 +503,11 @@ server.listen(80);
   &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;dailyshot-はどう対応した:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;Dailyshot はどう対応した？&lt;/h2&gt;
+&lt;h2 id=&#34;dailyshot-はどう対応した:167d0ed2667e622b37792095d8f962a5&#34;&gt;Dailyshot はどう対応した？&lt;/h2&gt;
 
 &lt;p&gt;Dailyshot では、以下の二つの機能を実装しました。&lt;/p&gt;
 
-&lt;h3 id=&#34;ショットの問題を報告する機能:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;ショットの問題を報告する機能&lt;/h3&gt;
+&lt;h3 id=&#34;ショットの問題を報告する機能:167d0ed2667e622b37792095d8f962a5&#34;&gt;ショットの問題を報告する機能&lt;/h3&gt;
 
 &lt;p&gt;ショットを表示した時、左下に「報告」のボタンが現れます。ここからそのショットの問題点を報告できるようになりました。&lt;/p&gt;
 
@@ -521,7 +521,7 @@ server.listen(80);
   &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;特定ユーザーのテーマをブロックする機能:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;特定ユーザーのテーマをブロックする機能&lt;/h3&gt;
+&lt;h3 id=&#34;特定ユーザーのテーマをブロックする機能:167d0ed2667e622b37792095d8f962a5&#34;&gt;特定ユーザーのテーマをブロックする機能&lt;/h3&gt;
 
 &lt;p&gt;ユーザのプロフィールを表示した時、画面の一番下に「〜さんをブロックする」ボタンが表示されます。これを使って、ユーザーをブロックすることができます。&lt;/p&gt;
 
@@ -539,7 +539,7 @@ server.listen(80);
 
 &lt;p&gt;これら二つの機能を実装し、Dailyshot v1.1.0 は審査を通過することができました。&lt;/p&gt;
 
-&lt;h2 id=&#34;最後に:2a9ff3b89ce4f5340f58c95fd3271e62&#34;&gt;最後に&lt;/h2&gt;
+&lt;h2 id=&#34;最後に:167d0ed2667e622b37792095d8f962a5&#34;&gt;最後に&lt;/h2&gt;
 
 &lt;p&gt;14.3項は&lt;a href=&#34;https://github.com/jaredsinclair/AppStoreReviewGuidelines/commit/46ed21b844473343680282b40800304e28381e5f#diff-1b07cb2ba52400b236afd363c871579e&#34;&gt;2014年9月1日のガイドライン&lt;/a&gt;更新で追加されたようです。&lt;/p&gt;
 
@@ -565,7 +565,7 @@ server.listen(80);
 
 &lt;p&gt;私は API サーバを実装する際に Node の Express を利用する事が多いので、今回は使っていて知った事のうち、世間的にはポツポツ程度にしか取り上げられていない事柄をいくつかあげていきます。簡単に Express を利用している初心者レベルを主な対象としています。&lt;/p&gt;
 
-&lt;h2 id=&#34;前置き:55c6b702dfb0305052c66ef6e950d392&#34;&gt;前置き&lt;/h2&gt;
+&lt;h2 id=&#34;前置き:71e2bdc3939118ff9134553a549177b5&#34;&gt;前置き&lt;/h2&gt;
 
 &lt;p&gt;以後の文中にて登場する名称／変数値は、&lt;a href=&#34;http://expressjs.com/4x/api.html&#34;&gt;Express API リファレンス&lt;/a&gt; を始めとした各種ドキュメント内でも扱われているものと同等に、以下のインスタンスを指すこととします。&lt;/p&gt;
 
@@ -576,7 +576,7 @@ server.listen(80);
 &lt;li&gt;routes: Application インスタンスによるURLルート定義にてマッピングされた Middleware&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;app-req-res-のライフサイクルについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app, req, res のライフサイクルについて&lt;/h2&gt;
+&lt;h2 id=&#34;app-req-res-のライフサイクルについて:71e2bdc3939118ff9134553a549177b5&#34;&gt;app, req, res のライフサイクルについて&lt;/h2&gt;
 
 &lt;p&gt;本当に基本的なことですが、Express による Web アプリケーションの根幹となる app インスタンスは、インスタンス作成時から各種セットアップ、サーバ Listen を行い始めた後も永続し、Listen を終了（Express アプリケーションを終了）させるまでは残り続けます。&lt;/p&gt;
 
@@ -584,7 +584,7 @@ server.listen(80);
 
 &lt;p&gt;以上のことから、app インスタンスは Web アプリケーション全体に関わるグローバル／汎用的な情報を保持すること、req, res インスタンスはクライアント固有の情報を保持する存在である捉えたほうがよさそうです。従って app インスタンスは Listen 時点ではもう情報が完成しており、req, res インスタンスはリクエスト受信時から応答結果を返すまで如何様にも情報操作を行うことができる対象であると言えます。&lt;/p&gt;
 
-&lt;h2 id=&#34;app-request-app-response:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app.request, app.response&lt;/h2&gt;
+&lt;h2 id=&#34;app-request-app-response:71e2bdc3939118ff9134553a549177b5&#34;&gt;app.request, app.response&lt;/h2&gt;
 
 &lt;p&gt;req, res の両インスタンスは最初の Middleware へ与えられる直前（厳密には内部で実行される最初の暗黙の Middleware で）app.request, app.response を prototype として設定されます。この app.request, app.response はそれぞれ Express モジュールが提供する Request, Response インスタンスを prototype とするオブジェクトです。&lt;/p&gt;
 
@@ -597,11 +597,11 @@ app.request.getAwesomeHeader = function () {
 };
 &lt;/pre&gt;
 
-&lt;h2 id=&#34;任意の値に-middleware-でアクセスしたい話:55c6b702dfb0305052c66ef6e950d392&#34;&gt;任意の値に Middleware でアクセスしたい話&lt;/h2&gt;
+&lt;h2 id=&#34;任意の値に-middleware-でアクセスしたい話:71e2bdc3939118ff9134553a549177b5&#34;&gt;任意の値に Middleware でアクセスしたい話&lt;/h2&gt;
 
 &lt;p&gt;Express を利用しはじめた人が行き当たる話で、任意の値（変数）を Middleware、特に routes 以下で利用するにはどうすればよいかというのものがあります。例えば app インスタンスの set() した値を参照したい、あるいは app.js で作成した値を routes 以下で参照したいなどです。基本的には好きなようにやってよいと思っていますので、いくつかの手段を紹介します。用途あるいは好みとしてフィットする方法を選んで使ってみてください。&lt;/p&gt;
 
-&lt;h3 id=&#34;1-req-app-res-app:55c6b702dfb0305052c66ef6e950d392&#34;&gt;1. req.app, res.app&lt;/h3&gt;
+&lt;h3 id=&#34;1-req-app-res-app:71e2bdc3939118ff9134553a549177b5&#34;&gt;1. req.app, res.app&lt;/h3&gt;
 
 &lt;p&gt;実は req, res それぞれは app インスタンスをメンバとして保持していますので、それを利用することができます。&lt;/p&gt;
 
@@ -612,7 +612,7 @@ app.request.getAwesomeHeader = function () {
 };
 &lt;/pre&gt;
 
-&lt;h3 id=&#34;2-前面にある-middleware-で仕込む:55c6b702dfb0305052c66ef6e950d392&#34;&gt;2. 前面にある Middleware で仕込む&lt;/h3&gt;
+&lt;h3 id=&#34;2-前面にある-middleware-で仕込む:71e2bdc3939118ff9134553a549177b5&#34;&gt;2. 前面にある Middleware で仕込む&lt;/h3&gt;
 
 &lt;p&gt;利用したい値を比較的早い段階の Middleware で req などに予め設定しておきます。前述したように req インスタンスはリクエスト毎のライフサイクルを持っているので、リクエストクライアント固有の情報などを扱う場合はこちらの方法がよさそうです。&lt;/p&gt;
 
@@ -624,7 +624,7 @@ app.request.getAwesomeHeader = function () {
 app.use(&#34;/users&#34;, routes.users);
 &lt;/pre&gt;
 
-&lt;h3 id=&#34;3-middleware-routes-作成時の引数として任意の変数を与える:55c6b702dfb0305052c66ef6e950d392&#34;&gt;3. Middleware / routes 作成時の引数として任意の変数を与える&lt;/h3&gt;
+&lt;h3 id=&#34;3-middleware-routes-作成時の引数として任意の変数を与える:71e2bdc3939118ff9134553a549177b5&#34;&gt;3. Middleware / routes 作成時の引数として任意の変数を与える&lt;/h3&gt;
 
 &lt;p&gt;Middleware, routes の実装時、それらを作成する関数として exports する体制にしておけば、require() 時に引数を与えてインスタンスを作成しつつ、Middleware 側で与えられた引数を用いた処理ができるようになります。&lt;/p&gt;
 
@@ -646,7 +646,7 @@ app.use(&#34;/users&#34;, routes.users);
 &lt;pre&gt;app.use(“/items”, require(“./routes/items”)(services));
 &lt;/pre&gt;
 
-&lt;h2 id=&#34;view-のキャッシュについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;view のキャッシュについて&lt;/h2&gt;
+&lt;h2 id=&#34;view-のキャッシュについて:71e2bdc3939118ff9134553a549177b5&#34;&gt;view のキャッシュについて&lt;/h2&gt;
 
 &lt;p&gt;Production 環境で稼働している、あるいは res.render() のオプションに cache = true を付与することで、view に対してキャッシュが有効となりますが、これはレンダリング処理に関わる各種情報のキャッシュであり、ページキャッシュではありません。&lt;/p&gt;
 
@@ -671,7 +671,7 @@ if (caches[id]) {
 }
 &lt;/pre&gt;
 
-&lt;h2 id=&#34;おまけ-routes-以下に設置したファイルの読み込みを楽にする:55c6b702dfb0305052c66ef6e950d392&#34;&gt;おまけ: routes 以下に設置したファイルの読み込みを楽にする&lt;/h2&gt;
+&lt;h2 id=&#34;おまけ-routes-以下に設置したファイルの読み込みを楽にする:71e2bdc3939118ff9134553a549177b5&#34;&gt;おまけ: routes 以下に設置したファイルの読み込みを楽にする&lt;/h2&gt;
 
 &lt;p&gt;Express 固有の話ではありませんが、いくつかの routes 定義ファイルを１つずつ require() していくのは若干面倒です。そこで &lt;a href=&#34;https://github.com/troygoode/node-require-directory&#34;&gt;require-directory&lt;/a&gt; モジュールを利用すると、指定するディレクトリ以下にある全てのファイルを１つのオブジェクトへまとめて exports オブジェクトへ再帰的にマッピングしてくれるため、ルーティング定義時が少し楽になります。&lt;/p&gt;
 

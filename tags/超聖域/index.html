@@ -49,6 +49,7 @@
 
 
 <body>
+<div class="container">
 
 <div id="container">
     <header id="header">
@@ -80,15 +81,14 @@
           
           
       </nav>
-        
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
-              <button type="submit" class="search-form-submit">
-              </button>
-              <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
-         </form>
-        </div>
+      <div id="search-form-wrap">
+        <form action="//google.com/cse" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search" />
+          <button type="submit" name="sa" value="Search" class="search-form-submit"></button>
+          <input type="hidden" name="cx" value="003452515502113334774:ivdehod_nfm" />
+          <input type="hidden" name="ie" value="UTF-8" />
+        </form>
+      </div>
     </div>
   </div>
   <div id="main-nav-mobile" class="header-sub header-inner">
@@ -432,6 +432,8 @@
         <ul class="category-list">
             
             
+            
+            
             <li class="category-list-item">
                 <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/04">
                     2014/04
@@ -576,6 +578,8 @@
                 </a>
                 <span class="category-list-count">4</span>
             </li>
+            
+            
             
             
             
@@ -804,5 +808,6 @@ MathJax.Hub.Config({
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
+</div>
 </body>
 </html>

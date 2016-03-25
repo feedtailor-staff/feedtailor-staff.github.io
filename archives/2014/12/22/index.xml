@@ -27,7 +27,7 @@
 
 &lt;p&gt;いくつかの機能を見ていきましょう。&lt;/p&gt;
 
-&lt;h3 id=&#34;今日-明日の予報-週間予報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;今日／明日の予報・週間予報&lt;/h3&gt;
+&lt;h3 id=&#34;今日-明日の予報-週間予報:d3705da740e106662dd8a106bcd1863e&#34;&gt;今日／明日の予報・週間予報&lt;/h3&gt;
 
 &lt;p&gt;地域の登録は市区町村単位でのみ行うようになりました。（旧バージョンをお使いの方はお手数ですが、再度地域設定を行ってください）&lt;/p&gt;
 
@@ -41,7 +41,7 @@
 
 &lt;p&gt;地域の切り替えは左右方向へフリックしてください。&lt;/p&gt;
 
-&lt;h3 id=&#34;天気概況-注警報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気概況／注警報&lt;/h3&gt;
+&lt;h3 id=&#34;天気概況-注警報:d3705da740e106662dd8a106bcd1863e&#34;&gt;天気概況／注警報&lt;/h3&gt;
 
 &lt;p&gt;下にスクロールすると天気概況が表示されます。文字でさらに天気の様子がわかるのではないでしょうか。&lt;/p&gt;
 
@@ -49,13 +49,13 @@
 
 &lt;p&gt;上部バーに「！」アイコンが表示されるとそれは注警報のお知らせです。「！」アイコンをタップして、注警報をチェックしましょう。&lt;/p&gt;
 
-&lt;h3 id=&#34;生物季節情報:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;生物季節情報&lt;/h3&gt;
+&lt;h3 id=&#34;生物季節情報:d3705da740e106662dd8a106bcd1863e&#34;&gt;生物季節情報&lt;/h3&gt;
 
 &lt;p&gt;右上メニューから、その地域での生物季節情報を閲覧できます。季節の移ろいを感じていただければと。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/20141218_3.png&#34; alt=&#34;20141218_3&#34; width=&#34;337&#34; height=&#34;600&#34; class=&#34;alignnone size-full wp-image-721&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;天気画像:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;天気画像&lt;/h3&gt;
+&lt;h3 id=&#34;天気画像:d3705da740e106662dd8a106bcd1863e&#34;&gt;天気画像&lt;/h3&gt;
 
 &lt;p&gt;ここが大幅リニューアルポイントです。&lt;/p&gt;
 
@@ -87,7 +87,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;余談:eabebeaaaa97e83b20d940ee1eec735f&#34;&gt;余談&lt;/h4&gt;
+&lt;h4 id=&#34;余談:d3705da740e106662dd8a106bcd1863e&#34;&gt;余談&lt;/h4&gt;
 
 &lt;p&gt;以上、さらっと紹介してきましたが、このAndroid版、私itokがつくりました。いや、これ、ほんとに。&lt;/p&gt;
 

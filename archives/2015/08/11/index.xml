@@ -27,7 +27,7 @@
 
 &lt;p&gt;日々細かい改良を施すというよりは、必要な時に少しまとまった時間をとって最低限の改良を行うにとどまる事が多かったのですが、超聖域という事で今まで気になりつつも放置していた部分に大きく手を入れよう試みを行いました。&lt;/p&gt;
 
-&lt;h2 id=&#34;これまでの状況:cebb9691144de1cb2625562fdc24a012&#34;&gt;これまでの状況&lt;/h2&gt;
+&lt;h2 id=&#34;これまでの状況:2926f8c19f0245e326fdd9f67904d277&#34;&gt;これまでの状況&lt;/h2&gt;
 
 &lt;p&gt;これまでの状況はざっくりと以下のような感じです。&lt;/p&gt;
 
@@ -42,7 +42,7 @@
 
 &lt;p&gt;社内のRakefileでは、xcodebuildを直接触って動作確認しつつ、ネット上の各種情報や既存の実装を参考に必要なエッセンスを取り込むような事をしていました。&lt;/p&gt;
 
-&lt;h2 id=&#34;fastlane:cebb9691144de1cb2625562fdc24a012&#34;&gt;fastlane&lt;/h2&gt;
+&lt;h2 id=&#34;fastlane:2926f8c19f0245e326fdd9f67904d277&#34;&gt;fastlane&lt;/h2&gt;
 
 &lt;p&gt;先にあげましたが、新しめのツールとして &lt;a href=&#34;https://github.com/KrauseFx/fastlane&#34;&gt;fastlane&lt;/a&gt;があります。iOSアプリ開発にまつわる様々なタスクをなんでも自動化してしまおうという壮大なプロジェクト。試してみる価値大では？という印象を受けました。&lt;/p&gt;
 
@@ -56,7 +56,7 @@
 
 &lt;p&gt;(fastlane自体はやりたい事にうまくはまると良いツールだと思いますので今後も注目していきたいと思っています)&lt;/p&gt;
 
-&lt;h2 id=&#34;gem化したコマンドラインツールへの置き換え:cebb9691144de1cb2625562fdc24a012&#34;&gt;Gem化したコマンドラインツールへの置き換え&lt;/h2&gt;
+&lt;h2 id=&#34;gem化したコマンドラインツールへの置き換え:2926f8c19f0245e326fdd9f67904d277&#34;&gt;Gem化したコマンドラインツールへの置き換え&lt;/h2&gt;
 
 &lt;p&gt;社内Rakefileは必要最低限の機能しかない規模の小さいもので見通しは良い状態にあります。ただ、いくつか問題があったのでそれを潰していく事にしました。&lt;/p&gt;
 
@@ -79,7 +79,7 @@
 
 &lt;p&gt;作ったコマンドは&amp;#8221;ftbuild&amp;#8221;と命名しました。(今の所一般公開予定はありません)&lt;/p&gt;
 
-&lt;h2 id=&#34;gemの作成:cebb9691144de1cb2625562fdc24a012&#34;&gt;Gemの作成&lt;/h2&gt;
+&lt;h2 id=&#34;gemの作成:2926f8c19f0245e326fdd9f67904d277&#34;&gt;Gemの作成&lt;/h2&gt;
 
 &lt;p&gt;bundlerでGemのひな形を作成することができるのでこれを利用。(&lt;a href=&#34;http://bundler.io/v1.10/bundle_gem.html&#34;&gt;&lt;code&gt;bundle gem&lt;/code&gt;&lt;/a&gt;)&lt;/p&gt;
 
@@ -126,7 +126,7 @@
 
 &lt;p&gt;あとは元のRakefileに実装していた諸々機能をThorベースでコマンド化していきます。&lt;/p&gt;
 
-&lt;h2 id=&#34;dsl:cebb9691144de1cb2625562fdc24a012&#34;&gt;DSL&lt;/h2&gt;
+&lt;h2 id=&#34;dsl:2926f8c19f0245e326fdd9f67904d277&#34;&gt;DSL&lt;/h2&gt;
 
 &lt;p&gt;昨今の開発シーンでは、RubyベースのDSLを設定ファイルとして利用する事がよくあります。(Gemfile、Podfile、Rakefile、Fastfile、etc..)&lt;/p&gt;
 
@@ -166,7 +166,7 @@ hogehoge dir_path + &amp;quot;_2&amp;quot;
 
 &lt;p&gt;のような記述が可能になり、YAMLの設定ファイルより記述力が格段に増します。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:cebb9691144de1cb2625562fdc24a012&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ:2926f8c19f0245e326fdd9f67904d277&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;fastlaneは要注目。&lt;/li&gt;

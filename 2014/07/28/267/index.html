@@ -47,7 +47,7 @@
 
 
 
-<meta itemprop="keywords" content="2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,node,アプリご紹介,全般,技術情報,未分類,8bitter,bgtube,book,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
+<meta itemprop="keywords" content="2014,2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,node,アプリご紹介,全般,技術情報,未分類,8bitter,bgtube,book,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
 
     
 
@@ -64,6 +64,7 @@
 
 
 <body>
+<div class="container">
 
 <div id="container">
     <header id="header">
@@ -95,15 +96,14 @@
           
           
       </nav>
-        
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
-              <button type="submit" class="search-form-submit">
-              </button>
-              <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
-         </form>
-        </div>
+      <div id="search-form-wrap">
+        <form action="//google.com/cse" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search" />
+          <button type="submit" name="sa" value="Search" class="search-form-submit"></button>
+          <input type="hidden" name="cx" value="003452515502113334774:ivdehod_nfm" />
+          <input type="hidden" name="ie" value="UTF-8" />
+        </form>
+      </div>
     </div>
   </div>
   <div id="main-nav-mobile" class="header-sub header-inner">
@@ -211,7 +211,7 @@
 
 <p>私は API サーバを実装する際に Node の Express を利用する事が多いので、今回は使っていて知った事のうち、世間的にはポツポツ程度にしか取り上げられていない事柄をいくつかあげていきます。簡単に Express を利用している初心者レベルを主な対象としています。</p>
 
-<h2 id="前置き:55c6b702dfb0305052c66ef6e950d392">前置き</h2>
+<h2 id="前置き:71e2bdc3939118ff9134553a549177b5">前置き</h2>
 
 <p>以後の文中にて登場する名称／変数値は、<a href="http://expressjs.com/4x/api.html">Express API リファレンス</a> を始めとした各種ドキュメント内でも扱われているものと同等に、以下のインスタンスを指すこととします。</p>
 
@@ -222,7 +222,7 @@
 <li>routes: Application インスタンスによるURLルート定義にてマッピングされた Middleware</li>
 </ul>
 
-<h2 id="app-req-res-のライフサイクルについて:55c6b702dfb0305052c66ef6e950d392">app, req, res のライフサイクルについて</h2>
+<h2 id="app-req-res-のライフサイクルについて:71e2bdc3939118ff9134553a549177b5">app, req, res のライフサイクルについて</h2>
 
 <p>本当に基本的なことですが、Express による Web アプリケーションの根幹となる app インスタンスは、インスタンス作成時から各種セットアップ、サーバ Listen を行い始めた後も永続し、Listen を終了（Express アプリケーションを終了）させるまでは残り続けます。</p>
 
@@ -230,7 +230,7 @@
 
 <p>以上のことから、app インスタンスは Web アプリケーション全体に関わるグローバル／汎用的な情報を保持すること、req, res インスタンスはクライアント固有の情報を保持する存在である捉えたほうがよさそうです。従って app インスタンスは Listen 時点ではもう情報が完成しており、req, res インスタンスはリクエスト受信時から応答結果を返すまで如何様にも情報操作を行うことができる対象であると言えます。</p>
 
-<h2 id="app-request-app-response:55c6b702dfb0305052c66ef6e950d392">app.request, app.response</h2>
+<h2 id="app-request-app-response:71e2bdc3939118ff9134553a549177b5">app.request, app.response</h2>
 
 <p>req, res の両インスタンスは最初の Middleware へ与えられる直前（厳密には内部で実行される最初の暗黙の Middleware で）app.request, app.response を prototype として設定されます。この app.request, app.response はそれぞれ Express モジュールが提供する Request, Response インスタンスを prototype とするオブジェクトです。</p>
 
@@ -243,11 +243,11 @@ app.request.getAwesomeHeader = function () {
 };
 </pre>
 
-<h2 id="任意の値に-middleware-でアクセスしたい話:55c6b702dfb0305052c66ef6e950d392">任意の値に Middleware でアクセスしたい話</h2>
+<h2 id="任意の値に-middleware-でアクセスしたい話:71e2bdc3939118ff9134553a549177b5">任意の値に Middleware でアクセスしたい話</h2>
 
 <p>Express を利用しはじめた人が行き当たる話で、任意の値（変数）を Middleware、特に routes 以下で利用するにはどうすればよいかというのものがあります。例えば app インスタンスの set() した値を参照したい、あるいは app.js で作成した値を routes 以下で参照したいなどです。基本的には好きなようにやってよいと思っていますので、いくつかの手段を紹介します。用途あるいは好みとしてフィットする方法を選んで使ってみてください。</p>
 
-<h3 id="1-req-app-res-app:55c6b702dfb0305052c66ef6e950d392">1. req.app, res.app</h3>
+<h3 id="1-req-app-res-app:71e2bdc3939118ff9134553a549177b5">1. req.app, res.app</h3>
 
 <p>実は req, res それぞれは app インスタンスをメンバとして保持していますので、それを利用することができます。</p>
 
@@ -258,7 +258,7 @@ app.request.getAwesomeHeader = function () {
 };
 </pre>
 
-<h3 id="2-前面にある-middleware-で仕込む:55c6b702dfb0305052c66ef6e950d392">2. 前面にある Middleware で仕込む</h3>
+<h3 id="2-前面にある-middleware-で仕込む:71e2bdc3939118ff9134553a549177b5">2. 前面にある Middleware で仕込む</h3>
 
 <p>利用したい値を比較的早い段階の Middleware で req などに予め設定しておきます。前述したように req インスタンスはリクエスト毎のライフサイクルを持っているので、リクエストクライアント固有の情報などを扱う場合はこちらの方法がよさそうです。</p>
 
@@ -270,7 +270,7 @@ app.request.getAwesomeHeader = function () {
 app.use("/users", routes.users);
 </pre>
 
-<h3 id="3-middleware-routes-作成時の引数として任意の変数を与える:55c6b702dfb0305052c66ef6e950d392">3. Middleware / routes 作成時の引数として任意の変数を与える</h3>
+<h3 id="3-middleware-routes-作成時の引数として任意の変数を与える:71e2bdc3939118ff9134553a549177b5">3. Middleware / routes 作成時の引数として任意の変数を与える</h3>
 
 <p>Middleware, routes の実装時、それらを作成する関数として exports する体制にしておけば、require() 時に引数を与えてインスタンスを作成しつつ、Middleware 側で与えられた引数を用いた処理ができるようになります。</p>
 
@@ -292,7 +292,7 @@ app.use("/users", routes.users);
 <pre>app.use(“/items”, require(“./routes/items”)(services));
 </pre>
 
-<h2 id="view-のキャッシュについて:55c6b702dfb0305052c66ef6e950d392">view のキャッシュについて</h2>
+<h2 id="view-のキャッシュについて:71e2bdc3939118ff9134553a549177b5">view のキャッシュについて</h2>
 
 <p>Production 環境で稼働している、あるいは res.render() のオプションに cache = true を付与することで、view に対してキャッシュが有効となりますが、これはレンダリング処理に関わる各種情報のキャッシュであり、ページキャッシュではありません。</p>
 
@@ -317,7 +317,7 @@ if (caches[id]) {
 }
 </pre>
 
-<h2 id="おまけ-routes-以下に設置したファイルの読み込みを楽にする:55c6b702dfb0305052c66ef6e950d392">おまけ: routes 以下に設置したファイルの読み込みを楽にする</h2>
+<h2 id="おまけ-routes-以下に設置したファイルの読み込みを楽にする:71e2bdc3939118ff9134553a549177b5">おまけ: routes 以下に設置したファイルの読み込みを楽にする</h2>
 
 <p>Express 固有の話ではありませんが、いくつかの routes 定義ファイルを１つずつ require() していくのは若干面倒です。そこで <a href="https://github.com/troygoode/node-require-directory">require-directory</a> モジュールを利用すると、指定するディレクトリ以下にある全てのファイルを１つのオブジェクトへまとめて exports オブジェクトへ再帰的にマッピングしてくれるため、ルーティング定義時が少し楽になります。</p>
 
@@ -339,9 +339,32 @@ app.use('/register', routes.auth.register);
 
             </div>
             <footer class="article-footer">
-    <a data-url="http://staff.feedtailor.jp/2014/07/28/267" data-id="55c6b702dfb0305052c66ef6e950d392" class="article-share-link">
-        Share
-    </a>
+    <div class="article-share-link">
+        
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+        <div class="article-share-link-button">
+            <div class="fb-like" data-href="http://feedtailor.jp/staff/2014/07/28/267" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+        </div>
+        
+        <div class="article-share-link-button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://feedtailor.jp/staff/2014/07/28/267" data-lang="ja">ツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        
+        <div class="article-share-link-button">
+            <a href="http://b.hatena.ne.jp/entry/http://feedtailor.jp/staff/2014/07/28/267" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加">
+            <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+            <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+    </div>
     
 </footer>
 
@@ -573,6 +596,8 @@ app.use('/register', routes.auth.register);
         <ul class="category-list">
             
             
+            
+            
             <li class="category-list-item">
                 <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/04">
                     2014/04
@@ -717,6 +742,8 @@ app.use('/register', routes.auth.register);
                 </a>
                 <span class="category-list-count">4</span>
             </li>
+            
+            
             
             
             
@@ -945,5 +972,6 @@ MathJax.Hub.Config({
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
+</div>
 </body>
 </html>

@@ -66,7 +66,7 @@
 
 &lt;p&gt;私は API サーバを実装する際に Node の Express を利用する事が多いので、今回は使っていて知った事のうち、世間的にはポツポツ程度にしか取り上げられていない事柄をいくつかあげていきます。簡単に Express を利用している初心者レベルを主な対象としています。&lt;/p&gt;
 
-&lt;h2 id=&#34;前置き:55c6b702dfb0305052c66ef6e950d392&#34;&gt;前置き&lt;/h2&gt;
+&lt;h2 id=&#34;前置き:71e2bdc3939118ff9134553a549177b5&#34;&gt;前置き&lt;/h2&gt;
 
 &lt;p&gt;以後の文中にて登場する名称／変数値は、&lt;a href=&#34;http://expressjs.com/4x/api.html&#34;&gt;Express API リファレンス&lt;/a&gt; を始めとした各種ドキュメント内でも扱われているものと同等に、以下のインスタンスを指すこととします。&lt;/p&gt;
 
@@ -77,7 +77,7 @@
 &lt;li&gt;routes: Application インスタンスによるURLルート定義にてマッピングされた Middleware&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;app-req-res-のライフサイクルについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app, req, res のライフサイクルについて&lt;/h2&gt;
+&lt;h2 id=&#34;app-req-res-のライフサイクルについて:71e2bdc3939118ff9134553a549177b5&#34;&gt;app, req, res のライフサイクルについて&lt;/h2&gt;
 
 &lt;p&gt;本当に基本的なことですが、Express による Web アプリケーションの根幹となる app インスタンスは、インスタンス作成時から各種セットアップ、サーバ Listen を行い始めた後も永続し、Listen を終了（Express アプリケーションを終了）させるまでは残り続けます。&lt;/p&gt;
 
@@ -85,7 +85,7 @@
 
 &lt;p&gt;以上のことから、app インスタンスは Web アプリケーション全体に関わるグローバル／汎用的な情報を保持すること、req, res インスタンスはクライアント固有の情報を保持する存在である捉えたほうがよさそうです。従って app インスタンスは Listen 時点ではもう情報が完成しており、req, res インスタンスはリクエスト受信時から応答結果を返すまで如何様にも情報操作を行うことができる対象であると言えます。&lt;/p&gt;
 
-&lt;h2 id=&#34;app-request-app-response:55c6b702dfb0305052c66ef6e950d392&#34;&gt;app.request, app.response&lt;/h2&gt;
+&lt;h2 id=&#34;app-request-app-response:71e2bdc3939118ff9134553a549177b5&#34;&gt;app.request, app.response&lt;/h2&gt;
 
 &lt;p&gt;req, res の両インスタンスは最初の Middleware へ与えられる直前（厳密には内部で実行される最初の暗黙の Middleware で）app.request, app.response を prototype として設定されます。この app.request, app.response はそれぞれ Express モジュールが提供する Request, Response インスタンスを prototype とするオブジェクトです。&lt;/p&gt;
 
@@ -98,11 +98,11 @@ app.request.getAwesomeHeader = function () {
 };
 &lt;/pre&gt;
 
-&lt;h2 id=&#34;任意の値に-middleware-でアクセスしたい話:55c6b702dfb0305052c66ef6e950d392&#34;&gt;任意の値に Middleware でアクセスしたい話&lt;/h2&gt;
+&lt;h2 id=&#34;任意の値に-middleware-でアクセスしたい話:71e2bdc3939118ff9134553a549177b5&#34;&gt;任意の値に Middleware でアクセスしたい話&lt;/h2&gt;
 
 &lt;p&gt;Express を利用しはじめた人が行き当たる話で、任意の値（変数）を Middleware、特に routes 以下で利用するにはどうすればよいかというのものがあります。例えば app インスタンスの set() した値を参照したい、あるいは app.js で作成した値を routes 以下で参照したいなどです。基本的には好きなようにやってよいと思っていますので、いくつかの手段を紹介します。用途あるいは好みとしてフィットする方法を選んで使ってみてください。&lt;/p&gt;
 
-&lt;h3 id=&#34;1-req-app-res-app:55c6b702dfb0305052c66ef6e950d392&#34;&gt;1. req.app, res.app&lt;/h3&gt;
+&lt;h3 id=&#34;1-req-app-res-app:71e2bdc3939118ff9134553a549177b5&#34;&gt;1. req.app, res.app&lt;/h3&gt;
 
 &lt;p&gt;実は req, res それぞれは app インスタンスをメンバとして保持していますので、それを利用することができます。&lt;/p&gt;
 
@@ -113,7 +113,7 @@ app.request.getAwesomeHeader = function () {
 };
 &lt;/pre&gt;
 
-&lt;h3 id=&#34;2-前面にある-middleware-で仕込む:55c6b702dfb0305052c66ef6e950d392&#34;&gt;2. 前面にある Middleware で仕込む&lt;/h3&gt;
+&lt;h3 id=&#34;2-前面にある-middleware-で仕込む:71e2bdc3939118ff9134553a549177b5&#34;&gt;2. 前面にある Middleware で仕込む&lt;/h3&gt;
 
 &lt;p&gt;利用したい値を比較的早い段階の Middleware で req などに予め設定しておきます。前述したように req インスタンスはリクエスト毎のライフサイクルを持っているので、リクエストクライアント固有の情報などを扱う場合はこちらの方法がよさそうです。&lt;/p&gt;
 
@@ -125,7 +125,7 @@ app.request.getAwesomeHeader = function () {
 app.use(&#34;/users&#34;, routes.users);
 &lt;/pre&gt;
 
-&lt;h3 id=&#34;3-middleware-routes-作成時の引数として任意の変数を与える:55c6b702dfb0305052c66ef6e950d392&#34;&gt;3. Middleware / routes 作成時の引数として任意の変数を与える&lt;/h3&gt;
+&lt;h3 id=&#34;3-middleware-routes-作成時の引数として任意の変数を与える:71e2bdc3939118ff9134553a549177b5&#34;&gt;3. Middleware / routes 作成時の引数として任意の変数を与える&lt;/h3&gt;
 
 &lt;p&gt;Middleware, routes の実装時、それらを作成する関数として exports する体制にしておけば、require() 時に引数を与えてインスタンスを作成しつつ、Middleware 側で与えられた引数を用いた処理ができるようになります。&lt;/p&gt;
 
@@ -147,7 +147,7 @@ app.use(&#34;/users&#34;, routes.users);
 &lt;pre&gt;app.use(“/items”, require(“./routes/items”)(services));
 &lt;/pre&gt;
 
-&lt;h2 id=&#34;view-のキャッシュについて:55c6b702dfb0305052c66ef6e950d392&#34;&gt;view のキャッシュについて&lt;/h2&gt;
+&lt;h2 id=&#34;view-のキャッシュについて:71e2bdc3939118ff9134553a549177b5&#34;&gt;view のキャッシュについて&lt;/h2&gt;
 
 &lt;p&gt;Production 環境で稼働している、あるいは res.render() のオプションに cache = true を付与することで、view に対してキャッシュが有効となりますが、これはレンダリング処理に関わる各種情報のキャッシュであり、ページキャッシュではありません。&lt;/p&gt;
 
@@ -172,7 +172,7 @@ if (caches[id]) {
 }
 &lt;/pre&gt;
 
-&lt;h2 id=&#34;おまけ-routes-以下に設置したファイルの読み込みを楽にする:55c6b702dfb0305052c66ef6e950d392&#34;&gt;おまけ: routes 以下に設置したファイルの読み込みを楽にする&lt;/h2&gt;
+&lt;h2 id=&#34;おまけ-routes-以下に設置したファイルの読み込みを楽にする:71e2bdc3939118ff9134553a549177b5&#34;&gt;おまけ: routes 以下に設置したファイルの読み込みを楽にする&lt;/h2&gt;
 
 &lt;p&gt;Express 固有の話ではありませんが、いくつかの routes 定義ファイルを１つずつ require() していくのは若干面倒です。そこで &lt;a href=&#34;https://github.com/troygoode/node-require-directory&#34;&gt;require-directory&lt;/a&gt; モジュールを利用すると、指定するディレクトリ以下にある全てのファイルを１つのオブジェクトへまとめて exports オブジェクトへ再帰的にマッピングしてくれるため、ルーティング定義時が少し楽になります。&lt;/p&gt;
 
