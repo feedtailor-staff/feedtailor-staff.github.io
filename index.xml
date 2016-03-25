@@ -6,8 +6,36 @@
     <description>Recent content on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 11 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Mar 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>スタッフブログを静的サイトに移行しました</title>
+      <link>http://staff.feedtailor.jp/2016/03/25/migration</link>
+      <pubDate>Fri, 25 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/03/25/migration</guid>
+      <description>&lt;p&gt;久しぶりの投稿になります、 tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2014/04/18/45/&#34;&gt;2014年4月の開設&lt;/a&gt; からずっと &lt;a href=&#34;https://ja.wordpress.org/&#34;&gt;WordPress&lt;/a&gt; で運用していた本スタッフブログを静的サイトに移行しました。&lt;/p&gt;
+
+&lt;p&gt;昨年末から弊社が管理しているウェブサイトを徐々に静的サイトに移行していて、これで既に６サイト目。今回も静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; を使用しています。&lt;/p&gt;
+
+&lt;p&gt;既存のテーマを拝借して、&lt;a href=&#34;https://ja.wordpress.org/&#34;&gt;WordPress&lt;/a&gt; から記事をエクスポートしたり何やかんや手を入れてトータル３日くらいで設置しました。その後も少しずつ修正してますが。
+ちなみに本サイトは &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; で運用。ソースコードも &lt;a href=&#34;https://github.com/feedtailor/StaffBlog&#34;&gt;弊社のGitHub&lt;/a&gt; で公開しています。&lt;/p&gt;
+
+&lt;p&gt;というわけで、構築した時のノウハウとか課題とか、本サイトを更新しながら備忘録的に書いていく予定です。静的Webサイトに関する勉強会もやってますので、興味のある方は是非ご参加ください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://connpass.com/event/26420/&#34;&gt;第2回 静的Webサイト 勉強会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://connpass.com/event/25507/&#34;&gt;第1回 静的Webサイト 勉強会&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;静的サイトへの移行については「なんでそんな面倒臭いことを？」とか「わざわざ移行する必要ある？」とか意見はあると思いますが、好きなテキストエディタを使って &lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34;&gt;Markdown記法&lt;/a&gt; で書けるので個人的にはとても気に入ってます。&lt;/p&gt;
+
+&lt;p&gt;もちろん動的サイトじゃないと無理って言うところもあるので、全部置き換えることはできないしその必要もありませんが、Markdownで記事を書いてサクッと投稿、みたいな運用をしたい方は移行を検討してみても良いのではないでしょうか。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>超聖域: iOSアプリのビルドツール</title>
@@ -1538,58 +1566,6 @@ server.listen(80);
 &lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/app/3bf3f7df-2f79-4949-9467-5385c3ced46b&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/03/WindowsStore_badge_Japanese_ja_Black_med_258x67.png&#34; alt=&#34;WindowsStore_badge_Japanese_ja_Black_med_258x67&#34; width=&#34;258&#34; height=&#34;67&#34; class=&#34;alignnone size-full wp-image-813&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;まだお使いでない方もぜひどうぞ。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>そら案内（iOS版） v4.1.0 を公開しました – AppleWatch対応</title>
-      <link>http://staff.feedtailor.jp/2015/04/17/835</link>
-      <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://staff.feedtailor.jp/2015/04/17/835</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/19b3eee70366dac93faf64e64d75a72e.png&#34; alt=&#34;Icon@2x-1&#34; width=&#34;120&#34; height=&#34;120&#34; class=&#34;alignnone size-full wp-image-117&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;定番お天気アプリ「そら案内」の v4.1.0 が来週発売の AppleWatch に対応しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;変更点&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;AppleWatchに対応&lt;/li&gt;
-&lt;li&gt;外部ライブラリの更新&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;AppleWatchでのそら案内はこんな感じです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/20150417_sora-annai-promotion-02.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/20150417_sora-annai-promotion-02.png&#34; alt=&#34;20150417_sora-annai-promotion-02&#34; width=&#34;800&#34; height=&#34;707&#34; class=&#34;alignnone size-full wp-image-841&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Watch 上での操作を減らして、天気予報が一目でわかるシンプルさを重視しました。&lt;/p&gt;
-
-&lt;p&gt;Watch 上には以下の情報が表示されます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;現在地の天気予報、降水確率、気温&lt;/li&gt;
-&lt;li&gt;3時間ごとの天気と気温予想をグラフで表示&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Glance では直近12時間分の天気予報を表示します。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/3.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/3.png&#34; alt=&#34;3&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-837&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;WatchApp では2ページで合計24時間分の天気予報を表示します。ページは横フリックで切り替えてください。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/12.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/12.png&#34; alt=&#34;1&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-848&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/22.png&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/22.png&#34; alt=&#34;2&#34; width=&#34;312&#34; height=&#34;390&#34; class=&#34;alignnone size-full wp-image-851&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;普段は Glance でちらりと天気を確認し、もう少し先の予報が気になる場合はそこから WatchApp を立ち上げる、という使い方ができます。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;まだお使いでないという方もぜひどうぞ。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id599856811&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

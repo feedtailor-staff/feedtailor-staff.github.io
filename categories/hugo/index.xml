@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/categories/hugo/</link>
+    <description>Recent content in Hugo on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 25 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>スタッフブログを静的サイトに移行しました</title>
+      <link>http://staff.feedtailor.jp/2016/03/25/migration</link>
+      <pubDate>Fri, 25 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/03/25/migration</guid>
+      <description>&lt;p&gt;久しぶりの投稿になります、 tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2014/04/18/45/&#34;&gt;2014年4月の開設&lt;/a&gt; からずっと &lt;a href=&#34;https://ja.wordpress.org/&#34;&gt;WordPress&lt;/a&gt; で運用していた本スタッフブログを静的サイトに移行しました。&lt;/p&gt;
+
+&lt;p&gt;昨年末から弊社が管理しているウェブサイトを徐々に静的サイトに移行していて、これで既に６サイト目。今回も静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; を使用しています。&lt;/p&gt;
+
+&lt;p&gt;既存のテーマを拝借して、&lt;a href=&#34;https://ja.wordpress.org/&#34;&gt;WordPress&lt;/a&gt; から記事をエクスポートしたり何やかんや手を入れてトータル３日くらいで設置しました。その後も少しずつ修正してますが。
+ちなみに本サイトは &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; で運用。ソースコードも &lt;a href=&#34;https://github.com/feedtailor/StaffBlog&#34;&gt;弊社のGitHub&lt;/a&gt; で公開しています。&lt;/p&gt;
+
+&lt;p&gt;というわけで、構築した時のノウハウとか課題とか、本サイトを更新しながら備忘録的に書いていく予定です。静的Webサイトに関する勉強会もやってますので、興味のある方は是非ご参加ください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://connpass.com/event/26420/&#34;&gt;第2回 静的Webサイト 勉強会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://connpass.com/event/25507/&#34;&gt;第1回 静的Webサイト 勉強会&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;静的サイトへの移行については「なんでそんな面倒臭いことを？」とか「わざわざ移行する必要ある？」とか意見はあると思いますが、好きなテキストエディタを使って &lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34;&gt;Markdown記法&lt;/a&gt; で書けるので個人的にはとても気に入ってます。&lt;/p&gt;
+
+&lt;p&gt;もちろん動的サイトじゃないと無理って言うところもあるので、全部置き換えることはできないしその必要もありませんが、Markdownで記事を書いてサクッと投稿、みたいな運用をしたい方は移行を検討してみても良いのではないでしょうか。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
