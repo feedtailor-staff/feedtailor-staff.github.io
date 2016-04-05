@@ -6,8 +6,154 @@
     <description>Recent content in 全般 on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 30 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/categories/%E5%85%A8%E8%88%AC/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（導入編）</title>
+      <link>http://staff.feedtailor.jp/2016/04/05/hugo_01</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/04/05/hugo_01</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;これから何回かに分けて本サイト構築時に使用した静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; についてご紹介したいと思います。&lt;/p&gt;
+
+&lt;h3 id=&#34;hugoとは:54279ffd0468d4c436fbfa877d58da8e&#34;&gt;Hugoとは？&lt;/h3&gt;
+
+&lt;p&gt;Go言語で書かれた&lt;a href=&#34;http://staticgen.com&#34;&gt;静的サイトジェネレータ&lt;/a&gt;です。&lt;br /&gt;
+代表的な静的サイトジェネレータとして、GitHub社が開発している&lt;a href=&#34;https://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;や&lt;a href=&#34;https://middlemanapp.com/jp/&#34;&gt;Middleman&lt;/a&gt;、
+国産ではChatwork社が開発している&lt;a href=&#34;https://github.com/chatwork/Phest&#34;&gt;Phest&lt;/a&gt;等がありますが、Hugoを選んだ大きな理由は以下の３つです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;インストールが楽&lt;/li&gt;
+&lt;li&gt;クロスプラットフォーム対応&lt;/li&gt;
+&lt;li&gt;ページ生成が速い&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Win/Mac/Linux環境に対応していて、どの環境も実行ファイル１つです。簡易HTTPサーバも内蔵しているのでRubyやPHPのインストールはもちろんApacheさえも不要です。&lt;br /&gt;
+ページ生成も高速で本ブログの規模であれば0.3秒くらいで生成されます。&lt;/p&gt;
+
+&lt;h3 id=&#34;インストール:54279ffd0468d4c436fbfa877d58da8e&#34;&gt;インストール&lt;/h3&gt;
+
+&lt;p&gt;各プラットフォーム用の実行ファイルが提供されているので&lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;リリース情報のページ&lt;/a&gt;からダウンロードしてください。
+Windows 64bit版はhugo_0.15_windows_amd64.zip、MacOSX版はhugo_0.15_darwin_amd64.zipです。zipファイルから展開した実行ファイルは hugo（Winは hugo.exe）という名前に変更しておきましょう。&lt;br /&gt;
+Mac版であれば&lt;a href=&#34;http://brew.sh/index_ja.html&#34;&gt;Homebrew&lt;/a&gt;からもインストールできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ /usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
+$ brew update
+$ brew install hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;サイト作成:54279ffd0468d4c436fbfa877d58da8e&#34;&gt;サイト作成&lt;/h3&gt;
+
+&lt;p&gt;新規サイトを作成するには以下のコマンドを実行します。hugo(.exe)を環境変数PATHに登録していない場合はダウンロードしたhugo(.exe)があるフォルダで実行しましょう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new site サイト名
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで空のサイトが出来上がります。生成されたのはサイトの情報を入力する config.toml ファイルと空のフォルダ５つ（&lt;strong&gt;archetypes&lt;/strong&gt;, &lt;strong&gt;content&lt;/strong&gt;, &lt;strong&gt;data&lt;/strong&gt;, &lt;strong&gt;layouts&lt;/strong&gt;, &lt;strong&gt;static&lt;/strong&gt;）だけで中身はありません。
+以降、hugo コマンドは config.toml ファイルのあるフォルダで実行しますので、hugo(.exe)を同じ場所に移動しておくとよいでしょう。&lt;/p&gt;
+
+&lt;p&gt;生成された config.toml ファイルは以下のようになっています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://replace-this-with-your-hugo-site.com/&amp;quot;
+languageCode = &amp;quot;en-us&amp;quot;
+title = &amp;quot;My New Hugo Site&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;baseurlがこのサイトを公開するURL、languageCodeはRSS出力に付与する文字コード、titleはサイトのタイトルです。環境に合わせて変更してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://example.com/&amp;quot;
+languageCode = &amp;quot;ja&amp;quot;
+title = &amp;quot;Hugo入門&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;テーマのインストール:54279ffd0468d4c436fbfa877d58da8e&#34;&gt;テーマのインストール&lt;/h3&gt;
+
+&lt;p&gt;レイアウトを１から作るのは時間がかかるので、一般公開されているテーマを利用してみましょう。&lt;br /&gt;
+Hugo公式サイトの&lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;テーマ一覧のページ&lt;/a&gt;から好きなデザインを選択します。ここでは公式サイトの&lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;クイックスタート&lt;/a&gt;と同じく &lt;a href=&#34;http://themes.gohugo.io/hugo-uno/&#34;&gt;hugo-uno&lt;/a&gt; テーマを使ってみます。
+まずはサイトのトップフォルダ（config.tomlがあるフォルダ）に themes というフォルダを作って、そこにhugo-unoテーマを設置します。gitコマンドが使える方は以下で。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir themes
+$ cd themes
+$ git clone https://github.com/SenjinDarashiva/hugo-uno.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;git コマンドが使えない方は &lt;a href=&#34;https://github.com/SenjinDarashiva/hugo-uno/archive/master.zip&#34;&gt;ここ&lt;/a&gt; からzipファイルをダウンロードして展開してください。フォルダ名は hugo-uno に変更してください。&lt;/p&gt;
+
+&lt;h3 id=&#34;記事の追加:54279ffd0468d4c436fbfa877d58da8e&#34;&gt;記事の追加&lt;/h3&gt;
+
+&lt;p&gt;記事は content フォルダに置きます。以下のコマンドでからの記事ファイルを作ることができます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new ファイル名
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ここでは post/hello.md という名前で作ってみます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new post/hello.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コマンドを実行すると content フォルダ内に post フォルダが作成され、その中に hello.md ファイルが作られます。&lt;br /&gt;
+標準設定ではファイルの場所・名前がそのままURLのパス部分になるので、この記事は http://サーバ名/post/hello/ というURLで公開されることになります。&lt;/p&gt;
+
+&lt;p&gt;テキストエディタで hello.md を編集しましょう。生成された直後の hello.md ファイルの中身は以下のようになっています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+date = &amp;quot;2016-04-05T12:00:00+09:00&amp;quot;
+draft = true
+title = &amp;quot;hello&amp;quot;
+
++++
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;先頭の半角 + 3文字から次の + 3文字の行までを &lt;strong&gt;フロントマター&lt;/strong&gt; と呼び、記事のタイトルや日付、カテゴリ等ページの属性を指定します。&lt;br /&gt;
+title がページのタイトルです。draft は下書きかどうかの状態で true が指定されているとプレビューやページ生成がされませんので false に指定するか削除しましょう。本文はフロントマター以降（この場合は７行目以降）に &lt;a href=&#34;https://ja.wikipedia.org/wiki/Markdown&#34;&gt;Markdown記法&lt;/a&gt; で記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+date = &amp;quot;2016-04-05T12:00:00+09:00&amp;quot;
+title = &amp;quot;Hugoを始めました&amp;quot;
+
++++
+
+こんにちは、**Hugo** を始めました。
+
+### Markdown記法
+
+Markdownの書き方は以下のサイトが参考になります。
+
+- [Wikipedia](https://ja.wikipedia.org/wiki/Markdown)
+- [Qiita](http://qiita.com/Qiita/items/c686397e4a0f4f11683d)
+- [日本語Markdownユーザー会](http://www.markdown.jp/what-is-markdown/#markdown-1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;プレビュー:54279ffd0468d4c436fbfa877d58da8e&#34;&gt;プレビュー&lt;/h3&gt;
+
+&lt;p&gt;hugo は簡易HTTPサーバを内蔵していていつでもプレビューできます。プレビュー中は自動的にリロードがかかるため何もしなくても表示が逐次更新されます。
+プレビュー機能を実行するには &lt;strong&gt;hugo server&lt;/strong&gt; コマンドを使用します。-t の後ろはテーマのフォルダ名を指定してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo server -t hugo-uno -w
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ブラウザで &lt;a href=&#34;http://127.0.0.1:1313/&#34;&gt;http://127.0.0.1:1313/&lt;/a&gt; にアクセスすると作成したサイトが表示されます。終了するときは Ctrl+C を押してください。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2016/04/hugo_01_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;ページ生成:54279ffd0468d4c436fbfa877d58da8e&#34;&gt;ページ生成&lt;/h3&gt;
+
+&lt;p&gt;プレビューで問題がないことを確認できたらページ生成です。以下のコマンドを実行してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo -t hugo-uno
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ウェブサイトとして公開するファイル一式が &lt;strong&gt;public&lt;/strong&gt; フォルダに出力されますので、このままウェブサーバに設置してください。&lt;/p&gt;
+
+&lt;p&gt;今回はインストールからページ生成、ウェブサーバの公開までの流れを急ぎでご紹介しましたが、次回以降は各項目についてもう少し掘り下げていこうと思います。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>第2回静的Webサイト勉強会を開催しました</title>
