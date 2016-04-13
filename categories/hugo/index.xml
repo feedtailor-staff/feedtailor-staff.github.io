@@ -6,8 +6,125 @@
     <description>Recent content in Hugo on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 05 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（フォルダ構成編）</title>
+      <link>http://staff.feedtailor.jp/2016/04/13/hugo_02</link>
+      <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/04/13/hugo_02</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2016/04/05/hugo_01&#34;&gt;前回&lt;/a&gt;に引き続き、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; について書きたいと思います。今回はフォルダ構成について。&lt;/p&gt;
+
+&lt;h3 id=&#34;フォルダ構成:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;フォルダ構成&lt;/h3&gt;
+
+&lt;p&gt;Hugo では、記事や画像、レイアウトを種類毎にそれぞれ決まったフォルダに配置する必要があります。&lt;br /&gt;
+新規サイトを作成する &lt;strong&gt;hugo new site&lt;/strong&gt; コマンドを利用すると、デフォルト設定に準じた以下のファイル・フォルダが生成されます。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/overview/configuration/&#34; target=&#34;_blank&#34;&gt;config.toml&lt;/a&gt;&lt;/th&gt;&lt;td&gt;サイト全体の設定ファイル&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/content/archetypes/&#34; target=&#34;_blank&#34;&gt;archetypes&lt;/a&gt;&lt;/th&gt;&lt;td&gt;記事の雛形を置くフォルダ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/content/organization/&#34; target=&#34;_blank&#34;&gt;content&lt;/a&gt;&lt;/th&gt;&lt;td&gt;記事を置くフォルダ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/extras/datafiles/&#34; target=&#34;_blank&#34;&gt;data&lt;/a&gt;&lt;/th&gt;&lt;td&gt;データファイルを置くフォルダ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/layout/overview/&#34; target=&#34;_blank&#34;&gt;layouts&lt;/a&gt;&lt;/th&gt;&lt;td&gt;レイアウトを置くフォルダ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/themes/creation#toc_4&#34; target=&#34;_blank&#34;&gt;static&lt;/a&gt;&lt;/th&gt;&lt;td&gt;画像等の静的素材を置くフォルダ&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;その他に、テーマを置く &lt;strong&gt;&lt;a href=&#34;http://gohugo.io/themes/overview/&#34;&gt;themes&lt;/a&gt;&lt;/strong&gt; フォルダ、ファイルが出力される &lt;strong&gt;public&lt;/strong&gt; フォルダの位置がデフォルトで設定されています。&lt;/p&gt;
+
+&lt;h3 id=&#34;config-tomlファイル:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;config.tomlファイル&lt;/h3&gt;
+
+&lt;p&gt;URLやタイトル、フォルダ構成等、サイト全体の設定を記載するファイルです。&lt;br /&gt;
+デフォルトでは拡張子の通り、&lt;a href=&#34;https://github.com/toml-lang/toml&#34;&gt;TOML形式&lt;/a&gt; で書きます。config.toml が存在しない場合は config.yaml、config.json の順に使用されます。&lt;/p&gt;
+
+&lt;p&gt;生成直後は次のような内容ですので、ご利用の環境に合わせて変更してください。&lt;br /&gt;
+定義されている項目は&lt;a href=&#34;http://gohugo.io/overview/configuration/&#34;&gt;こちら&lt;/a&gt;。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://replace-this-with-your-hugo-site.com/&amp;quot;
+languageCode = &amp;quot;en-us&amp;quot;
+title = &amp;quot;My New Hugo Site&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;前述のフォルダ構成を変更したり任意の項目を追加することもできます。&lt;/p&gt;
+
+&lt;p&gt;設定値は以下のコマンドで確認できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;publicフォルダ:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;publicフォルダ&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;hugo&lt;/strong&gt; コマンドで生成されるファイル群は public フォルダに出力されます。&lt;br /&gt;
+このフォルダをウェブサーバに設置してサイトを公開します。&lt;/p&gt;
+
+&lt;h3 id=&#34;archetypesフォルダ:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;archetypesフォルダ&lt;/h3&gt;
+
+&lt;p&gt;記事の雛形を置くフォルダです。&lt;br /&gt;
+雛形ファイルは &lt;strong&gt;hugo new&lt;/strong&gt; コマンドで記事ファイルを生成する時に使用されます。雛形が見つからない場合は、日付、タイトル、下書きフラグのみの記事が生成されます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+date = &amp;quot;2016-04-13T14:31:25+09:00&amp;quot;
+draft = true
+title = &amp;quot;test&amp;quot;
+
++++
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;contentフォルダ:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;contentフォルダ&lt;/h3&gt;
+
+&lt;p&gt;記事を置くフォルダです。&lt;br /&gt;
+このフォルダにあるファイルはHugoの変換処理を通ります。例えば、.md（Markdown形式）ファイルの内容は、HTMLに変換され、所定のレイアウトに埋め込まれてHTMLファイルとして出力されます。&lt;br /&gt;
+変換処理が不要なファイルは後述する &lt;strong&gt;static&lt;/strong&gt; フォルダに置いてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;dataフォルダ:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;dataフォルダ&lt;/h3&gt;
+
+&lt;p&gt;データファイルを置くフォルダです。&lt;br /&gt;
+データファイルは、任意の名前・値を定義することができるので、簡易なKey-Valueデータストアとして使用できます。&lt;br /&gt;
+例えば、トピックスや会社の年表、製品情報等をデータファイルとして保存しておくと、レイアウトファイルを変更することなくデータのみを更新することができます。&lt;br /&gt;
+因みに &lt;a href=&#34;http://www.feedtailor.jp/&#34; target=&#34;_blank&#34;&gt;弊社サイト&lt;/a&gt; の &amp;ldquo;WHAT&amp;rsquo;S NEW&amp;rdquo; の内容は、レイアウトに直接書くのではなく、以下のようにTOML形式のデータファイルに記載しています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[news_row]]
+  date        = &amp;quot;2016.03.14&amp;quot;
+  title       = &#39;&amp;lt;a href=&amp;quot;http://staff.feedtailor.jp/&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;スタッフブログ&amp;lt;/a&amp;gt;のデザインを変更しました(静的Webサイト化)&#39;
+
+[[news_row]]
+  date        = &amp;quot;2015.01.27&amp;quot;
+  title       = &amp;quot;B2B向けサービス「SYNCNEL」を事業売却しました&amp;quot;
+  url         = &amp;quot;http://feedtailor.jp/wp/?p=15686&amp;quot;
+
+[[news_row]]
+  date        = &amp;quot;2015.10.16&amp;quot;
+  title       = &amp;quot;天気予報アプリ「そら案内」および関連全事業を無償譲渡しました&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;layoutフォルダ:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;layoutフォルダ&lt;/h3&gt;
+
+&lt;p&gt;HTMLのレイアウトを置くフォルダです。&lt;br /&gt;
+このフォルダにあるレイアウトに &lt;strong&gt;content&lt;/strong&gt; フォルダ内の記事や &lt;strong&gt;data&lt;/strong&gt; フォルダのデータを埋め込んでHTMLを生成します。&lt;br /&gt;
+レイアウト内の制御文やループはGo言語の &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/templateライブラリ&lt;/a&gt; を使って記述します。&lt;/p&gt;
+
+&lt;h3 id=&#34;staticフォルダ:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;staticフォルダ&lt;/h3&gt;
+
+&lt;p&gt;JSやCSS、画像等の静的素材を置くフォルダです。&lt;br /&gt;
+Hugoの変換処理が不要なファイルはこのフォルダに設置してください。&lt;strong&gt;public&lt;/strong&gt; フォルダにそのままコピーされます。&lt;/p&gt;
+
+&lt;h3 id=&#34;themeフォルダ:b6ad6915c304ed346981b48c19a03aa1&#34;&gt;themeフォルダ&lt;/h3&gt;
+
+&lt;p&gt;テーマを置くフォルダです。&lt;br /&gt;
+Hugo では複数のテーマを保存しておいて、簡単に切り替えることができます。&lt;br /&gt;
+&lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;公開されているテーマ&lt;/a&gt; も沢山ありますので利用してみるのもよいでしょう。&lt;/p&gt;
+
+&lt;p&gt;今回は以上です。&lt;br /&gt;
+各フォルダの詳細についても順次書いていこうと思います。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（導入編）</title>
