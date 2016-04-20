@@ -6,8 +6,100 @@
     <description>Recent content in 静的サイトジェネレータ on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 13 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/categories/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）</title>
+      <link>http://staff.feedtailor.jp/2016/04/13/hugo_03</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/04/13/hugo_03</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; のレイアウトテンプレートについて書きたいと思います。&lt;/p&gt;
+
+&lt;p&gt;Hugo では、テンプレートの記述に Go 言語の &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; ライブラリを使用しています。
+一見複雑そうに見えますが、簡単な記法で多くのことを実現できます。&lt;/p&gt;
+
+&lt;h3 id=&#34;テンプレートの種類:4c2585f1ab85585af71601f47af31217&#34;&gt;テンプレートの種類&lt;/h3&gt;
+
+&lt;p&gt;Hugo では、以下の３種類のテンプレートでサイトを構築します。&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Single&lt;/dt&gt;
+&lt;dd&gt;単一のコンテンツを表示するページ&lt;/dd&gt;
+&lt;dt&gt;List&lt;/dt&gt;
+&lt;dd&gt;複数のコンテンツのリストを表示するページ&lt;/dd&gt;
+&lt;dt&gt;Homepage&lt;/dt&gt;
+&lt;dd&gt;ホームページ（トップページ）&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;多くのサイトでは、トップページからあるコンテンツのリストを表示し、そこから目的のコンテンツページを表示する構成になっていると思います。&lt;br /&gt;
+上の３つを組み合わせることで複雑なサイトを構築できるようになります。&lt;/p&gt;
+
+&lt;p&gt;Hugo では、その他に補助的なテンプレートが用意されています。何れも上のテンプレートに組み込んで（include）使用します。&lt;br /&gt;
+種類によって、テンプレート内で使用出来る変数が異なります。&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Partial Templates&lt;/dt&gt;
+&lt;dd&gt;ページ内の共通パーツ&lt;/dd&gt;
+&lt;dt&gt;Content Views&lt;/dt&gt;
+&lt;dd&gt;コンテンツを表示するパーツ&lt;/dd&gt;
+&lt;dt&gt;Taxonomy Terms&lt;/dt&gt;
+&lt;dd&gt;Taxonomy（カテゴリやタグなどの分類）のリストを表示するパーツ&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h3 id=&#34;トップページ:4c2585f1ab85585af71601f47af31217&#34;&gt;トップページ&lt;/h3&gt;
+
+&lt;p&gt;まずサイトのトップページを作りましょう。&lt;a href=&#34;http://staff.feedtailor.jp/2016/04/13/hugo_02/&#34;&gt;前回&lt;/a&gt; で config.toml に書いた baseurl で表示するページです。&lt;br /&gt;
+ファイルは layouts フォルダ直下に index.html という名前で作成します。content フォルダ内ではありませんので注意してください。&lt;br /&gt;
+以下は本ブログのトップページのソースコードです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&amp;quot;&amp;gt;
+
+{{ partial &amp;quot;head&amp;quot; . }}
+
+&amp;lt;body&amp;gt;
+&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+
+&amp;lt;div id=&amp;quot;container&amp;quot;&amp;gt;
+    {{ partial &amp;quot;header&amp;quot; . }}
+    &amp;lt;div class=&amp;quot;outer&amp;quot;&amp;gt;
+        {{ partial &amp;quot;article_list&amp;quot; . }}
+        {{ partial &amp;quot;sidebar&amp;quot; . }}
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+{{ partial &amp;quot;footer&amp;quot; . }}
+
+&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;多くの場合、ページのヘッダやフッタ等、複数のページで共通化できる部分があると思います。本ブログでは、headタグ、ページのヘッダ、ページ中央の記事のリスト、サイドバー、フッタを Partial テンプレートとして共通化しています。&lt;/p&gt;
+
+&lt;p&gt;Partial テンプレートは layouts フォルダ内に partials フォルダを作成してそこに置きます。使用するときは、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ partial &amp;quot;ファイル名(拡張子なし)&amp;quot; . }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;と書きます。例えば、上の {{ partial &amp;ldquo;head&amp;rdquo; . }} は layouts/partials/head.html を読み込んでいます。&lt;/p&gt;
+
+&lt;p&gt;partial を使用する時、ファイル名の後ろの . （半角ドット）を忘れないようにしてください。&lt;br /&gt;
+Go テンプレートでは . は、現在スコープのコンテキストを表しています。もう少し砕いていうと、その場で使える変数を入れている箱です。
+上の Partial の例では、指定したファイルのテンプレートに . を渡している、つまりその場で使える全ての変数が Partial テンプレートでも使えますよ、ということです。
+.Data のようにある変数だけを渡すこともできますが、良く分からなければ毎回 . を渡しても良いでしょう。&lt;/p&gt;
+
+&lt;p&gt;その他のテンプレートや Partial の中身については順次ご説明します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、SSGの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽にご相談ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（フォルダ構成編）</title>
