@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-    <title>新サービス Dailyshot をリリース！ &middot; feedtailor Inc. スタッフブログ</title>
+    <title>静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１） &middot; feedtailor Inc. スタッフブログ</title>
     <meta name="generator" content="Hugo 0.15" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,13 +19,16 @@
     <link rel="stylesheet" href="http://staff.feedtailor.jp/fancybox/jquery.fancybox.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="新サービス Dailyshot をリリース！" />
-<meta property="og:description" content="このたび、新サービス「Dailyshot」を始めます。 サービスの企画＆サーバ開発のくまくら (@kumatch) です。 色々な小さな情報を毎日記録 Dailyshot は、自分で決め" />
+    <meta property="og:title" content="静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）" />
+<meta property="og:description" content="こんにちは、tamaoki (@t0shiya) です。
+
+今回は、静的サイトジェネレータ Hugo のレイアウトテンプレートについて書きたいと思います。
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://staff.feedtailor.jp/2014/11/05/565" />
+<meta property="og:url" content="http://staff.feedtailor.jp/2016/04/20/hugo_03" />
 
 
-<meta property="og:updated_time" content="2014-11-05T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2016-04-20T00:00:00&#43;00:00"/>
 
 
 
@@ -38,12 +41,15 @@
 
     
     
-<meta itemprop="name" content="新サービス Dailyshot をリリース！">
-<meta itemprop="description" content="このたび、新サービス「Dailyshot」を始めます。 サービスの企画＆サーバ開発のくまくら (@kumatch) です。 色々な小さな情報を毎日記録 Dailyshot は、自分で決め">
+<meta itemprop="name" content="静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）">
+<meta itemprop="description" content="こんにちは、tamaoki (@t0shiya) です。
+
+今回は、静的サイトジェネレータ Hugo のレイアウトテンプレートについて書きたいと思います。
+">
 
 
-<meta itemprop="dateModified" content="2014-11-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2091">
+<meta itemprop="dateModified" content="2016-04-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1148">
 
 
 
@@ -55,8 +61,11 @@
 
 
 
-<meta name="twitter:title" content="新サービス Dailyshot をリリース！"/>
-<meta name="twitter:description" content="このたび、新サービス「Dailyshot」を始めます。 サービスの企画＆サーバ開発のくまくら (@kumatch) です。 色々な小さな情報を毎日記録 Dailyshot は、自分で決め"/>
+<meta name="twitter:title" content="静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）"/>
+<meta name="twitter:description" content="こんにちは、tamaoki (@t0shiya) です。
+
+今回は、静的サイトジェネレータ Hugo のレイアウトテンプレートについて書きたいと思います。
+"/>
 <meta name="twitter:site" content="@feedtailor"/>
 
 
@@ -151,20 +160,20 @@
         <div class="article-inner">
             
                 
-                <img src="http://staff.feedtailor.jp/images/2014/11/dailyshot_logo_100.png" class="article-banner">
+                <img src="http://staff.feedtailor.jp/images/2016/04/hugo_03.png" class="article-banner">
                 
             
 
             <header class="article-header">
-    <a href="http://staff.feedtailor.jp/2014/11/05/565">
+    <a href="http://staff.feedtailor.jp/2016/04/20/hugo_03">
     <h1 class="article-title" itemprop="name">
-        新サービス Dailyshot をリリース！
+        静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）
     </h1>
     </a>
     <div class="article-meta">
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2014-11-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-11-05</time>
+            <time datetime="2016-04-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-04-20</time>
             
         </div>
 
@@ -175,7 +184,13 @@
             <div class="article-category">
                 <i class="fa fa-folder"></i>
                 
-                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">アプリご紹介</a>
+                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e5%85%a8%e8%88%ac">全般</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">静的サイトジェネレータ</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/hugo">Hugo</a>
                 
                 
             </div>
@@ -189,77 +204,87 @@
             <div class="article-entry" itemprop="articleBody">
                 
 
-<p>このたび、新サービス「Dailyshot」を始めます。</p>
+<p>こんにちは、tamaoki (<a href="https://twitter.com/t0shiya">@t0shiya</a>) です。</p>
 
-<p>サービスの企画＆サーバ開発のくまくら (<a href="http://twitter.com/kumatch">@kumatch</a>) です。</p>
+<p>今回は、静的サイトジェネレータ <a href="http://gohugo.io">Hugo</a> のレイアウトテンプレートについて書きたいと思います。</p>
 
-<p><a href="https://itunes.apple.com/jp/app/dailyshot/id932716879" target="_blank"><img src="/images/2014/11/dailyshot_icon-150x150.png" alt="dailyshot_icon" width="150" height="150" class="alignnone size-thumbnail wp-image-581" /></a></p>
+<p>Hugo では、テンプレートの記述に Go 言語の <a href="https://golang.org/pkg/html/template/">html/template</a> ライブラリを使用しています。
+一見複雑そうに見えますが、簡単な記法で多くのことを実現できます。</p>
 
-<h2 id="色々な小さな情報を毎日記録:dbfeb51bb67212d643daa6120f5baeb4">色々な小さな情報を毎日記録</h2>
+<h3 id="テンプレートの種類:4c2585f1ab85585af71601f47af31217">テンプレートの種類</h3>
 
-<p>Dailyshot は、自分で決めたテーマに基づいて、一日の様々な事柄や出来事を小さく記録していくサービスです。</p>
+<p>Hugo では、以下の３種類のテンプレートでサイトを構築します。</p>
 
-<p>小さくというのは、例えば一枚の写真、簡潔な一言、数字、あるいは印（マーク）といったものになります。そういった小さな情報を少しずつ、一日単位で綴っていき、それら記録を「日付」という時系列で並べていきます。</p>
+<dl>
+<dt>Single</dt>
+<dd>単一のコンテンツを表示するページ</dd>
+<dt>List</dt>
+<dd>複数のコンテンツのリストを表示するページ</dd>
+<dt>Homepage</dt>
+<dd>ホームページ（トップページ）</dd>
+</dl>
 
-<p>一方、他の人（友人）も同じように一日単位の小さな記録を作っています。あなたがその人をサービス内でフォローすると、自分の毎日の記録と並んで、その人の記録が一緒に表示されます。そうすると、ある一日の出来事として、あなたと友人がどうだったのかということを眺めることができます。</p>
+<p>多くのサイトでは、トップページからあるコンテンツのリストを表示し、そこから目的のコンテンツページを表示する構成になっていると思います。<br />
+上の３つを組み合わせることで複雑なサイトを構築できるようになります。</p>
 
-<p><a href="/images/2014/11/press_dailyshot_ios_01.png"><img src="/images/2014/11/press_dailyshot_ios_01-169x300.png" alt="press_dailyshot_ios_01" width="169" height="300" class="alignnone size-medium wp-image-570" /></a></p>
+<p>Hugo では、その他に補助的なテンプレートが用意されています。何れも上のテンプレートに組み込んで（include）使用します。<br />
+種類によって、テンプレート内で使用出来る変数が異なります。</p>
 
-<p>ふとしたきっかけで過去の自分や友人の身の回りを振り返って眺めるというのはなかなか楽しいものです。あるいは、友人同士であえて同じテーマの内容を毎日記録していって、比較をしては一喜一憂するのも良いかもしれません。</p>
+<dl>
+<dt>Partial Templates</dt>
+<dd>ページ内の共通パーツ</dd>
+<dt>Content Views</dt>
+<dd>コンテンツを表示するパーツ</dd>
+<dt>Taxonomy Terms</dt>
+<dd>Taxonomy（カテゴリやタグなどの分類）のリストを表示するパーツ</dd>
+</dl>
 
-<p>みんなの毎日の記録が一杯になってくると、大きな画面で一気に眺めるのが壮観です。</p>
+<h3 id="トップページ:4c2585f1ab85585af71601f47af31217">トップページ</h3>
 
-<p><a href="/images/2014/11/press_dailyshot_ios_09.png"><img src="/images/2014/11/press_dailyshot_ios_09-300x141.png" alt="press_dailyshot_ios_09" width="300" height="141" class="alignnone size-medium wp-image-573" /></a></p>
+<p>まずサイトのトップページを作りましょう。<a href="/2016/04/13/hugo_02/">前回</a> で config.toml に書いた baseurl で表示するページです。<br />
+ファイルは layouts フォルダ直下に index.html という名前で作成します。content フォルダ内ではありませんので注意してください。<br />
+以下は本ブログのトップページのソースコードです。</p>
 
-<p>iPhone6 Plus の大きな画面で見るのがオススメですね！</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&quot;&gt;
 
-<p>上のように自分や友人の記録を一気に眺めることができることをコンセプトの１つとして据えていたので、最初の方でも書いているように、記録できる内容は出来る限り小さくしようと考えました。それらを並べた際、１マスの中に記録された内容が省略されることなく全貌すべてを見れるようにしたかったからです。</p>
+{{ partial &quot;head&quot; . }}
 
-<p>なので、文字を記録することができる「単文」で入力可能な文字数は、７文字にしました。</p>
+&lt;body&gt;
+&lt;div class=&quot;container&quot;&gt;
 
-<p><a href="/images/2014/11/press_dailyshot_ios_03.png"><img src="/images/2014/11/press_dailyshot_ios_03-169x300.png" alt="press_dailyshot_ios_03" width="169" height="300" class="alignnone size-medium wp-image-574" /></a></p>
+&lt;div id=&quot;container&quot;&gt;
+    {{ partial &quot;header&quot; . }}
+    &lt;div class=&quot;outer&quot;&gt;
+        {{ partial &quot;article_list&quot; . }}
+        {{ partial &quot;sidebar&quot; . }}
+    &lt;/div&gt;
+&lt;/div&gt;
 
-<p>Dailyshot は、企画時点でこの仕様を提示した際には少し笑いが起きた上で、サービス用のアプリ開発の開始直後、アプリ担当の <a href="http://twitter.com/sumihiro">@sumihiro</a> が始めて単文をアプリから投稿しようと「Dailyshot」と入力したところ、サーバからエラー応答を受け取ったため、サーバの不具合ではないかと本気で聞かれたところから始まりました。（もちろんサーバ視点では妥当な振る舞い）</p>
+{{ partial &quot;footer&quot; . }}
 
-<h2 id="本当に気に入ったものへ-そのとおりの思いを:dbfeb51bb67212d643daa6120f5baeb4">本当に気に入ったものへ、そのとおりの思いを</h2>
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-<p>Dailyshot では、他のひとが記録として投稿した内容に対して他の SNS と同様に「Like」することができるのですが、Like した、していないという類いのものではなく、その度合いを示せるよう Like を複数回行えるようにしました。つまり、友人のその日の投稿を本当に気に入った場合は、20 Like を贈ることができます。</p>
+<p>多くの場合、ページのヘッダやフッタ等、複数のページで共通化できる部分があると思います。本ブログでは、headタグ、ページのヘッダ、ページ中央の記事のリスト、サイドバー、フッタを Partial テンプレートとして共通化しています。</p>
 
-<p>Like をたくさん贈るためには、ほんの少し昔に流行ったあのやり方と同じように、ボタンをたくさん押します。</p>
+<p>Partial テンプレートは layouts フォルダ内に partials フォルダを作成してそこに置きます。使用するときは、</p>
 
-<p><a href="/images/2014/11/press_dailyshot_ios_06.png"><img src="/images/2014/11/press_dailyshot_ios_06-169x300.png" alt="press_dailyshot_ios_06" width="169" height="300" class="alignnone size-medium wp-image-575" /></a></p>
+<pre><code>{{ partial &quot;ファイル名(拡張子なし)&quot; . }}
+</code></pre>
 
-<p>しかし、一度に無制限で贈れてしまうと訳が分からなくなってしまうので、一応僅かばかりの制約を作りました。システムとして現在 Like 可能な数が設けられています。Like リソースの上限値が 100 になっていますので、あるタイミングで１つの投稿に Like できる数は 100 まで、ということになります。このリソースは時間と共に回復する、これまたよく聞いたことがあるようなシステムです。回復したあと、同じ投稿に対して再び Like することは可能ですので、日を改めて投稿を見た際にやっぱり気に入っていてもう一度幾つか贈る、というような楽しみ方ができますよ。</p>
+<p>と書きます。例えば、上の {{ partial &ldquo;head&rdquo; . }} は layouts/partials/head.html を読み込んでいます。</p>
 
-<h2 id="dailyshot-の楽しみ方:dbfeb51bb67212d643daa6120f5baeb4">Dailyshot の楽しみ方</h2>
+<p>partial を使用する時、ファイル名の後ろの . （半角ドット）を忘れないようにしてください。<br />
+Go テンプレートでは . は、現在スコープのコンテキストを表しています。もう少し砕いていうと、その場で使える変数を入れている箱です。
+上の Partial の例では、指定したファイルのテンプレートに . を渡している、つまりその場で使える全ての変数が Partial テンプレートでも使えますよ、ということです。
+.Data のようにある変数だけを渡すこともできますが、良く分からなければ毎回 . を渡しても良いでしょう。</p>
 
-<p>Dailyshot は、たとえば次にあげるような楽しみ方があります。もちろんこれだけではないはずで、毎日継続して何かを記録していき、それらが並ぶというコンセプトに沿って様々な使い方がありそうです。</p>
+<p>その他のテンプレートや Partial の中身については順次ご説明します。</p>
 
-<h3 id="写真日記:dbfeb51bb67212d643daa6120f5baeb4">写真日記</h3>
-
-<p>例えばペットの毎日の様子を写真に撮って、Dailyshot に記録していきます。毎日続けていって、あるときにふと振り返ってみると、小さかったときの様子、顔つきの変化などが見て取れるはずです。</p>
-
-<h3 id="ひとこと日記:dbfeb51bb67212d643daa6120f5baeb4">ひとこと日記</h3>
-
-<p>その日にやった事、特徴的だった出来事を一言で表して記録していきます。先ほど挙げたように、なにせ７文字ですから、書けることは限られています。１、２文章書くことと比べても楽なわりに、後日読み直してみると良い思い出しができたり、むりやり短いひとことで書いたが故の可笑しさを楽しめたりできます。</p>
-
-<h3 id="トレーニング記録:dbfeb51bb67212d643daa6120f5baeb4">トレーニング記録</h3>
-
-<p>上げたウェイト、あるいは走った距離、歩いた歩数。それぞれトレーニングしている内容毎にテーマを１つずつ作って記録していけば、日々の成長の様子、あるいは相互関係を掴めるかもしれません。</p>
-
-<p>友達とも同じ内容を記録していけば、お互いに良い影響を与え合いながら継続させていくことも。</p>
-
-<h2 id="まとめ:dbfeb51bb67212d643daa6120f5baeb4">まとめ</h2>
-
-<p>新しいサービス Dailyshot についてと、その基本的な使い方について紹介しました。</p>
-
-<p>会社ページの方でもリリースに関する情報を掲載しています。そちらでも詳細に紹介していますので、是非ご覧ください。</p>
-
-<p><a href="http://feedtailor.jp/press_dailyshot" title="フィードテイラー、毎日の写真や一言を残していく新感覚のライフログサービス「Dailyshot」をスタート！" target="_blank">フィードテイラー、毎日の写真や一言を残していく新感覚のライフログサービス「Dailyshot」をスタート！</a></p>
-
-<p>まだまだ機能面では不足があったり、開発中でアイデアはあったもののもう少し内容を詰めた方がいいという理由から取り下げた機能もあったりします。そのあたりは今後のリリースにて実装、機能提供する予定です。毎日記録していこうと思えるよう、記録を眺めるのが楽しくなるよう、サービス内容を広げていければと考えています。Dailyshot を、どうぞよろしくお願いします！</p>
-
-<p><a href="https://itunes.apple.com/jp/app/dailyshot/id932716879" target="_blank"><img src="/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png" alt="AppStoreからダウンロード" width="135" height="40" class="alignnone size-full wp-image-58" /></a></p>
+<p><a href="http://www.feedtailor.jp">feedtailor</a> では、SSGの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽にご相談ください。</p>
 
             </div>
             <footer class="article-footer">
@@ -275,16 +300,16 @@
         }(document, 'script', 'facebook-jssdk'));</script>
         
         <div class="article-share-link-button">
-            <div class="fb-like" data-href="http://feedtailor.jp/staff/2014/11/05/565" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+            <div class="fb-like" data-href="http://staff.feedtailor.jp/2016/04/20/hugo_03" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
         </div>
         
         <div class="article-share-link-button">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://feedtailor.jp/staff/2014/11/05/565" data-lang="ja">ツイート</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://staff.feedtailor.jp/2016/04/20/hugo_03" data-lang="ja">ツイート</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </div>
         
         <div class="article-share-link-button">
-            <a href="http://b.hatena.ne.jp/entry/http://feedtailor.jp/staff/2014/11/05/565" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加">
+            <a href="http://b.hatena.ne.jp/entry/http://staff.feedtailor.jp/2016/04/20/hugo_03" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加">
             <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
             <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
         </div>
@@ -297,21 +322,14 @@
         
 <nav id="article-nav">
     
-    <a href="http://staff.feedtailor.jp/2014/11/04/560" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://staff.feedtailor.jp/2016/04/13/hugo_02" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">Groups for facebook. v1.1.1 を公開しました</div>
+      <div class="article-nav-title">静的サイトジェネレータHugoを使ったサイト構築（フォルダ構成編）</div>
     </a>
     
 
-    
-    <a href="http://staff.feedtailor.jp/2014/11/06/590" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">そら案内（Mac版）v2.0.2 を公開しました</div>
-    </a>
     
 </nav>
 
@@ -339,7 +357,7 @@
                     <a href="http://staff.feedtailor.jp/2016/04/20/hugo_03" class="thumbnail">
                     
                         
-                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_03.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_03.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）" class="thumbnail-image"></span>
                         
                     
                     </a>
@@ -364,7 +382,7 @@
                     <a href="http://staff.feedtailor.jp/2016/04/13/hugo_02" class="thumbnail">
                     
                         
-                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_02.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_02.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）" class="thumbnail-image"></span>
                         
                     
                     </a>
@@ -389,7 +407,7 @@
                     <a href="http://staff.feedtailor.jp/2016/04/05/hugo_01" class="thumbnail">
                     
                         
-                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_01_1-450x262.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_01_1-450x262.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）" class="thumbnail-image"></span>
                         
                     
                     </a>
@@ -414,7 +432,7 @@
                     <a href="http://staff.feedtailor.jp/2016/03/30/swebmtg2" class="thumbnail">
                     
                         
-                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/03/swebmtg2-450x338.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/03/swebmtg2-450x338.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）" class="thumbnail-image"></span>
                         
                     
                     </a>
@@ -439,7 +457,7 @@
                     <a href="http://staff.feedtailor.jp/2016/03/25/migration" class="thumbnail">
                     
                         
-                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/03/migration-450x250.png)" alt="新サービス Dailyshot をリリース！" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/03/migration-450x250.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）" class="thumbnail-image"></span>
                         
                     
                     </a>
