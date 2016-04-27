@@ -6,8 +6,185 @@
     <description>Recent content in 2016 on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/archives/2016/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（レイアウト編２）</title>
+      <link>http://staff.feedtailor.jp/2016/04/27/hugo_04</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/04/27/hugo_04</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; のテンプレートの書き方について。&lt;/p&gt;
+
+&lt;p&gt;Hugo では、テンプレートの記述に Go 言語の &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; ライブラリを使用しています。
+その文法や変数の扱い方等を簡単にご説明したいと思います。&lt;/p&gt;
+
+&lt;h3 id=&#34;基本文法:4afe71ad9c1b88ac3ae88837f5863813&#34;&gt;基本文法&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;テンプレートで変数や関数を使用するときは、中括弧（波括弧）２つで括ります。括弧内で改行してはいけません。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt; {{ }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;引数はスペースで区切ります&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ printf &amp;quot;%#v&amp;quot; . }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;関数や変数は . を使用してアクセスします&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;.Params.bar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;コメントは /*  */ で括ります。コメント内は改行しても構いません。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;{{/*
+      コメント
+               */}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;変数:4afe71ad9c1b88ac3ae88837f5863813&#34;&gt;変数&lt;/h3&gt;
+
+&lt;p&gt;変数は、前述のように .名前 という形式で記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.Title
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2016/04/20/hugo_03/&#34;&gt;前回&lt;/a&gt;ご紹介したように Hugo ではページの種類によって使用できる変数が異なります。詳しくは &lt;a href=&#34;http://gohugo.io/templates/variables/&#34;&gt;こちら&lt;/a&gt; を参照してください。&lt;/p&gt;
+
+&lt;p&gt;変数は自分で定義して代入、参照することもできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ $address := &amp;quot;東京都千代田区&amp;quot;}}
+{{ $address }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;関数:4afe71ad9c1b88ac3ae88837f5863813&#34;&gt;関数&lt;/h3&gt;
+
+&lt;p&gt;関数は、Go 言語の text/template で定義されているものと Hugo の独自関数が使用できます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang-jp.org/pkg/text/template/&#34;&gt;Go言語 text/template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/templates/functions/&#34;&gt;Hugo 独自の関数&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;制御文:4afe71ad9c1b88ac3ae88837f5863813&#34;&gt;制御文&lt;/h3&gt;
+
+&lt;p&gt;他の多くのテンプレートと同様に条件式やループが使用できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ if isset .Params &amp;quot;title&amp;quot; }}{{ .Params.title }}{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;isset は .Params に &amp;ldquo;title&amp;rdquo; という名前の要素が含まれているかどうかを返します。上の式は with を使って書き換えることもできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ with .Params.title }}{{ . }}{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;with を使用すると . に引数の値がセットされます。（ここでは .Params.title の値）&lt;/p&gt;
+
+&lt;p&gt;ループは次のように書きます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range array }}
+   現在の値は {{ . }} です。
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;array には配列やマップ（連想配列）を指定します。range から end の間は . にループの次の値がセットされます。&lt;/p&gt;
+
+&lt;h3 id=&#34;パイプ:4afe71ad9c1b88ac3ae88837f5863813&#34;&gt;パイプ&lt;/h3&gt;
+
+&lt;p&gt;Go テンプレートではパイプライン文字 | を使って、値やコマンドの結果を次のコマンドへ渡すことができます。渡された値は最後の引数として扱われます。&lt;br /&gt;
+例えば、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ if eq 1 1 }} 同じ {{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;は、パイプを使って次のように書き換えることができます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ eq 1 1 | if }} 同じ {{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;コンテキスト:4afe71ad9c1b88ac3ae88837f5863813&#34;&gt;コンテキスト&lt;/h3&gt;
+
+&lt;p&gt;. （ドット）には現在参照できる値または変数群が格納されています。&lt;br /&gt;
+例えばテンプレートの最上位では、そのページで使用できるデータ・変数が全て格納されていますが、range や with の中では現在の値のみが格納されています。&lt;br /&gt;
+range や with の中でサイト全体の値を参照する場合は、 $. を使ってグローバルな値を取得することができます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range array }}
+   現在の値は {{ . }} です。
+   サイトの名称は {{ $.Site.Title }} です。
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;パラメータ:4afe71ad9c1b88ac3ae88837f5863813&#34;&gt;パラメータ&lt;/h3&gt;
+
+&lt;p&gt;Hugo では、サイト全体またはページ単位で独自のパラメータを定義することができます。&lt;br /&gt;
+定義したパラメータはテンプレートから自由に参照できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ページパラメータ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hugo では各ページの &lt;em&gt;フロントマター&lt;/em&gt; でタイトルや日付等の属性を埋め込みます。（ &lt;a href=&#34;http://staff.feedtailor.jp/2016/04/05/hugo_01/&#34;&gt;導入編&lt;/a&gt; の &amp;ldquo;記事の追加&amp;rdquo; を参照）&lt;br /&gt;
+パラメータも同じく、このフロントマターで指定します。例えば、notoc というパラメータを追加した場合、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+date = &amp;quot;2016-04-05T12:00:00+09:00&amp;quot;
+draft = true
+title = &amp;quot;hello&amp;quot;
+notoc = true
+
++++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ページテンプレートでは以下のように .Params.notoc で参照できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ if not .Params.notoc }}
+    &amp;lt;div id=&amp;quot;toc&amp;quot; class=&amp;quot;well col-md-4 col-sm-6&amp;quot;&amp;gt;
+    {{ .TableOfContents }}
+    &amp;lt;/div&amp;gt;
+{{ end }}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;サイトパラメータ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;サイト全体のパラメータは config.toml ファイルで指定します。&lt;br /&gt;
+config.toml では params の属性として追加してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://staff.feedtailor.jp/&amp;quot;
+title   = &amp;quot;feedtailor Inc. スタッフブログ&amp;quot;
+
+...
+
+[params]
+    author = &amp;quot;feedtailor Inc.&amp;quot;
+    location = &amp;quot;Osaka, Japan&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;サイトパラメータは以下のように .Site.Params.名前 で参照できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ with .Site.Params.author }}&amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;{{ . }}&amp;quot;&amp;gt;{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;今回は Hugo レイアウトテンプレートの基本的な文法をご説明しました。&lt;br /&gt;
+これらを組み合わせてテンプレートをどのように書くかを次回以降でご紹介していこうと思います。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）</title>
