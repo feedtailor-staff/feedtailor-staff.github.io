@@ -6,8 +6,154 @@
     <description>Recent content in Hugo on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 11 May 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 May 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（コンテンツ編１）</title>
+      <link>http://staff.feedtailor.jp/2016/05/18/hugo_06</link>
+      <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/05/18/hugo_06</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; のコンテンツのフロントマター(Front Matter)ついて。&lt;/p&gt;
+
+&lt;p&gt;Hugo では、コンテンツ（Markdownファイル）のタイトル、日付、カテゴリや任意のパラメータ等のメタデータを追加することができます。&lt;/p&gt;
+
+&lt;p&gt;メタデータはコンテンツファイルの先頭で指定しますが、この部分をフロントマターと呼びます。&lt;br /&gt;
+フロントマターは以下の３つの形式に対応しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/minoritea/items/c0de47b8beb813c655d4&#34;&gt;TOML形式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+date = &amp;quot;2016-05-18&amp;quot;
+title = &amp;quot;フロントマターTOML形式&amp;quot;
+categories = [
+  &amp;quot;Hugo&amp;quot;, &amp;quot;静的サイトジェネレータ&amp;quot;
+] 
++++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/YAML&#34;&gt;YAML形式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+date: &amp;quot;2016-05-18&amp;quot;
+title: &amp;quot;フロントマターYAML形式&amp;quot;
+categories:
+  - &amp;quot;Hugo&amp;quot;
+  - &amp;quot;静的サイトジェネレータ&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/JavaScript_Object_Notation&#34;&gt;JSON形式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;date&amp;quot;: &amp;quot;2016-05-18&amp;quot;,
+    &amp;quot;title&amp;quot;: &amp;quot;フロントマターJSON形式&amp;quot;,
+    &amp;quot;categories&amp;quot;: [
+        &amp;quot;Hugo&amp;quot;,
+        &amp;quot;静的サイトジェネレータ&amp;quot;
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;必須パラメータ:8ede24df0bb5942341e9f66136792af4&#34;&gt;必須パラメータ&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;title&lt;/td&gt;&lt;td&gt;コンテンツのタイトル&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;コンテンツの日付（ソートに使用されます）&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;オプションパラメータ:8ede24df0bb5942341e9f66136792af4&#34;&gt;オプションパラメータ&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;description&lt;/td&gt;&lt;td&gt;コンテンツの説明文&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;draft&lt;/td&gt;&lt;td&gt;下書きフラグ&lt;br&gt;true に設定するとビルド時に --buildDrafts オプションを&lt;br&gt;つけなければページが生成されません。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;publishdate&lt;/td&gt;&lt;td&gt;発行日&lt;br&gt;true に設定するとビルド時に --buildFuture オプションを&lt;br&gt;つけなければページが生成されません。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;type&lt;/td&gt;&lt;td&gt;コンテンツのタイプ&lt;br&gt;詳しくは&lt;a href=&#34;http://staff.feedtailor.jp/2016/05/11/hugo_05/&#34;&gt;前回のエントリ&lt;/a&gt;を参照ください。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;isCKJLanguage&lt;/td&gt;&lt;td&gt;日本語韓国語中国語を含む場合は true を設定してください。&lt;br&gt;サマリーや文字数カウントに影響します。&lt;br&gt;config.toml の hasCJKLanguage を true にすると&lt;br&gt;自動判定されますので省略可能です。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;weight&lt;/td&gt;&lt;td&gt;エントリの並び順を変更する時に使用します。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;slug&lt;/td&gt;&lt;td&gt;URLの末尾、ファイル名部分を変更します。&lt;br&gt;詳しくは&lt;a href=&#34;http://staff.feedtailor.jp/2016/05/11/hugo_05/&#34;&gt;前回のエントリ&lt;/a&gt;を参照ください。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;url&lt;/td&gt;&lt;td&gt;URLを変更します。&lt;br&gt;詳しくは&lt;a href=&#34;http://staff.feedtailor.jp/2016/05/11/hugo_05/&#34;&gt;前回のエントリ&lt;/a&gt;を参照ください。&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;カテゴリ-タグについて:8ede24df0bb5942341e9f66136792af4&#34;&gt;カテゴリ・タグについて&lt;/h3&gt;
+
+&lt;p&gt;Hugo ではコンテンツをグルーピングするカテゴリやタグ等の分類のことを taxonomies と呼びます。&lt;/p&gt;
+
+&lt;p&gt;コンテンツで指定した taxonomies は、画面に表示したり、グルーピングしたコンテンツのリストページの生成に使用できます。&lt;/p&gt;
+
+&lt;p&gt;以下はコンテンツにカテゴリ &amp;ldquo;開発&amp;rdquo; とタグ &amp;ldquo;Hugo&amp;rdquo; &amp;ldquo;静的サイトジェネレータ&amp;rdquo; を追加する例です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+date: &amp;quot;2016-05-18&amp;quot;
+title: &amp;quot;フロントマターYAML形式&amp;quot;
+categories:
+  - &amp;quot;ウェブサイト&amp;quot;
+tags
+  - &amp;quot;Hugo&amp;quot;
+  - &amp;quot;静的サイトジェネレータ&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;taxonomies にはデフォルト値として &lt;strong&gt;categories&lt;/strong&gt; と &lt;strong&gt;tags&lt;/strong&gt; が設定されていますが、自由に追加、変更することができます。&lt;br /&gt;
+categories, tags 以外の taxonomies を追加する場合は config.toml に定義を追加してください。この時、追加するものだけを記述すると tags, categories が使用できなくなりますので、残したい場合は以下のように全て記述してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[taxonomies]
+  tag = &amp;quot;tags&amp;quot;
+  category = &amp;quot;categories&amp;quot;
+  series = &amp;quot;series&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記のように記述すると、コンテンツのフロントマターで ”series&amp;rdquo; が使用できるようになります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+date: &amp;quot;2016-05-18&amp;quot;
+title: &amp;quot;フロントマターYAML形式&amp;quot;
+categories:
+  - &amp;quot;ウェブサイト&amp;quot;
+tags:
+  - &amp;quot;Hugo&amp;quot;
+  - &amp;quot;静的サイトジェネレータ&amp;quot;
+series:
+  - &amp;quot;Hugoを使ったサイト構築&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ユーザ定義パラメータ:8ede24df0bb5942341e9f66136792af4&#34;&gt;ユーザ定義パラメータ&lt;/h3&gt;
+
+&lt;p&gt;Hugo では、コンテンツに対して上で紹介した以外の任意のパラメータを追加することができます。&lt;br /&gt;
+以下は camelCase というパラメータを追加した例です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+date: &amp;quot;2016-05-18&amp;quot;
+title: &amp;quot;フロントマターYAML形式&amp;quot;
+camelCase: true
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;予め定義されていないパラメータは全て params という変数に格納されます。また、パラメータ名は全て小文字に変換されます。&lt;br /&gt;
+従って、上の camelCase パラメータをレイアウトで使用する場合は、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Params.camelcase }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;のように記述してください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（レイアウト編３）</title>
