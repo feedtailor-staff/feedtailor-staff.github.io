@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/tags/</link>
+    <description>Recent content on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 01 Jun 2016 16:16:29 +0900</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>test2</title>
+      <link>http://staff.feedtailor.jp/2016/01/01/xxx</link>
+      <pubDate>Wed, 01 Jun 2016 16:16:29 +0900</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/01/01/xxx</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

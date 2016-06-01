@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016/06 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2016/06/</link>
+    <description>Recent content in 2016/06 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 01 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2016/06/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（コンテンツ編２）</title>
+      <link>http://staff.feedtailor.jp/2016/06/01/hugo_07</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/06/01/hugo_07</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;archetype&lt;/strong&gt; について。&lt;/p&gt;
+
+&lt;p&gt;Hugo では、新しいコンテンツを追加する時、予め用意した雛形からコピー作成することができます。この雛形のことを &lt;strong&gt;archetype&lt;/strong&gt; と呼びます。&lt;/p&gt;
+
+&lt;p&gt;archetype を使用すると毎回フロントマターに同じ項目を追加したり、同じ書き出し文を書いたりする煩わしさから解放されます。&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方:d6589e61dcd714d6997986c654c8402a&#34;&gt;使い方&lt;/h2&gt;
+
+&lt;p&gt;以下、フロントマターの categories と tags という項目と&amp;rdquo;こんにちは XXX です。&amp;rdquo;という本文を archetype で生成する方法を例示します。&lt;br /&gt;
+まず、雛形ファイルを作成します。archetypes/default.md という名前で次の内容を保存してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+# YAML形式の場合
+categories:
+  - &amp;quot;a&amp;quot;
+  - &amp;quot;b&amp;quot;
+tags:
+  - &amp;quot;x&amp;quot;
+  - &amp;quot;y&amp;quot;
+---
+こんにちは XXX です。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;次に hugo コマンドでコンテンツを追加します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new post/test.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hugoコマンドの第２引数は content ファルダからの相対パスを指定します。この例ではファイル content/post/test.md が生成されます。&lt;br /&gt;
+生成されたファイルを開くと次のような内容になっています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+categories = [&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;]
+date = &amp;quot;2016-06-01T15:25:17+09:00&amp;quot;
+tags = [&amp;quot;x&amp;quot;, &amp;quot;y&amp;quot;]
+title = &amp;quot;test&amp;quot;
+
++++
+こんにちは XXX です。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ここで注意事項が４点あります。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;生成されるコンテンツのフロントマターは archetype の形式に関係なく、デフォルトでは toml 形式になる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;config.toml に metaDataFormat: &amp;ldquo;yaml&amp;rdquo; を追加すると yaml 形式に変更できます&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;項目 date と title が自動的に追加される&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;date はコンテンツを生成した日時、title はコンテンツのファイル名が自動設定されます&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;フロントマターの項目がアルファベット順に並べ替えられる&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;（YAML形式の場合）インデントが崩れる場合がある&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;あくまで雛形ですので、各項目は適宜修正してください。
+因みに本エントリの archetype は以下のようになっています。ご参考まで。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+author: &amp;quot;&amp;quot;
+layout: &amp;quot;post&amp;quot;
+banner: &amp;quot;banners/placeholder.png&amp;quot;
+archives:
+  - &amp;quot;2016&amp;quot;
+  - &amp;quot;2016/01&amp;quot;
+  - &amp;quot;2016/01/01&amp;quot;
+url: &amp;quot;/2016/01/01/xxx&amp;quot;
+categories:
+  - &amp;quot;&amp;quot;
+tags:
+  - &amp;quot;&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;archetypeの検索順:d6589e61dcd714d6997986c654c8402a&#34;&gt;archetypeの検索順&lt;/h2&gt;
+
+&lt;p&gt;適用されるarchetypeは以下の順に検索されます。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;archetypes/[コンテンツのtype].md&lt;/li&gt;
+&lt;li&gt;archetypes/default.md&lt;/li&gt;
+&lt;li&gt;themes/[テーマ名]/archetypes/[コンテンツのtype].md&lt;/li&gt;
+&lt;li&gt;themes/[テーマ名]/archetypes/default.md&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;コンテンツのtypeは &lt;a href=&#34;http://staff.feedtailor.jp/2016/05/11/hugo_05/&#34;&gt;レイアウト編３&lt;/a&gt; でご説明したようにコンテンツが置かれたフォルダの１階層目に相当します。
+従って、post/test.md を生成する場合は以下の順に検索して最初に見つかったものが適用されます。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;archetypes/post.md&lt;/li&gt;
+&lt;li&gt;archetypes/default.md&lt;/li&gt;
+&lt;li&gt;themes/[テーマ名]/archetypes/post.md&lt;/li&gt;
+&lt;li&gt;themes/[テーマ名]/archetypes/default.md&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;コンテンツの type は通常、フォルダの１階層目から決定されるのですが、hugo コマンドで直接 type を指定することもできます。&lt;br /&gt;
+以下は test.md に type=post を指定する例です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new test.md -k post
+
+または
+
+$ hugo new test.md --kind=post
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;以上のようにコンテンツの内容や種別毎に archetype を生成しておくととても便利です。&lt;br /&gt;
+毎回古いコンテンツからコピー作成している方や同じフロントマター項目を都度追加している方は archetype の導入を検討してみてはいかがでしょうか。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
