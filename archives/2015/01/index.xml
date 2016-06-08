@@ -29,7 +29,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/feedtailor/CWNotify/releases&#34; target=&#34;_blank&#34;&gt;GitHub: Releases · feedtailor/CWNotify&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;概要:0494502783db26c0fb4c19a0460954d4&#34;&gt;概要&lt;/h3&gt;
+&lt;h3 id=&#34;概要&#34;&gt;概要&lt;/h3&gt;
 
 &lt;p&gt;チャットワークのピン留めしたルームへの自分以外の投稿を通知センターに通知する、というそれだけのアプリです。&lt;/p&gt;
 
@@ -39,7 +39,7 @@
 
 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：チャットワークAPIはプレビュー版ですのでその点ご注意ください&lt;/p&gt;
 
-&lt;h3 id=&#34;使い方:0494502783db26c0fb4c19a0460954d4&#34;&gt;使い方&lt;/h3&gt;
+&lt;h3 id=&#34;使い方&#34;&gt;使い方&lt;/h3&gt;
 
 &lt;p&gt;上述のようにプレビュー版のAPIを使用しているため、APIの利用申請をしなければなりません（アカウントごとに）。&lt;/p&gt;
 
@@ -77,7 +77,7 @@
 
 &lt;p&gt;明けましておめでとうございます。2015年最初のスタッフブログは、玄関に行けば降水確率を声でお知らせするiPhoneアプリ「&lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34;&gt;そら用心&lt;/a&gt;」のアップデートのお知らせです。&lt;/p&gt;
 
-&lt;h4 id=&#34;更新内容:9ce039854ad4c77a7494067ce222ad9f&#34;&gt;更新内容&lt;/h4&gt;
+&lt;h4 id=&#34;更新内容&#34;&gt;更新内容&lt;/h4&gt;
 
 &lt;p&gt;いくつかの不具合を修正しました。&lt;/p&gt;
 

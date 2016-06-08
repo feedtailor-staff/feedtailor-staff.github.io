@@ -27,7 +27,7 @@
 
 &lt;p&gt;日々細かい改良を施すというよりは、必要な時に少しまとまった時間をとって最低限の改良を行うにとどまる事が多かったのですが、超聖域という事で今まで気になりつつも放置していた部分に大きく手を入れよう試みを行いました。&lt;/p&gt;
 
-&lt;h2 id=&#34;これまでの状況:2926f8c19f0245e326fdd9f67904d277&#34;&gt;これまでの状況&lt;/h2&gt;
+&lt;h2 id=&#34;これまでの状況&#34;&gt;これまでの状況&lt;/h2&gt;
 
 &lt;p&gt;これまでの状況はざっくりと以下のような感じです。&lt;/p&gt;
 
@@ -42,7 +42,7 @@
 
 &lt;p&gt;社内のRakefileでは、xcodebuildを直接触って動作確認しつつ、ネット上の各種情報や既存の実装を参考に必要なエッセンスを取り込むような事をしていました。&lt;/p&gt;
 
-&lt;h2 id=&#34;fastlane:2926f8c19f0245e326fdd9f67904d277&#34;&gt;fastlane&lt;/h2&gt;
+&lt;h2 id=&#34;fastlane&#34;&gt;fastlane&lt;/h2&gt;
 
 &lt;p&gt;先にあげましたが、新しめのツールとして &lt;a href=&#34;https://github.com/KrauseFx/fastlane&#34;&gt;fastlane&lt;/a&gt;があります。iOSアプリ開発にまつわる様々なタスクをなんでも自動化してしまおうという壮大なプロジェクト。試してみる価値大では？という印象を受けました。&lt;/p&gt;
 
@@ -56,7 +56,7 @@
 
 &lt;p&gt;(fastlane自体はやりたい事にうまくはまると良いツールだと思いますので今後も注目していきたいと思っています)&lt;/p&gt;
 
-&lt;h2 id=&#34;gem化したコマンドラインツールへの置き換え:2926f8c19f0245e326fdd9f67904d277&#34;&gt;Gem化したコマンドラインツールへの置き換え&lt;/h2&gt;
+&lt;h2 id=&#34;gem化したコマンドラインツールへの置き換え&#34;&gt;Gem化したコマンドラインツールへの置き換え&lt;/h2&gt;
 
 &lt;p&gt;社内Rakefileは必要最低限の機能しかない規模の小さいもので見通しは良い状態にあります。ただ、いくつか問題があったのでそれを潰していく事にしました。&lt;/p&gt;
 
@@ -79,7 +79,7 @@
 
 &lt;p&gt;作ったコマンドは&amp;#8221;ftbuild&amp;#8221;と命名しました。(今の所一般公開予定はありません)&lt;/p&gt;
 
-&lt;h2 id=&#34;gemの作成:2926f8c19f0245e326fdd9f67904d277&#34;&gt;Gemの作成&lt;/h2&gt;
+&lt;h2 id=&#34;gemの作成&#34;&gt;Gemの作成&lt;/h2&gt;
 
 &lt;p&gt;bundlerでGemのひな形を作成することができるのでこれを利用。(&lt;a href=&#34;http://bundler.io/v1.10/bundle_gem.html&#34;&gt;&lt;code&gt;bundle gem&lt;/code&gt;&lt;/a&gt;)&lt;/p&gt;
 
@@ -126,7 +126,7 @@
 
 &lt;p&gt;あとは元のRakefileに実装していた諸々機能をThorベースでコマンド化していきます。&lt;/p&gt;
 
-&lt;h2 id=&#34;dsl:2926f8c19f0245e326fdd9f67904d277&#34;&gt;DSL&lt;/h2&gt;
+&lt;h2 id=&#34;dsl&#34;&gt;DSL&lt;/h2&gt;
 
 &lt;p&gt;昨今の開発シーンでは、RubyベースのDSLを設定ファイルとして利用する事がよくあります。(Gemfile、Podfile、Rakefile、Fastfile、etc..)&lt;/p&gt;
 
@@ -166,7 +166,7 @@ hogehoge dir_path + &amp;quot;_2&amp;quot;
 
 &lt;p&gt;のような記述が可能になり、YAMLの設定ファイルより記述力が格段に増します。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:2926f8c19f0245e326fdd9f67904d277&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;fastlaneは要注目。&lt;/li&gt;
@@ -194,7 +194,7 @@ hogehoge dir_path + &amp;quot;_2&amp;quot;
 
 &lt;p&gt;で、何をやったかというと以前から着手していた &lt;a href=&#34;http://www.syncnel.biz&#34;&gt;SYNCNEL&lt;/a&gt; のJavaFXアプリケーションのGradleビルドスクリプトを書いてました。&lt;/p&gt;
 
-&lt;h1 id=&#34;javafx:c72476a69a59a5330d1bc20d52986ca9&#34;&gt;JavaFX&lt;/h1&gt;
+&lt;h1 id=&#34;javafx&#34;&gt;JavaFX&lt;/h1&gt;
 
 &lt;p&gt;JavaFXとはJavaのGUIツールキットでJDK8からは標準で提供されています。&lt;/p&gt;
 
@@ -204,7 +204,7 @@ hogehoge dir_path + &amp;quot;_2&amp;quot;
 
 &lt;p&gt;簡単とは言いましたが、はまるポイントは幾つもあったので、今回はその内のビルドスクリプトについてご紹介します。&lt;/p&gt;
 
-&lt;h1 id=&#34;gradleビルドスクリプト:c72476a69a59a5330d1bc20d52986ca9&#34;&gt;Gradleビルドスクリプト&lt;/h1&gt;
+&lt;h1 id=&#34;gradleビルドスクリプト&#34;&gt;Gradleビルドスクリプト&lt;/h1&gt;
 
 &lt;p&gt;アプリ自体はコードが書ければできあがるんですが、それを公開するとなるといろいろやることがあります。&lt;/p&gt;
 
@@ -322,7 +322,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id1013687357&amp;mt=8&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;基本的な使い方:1ce1343da674e376a528221182093bfb&#34;&gt;基本的な使い方&lt;/h3&gt;
+&lt;h3 id=&#34;基本的な使い方&#34;&gt;基本的な使い方&lt;/h3&gt;
 
 &lt;p&gt;起動するとフォロー・フォロワーのアイコン一覧が表示されます（Twitterと連携しなくても使えます）。&lt;/p&gt;
 
@@ -372,7 +372,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id1013687357&amp;mt=8&#34; target=_blank&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;写真エクステンション対応:1ce1343da674e376a528221182093bfb&#34;&gt;写真エクステンション対応&lt;/h3&gt;
+&lt;h3 id=&#34;写真エクステンション対応&#34;&gt;写真エクステンション対応&lt;/h3&gt;
 
 &lt;p&gt;さて、この iMasks。iOS8でのエクステンションに対応していまして、なんと標準の写真アプリから直接使うことができます。&lt;/p&gt;
 
@@ -435,7 +435,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;作ったもの-スライドパズル:027cb615520d614313e0df760225e19f&#34;&gt;作ったもの -&amp;gt; スライドパズル&lt;/h2&gt;
+&lt;h2 id=&#34;作ったもの-スライドパズル&#34;&gt;作ったもの -&amp;gt; スライドパズル&lt;/h2&gt;
 
 &lt;p&gt;スライドパズルって何？って方はGoogle画像検索してもらえれば「あーこれね！」ってなるんじゃないでしょうか。そうです、よくお土産物屋なんかで見かけるパズルの玩具ですね。15パズルとも呼ばれます。&lt;/p&gt;
 
@@ -451,7 +451,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;使ったもの-cocos2d-x-c:027cb615520d614313e0df760225e19f&#34;&gt;使ったもの -&amp;gt; Cocos2d-x(C++)&lt;/h2&gt;
+&lt;h2 id=&#34;使ったもの-cocos2d-x-c&#34;&gt;使ったもの -&amp;gt; Cocos2d-x(C++)&lt;/h2&gt;
 
 &lt;p&gt;Cocos2d-xとは、クロスプラットフォームでの2Dゲーム開発に特化したゲーム開発フレームワークです。国内でもモンストなど数々のヒットゲームアプリでも使用されています。&lt;/p&gt;
 
@@ -473,7 +473,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;個人的な超聖域に対してのコンセプト:027cb615520d614313e0df760225e19f&#34;&gt;個人的な超聖域に対してのコンセプト&lt;/h2&gt;
+&lt;h2 id=&#34;個人的な超聖域に対してのコンセプト&#34;&gt;個人的な超聖域に対してのコンセプト&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;――未習得技術を使って一週間（5日間）でどこまでできるか？&lt;/em&gt;&lt;/p&gt;
 
@@ -487,7 +487,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;成果物:027cb615520d614313e0df760225e19f&#34;&gt;成果物&lt;/h2&gt;
+&lt;h2 id=&#34;成果物&#34;&gt;成果物&lt;/h2&gt;
 
 &lt;p&gt;ではどんな感じで出来上がったかというのがこちら。&lt;/p&gt;
 
@@ -525,7 +525,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;さいごに:027cb615520d614313e0df760225e19f&#34;&gt;さいごに&lt;/h2&gt;
+&lt;h2 id=&#34;さいごに&#34;&gt;さいごに&lt;/h2&gt;
 
 &lt;p&gt;一週間まるまる「業務以外で何してもいいよ」というのは、楽しみな反面いざ直面すると、何をするかの選択など、なかなかに戸惑うこともありました。&lt;/p&gt;
 
@@ -551,7 +551,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;各スタッフからレポートが上がっていますが、私からもやってみたことのレポートを報告します。&lt;/p&gt;
 
-&lt;h2 id=&#34;何をしたか:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;何をしたか&lt;/h2&gt;
+&lt;h2 id=&#34;何をしたか&#34;&gt;何をしたか&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unity/&#34; target=&#34;_blank&#34;&gt;Unity&lt;/a&gt;を使用してゲーム作りに挑戦してみました。&lt;/p&gt;
 
@@ -563,7 +563,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unity/&#34;&gt;http://japan.unity3d.com/unity/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;なぜか:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;なぜか&lt;/h2&gt;
+&lt;h2 id=&#34;なぜか&#34;&gt;なぜか&lt;/h2&gt;
 
 &lt;p&gt;フィードテイラーにおける私の普段のメインの業務はiOSのアプリ作成です。&lt;/p&gt;
 
@@ -581,7 +581,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;常日頃から「目の前の問題を殴る道具はたくさん持っている方がいい」と考えている私としては、新しいものに挑戦する良い機会と判断してゲーム作りに取り組みました。&lt;/p&gt;
 
-&lt;h2 id=&#34;何を作ろうとしたか:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;何を作ろうとしたか&lt;/h2&gt;
+&lt;h2 id=&#34;何を作ろうとしたか&#34;&gt;何を作ろうとしたか&lt;/h2&gt;
 
 &lt;p&gt;まず、&lt;a href=&#34;https://www.ingress.com/&#34; target=&#34;_blank&#34;&gt;Ingress&lt;/a&gt;というゲームが流行っておりまして、私も流行りに乗っかってハマっています。（陣営は緑。レベル15です。）&lt;/p&gt;
 
@@ -607,7 +607,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;その詰イングレスを存分に遊べるゲーム「詰めCF」を作ってみました。&lt;/p&gt;
 
-&lt;h2 id=&#34;どうなったか:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;どうなったか&lt;/h2&gt;
+&lt;h2 id=&#34;どうなったか&#34;&gt;どうなったか&lt;/h2&gt;
 
 &lt;p&gt;「お題を選択してCFを作る」という部分までなんとか実装したに留まってしまいました。&lt;/p&gt;
 
@@ -631,7 +631,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;以下に、詰めCFを作るにあたって参考にしたサイトやツールなどをご紹介します。&lt;/p&gt;
 
-&lt;h2 id=&#34;何を使ったか:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;何を使ったか&lt;/h2&gt;
+&lt;h2 id=&#34;何を使ったか&#34;&gt;何を使ったか&lt;/h2&gt;
 
 &lt;p&gt;まずは&lt;a href=&#34;http://japan.unity3d.com/unity/&#34;&gt;Unity&lt;/a&gt;。&lt;/p&gt;
 
@@ -649,7 +649,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;一番の注意点は「直前会計年度の総収益が US$100,000 を超える事業体」という条件でしょうか。ベンチャー企業に対する「この条件を超えるまでは無料で、超えたら払ってね」というメッセージのようにも読めます。&lt;/p&gt;
 
-&lt;h3 id=&#34;アセット:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;アセット&lt;/h3&gt;
+&lt;h3 id=&#34;アセット&#34;&gt;アセット&lt;/h3&gt;
 
 &lt;p&gt;Unityのプロジェクト内で使用できるライブラリをアセットと呼びます。アセットは &lt;a href=&#34;https://www.assetstore.unity3d.com/jp/&#34; target=&#34;_blank&#34;&gt;Asset Store&lt;/a&gt;で販売、または無料で配布され、3Dモデルやオーディオ素材だけでなく、外部サービスとの連携のためのSDKやエディタを拡張するツールなどまで取り扱われています。&lt;/p&gt;
 
@@ -657,7 +657,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;今回のプロジェクトで使用したアセットをご紹介します。&lt;/p&gt;
 
-&lt;h4 id=&#34;a-href-https-www-assetstore-unity3d-com-jp-content-710-target-blank-json-object-a:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/710&#34; target=&#34;_blank&#34;&gt;JSON Object&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;a-href-https-www-assetstore-unity3d-com-jp-content-710-target-blank-json-object-a&#34;&gt;&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/710&#34; target=&#34;_blank&#34;&gt;JSON Object&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/2704CFF9-ABE8-44D7-A657-77BA35AB353C.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-973&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/2704CFF9-ABE8-44D7-A657-77BA35AB353C-300x282.png&#34; alt=&#34;2704CFF9-ABE8-44D7-A657-77BA35AB353C&#34; width=&#34;300&#34; height=&#34;282&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -683,7 +683,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 &lt;p&gt;int count = (int)json.GetField(&amp;#8220;count&amp;#8221;).n;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&#34;a-href-https-github-com-naichilab-unity-fademanager-blob-master-readme-ja-md-target-blank-unity-fademanager-a:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md&#34; target=&#34;_blank&#34;&gt;Unity-FadeManager&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;a-href-https-github-com-naichilab-unity-fademanager-blob-master-readme-ja-md-target-blank-unity-fademanager-a&#34;&gt;&lt;a href=&#34;https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md&#34; target=&#34;_blank&#34;&gt;Unity-FadeManager&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-974&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/BB54CCBD-BE6F-4690-AA07-3862AD6F7B5B-300x165.png&#34; alt=&#34;BB54CCBD-BE6F-4690-AA07-3862AD6F7B5B&#34; width=&#34;300&#34; height=&#34;165&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -701,7 +701,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 &lt;p&gt;FadeManager.Instance.LoadLevel (&amp;#8220;Scene1&amp;#8243;, 2.0f);&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&#34;a-href-http-itween-pixelplacement-com-index-php-target-blank-itween-a:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;http://itween.pixelplacement.com/index.php&#34; target=&#34;_blank&#34;&gt;iTween&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;a-href-http-itween-pixelplacement-com-index-php-target-blank-itween-a&#34;&gt;&lt;a href=&#34;http://itween.pixelplacement.com/index.php&#34; target=&#34;_blank&#34;&gt;iTween&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://itween.pixelplacement.com/index.php&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-975&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/E689A6F1-8051-4BF0-9A54-7F58FD64E6DF-300x225.png&#34; alt=&#34;E689A6F1-8051-4BF0-9A54-7F58FD64E6DF&#34; width=&#34;300&#34; height=&#34;225&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -745,7 +745,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&lt;a href=&#34;http://itween.pixelplacement.com/documentation.php&#34; target=&#34;_blank&#34;&gt;ドキュメント&lt;/a&gt;を見ると様々操作が簡単にできることがわかります。&lt;/p&gt;
 
-&lt;h4 id=&#34;a-href-http-www-protoolsforunity3d-com-prototype-target-blank-prototype-a:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;http://www.protoolsforunity3d.com/prototype/&#34; target=&#34;_blank&#34;&gt;Prototype&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;a-href-http-www-protoolsforunity3d-com-prototype-target-blank-prototype-a&#34;&gt;&lt;a href=&#34;http://www.protoolsforunity3d.com/prototype/&#34; target=&#34;_blank&#34;&gt;Prototype&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.protoolsforunity3d.com/prototype/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-976&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/D6592C9B-0E7C-4DA1-978F-AE9E86B29AD9-300x168.png&#34; alt=&#34;D6592C9B-0E7C-4DA1-978F-AE9E86B29AD9&#34; width=&#34;300&#34; height=&#34;168&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -761,7 +761,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;ポータルやリンク、また床などをこのアセットを使用して作成しました。&lt;/p&gt;
 
-&lt;h4 id=&#34;a-href-https-ilih-ru-unity-assets-uiwidgets-target-blank-new-ui-widgets-a:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;https://ilih.ru/unity-assets/UIWidgets/&#34; target=&#34;_blank&#34;&gt;New UI Widgets&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;a-href-https-ilih-ru-unity-assets-uiwidgets-target-blank-new-ui-widgets-a&#34;&gt;&lt;a href=&#34;https://ilih.ru/unity-assets/UIWidgets/&#34; target=&#34;_blank&#34;&gt;New UI Widgets&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ilih.ru/unity-assets/UIWidgets/&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-978&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/01533F3D-5D2F-454C-808F-6694F1935CAD-300x159.png&#34; alt=&#34;01533F3D-5D2F-454C-808F-6694F1935CAD&#34; width=&#34;300&#34; height=&#34;159&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -779,9 +779,9 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;今回は結局ここでしか使わなかったんですけどね…&lt;/p&gt;
 
-&lt;h3 id=&#34;エディタ:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;エディタ&lt;/h3&gt;
+&lt;h3 id=&#34;エディタ&#34;&gt;エディタ&lt;/h3&gt;
 
-&lt;h4 id=&#34;a-href-https-code-visualstudio-com-target-blank-visual-studio-code-a:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34;&gt;Visual Studio Code&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;a-href-https-code-visualstudio-com-target-blank-visual-studio-code-a&#34;&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34;&gt;Visual Studio Code&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-980&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/7FFA3930-F64A-43F5-83E0-22EDBEB41B4F-300x198.png&#34; alt=&#34;7FFA3930-F64A-43F5-83E0-22EDBEB41B4F&#34; width=&#34;300&#34; height=&#34;198&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -805,7 +805,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;バージョンの違いにより、一部で設定の方法が変わっている可能性があります。&lt;/p&gt;
 
-&lt;h2 id=&#34;参考にしたもの:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;参考にしたもの&lt;/h2&gt;
+&lt;h2 id=&#34;参考にしたもの&#34;&gt;参考にしたもの&lt;/h2&gt;
 
 &lt;p&gt;実は超聖域開始前に「完全にニュートラルな状態から入るのは無理がある」と判断し、Unityの入門書を1冊読みました。&lt;/p&gt;
 
@@ -813,7 +813,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;Youtubeなどの動画サイトでレクチャーも多く公開されており、それらもとても参考になりました。開発中に閲覧したサイトや動画をいくつかご紹介します。&lt;/p&gt;
 
-&lt;h3 id=&#34;はじめての-unity-http-japan-unity3d-com-developer-document-tutorial-my-first-unity:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;http://japan.unity3d.com/developer/document/tutorial/my-first-unity/&#34;&gt;はじめての Unity&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;はじめての-unity-http-japan-unity3d-com-developer-document-tutorial-my-first-unity&#34;&gt;&lt;a href=&#34;http://japan.unity3d.com/developer/document/tutorial/my-first-unity/&#34;&gt;はじめての Unity&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/developer/document/tutorial/my-first-unity/&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-981&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/C80F93E7-8918-4F54-AF30-3AC40ADC2DF8-300x124.png&#34; alt=&#34;C80F93E7-8918-4F54-AF30-3AC40ADC2DF8&#34; width=&#34;300&#34; height=&#34;124&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -823,13 +823,13 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;よくあるブロック崩しを作ります。ただし、まだ途中までしかなく、スマホへのパブリッシュ手法などは近日公開のままです。&lt;/p&gt;
 
-&lt;h3 id=&#34;a-href-https-www-youtube-com-watch-v-ep0rlbqrcvc-target-blank-unity-5-tutorial-basics-a:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ep0rlBQRcVc&#34; target=&#34;_blank&#34;&gt;Unity 5 Tutorial : Basics&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;a-href-https-www-youtube-com-watch-v-ep0rlbqrcvc-target-blank-unity-5-tutorial-basics-a&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ep0rlBQRcVc&#34; target=&#34;_blank&#34;&gt;Unity 5 Tutorial : Basics&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ep0rlBQRcVc&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ep0rlBQRcVc&#34;&gt;https://www.youtube.com/watch?v=Ep0rlBQRcVc&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Unityの基本的な操作や使い方、書き出しまでを一通り。&lt;/p&gt;
 
-&lt;h3 id=&#34;a-href-https-www-youtube-com-playlist-list-plt-y3hw1v3qtebh8fqv1duouih9nf0k6c-target-blank-3dbuzz-modern-ui-development-in-unity-4-6-a:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&#34; target=&#34;_blank&#34;&gt;3DBuzz Modern UI Development in Unity 4.6&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;a-href-https-www-youtube-com-playlist-list-plt-y3hw1v3qtebh8fqv1duouih9nf0k6c-target-blank-3dbuzz-modern-ui-development-in-unity-4-6-a&#34;&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&#34; target=&#34;_blank&#34;&gt;3DBuzz Modern UI Development in Unity 4.6&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&#34;&gt;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -837,13 +837,13 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;UI用のパーツは通常のパーツとは異なりレイアウトを自動で行ったりする仕組みなど、メニューや設定画面で使いやすい仕組みが用意されています。&lt;/p&gt;
 
-&lt;h2 id=&#34;今後の展開:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;今後の展開&lt;/h2&gt;
+&lt;h2 id=&#34;今後の展開&#34;&gt;今後の展開&lt;/h2&gt;
 
 &lt;p&gt;「詰めCF」自体は私にとってとても興味深いゲームですので…もしかするといつの日かリリースされるかもしれません。&lt;/p&gt;
 
 &lt;p&gt;また、Unityを実際に触ることによって、使用する前とはずいぶんと印象が変わった部分がありました。&lt;/p&gt;
 
-&lt;h3 id=&#34;開発環境が想像以上にカオス:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;開発環境が想像以上にカオス&lt;/h3&gt;
+&lt;h3 id=&#34;開発環境が想像以上にカオス&#34;&gt;開発環境が想像以上にカオス&lt;/h3&gt;
 
 &lt;p&gt;これはiOSでももちろんそうなのですが、複数人で一つのプロジェクトを回すことがあります。その際に重要なことは他人と自分の触るファイルをできるだけ分けることであると思います。&lt;/p&gt;
 
@@ -861,7 +861,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unite/unite2015/files/DAY2_1500_room2_Hamaguchi.pdf&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://japan.unity3d.com/unite/unite2015/files/DAY2_1500_room2_Hamaguchi.pdf&#34;&gt;http://japan.unity3d.com/unite/unite2015/files/DAY2_1500_room2_Hamaguchi.pdf&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;ゲーム以外でも意外と使えそう:b6b7748f28c1904985e5f6f8e5b6a5f2&#34;&gt;ゲーム以外でも意外と使えそう&lt;/h3&gt;
+&lt;h3 id=&#34;ゲーム以外でも意外と使えそう&#34;&gt;ゲーム以外でも意外と使えそう&lt;/h3&gt;
 
 &lt;p&gt;ちょうどこのようなツイートがありました。&lt;/p&gt;
 
@@ -921,11 +921,11 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;私はこれまで &lt;a href=&#34;https://www.syncnel.biz/&#34;&gt;SYNCNEL&lt;/a&gt; のサーバサイドの実装と構築を担当し続けているのですが、今回自由に使っていい一週間あるということで、その SYNCNEL サービスの運用のなか Issue として挙げられている事柄のうち個人的に関心あるものをピックアップして、ある程度の方針決定、あるいは解決に至るまでできるかに時間を充てることにしました。&lt;/p&gt;
 
-&lt;h2 id=&#34;1-サブドメインベースアプリケーション:69c13cf2501e6a6e3a3cc4f993b3b343&#34;&gt;1. サブドメインベースアプリケーション&lt;/h2&gt;
+&lt;h2 id=&#34;1-サブドメインベースアプリケーション&#34;&gt;1. サブドメインベースアプリケーション&lt;/h2&gt;
 
 &lt;p&gt;SYNCNEL では、サービス契約されたお客様ごとに固有の名前を持った識別子を発行して運用しているのですが、この識別子をサービスのサブドメイン部分に据えてより良いサービス提供ができないかという機能案がありましたので、その可能性について調査と仮実装を行ってみました。&lt;/p&gt;
 
-&lt;h3 id=&#34;ドメインをワイルドカードで運用する:69c13cf2501e6a6e3a3cc4f993b3b343&#34;&gt;ドメインをワイルドカードで運用する&lt;/h3&gt;
+&lt;h3 id=&#34;ドメインをワイルドカードで運用する&#34;&gt;ドメインをワイルドカードで運用する&lt;/h3&gt;
 
 &lt;p&gt;何はともあれ、任意のサブドメインを持つドメインアドレスで特定のエントリサーバへリクエストしてもらう必要がありますので、ドメインはワイルドカードで運用することになります。&lt;/p&gt;
 
@@ -935,7 +935,7 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 
 &lt;p&gt;ただ、利用している DNS サービスによってはワイルドカードエントリが定義不可能なものもあるようです。&lt;/p&gt;
 
-&lt;h3 id=&#34;アクセスコントロール-と-サービスコントロール:69c13cf2501e6a6e3a3cc4f993b3b343&#34;&gt;「アクセスコントロール」と「サービスコントロール」&lt;/h3&gt;
+&lt;h3 id=&#34;アクセスコントロール-と-サービスコントロール&#34;&gt;「アクセスコントロール」と「サービスコントロール」&lt;/h3&gt;
 
 &lt;p&gt;リクエストを受け付けるサーバ側はどんな構成になるべきかと考えた際に、結論として「サブドメイン部分にあたる会社識別子を用いて会社を特定した上で、どのような問題を解決したいのか」という点でやるべきことが異なるということに至りました。&lt;/p&gt;
 
@@ -986,7 +986,7 @@ server.listen(80);
 
 &lt;p&gt;後者のサービスコントロールパターンの方も実際のアプリケーションサーバ側のコードとして実装して、初アクセス時に会社名を表示したりなどの会社固有の振る舞いを実装してみました。こちらはコード例は割愛します。&lt;/p&gt;
 
-&lt;h2 id=&#34;2-php-5-3-から-php-5-6-への環境移行テスト:69c13cf2501e6a6e3a3cc4f993b3b343&#34;&gt;2. PHP 5.3 から PHP 5.6 への環境移行テスト&lt;/h2&gt;
+&lt;h2 id=&#34;2-php-5-3-から-php-5-6-への環境移行テスト&#34;&gt;2. PHP 5.3 から PHP 5.6 への環境移行テスト&lt;/h2&gt;
 
 &lt;p&gt;SYNCNEL のアプリケーションサーバの一部は PHP で書かれているのですが、その箇所は古い実装体系から継続的に進めてきたため、内部の一部ではより古い PHP コードが残っています。その都合上 PHP 5.3 へのアップグレードを最後に、それ以上のアップグレードを行うことをこれまで行うことができていませんでした。&lt;/p&gt;
 
@@ -1158,7 +1158,7 @@ server.listen(80);
 
 &lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.or.jwa.sora_annai.android&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;alignnone size-full wp-image-715&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:01cfb783007d19b614641a1007608b27&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;台風表示への対応&lt;/li&gt;
@@ -1194,7 +1194,7 @@ server.listen(80);
 
 &lt;p&gt;変わった制度は色々ありますが、&lt;strong&gt;残業禁止&lt;/strong&gt;、&lt;strong&gt;副業推奨&lt;/strong&gt;、&lt;strong&gt;SNS推奨&lt;/strong&gt;、&lt;strong&gt;エンジニアの電話／メール禁止&lt;/strong&gt;、&lt;a href=&#34;http://feedtailor.jp/wp/?p=178&#34;&gt;Mac&lt;/a&gt;や[iPad]()、最近では&lt;a href=&#34;http://feedtailor.jp/wp/?p=14361&#34;&gt;&lt;strong&gt;Apple Watchの購入支援&lt;/strong&gt;&lt;/a&gt;など。Windows禁止の時期もあったようです（今も？）。&lt;/p&gt;
 
-&lt;h4 id=&#34;残業禁止:6b111f05cd8857919eb10378d5dac2f6&#34;&gt;残業禁止&lt;/h4&gt;
+&lt;h4 id=&#34;残業禁止&#34;&gt;残業禁止&lt;/h4&gt;
 
 &lt;p&gt;最近、耳にする機会が増えたIT系での残業禁止ですが、弊社ではかなり前から取り組んでいます。&lt;/p&gt;
 
@@ -1204,7 +1204,7 @@ server.listen(80);
 
 &lt;p&gt;それを支えているのが、&lt;strong&gt;毎日朝夕２回のミーティング&lt;/strong&gt;です。&lt;/p&gt;
 
-&lt;h4 id=&#34;朝ミーティング:6b111f05cd8857919eb10378d5dac2f6&#34;&gt;朝ミーティング〜&lt;/h4&gt;
+&lt;h4 id=&#34;朝ミーティング&#34;&gt;朝ミーティング〜&lt;/h4&gt;
 
 &lt;p&gt;毎朝9:00から5分程度全員でその日やるべき事、御客様からのフィードバックや打合せの時間調整／報告などを確認します。&lt;/p&gt;
 
@@ -1214,7 +1214,7 @@ server.listen(80);
 
 &lt;p&gt;その後、17:00 頃から各自日報を slack に投げ始め、17:15 から夕方ミーティング。終わったら定時に帰るという流れです。&lt;/p&gt;
 
-&lt;h4 id=&#34;夕方ミーティング:6b111f05cd8857919eb10378d5dac2f6&#34;&gt;夕方ミーティング&lt;/h4&gt;
+&lt;h4 id=&#34;夕方ミーティング&#34;&gt;夕方ミーティング&lt;/h4&gt;
 
 &lt;p&gt;入社して一番驚いたのがこの夕方ミーティングです。&lt;/p&gt;
 
@@ -1222,7 +1222,7 @@ server.listen(80);
 
 &lt;p&gt;その日の作業でこんな物作りましたとか、ここまで動くようになりましたとか、画面に映して発表します。ほぼ毎日、みんな動く物を出してくるのであまり作業が進まなかった日はなかなかつらいです。16:00頃から何を発表しようか考え出して、何もなければ何とか見せられるものを作ろうと追い込みを掛けます。もしかしたら15:00〜17:00が一番集中している時間帯かも知れません。&lt;/p&gt;
 
-&lt;h4 id=&#34;今日の新発見:6b111f05cd8857919eb10378d5dac2f6&#34;&gt;今日の新発見&lt;/h4&gt;
+&lt;h4 id=&#34;今日の新発見&#34;&gt;今日の新発見&lt;/h4&gt;
 
 &lt;p&gt;夕方ミーティングではもう一つ「&lt;a href=&#34;http://feedtailor.jp/wp/?p=8384&#34;&gt;今日の新発見&lt;/a&gt;」というものを発表しなければいけません。&lt;/p&gt;
 
@@ -1274,7 +1274,7 @@ server.listen(80);
 
 &lt;p&gt;新しい「お知らせボイス」で私の一番の推しメンは「よしえ」なのですが、みなさんは誰が一番好みでしょうか？&lt;/p&gt;
 
-&lt;h3 id=&#34;通知する時間帯の設定ができるようになりました:70e3a58aecdf934d34ecd019b0224e7b&#34;&gt;通知する時間帯の設定ができるようになりました&lt;/h3&gt;
+&lt;h3 id=&#34;通知する時間帯の設定ができるようになりました&#34;&gt;通知する時間帯の設定ができるようになりました&lt;/h3&gt;
 
 &lt;p&gt;そら用心のダウンロードはこちらから。&lt;/p&gt;
 
@@ -1288,7 +1288,7 @@ server.listen(80);
 
 &lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/04/schedule5.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2015/04/schedule5-175x300.jpg&#34; alt=&#34;そら用心 通知する時間帯の設定&#34; width=&#34;175&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-892&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;通知する時間帯の設定の方法:70e3a58aecdf934d34ecd019b0224e7b&#34;&gt;通知する時間帯の設定の方法&lt;/h3&gt;
+&lt;h3 id=&#34;通知する時間帯の設定の方法&#34;&gt;通知する時間帯の設定の方法&lt;/h3&gt;
 
 &lt;p&gt;ビーコンの通知の設定画面から設定が可能です。&lt;/p&gt;
 
@@ -1298,7 +1298,7 @@ server.listen(80);
 
 &lt;p&gt;詳しい設定方法は&lt;a href=&#34;http://sorayoujin.feedtailor.jp/notification.html#timezone&#34;&gt;公式サイトの「通知の設定」&lt;/a&gt;をごらんください。&lt;/p&gt;
 
-&lt;h3 id=&#34;おわりに:70e3a58aecdf934d34ecd019b0224e7b&#34;&gt;おわりに&lt;/h3&gt;
+&lt;h3 id=&#34;おわりに&#34;&gt;おわりに&lt;/h3&gt;
 
 &lt;p&gt;そら用心はより便利に、そしてより身近に溶け込んでいくように進化していきます。これからもご期待ください。&lt;/p&gt;
 
@@ -1336,7 +1336,7 @@ server.listen(80);
 
 &lt;p&gt;玄関でお知らせするそら用心、そしてiPhoneを出す必要なく通知を表示できるApple Watch。この二つの相性は最高です！&lt;/p&gt;
 
-&lt;h3 id=&#34;そら用心はapple-watchに対応しました:5ddd77fe51c3f4eb72fcedd652d32b6e&#34;&gt;そら用心はApple Watchに対応しました&lt;/h3&gt;
+&lt;h3 id=&#34;そら用心はapple-watchに対応しました&#34;&gt;そら用心はApple Watchに対応しました&lt;/h3&gt;
 
 &lt;p&gt;そら用心のダウンロードはこちらから。&lt;/p&gt;
 
@@ -1366,7 +1366,7 @@ server.listen(80);
 
 &lt;p&gt;画面が少し長いですが、必要な情報を全て手に入れることができます。&lt;/p&gt;
 
-&lt;h3 id=&#34;apple-watchにおすすめの設定:5ddd77fe51c3f4eb72fcedd652d32b6e&#34;&gt;Apple Watchにおすすめの設定&lt;/h3&gt;
+&lt;h3 id=&#34;apple-watchにおすすめの設定&#34;&gt;Apple Watchにおすすめの設定&lt;/h3&gt;
 
 &lt;p&gt;そら用心は通知を送る回数でポケットの中にiPhoneが入っていてもおおよその降水確率がわかるようになっています。&lt;/p&gt;
 
@@ -1388,7 +1388,7 @@ server.listen(80);
 
 &lt;p&gt;少々設定がややこしいですが、より便利に快適にそら用心をご利用ください！&lt;/p&gt;
 
-&lt;h3 id=&#34;one-more-thing-8230:5ddd77fe51c3f4eb72fcedd652d32b6e&#34;&gt;One more thing&amp;#8230;&lt;/h3&gt;
+&lt;h3 id=&#34;one-more-thing-8230&#34;&gt;One more thing&amp;#8230;&lt;/h3&gt;
 
 &lt;p&gt;そら用心は今回のバージョンから&lt;strong&gt;通知の声が大阪のおばちゃんに変わります&lt;/strong&gt;！&lt;/p&gt;
 
@@ -1420,7 +1420,7 @@ server.listen(80);
 
 &lt;p&gt;今回は5人(?)のキャラクターが登場。それぞれ個性的なキャラですので、お気に入りのキャラを選んでみてください。&lt;/p&gt;
 
-&lt;h3 id=&#34;個性豊かなキャラたち:5ddd77fe51c3f4eb72fcedd652d32b6e&#34;&gt;個性豊かなキャラたち&lt;/h3&gt;
+&lt;h3 id=&#34;個性豊かなキャラたち&#34;&gt;個性豊かなキャラたち&lt;/h3&gt;
 
 &lt;p&gt;それぞれのキャラを簡単にご紹介します。&lt;/p&gt;
 
@@ -1486,7 +1486,7 @@ server.listen(80);
 
 &lt;p&gt;好評いただいているそら案内のWindows版、以前のお知らせ通り天気画像の表示に対応した v1.1 を公開します。&lt;/p&gt;
 
-&lt;h4 id=&#34;変更点:60944f85d9681b5089273075f760e551&#34;&gt;変更点&lt;/h4&gt;
+&lt;h4 id=&#34;変更点&#34;&gt;変更点&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;天気画像（気象衛星、天気図、雨雲の動き、アメダス各種情報、XバンドMPレーダ予測、台風、黄砂予測、PM2.5予測）の表示に対応しました&lt;/li&gt;
@@ -1495,7 +1495,7 @@ server.listen(80);
 
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;天気画像の表示に対応:60944f85d9681b5089273075f760e551&#34;&gt;天気画像の表示に対応&lt;/h3&gt;
+&lt;h3 id=&#34;天気画像の表示に対応&#34;&gt;天気画像の表示に対応&lt;/h3&gt;
 
 &lt;p&gt;iOS/Mac/Android版と同等の機能を持ちました。&lt;/p&gt;
 

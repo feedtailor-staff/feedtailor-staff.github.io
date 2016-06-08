@@ -17,7 +17,7 @@
       <guid>http://staff.feedtailor.jp/2014/05/15/151</guid>
       <description>
 
-&lt;h2 id=&#34;ごあいさつ:41fae26ef1b1d201885f8015507598c4&#34;&gt;ごあいさつ&lt;/h2&gt;
+&lt;h2 id=&#34;ごあいさつ&#34;&gt;ごあいさつ&lt;/h2&gt;
 
 &lt;p&gt;最近、「フルスタック」がバズワード化してきて、なんとなく残念な気分になっています。&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
 
@@ -27,7 +27,7 @@
 
 &lt;p&gt;(Nyatterの基本的な使い方は&lt;a href=&#34;http://feedtailor.jp/wp/?p=13172&#34;&gt;社長ブログ&lt;/a&gt;をご覧ください。)&lt;/p&gt;
 
-&lt;h2 id=&#34;タイムラインが使用するtwitterアカウントが変更できます:41fae26ef1b1d201885f8015507598c4&#34;&gt;タイムラインが使用するTwitterアカウントが変更できます&lt;/h2&gt;
+&lt;h2 id=&#34;タイムラインが使用するtwitterアカウントが変更できます&#34;&gt;タイムラインが使用するTwitterアカウントが変更できます&lt;/h2&gt;
 
 &lt;p&gt;「今まで何でできなかったのか？」とお叱りを受けるかもしれませんが、ようやくTwitterアカウントを変更することができるようになりました。&lt;/p&gt;
 
@@ -35,7 +35,7 @@
 
 &lt;p&gt;今回の機能追加により、上記のような場合でも新しいアカウントで継続して画像を集め続けることができます。&lt;/p&gt;
 
-&lt;h2 id=&#34;使用方法:41fae26ef1b1d201885f8015507598c4&#34;&gt;使用方法&lt;/h2&gt;
+&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/05/nyatter_account_select.jpg&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/05/nyatter_account_select.jpg&#34; alt=&#34;nyatter_account_select&#34; width=&#34;640&#34; height=&#34;568&#34; class=&#34;alignnone size-full wp-image-152&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -48,7 +48,7 @@
 
 &lt;p&gt;ただし、非公開のリストを使用したタイムラインの場合、そのリストにアクセスできるユーザー以外を設定すると正しく読み込めずにエラーになるのでご注意ください。&lt;/p&gt;
 
-&lt;h2 id=&#34;ついでに検索のtipsも:41fae26ef1b1d201885f8015507598c4&#34;&gt;ついでに検索のTipsも&lt;/h2&gt;
+&lt;h2 id=&#34;ついでに検索のtipsも&#34;&gt;ついでに検索のTipsも&lt;/h2&gt;
 
 &lt;p&gt;みなさんはNyatterでは検索キーワードを使用したタイムラインの場合、検索するツイートの言語を指定することができるのはご存知ですか？&lt;/p&gt;
 

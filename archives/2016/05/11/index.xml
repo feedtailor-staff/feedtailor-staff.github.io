@@ -114,7 +114,7 @@ type: &amp;quot;e&amp;quot;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h3 id=&#34;section-type-について:86eb3326f00585c43a278d04aa86698c&#34;&gt;Section / Type について&lt;/h3&gt;
+&lt;h3 id=&#34;section-type-について&#34;&gt;Section / Type について&lt;/h3&gt;
 
 &lt;p&gt;type と section は主にレイアウトの決定に使用され、Hugo では自動的に section 毎のリストページを生成します。&lt;/p&gt;
 

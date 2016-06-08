@@ -41,7 +41,7 @@
 
 &lt;p&gt;というわけで、睡眠時間を記録するだけですけれど連携してみました。本来であれば、睡眠の質も記録できる仕様になっているのですが、QR目覚まし自体がそういう機能を持ってないので、単に睡眠時間の記録としてお使いください。&lt;/p&gt;
 
-&lt;h3 id=&#34;連携方法:60d80ac7337ee252627628cc535fc7a5&#34;&gt;連携方法&lt;/h3&gt;
+&lt;h3 id=&#34;連携方法&#34;&gt;連携方法&lt;/h3&gt;
 
 &lt;p&gt;まず最初に、確認のダイアログが表示されます。これは設定タブの「ログはHealthに保存」からもできます。&lt;/p&gt;
 
@@ -89,7 +89,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/id600772761&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-58&#34; src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;8bitter-とは:417fbc1de7ef8e4e918c605f7deb57b6&#34;&gt;『8bitter』とは？&lt;/h3&gt;
+&lt;h3 id=&#34;8bitter-とは&#34;&gt;『8bitter』とは？&lt;/h3&gt;
 
 &lt;p&gt;『8bitter』って何？という方は、社長ブログの過去記事をご覧ください。&lt;/p&gt;
 
@@ -103,7 +103,7 @@
 
 &lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/main.png&#34;&gt;&lt;img class=&#34;alignnone wp-image-392 size-medium&#34; src=&#34;http://staff.feedtailor.jp/images/2014/09/main-169x300.png&#34; alt=&#34;main&#34; width=&#34;169&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/tweet_normal.png&#34;&gt;&lt;img class=&#34;alignnone wp-image-394 size-medium&#34; src=&#34;http://staff.feedtailor.jp/images/2014/09/tweet_normal-169x300.png&#34; alt=&#34;tweet_normal&#34; width=&#34;169&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2014/09/tweet_normal.png&#34;&gt;&lt;img class=&#34;alignnone wp-image-393 size-medium&#34; src=&#34;http://staff.feedtailor.jp/images/2014/09/status-169x300.png&#34; alt=&#34;status&#34; width=&#34;169&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;v2-0-0の新機能-8bitキーボード:417fbc1de7ef8e4e918c605f7deb57b6&#34;&gt;v2.0.0の新機能『&lt;strong&gt;8bitキーボード&lt;/strong&gt;』&lt;/h3&gt;
+&lt;h3 id=&#34;v2-0-0の新機能-8bitキーボード&#34;&gt;v2.0.0の新機能『&lt;strong&gt;8bitキーボード&lt;/strong&gt;』&lt;/h3&gt;
 
 &lt;p&gt;今回の新機能はこちら&lt;strong&gt;『8bitキーボード』&lt;/strong&gt;！画面全体がレトロゲーム風に！&lt;/p&gt;
 
@@ -111,7 +111,7 @@
 
 &lt;p&gt;ただし、&lt;strong&gt;このキーボードを使うにはiOS 8が必要です。&lt;/strong&gt; 実はこのキーボード、iOS 8の新機能である&lt;strong&gt;カスタムキーボード&lt;/strong&gt;として実現されているのです！&lt;/p&gt;
 
-&lt;h3 id=&#34;8bitキーボード-を使うには:417fbc1de7ef8e4e918c605f7deb57b6&#34;&gt;『8bitキーボード』を使うには？&lt;/h3&gt;
+&lt;h3 id=&#34;8bitキーボード-を使うには&#34;&gt;『8bitキーボード』を使うには？&lt;/h3&gt;
 
 &lt;p&gt;『8bitキーボード』を利用するにはキーボードの登録が必要です。 『設定アプリ&amp;gt;一般&amp;gt;キーボード&amp;gt;キーボード』を開いた後、以下の手順で『8bitキーボード』を追加します。&lt;/p&gt;
 
@@ -170,7 +170,7 @@
 
 &lt;p&gt;なんといっても目玉はこれですね&lt;/p&gt;
 
-&lt;h3 id=&#34;台風情報の表示に対応:8e7f112373da111b9d8ba97b8d1afe56&#34;&gt;台風情報の表示に対応&lt;/h3&gt;
+&lt;h3 id=&#34;台風情報の表示に対応&#34;&gt;台風情報の表示に対応&lt;/h3&gt;
 
 &lt;p&gt;天気画像画面に台風タブが追加されています（以下、先日の台風11号・13号をサンプルとして表示しています）&lt;/p&gt;
 

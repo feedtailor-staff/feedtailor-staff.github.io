@@ -17,11 +17,11 @@
       <guid>http://staff.feedtailor.jp/2014/04/24/102</guid>
       <description>
 
-&lt;h3 id=&#34;ごあいさつ:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;ごあいさつ&lt;/h3&gt;
+&lt;h3 id=&#34;ごあいさつ&#34;&gt;ごあいさつ&lt;/h3&gt;
 
 &lt;p&gt;まずはじめにということで、はじめましてです。&lt;a href=&#34;https://twitter.com/itok\_twit&#34; target=\_blank&gt;itok&lt;/a&gt;です。feedtailorの古参エンジニアです。iOS/Macがメインですが、たまにサーバサイドもちょっとだけ触ったりします。うちの代表作「&lt;a href=&#34;http://sora-annai.jp/&#34; target=_blank&gt;そら案内&lt;/a&gt;」の中の人ということで今後ともよろしくお願いします。（個人の&lt;a href=&#34;http://itok.jp/&#34; target=_blank&gt;ブログ&lt;/a&gt;と文体変わらない感じですけれど、その点はご了承ください）&lt;/p&gt;
 
-&lt;h3 id=&#34;本題:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;本題&lt;/h3&gt;
+&lt;h3 id=&#34;本題&#34;&gt;本題&lt;/h3&gt;
 
 &lt;p&gt;さてさて、というわけで表題の通り「QR目覚まし」の v1.0.2 を公開しました。&lt;/p&gt;
 
@@ -38,7 +38,7 @@
 
 &lt;p&gt;変更点自体はそれほどたいしたことはないのですけれど、せっかくスタッフブログも始まったことですので、開発者によるアプリ紹介などを。&lt;/p&gt;
 
-&lt;h3 id=&#34;qr目覚ましとは:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;QR目覚ましとは&lt;/h3&gt;
+&lt;h3 id=&#34;qr目覚ましとは&#34;&gt;QR目覚ましとは&lt;/h3&gt;
 
 &lt;p&gt;僕自身の生活習慣から生まれたアプリです。&lt;/p&gt;
 
@@ -62,7 +62,7 @@
 
 &lt;p&gt;と、まあそういうわけで、なにかiPhoneを使って操作をしたら止まるようなもの（でもiPhone単体では成り立たないような操作）を考えていて、結果的にそれがQRコードをスキャンすると止まる、っていうところに行き着いたのでした。&lt;/p&gt;
 
-&lt;h3 id=&#34;itok的使い方:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;itok的使い方&lt;/h3&gt;
+&lt;h3 id=&#34;itok的使い方&#34;&gt;itok的使い方&lt;/h3&gt;
 
 &lt;p&gt;僕自身の設定はこんな感じです（普段、開発機であるtouchをアラーム用に使っているので英語環境のまんまですが）&lt;/p&gt;
 

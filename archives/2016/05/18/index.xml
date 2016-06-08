@@ -66,14 +66,14 @@ categories:
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;必須パラメータ:8ede24df0bb5942341e9f66136792af4&#34;&gt;必須パラメータ&lt;/h3&gt;
+&lt;h3 id=&#34;必須パラメータ&#34;&gt;必須パラメータ&lt;/h3&gt;
 
 &lt;table&gt;
 &lt;tr&gt;&lt;td&gt;title&lt;/td&gt;&lt;td&gt;コンテンツのタイトル&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;コンテンツの日付（ソートに使用されます）&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&#34;オプションパラメータ:8ede24df0bb5942341e9f66136792af4&#34;&gt;オプションパラメータ&lt;/h3&gt;
+&lt;h3 id=&#34;オプションパラメータ&#34;&gt;オプションパラメータ&lt;/h3&gt;
 
 &lt;table&gt;
 &lt;tr&gt;&lt;td&gt;description&lt;/td&gt;&lt;td&gt;コンテンツの説明文&lt;/td&gt;&lt;/tr&gt;
@@ -86,7 +86,7 @@ categories:
 &lt;tr&gt;&lt;td&gt;url&lt;/td&gt;&lt;td&gt;URLを変更します。&lt;br&gt;詳しくは&lt;a href=&#34;http://staff.feedtailor.jp/2016/05/11/hugo_05/&#34;&gt;前回のエントリ&lt;/a&gt;を参照ください。&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&#34;カテゴリ-タグについて:8ede24df0bb5942341e9f66136792af4&#34;&gt;カテゴリ・タグについて&lt;/h3&gt;
+&lt;h3 id=&#34;カテゴリ-タグについて&#34;&gt;カテゴリ・タグについて&lt;/h3&gt;
 
 &lt;p&gt;Hugo ではコンテンツをグルーピングするカテゴリやタグ等の分類のことを taxonomies と呼びます。&lt;/p&gt;
 
@@ -129,7 +129,7 @@ series:
 ---
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ユーザ定義パラメータ:8ede24df0bb5942341e9f66136792af4&#34;&gt;ユーザ定義パラメータ&lt;/h3&gt;
+&lt;h3 id=&#34;ユーザ定義パラメータ&#34;&gt;ユーザ定義パラメータ&lt;/h3&gt;
 
 &lt;p&gt;Hugo では、コンテンツに対して上で紹介した以外の任意のパラメータを追加することができます。&lt;br /&gt;
 以下は camelCase というパラメータを追加した例です。&lt;/p&gt;

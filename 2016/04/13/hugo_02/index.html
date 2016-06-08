@@ -3,7 +3,7 @@
 
 <head>
     <title>静的サイトジェネレータHugoを使ったサイト構築（フォルダ構成編） &middot; feedtailor Inc. スタッフブログ</title>
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.16" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="feedtailor Inc.">
@@ -53,7 +53,7 @@
 
 
 
-<meta itemprop="keywords" content="2014,2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,2016,2016/03,2016/03/25,2016/03/30,2016/04,2016/04/05,2016/04/13,2016/04/20,2016/04/27,2016/05,2016/05/11,2016/05/18,2016/06,2016/06/01,hugo,node,アプリご紹介,全般,技術情報,未分類,静的サイトジェネレータ,8bitter,bgtube,book,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
+<meta itemprop="keywords" content="2014,2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,2016,2016/03,2016/03/25,2016/03/30,2016/04,2016/04/05,2016/04/13,2016/04/20,2016/04/27,2016/05,2016/05/11,2016/05/18,2016/06,2016/06/01,2016/06/08,hugo,node,アプリご紹介,全般,技術情報,未分類,静的サイトジェネレータ,8bitter,bgtube,book&#43;,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
 
     
 
@@ -205,7 +205,7 @@
 
 <p><a href="/2016/04/05/hugo_01">前回</a>に引き続き、静的サイトジェネレータ <a href="http://gohugo.io">Hugo</a> について書きたいと思います。今回はフォルダ構成について。</p>
 
-<h3 id="フォルダ構成:b6ad6915c304ed346981b48c19a03aa1">フォルダ構成</h3>
+<h3 id="フォルダ構成">フォルダ構成</h3>
 
 <p>Hugo では、記事や画像、レイアウトを種類毎にそれぞれ決まったフォルダに配置する必要があります。<br />
 新規サイトを作成する <strong>hugo new site</strong> コマンドを利用すると、デフォルト設定に準じた以下のファイル・フォルダが生成されます。</p>
@@ -221,7 +221,7 @@
 
 <p>その他に、テーマを置く <strong><a href="http://gohugo.io/themes/overview/">themes</a></strong> フォルダ、ファイルが出力される <strong>public</strong> フォルダの位置がデフォルトで設定されています。</p>
 
-<h3 id="config-tomlファイル:b6ad6915c304ed346981b48c19a03aa1">config.tomlファイル</h3>
+<h3 id="config-tomlファイル">config.tomlファイル</h3>
 
 <p>URLやタイトル、フォルダ構成等、サイト全体の設定を記載するファイルです。<br />
 デフォルトでは拡張子の通り、<a href="https://github.com/toml-lang/toml">TOML形式</a> で書きます。config.toml が存在しない場合は config.yaml、config.json の順に使用されます。</p>
@@ -241,12 +241,12 @@ title = &quot;My New Hugo Site&quot;
 <pre><code>$ hugo config
 </code></pre>
 
-<h3 id="publicフォルダ:b6ad6915c304ed346981b48c19a03aa1">publicフォルダ</h3>
+<h3 id="publicフォルダ">publicフォルダ</h3>
 
 <p><strong>hugo</strong> コマンドで生成されるファイル群は public フォルダに出力されます。<br />
 このフォルダをウェブサーバに設置してサイトを公開します。</p>
 
-<h3 id="archetypesフォルダ:b6ad6915c304ed346981b48c19a03aa1">archetypesフォルダ</h3>
+<h3 id="archetypesフォルダ">archetypesフォルダ</h3>
 
 <p>記事の雛形を置くフォルダです。<br />
 雛形ファイルは <strong>hugo new</strong> コマンドで記事ファイルを生成する時に使用されます。雛形が見つからない場合は、日付、タイトル、下書きフラグのみの記事が生成されます。</p>
@@ -261,13 +261,13 @@ title = &quot;test&quot;
 
 </code></pre>
 
-<h3 id="contentフォルダ:b6ad6915c304ed346981b48c19a03aa1">contentフォルダ</h3>
+<h3 id="contentフォルダ">contentフォルダ</h3>
 
 <p>記事を置くフォルダです。<br />
 このフォルダにあるファイルはHugoの変換処理を通ります。例えば、.md（Markdown形式）ファイルの内容は、HTMLに変換され、所定のレイアウトに埋め込まれてHTMLファイルとして出力されます。<br />
 変換処理が不要なファイルは後述する <strong>static</strong> フォルダに置いてください。</p>
 
-<h3 id="dataフォルダ:b6ad6915c304ed346981b48c19a03aa1">dataフォルダ</h3>
+<h3 id="dataフォルダ">dataフォルダ</h3>
 
 <p>データファイルを置くフォルダです。<br />
 データファイルは、任意の名前・値を定義することができるので、簡易なKey-Valueデータストアとして使用できます。<br />
@@ -288,18 +288,18 @@ title = &quot;test&quot;
   title       = &quot;天気予報アプリ「そら案内」および関連全事業を無償譲渡しました&quot;
 </code></pre>
 
-<h3 id="layoutフォルダ:b6ad6915c304ed346981b48c19a03aa1">layoutフォルダ</h3>
+<h3 id="layoutフォルダ">layoutフォルダ</h3>
 
 <p>HTMLのレイアウトを置くフォルダです。<br />
 このフォルダにあるレイアウトに <strong>content</strong> フォルダ内の記事や <strong>data</strong> フォルダのデータを埋め込んでHTMLを生成します。<br />
 レイアウト内の制御文やループはGo言語の <a href="https://golang.org/pkg/html/template/">html/templateライブラリ</a> を使って記述します。</p>
 
-<h3 id="staticフォルダ:b6ad6915c304ed346981b48c19a03aa1">staticフォルダ</h3>
+<h3 id="staticフォルダ">staticフォルダ</h3>
 
 <p>JSやCSS、画像等の静的素材を置くフォルダです。<br />
 Hugoの変換処理が不要なファイルはこのフォルダに設置してください。<strong>public</strong> フォルダにそのままコピーされます。</p>
 
-<h3 id="themeフォルダ:b6ad6915c304ed346981b48c19a03aa1">themeフォルダ</h3>
+<h3 id="themeフォルダ">themeフォルダ</h3>
 
 <p>テーマを置くフォルダです。<br />
 Hugo では複数のテーマを保存しておいて、簡単に切り替えることができます。<br />
@@ -380,6 +380,31 @@ Hugo では複数のテーマを保存しておいて、簡単に切り替える
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2016/06/08/hugo_08" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/06/hugo_08.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（フォルダ構成編）" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                        静的サイトジェネレータ
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/06/08/hugo_08" class="title">静的サイトジェネレータ「Hugo」v0.16 がリリースされました</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-06-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-06-08</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -481,31 +506,6 @@ Hugo では複数のテーマを保存しておいて、簡単に切り替える
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://staff.feedtailor.jp/2016/04/20/hugo_03" class="thumbnail">
-                    
-                        
-                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_03.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（フォルダ構成編）" class="thumbnail-image"></span>
-                        
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-category">
-                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
-                        静的サイトジェネレータ
-                        </a>
-                    </p>
-                    
-                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/04/20/hugo_03" class="title">静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）</a></p>
-                    <p class="item-date">
-                        <time datetime="2016-04-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-04-20</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -523,7 +523,7 @@ Hugo では複数のテーマを保存しておいて、簡単に切り替える
                 <a class="category-list-link" href="http://staff.feedtailor.jp/categories/hugo">
                     hugo
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
             <li class="category-list-item">
@@ -565,7 +565,7 @@ Hugo では複数のテーマを保存しておいて、簡単に切り替える
                 <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
                     静的サイトジェネレータ
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
         </ul>
@@ -892,8 +892,10 @@ Hugo では複数のテーマを保存しておいて、簡単に切り替える
                 <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2016/06">
                     2016/06
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
+            
+            
             
             
             
@@ -919,7 +921,7 @@ Hugo では複数のテーマを保存しておいて、簡単に切り替える
         
         <a href="http://staff.feedtailor.jp/tags/bgtube" style="font-size: 12px;">bgtube</a>
         
-        <a href="http://staff.feedtailor.jp/tags/book" style="font-size: 12px;">book</a>
+        <a href="http://staff.feedtailor.jp/tags/book&#43;" style="font-size: 12px;">book&#43;</a>
         
         <a href="http://staff.feedtailor.jp/tags/cocos2d-x" style="font-size: 12px;">cocos2d-x</a>
         

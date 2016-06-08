@@ -24,7 +24,7 @@
 &lt;p&gt;Hugo では、テンプレートの記述に Go 言語の &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; ライブラリを使用しています。
 一見複雑そうに見えますが、簡単な記法で多くのことを実現できます。&lt;/p&gt;
 
-&lt;h3 id=&#34;テンプレートの種類:4c2585f1ab85585af71601f47af31217&#34;&gt;テンプレートの種類&lt;/h3&gt;
+&lt;h3 id=&#34;テンプレートの種類&#34;&gt;テンプレートの種類&lt;/h3&gt;
 
 &lt;p&gt;Hugo では、以下の３種類のテンプレートでサイトを構築します。&lt;/p&gt;
 
@@ -52,7 +52,7 @@
 &lt;dd&gt;Taxonomy（カテゴリやタグなどの分類）のリストを表示するパーツ&lt;/dd&gt;
 &lt;/dl&gt;
 
-&lt;h3 id=&#34;トップページ:4c2585f1ab85585af71601f47af31217&#34;&gt;トップページ&lt;/h3&gt;
+&lt;h3 id=&#34;トップページ&#34;&gt;トップページ&lt;/h3&gt;
 
 &lt;p&gt;まずサイトのトップページを作りましょう。&lt;a href=&#34;http://staff.feedtailor.jp/2016/04/13/hugo_02/&#34;&gt;前回&lt;/a&gt; で config.toml に書いた baseurl で表示するページです。&lt;br /&gt;
 ファイルは layouts フォルダ直下に index.html という名前で作成します。content フォルダ内ではありませんので注意してください。&lt;br /&gt;

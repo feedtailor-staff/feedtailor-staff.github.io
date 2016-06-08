@@ -31,7 +31,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;リジェクト理由は-8221-14-personal-attacks-8221-の第3項:167d0ed2667e622b37792095d8f962a5&#34;&gt;リジェクト理由は&amp;#8221;14. Personal attacks&amp;#8221;の第3項&lt;/h2&gt;
+&lt;h2 id=&#34;リジェクト理由は-8221-14-personal-attacks-8221-の第3項&#34;&gt;リジェクト理由は&amp;#8221;14. Personal attacks&amp;#8221;の第3項&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developer.apple.com/app-store/review/guidelines/#personal-attacks&#34;&gt;App Store Review Guidelines&lt;/a&gt; からリジェクト理由として挙げられた箇所を引用します。&lt;/p&gt;
 
@@ -43,13 +43,13 @@
 
 &lt;p&gt;つまり、「未成年者がエロいコンテンツを見ることを防ぐ」や「不愉快で見たくない投稿を行うユーザーをブロックする」ことを目的にユーザーを保護しようという目的があるようです。&lt;/p&gt;
 
-&lt;h2 id=&#34;twitter-や-facebook-はどうしてる:167d0ed2667e622b37792095d8f962a5&#34;&gt;Twitter や Facebook はどうしてる？&lt;/h2&gt;
+&lt;h2 id=&#34;twitter-や-facebook-はどうしてる&#34;&gt;Twitter や Facebook はどうしてる？&lt;/h2&gt;
 
 &lt;p&gt;ユーザー投稿型のサービスとして、今ならば Twitter と Facebook が双璧をなしていますね。&lt;/p&gt;
 
 &lt;p&gt;それぞれのサービスでも iOS アプリがありますが、どのように対応しているかを確認してみます。&lt;/p&gt;
 
-&lt;h3 id=&#34;twitter:167d0ed2667e622b37792095d8f962a5&#34;&gt;Twitter&lt;/h3&gt;
+&lt;h3 id=&#34;twitter&#34;&gt;Twitter&lt;/h3&gt;
 
 &lt;p&gt;特定のユーザーをブロックすること、特定のツイートをスパムなどとして報告できるようになっています。&lt;/p&gt;
 
@@ -71,7 +71,7 @@
   &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;facebook:167d0ed2667e622b37792095d8f962a5&#34;&gt;Facebook&lt;/h3&gt;
+&lt;h3 id=&#34;facebook&#34;&gt;Facebook&lt;/h3&gt;
 
 &lt;p&gt;投稿に対して「この投稿を報告する」として問題があることを報告できるようにしています。&lt;/p&gt;
 
@@ -85,11 +85,11 @@
   &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;dailyshot-はどう対応した:167d0ed2667e622b37792095d8f962a5&#34;&gt;Dailyshot はどう対応した？&lt;/h2&gt;
+&lt;h2 id=&#34;dailyshot-はどう対応した&#34;&gt;Dailyshot はどう対応した？&lt;/h2&gt;
 
 &lt;p&gt;Dailyshot では、以下の二つの機能を実装しました。&lt;/p&gt;
 
-&lt;h3 id=&#34;ショットの問題を報告する機能:167d0ed2667e622b37792095d8f962a5&#34;&gt;ショットの問題を報告する機能&lt;/h3&gt;
+&lt;h3 id=&#34;ショットの問題を報告する機能&#34;&gt;ショットの問題を報告する機能&lt;/h3&gt;
 
 &lt;p&gt;ショットを表示した時、左下に「報告」のボタンが現れます。ここからそのショットの問題点を報告できるようになりました。&lt;/p&gt;
 
@@ -103,7 +103,7 @@
   &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;特定ユーザーのテーマをブロックする機能:167d0ed2667e622b37792095d8f962a5&#34;&gt;特定ユーザーのテーマをブロックする機能&lt;/h3&gt;
+&lt;h3 id=&#34;特定ユーザーのテーマをブロックする機能&#34;&gt;特定ユーザーのテーマをブロックする機能&lt;/h3&gt;
 
 &lt;p&gt;ユーザのプロフィールを表示した時、画面の一番下に「〜さんをブロックする」ボタンが表示されます。これを使って、ユーザーをブロックすることができます。&lt;/p&gt;
 
@@ -121,7 +121,7 @@
 
 &lt;p&gt;これら二つの機能を実装し、Dailyshot v1.1.0 は審査を通過することができました。&lt;/p&gt;
 
-&lt;h2 id=&#34;最後に:167d0ed2667e622b37792095d8f962a5&#34;&gt;最後に&lt;/h2&gt;
+&lt;h2 id=&#34;最後に&#34;&gt;最後に&lt;/h2&gt;
 
 &lt;p&gt;14.3項は&lt;a href=&#34;https://github.com/jaredsinclair/AppStoreReviewGuidelines/commit/46ed21b844473343680282b40800304e28381e5f#diff-1b07cb2ba52400b236afd363c871579e&#34;&gt;2014年9月1日のガイドライン&lt;/a&gt;更新で追加されたようです。&lt;/p&gt;
 
@@ -153,7 +153,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/dailyshot/id932716879&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;アップデートの内容:9accb41482a9fdf0e94116ce0fc1066a&#34;&gt;アップデートの内容&lt;/h2&gt;
+&lt;h2 id=&#34;アップデートの内容&#34;&gt;アップデートの内容&lt;/h2&gt;
 
 &lt;p&gt;今回のアップデートの内容は以下の通りです。&lt;/p&gt;
 
@@ -173,7 +173,7 @@
 
 &lt;p&gt;いくつかピックアップして、詳しくご紹介します。&lt;/p&gt;
 
-&lt;h2 id=&#34;カラムの呼び方をテーマに変更:9accb41482a9fdf0e94116ce0fc1066a&#34;&gt;カラムの呼び方をテーマに変更&lt;/h2&gt;
+&lt;h2 id=&#34;カラムの呼び方をテーマに変更&#34;&gt;カラムの呼び方をテーマに変更&lt;/h2&gt;
 
 &lt;p&gt;Dailyshot は表計算ソフトのように行と列で構成されています。&lt;/p&gt;
 
@@ -181,7 +181,7 @@
 
 &lt;p&gt;機能的には変化はありませんが、一続きの写真を「テーマ」と呼ぶことによってより親しみが湧くのではないでしょうか。&lt;/p&gt;
 
-&lt;h2 id=&#34;ショットをシェアできるようになりました-ショットをtwitterやfacebbokに投稿することができます:9accb41482a9fdf0e94116ce0fc1066a&#34;&gt;ショットをシェアできるようになりました。ショットをTwitterやFacebbokに投稿することができます&lt;/h2&gt;
+&lt;h2 id=&#34;ショットをシェアできるようになりました-ショットをtwitterやfacebbokに投稿することができます&#34;&gt;ショットをシェアできるようになりました。ショットをTwitterやFacebbokに投稿することができます&lt;/h2&gt;
 
 &lt;p&gt;今まではあまり表に出ていませんでしたが、 Dailyshot はブラウザから見ることもできます。&lt;/p&gt;
 
@@ -199,7 +199,7 @@
 
 &lt;p&gt;Twitter や Facebook にシェアする場合には iOS の設定でそれぞれのアカウントの設定が必要ですのでご注意くださいね。&lt;/p&gt;
 
-&lt;h2 id=&#34;受け取る通知を選択できるようになりました:9accb41482a9fdf0e94116ce0fc1066a&#34;&gt;受け取る通知を選択できるようになりました&lt;/h2&gt;
+&lt;h2 id=&#34;受け取る通知を選択できるようになりました&#34;&gt;受け取る通知を選択できるようになりました&lt;/h2&gt;
 
 &lt;p&gt;Dailyshot は「フォローしているユーザーがショットを投稿した時」と「自分のショットにLikeがついた時」に通知を行います。&lt;/p&gt;
 
@@ -215,7 +215,7 @@
 
 &lt;p&gt;お詫び： v1.1.0 現在、通知の設定を表示した時に、すでに設定されたされた状態ではなく両方ともオフで表示されてしまう不具合が確認されています。次のリリースで修正される予定です。表示がオフになっていても、最後にオンに設定した状態では通知は正しく行われます。&lt;/p&gt;
 
-&lt;h2 id=&#34;urlスキームが追加されました-8220-dailyshot-shot-テーマid-ショットid-8221-でショットを外部から表示させることができます:9accb41482a9fdf0e94116ce0fc1066a&#34;&gt;URLスキームが追加されました。 &amp;#8220;dailyshot://shot/[テーマID]/[ショットID]&amp;#8221; でショットを外部から表示させることができます。&lt;/h2&gt;
+&lt;h2 id=&#34;urlスキームが追加されました-8220-dailyshot-shot-テーマid-ショットid-8221-でショットを外部から表示させることができます&#34;&gt;URLスキームが追加されました。 &amp;#8220;dailyshot://shot/[テーマID]/[ショットID]&amp;#8221; でショットを外部から表示させることができます。&lt;/h2&gt;
 
 &lt;p&gt;一部のユーザーさんに熱望される URL スキームに対応しました。&lt;/p&gt;
 
@@ -227,9 +227,9 @@
 
 &lt;p&gt;今回は「ショットを表示する URL スキーム」のみの対応ですが「ユーザーのタイムラインを表示する URL スキーム」も今後のアップデートで対応する予定です。&lt;/p&gt;
 
-&lt;h2 id=&#34;サービスにそぐわないショットを運営に報告できるようになりました:9accb41482a9fdf0e94116ce0fc1066a&#34;&gt;サービスにそぐわないショットを運営に報告できるようになりました&lt;/h2&gt;
+&lt;h2 id=&#34;サービスにそぐわないショットを運営に報告できるようになりました&#34;&gt;サービスにそぐわないショットを運営に報告できるようになりました&lt;/h2&gt;
 
-&lt;h2 id=&#34;特定のユーザーのテーマがパブリックタイムラインに表示されないようにブロックできるようになりました:9accb41482a9fdf0e94116ce0fc1066a&#34;&gt;特定のユーザーのテーマがパブリックタイムラインに表示されないようにブロックできるようになりました&lt;/h2&gt;
+&lt;h2 id=&#34;特定のユーザーのテーマがパブリックタイムラインに表示されないようにブロックできるようになりました&#34;&gt;特定のユーザーのテーマがパブリックタイムラインに表示されないようにブロックできるようになりました&lt;/h2&gt;
 
 &lt;p&gt;Dailyshot では &lt;a href=&#34;http://dailyshot.me/legal/terms.html&#34;&gt;利用規約&lt;/a&gt; の第9条 (禁止事項)にていくつかの行為を禁止しています。&lt;/p&gt;
 
@@ -239,7 +239,7 @@
 
 &lt;p&gt;ブロックすると、そのユーザーの投稿がパブリックタイムラインに流れてこなくなります。ただし、ブロックしたユーザーがご自身のショットを見ることは引き続き可能です。&lt;/p&gt;
 
-&lt;h3 id=&#34;最後に:9accb41482a9fdf0e94116ce0fc1066a&#34;&gt;最後に&lt;/h3&gt;
+&lt;h3 id=&#34;最後に&#34;&gt;最後に&lt;/h3&gt;
 
 &lt;p&gt;「報告」と「ブロック」の機能ですが、実は Apple の新しいレビューガイドラインの 14.3 項にて実装が必要とされている機能です。&lt;/p&gt;
 

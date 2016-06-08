@@ -25,7 +25,7 @@
 
 &lt;p&gt;archetype を使用すると毎回フロントマターに同じ項目を追加したり、同じ書き出し文を書いたりする煩わしさから解放されます。&lt;/p&gt;
 
-&lt;h2 id=&#34;使い方:d6589e61dcd714d6997986c654c8402a&#34;&gt;使い方&lt;/h2&gt;
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
 
 &lt;p&gt;以下、フロントマターの categories と tags という項目と&amp;rdquo;こんにちは XXX です。&amp;rdquo;という本文を archetype で生成する方法を例示します。&lt;br /&gt;
 まず、雛形ファイルを作成します。archetypes/default.md という名前で次の内容を保存してください。&lt;/p&gt;
@@ -101,7 +101,7 @@ tags:
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;archetypeの検索順:d6589e61dcd714d6997986c654c8402a&#34;&gt;archetypeの検索順&lt;/h2&gt;
+&lt;h2 id=&#34;archetypeの検索順&#34;&gt;archetypeの検索順&lt;/h2&gt;
 
 &lt;p&gt;適用されるarchetypeは以下の順に検索されます。&lt;/p&gt;
 

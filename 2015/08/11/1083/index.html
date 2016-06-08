@@ -3,7 +3,7 @@
 
 <head>
     <title>超聖域: iOSアプリのビルドツール &middot; feedtailor Inc. スタッフブログ</title>
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.16" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="feedtailor Inc.">
@@ -47,7 +47,7 @@
 
 
 
-<meta itemprop="keywords" content="2014,2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,2016,2016/03,2016/03/25,2016/03/30,2016/04,2016/04/05,2016/04/13,2016/04/20,2016/04/27,2016/05,2016/05/11,2016/05/18,2016/06,2016/06/01,hugo,node,アプリご紹介,全般,技術情報,未分類,静的サイトジェネレータ,8bitter,bgtube,book,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
+<meta itemprop="keywords" content="2014,2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,2016,2016/03,2016/03/25,2016/03/30,2016/04,2016/04/05,2016/04/13,2016/04/20,2016/04/27,2016/05,2016/05/11,2016/05/18,2016/06,2016/06/01,2016/06/08,hugo,node,アプリご紹介,全般,技術情報,未分類,静的サイトジェネレータ,8bitter,bgtube,book&#43;,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
 
     
 
@@ -195,7 +195,7 @@
 
 <p>日々細かい改良を施すというよりは、必要な時に少しまとまった時間をとって最低限の改良を行うにとどまる事が多かったのですが、超聖域という事で今まで気になりつつも放置していた部分に大きく手を入れよう試みを行いました。</p>
 
-<h2 id="これまでの状況:2926f8c19f0245e326fdd9f67904d277">これまでの状況</h2>
+<h2 id="これまでの状況">これまでの状況</h2>
 
 <p>これまでの状況はざっくりと以下のような感じです。</p>
 
@@ -210,7 +210,7 @@
 
 <p>社内のRakefileでは、xcodebuildを直接触って動作確認しつつ、ネット上の各種情報や既存の実装を参考に必要なエッセンスを取り込むような事をしていました。</p>
 
-<h2 id="fastlane:2926f8c19f0245e326fdd9f67904d277">fastlane</h2>
+<h2 id="fastlane">fastlane</h2>
 
 <p>先にあげましたが、新しめのツールとして <a href="https://github.com/KrauseFx/fastlane">fastlane</a>があります。iOSアプリ開発にまつわる様々なタスクをなんでも自動化してしまおうという壮大なプロジェクト。試してみる価値大では？という印象を受けました。</p>
 
@@ -224,7 +224,7 @@
 
 <p>(fastlane自体はやりたい事にうまくはまると良いツールだと思いますので今後も注目していきたいと思っています)</p>
 
-<h2 id="gem化したコマンドラインツールへの置き換え:2926f8c19f0245e326fdd9f67904d277">Gem化したコマンドラインツールへの置き換え</h2>
+<h2 id="gem化したコマンドラインツールへの置き換え">Gem化したコマンドラインツールへの置き換え</h2>
 
 <p>社内Rakefileは必要最低限の機能しかない規模の小さいもので見通しは良い状態にあります。ただ、いくつか問題があったのでそれを潰していく事にしました。</p>
 
@@ -247,7 +247,7 @@
 
 <p>作ったコマンドは&#8221;ftbuild&#8221;と命名しました。(今の所一般公開予定はありません)</p>
 
-<h2 id="gemの作成:2926f8c19f0245e326fdd9f67904d277">Gemの作成</h2>
+<h2 id="gemの作成">Gemの作成</h2>
 
 <p>bundlerでGemのひな形を作成することができるのでこれを利用。(<a href="http://bundler.io/v1.10/bundle_gem.html"><code>bundle gem</code></a>)</p>
 
@@ -294,7 +294,7 @@
 
 <p>あとは元のRakefileに実装していた諸々機能をThorベースでコマンド化していきます。</p>
 
-<h2 id="dsl:2926f8c19f0245e326fdd9f67904d277">DSL</h2>
+<h2 id="dsl">DSL</h2>
 
 <p>昨今の開発シーンでは、RubyベースのDSLを設定ファイルとして利用する事がよくあります。(Gemfile、Podfile、Rakefile、Fastfile、etc..)</p>
 
@@ -334,7 +334,7 @@ hogehoge dir_path + &quot;_2&quot;
 
 <p>のような記述が可能になり、YAMLの設定ファイルより記述力が格段に増します。</p>
 
-<h2 id="まとめ:2926f8c19f0245e326fdd9f67904d277">まとめ</h2>
+<h2 id="まとめ">まとめ</h2>
 
 <ul>
 <li>fastlaneは要注目。</li>
@@ -416,6 +416,31 @@ hogehoge dir_path + &quot;_2&quot;
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2016/06/08/hugo_08" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/06/hugo_08.png)" alt="超聖域: iOSアプリのビルドツール" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                        静的サイトジェネレータ
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/06/08/hugo_08" class="title">静的サイトジェネレータ「Hugo」v0.16 がリリースされました</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-06-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-06-08</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -517,31 +542,6 @@ hogehoge dir_path + &quot;_2&quot;
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://staff.feedtailor.jp/2016/04/20/hugo_03" class="thumbnail">
-                    
-                        
-                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_03.png)" alt="超聖域: iOSアプリのビルドツール" class="thumbnail-image"></span>
-                        
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-category">
-                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
-                        静的サイトジェネレータ
-                        </a>
-                    </p>
-                    
-                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/04/20/hugo_03" class="title">静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）</a></p>
-                    <p class="item-date">
-                        <time datetime="2016-04-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-04-20</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -559,7 +559,7 @@ hogehoge dir_path + &quot;_2&quot;
                 <a class="category-list-link" href="http://staff.feedtailor.jp/categories/hugo">
                     hugo
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
             <li class="category-list-item">
@@ -601,7 +601,7 @@ hogehoge dir_path + &quot;_2&quot;
                 <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
                     静的サイトジェネレータ
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
         </ul>
@@ -928,8 +928,10 @@ hogehoge dir_path + &quot;_2&quot;
                 <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2016/06">
                     2016/06
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
+            
+            
             
             
             
@@ -955,7 +957,7 @@ hogehoge dir_path + &quot;_2&quot;
         
         <a href="http://staff.feedtailor.jp/tags/bgtube" style="font-size: 12px;">bgtube</a>
         
-        <a href="http://staff.feedtailor.jp/tags/book" style="font-size: 12px;">book</a>
+        <a href="http://staff.feedtailor.jp/tags/book&#43;" style="font-size: 12px;">book&#43;</a>
         
         <a href="http://staff.feedtailor.jp/tags/cocos2d-x" style="font-size: 12px;">cocos2d-x</a>
         

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016/06/08 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2016/06/08/</link>
+    <description>Recent content in 2016/06/08 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 08 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2016/06/08/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータ「Hugo」v0.16 がリリースされました</title>
+      <link>http://staff.feedtailor.jp/2016/06/08/hugo_08</link>
+      <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/06/08/hugo_08</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;2016/06/06(現地時間)に、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の v0.16 がリリースされました。&lt;br /&gt;
+今回は、新バージョンの変更点をご紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/spf13/hugo/releases/tag/v0.16&#34;&gt;リリースノーツ&lt;/a&gt; をみたところ、Hugoの開発着手からちょうど 3 年だそうです。
+前バージョンである v0.15 からは約 6 ヶ月ぶりのアップデートになります。&lt;br /&gt;
+バージョン番号こそ 0.16 ですが、不具合も少なく、十分に安定して使用できています。&lt;/p&gt;
+
+&lt;h3 id=&#34;アップデート&#34;&gt;アップデート&lt;/h3&gt;
+
+&lt;p&gt;Mac の Homebrew を利用している場合は、簡単にアップデートできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew update
+$ brew upgrade hugo
+$ hugo version
+Hugo Static Site Generator v0.16 BuildDate: 2016-06-06T21:37:59+09:00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;debian / ubuntu linuxは、公式リポジトリに登録されましたので、以下のコマンドでインストールできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ apt-get install hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Window版は &lt;a href=&#34;https://github.com/spf13/hugo/releases/tag/v0.16&#34;&gt;こちら&lt;/a&gt; からダウンロードして exe ファイルを置き換えてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;主な新機能&#34;&gt;主な新機能&lt;/h3&gt;
+
+&lt;h4 id=&#34;partial-builds&#34;&gt;Partial Builds&lt;/h4&gt;
+
+&lt;p&gt;前バージョンまでは、サイトのプレビュー中（&lt;code&gt;hugo server&lt;/code&gt;）にコンテンツの変更点を感知した時、サイト全体を再生成していましたが、今バージョンからは、ファイルシステムを監視し変更されたファイルだけを再読み込みすることで、必要な部分だけを再生成するように変更されています。&lt;br /&gt;
+テストの結果、ビルド回数が 10% から最大 90% を減少したと記載されています。&lt;/p&gt;
+
+&lt;h4 id=&#34;template-の改善&#34;&gt;Template の改善&lt;/h4&gt;
+
+&lt;p&gt;今バージョンでは、Go 1.6 で導入された &lt;code&gt;block&lt;/code&gt; キーワードに対応しました。&lt;/p&gt;
+
+&lt;h3 id=&#34;その他の機能改善-修正&#34;&gt;その他の機能改善・修正&lt;/h3&gt;
+
+&lt;p&gt;その他、小さいけれども重要な機能改善・修正事項が多数記載されていました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;設定ファイルの Live Reload 対応&lt;/li&gt;
+&lt;li&gt;エラー終了時のエラーコード出力&lt;/li&gt;
+&lt;li&gt;環境変数からオプションを取得&lt;/li&gt;
+&lt;li&gt;themesDir オプションを追加&lt;/li&gt;
+&lt;li&gt;ソースファイルベースの相対リンク&lt;/li&gt;
+&lt;li&gt;ソート関数 ByLastmod を追加&lt;/li&gt;
+&lt;li&gt;ソート関数 ByCount の一貫性改善&lt;/li&gt;
+&lt;li&gt;テンプレート関数の追加 &lt;code&gt;readFile&lt;/code&gt; &lt;code&gt;countword&lt;/code&gt; &lt;code&gt;jsonify&lt;/code&gt; &lt;code&gt;slice&lt;/code&gt; &amp;hellip;&lt;/li&gt;
+&lt;li&gt;404.html のページ生成無効化オプションを追加&lt;/li&gt;
+&lt;li&gt;content, layout, static, theme のシンボリックリンク対応&lt;/li&gt;
+&lt;li&gt;server 起動時に指定ポートが使用中の場合は起動中止&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この中ではエラーコード出力とserver起動時のポートチェックが特に嬉しいです。シェルスクリプトからの起動やエラー判定に役立ちます！&lt;br /&gt;
+他には、設定ファイルのリロード、ByCountの一貫性改善、テンプレート関数の追加でしょうか。&lt;/p&gt;
+
+&lt;p&gt;他にもまだまだ変更点がありますので、気になった点は動作検証してまた改めてご紹介したいと思います。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

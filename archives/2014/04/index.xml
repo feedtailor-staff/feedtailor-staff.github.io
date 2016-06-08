@@ -17,11 +17,11 @@
       <guid>http://staff.feedtailor.jp/2014/04/24/102</guid>
       <description>
 
-&lt;h3 id=&#34;ごあいさつ:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;ごあいさつ&lt;/h3&gt;
+&lt;h3 id=&#34;ごあいさつ&#34;&gt;ごあいさつ&lt;/h3&gt;
 
 &lt;p&gt;まずはじめにということで、はじめましてです。&lt;a href=&#34;https://twitter.com/itok\_twit&#34; target=\_blank&gt;itok&lt;/a&gt;です。feedtailorの古参エンジニアです。iOS/Macがメインですが、たまにサーバサイドもちょっとだけ触ったりします。うちの代表作「&lt;a href=&#34;http://sora-annai.jp/&#34; target=_blank&gt;そら案内&lt;/a&gt;」の中の人ということで今後ともよろしくお願いします。（個人の&lt;a href=&#34;http://itok.jp/&#34; target=_blank&gt;ブログ&lt;/a&gt;と文体変わらない感じですけれど、その点はご了承ください）&lt;/p&gt;
 
-&lt;h3 id=&#34;本題:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;本題&lt;/h3&gt;
+&lt;h3 id=&#34;本題&#34;&gt;本題&lt;/h3&gt;
 
 &lt;p&gt;さてさて、というわけで表題の通り「QR目覚まし」の v1.0.2 を公開しました。&lt;/p&gt;
 
@@ -38,7 +38,7 @@
 
 &lt;p&gt;変更点自体はそれほどたいしたことはないのですけれど、せっかくスタッフブログも始まったことですので、開発者によるアプリ紹介などを。&lt;/p&gt;
 
-&lt;h3 id=&#34;qr目覚ましとは:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;QR目覚ましとは&lt;/h3&gt;
+&lt;h3 id=&#34;qr目覚ましとは&#34;&gt;QR目覚ましとは&lt;/h3&gt;
 
 &lt;p&gt;僕自身の生活習慣から生まれたアプリです。&lt;/p&gt;
 
@@ -62,7 +62,7 @@
 
 &lt;p&gt;と、まあそういうわけで、なにかiPhoneを使って操作をしたら止まるようなもの（でもiPhone単体では成り立たないような操作）を考えていて、結果的にそれがQRコードをスキャンすると止まる、っていうところに行き着いたのでした。&lt;/p&gt;
 
-&lt;h3 id=&#34;itok的使い方:c0048b4df7a78fbf4dc4c48cc5946596&#34;&gt;itok的使い方&lt;/h3&gt;
+&lt;h3 id=&#34;itok的使い方&#34;&gt;itok的使い方&lt;/h3&gt;
 
 &lt;p&gt;僕自身の設定はこんな感じです（普段、開発機であるtouchをアラーム用に使っているので英語環境のまんまですが）&lt;/p&gt;
 
@@ -94,7 +94,7 @@
       <guid>http://staff.feedtailor.jp/2014/04/18/32</guid>
       <description>
 
-&lt;h2 id=&#34;ごあいさつ:1e522eaaec5ddeeb385d71167c22e9ec&#34;&gt;ごあいさつ&lt;/h2&gt;
+&lt;h2 id=&#34;ごあいさつ&#34;&gt;ごあいさつ&lt;/h2&gt;
 
 &lt;p&gt;皆様、初めまして。feedtailor Inc. の赤魔導士、&lt;a href=&#34;http://twitter.com/sumihiro&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
 
@@ -102,7 +102,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/sunshine-the-stream-splitter/id826301053?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2014/04/Download_on_the_App_Store_Badge_JP_135x40_1004.png&#34; alt=&#34;AppStoreからダウンロード&#34; width=&#34;135&#34; height=&#34;40&#34; class=&#34;alignnone size-full wp-image-58&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;sunshineって何するアプリ:1e522eaaec5ddeeb385d71167c22e9ec&#34;&gt;Sunshineって何するアプリ？&lt;/h2&gt;
+&lt;h2 id=&#34;sunshineって何するアプリ&#34;&gt;Sunshineって何するアプリ？&lt;/h2&gt;
 
 &lt;p&gt;Sunshineは&lt;strong&gt;動画から音声だけを切り出したり、逆に音声を消して映像だけにしたりする&lt;/strong&gt;アプリです！なんとなく利用シーンが思い浮かびましたか？&lt;/p&gt;
 
@@ -116,7 +116,7 @@
 &lt;li&gt;ライブを撮影したけど、音声だけループで聴きたい！ → Sunshineで音声だけにして再生アプリに渡しましょう！&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;sunshineの使い方:1e522eaaec5ddeeb385d71167c22e9ec&#34;&gt;Sunshineの使い方&lt;/h2&gt;
+&lt;h2 id=&#34;sunshineの使い方&#34;&gt;Sunshineの使い方&lt;/h2&gt;
 
 &lt;p&gt;使い方はとても簡単です！&lt;/p&gt;
 
@@ -136,7 +136,7 @@
 
 &lt;p&gt;逆に、DropboxなどからSunshineに動画ファイルを渡すこともできます！&lt;/p&gt;
 
-&lt;h2 id=&#34;ご注意:1e522eaaec5ddeeb385d71167c22e9ec&#34;&gt;ご注意&lt;/h2&gt;
+&lt;h2 id=&#34;ご注意&#34;&gt;ご注意&lt;/h2&gt;
 
 &lt;p&gt;Sunshineは無料で購入できます！&lt;/p&gt;
 
@@ -146,7 +146,7 @@
 
 &lt;p&gt;制限解除を一度ご購入いただいた後は、回数に制限なく何回でもご利用いただけます。&lt;/p&gt;
 
-&lt;h2 id=&#34;なんでsunshineって名前なの:1e522eaaec5ddeeb385d71167c22e9ec&#34;&gt;なんでSunshineって名前なの？&lt;/h2&gt;
+&lt;h2 id=&#34;なんでsunshineって名前なの&#34;&gt;なんでSunshineって名前なの？&lt;/h2&gt;
 
 &lt;p&gt;「&lt;strong&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/sunshine-the-stream-splitter/id826301053?l=ja&amp;amp;ls=1&amp;amp;mt=8&#34;&gt;Sunshine(サンシャイン)&lt;/a&gt;&lt;/strong&gt;」の名前の由来は、実は弊社feedtailor Inc.が以前にリリースしたサムネイルも動画再生するYouTube動画プレイヤーアプリ「**&lt;a href=&#34;https://itunes.apple.com/jp/app/ashura-player-samuneirumo/id575096078?mt=8&#34;&gt;ASHURA Player(アシュラプレイヤー)&lt;/strong&gt;&lt;/a&gt;」と関係があるのです。&lt;/p&gt;&lt;/p&gt;
 
@@ -154,7 +154,7 @@
 
 &lt;p&gt;いくつもの動画を同時に再生できる「ASHURA Player」、そして大きな動画を小さな音声ファイルにしてしまう「Sunshine」。まさにぴったりのネーミングですね！&lt;/p&gt;
 
-&lt;h2 id=&#34;最後に:1e522eaaec5ddeeb385d71167c22e9ec&#34;&gt;最後に&lt;/h2&gt;
+&lt;h2 id=&#34;最後に&#34;&gt;最後に&lt;/h2&gt;
 
 &lt;p&gt;feedtailor Inc. スタッフブログからの最初のアプリご紹介はいかがでしたでしょうか？&lt;/p&gt;
 

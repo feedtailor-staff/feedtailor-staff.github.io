@@ -3,7 +3,7 @@
 
 <head>
     <title>Node Express でそこまで取り上げられていないあれこれ &middot; feedtailor Inc. スタッフブログ</title>
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.16" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="feedtailor Inc.">
@@ -47,7 +47,7 @@
 
 
 
-<meta itemprop="keywords" content="2014,2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,2016,2016/03,2016/03/25,2016/03/30,2016/04,2016/04/05,2016/04/13,2016/04/20,2016/04/27,2016/05,2016/05/11,2016/05/18,2016/06,2016/06/01,hugo,node,アプリご紹介,全般,技術情報,未分類,静的サイトジェネレータ,8bitter,bgtube,book,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
+<meta itemprop="keywords" content="2014,2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,2016,2016/03,2016/03/25,2016/03/30,2016/04,2016/04/05,2016/04/13,2016/04/20,2016/04/27,2016/05,2016/05/11,2016/05/18,2016/06,2016/06/01,2016/06/08,hugo,node,アプリご紹介,全般,技術情報,未分類,静的サイトジェネレータ,8bitter,bgtube,book&#43;,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
 
     
 
@@ -210,7 +210,7 @@
 
 <p>私は API サーバを実装する際に Node の Express を利用する事が多いので、今回は使っていて知った事のうち、世間的にはポツポツ程度にしか取り上げられていない事柄をいくつかあげていきます。簡単に Express を利用している初心者レベルを主な対象としています。</p>
 
-<h2 id="前置き:71e2bdc3939118ff9134553a549177b5">前置き</h2>
+<h2 id="前置き">前置き</h2>
 
 <p>以後の文中にて登場する名称／変数値は、<a href="http://expressjs.com/4x/api.html">Express API リファレンス</a> を始めとした各種ドキュメント内でも扱われているものと同等に、以下のインスタンスを指すこととします。</p>
 
@@ -221,7 +221,7 @@
 <li>routes: Application インスタンスによるURLルート定義にてマッピングされた Middleware</li>
 </ul>
 
-<h2 id="app-req-res-のライフサイクルについて:71e2bdc3939118ff9134553a549177b5">app, req, res のライフサイクルについて</h2>
+<h2 id="app-req-res-のライフサイクルについて">app, req, res のライフサイクルについて</h2>
 
 <p>本当に基本的なことですが、Express による Web アプリケーションの根幹となる app インスタンスは、インスタンス作成時から各種セットアップ、サーバ Listen を行い始めた後も永続し、Listen を終了（Express アプリケーションを終了）させるまでは残り続けます。</p>
 
@@ -229,7 +229,7 @@
 
 <p>以上のことから、app インスタンスは Web アプリケーション全体に関わるグローバル／汎用的な情報を保持すること、req, res インスタンスはクライアント固有の情報を保持する存在である捉えたほうがよさそうです。従って app インスタンスは Listen 時点ではもう情報が完成しており、req, res インスタンスはリクエスト受信時から応答結果を返すまで如何様にも情報操作を行うことができる対象であると言えます。</p>
 
-<h2 id="app-request-app-response:71e2bdc3939118ff9134553a549177b5">app.request, app.response</h2>
+<h2 id="app-request-app-response">app.request, app.response</h2>
 
 <p>req, res の両インスタンスは最初の Middleware へ与えられる直前（厳密には内部で実行される最初の暗黙の Middleware で）app.request, app.response を prototype として設定されます。この app.request, app.response はそれぞれ Express モジュールが提供する Request, Response インスタンスを prototype とするオブジェクトです。</p>
 
@@ -242,11 +242,11 @@ app.request.getAwesomeHeader = function () {
 };
 </pre>
 
-<h2 id="任意の値に-middleware-でアクセスしたい話:71e2bdc3939118ff9134553a549177b5">任意の値に Middleware でアクセスしたい話</h2>
+<h2 id="任意の値に-middleware-でアクセスしたい話">任意の値に Middleware でアクセスしたい話</h2>
 
 <p>Express を利用しはじめた人が行き当たる話で、任意の値（変数）を Middleware、特に routes 以下で利用するにはどうすればよいかというのものがあります。例えば app インスタンスの set() した値を参照したい、あるいは app.js で作成した値を routes 以下で参照したいなどです。基本的には好きなようにやってよいと思っていますので、いくつかの手段を紹介します。用途あるいは好みとしてフィットする方法を選んで使ってみてください。</p>
 
-<h3 id="1-req-app-res-app:71e2bdc3939118ff9134553a549177b5">1. req.app, res.app</h3>
+<h3 id="1-req-app-res-app">1. req.app, res.app</h3>
 
 <p>実は req, res それぞれは app インスタンスをメンバとして保持していますので、それを利用することができます。</p>
 
@@ -257,7 +257,7 @@ app.request.getAwesomeHeader = function () {
 };
 </pre>
 
-<h3 id="2-前面にある-middleware-で仕込む:71e2bdc3939118ff9134553a549177b5">2. 前面にある Middleware で仕込む</h3>
+<h3 id="2-前面にある-middleware-で仕込む">2. 前面にある Middleware で仕込む</h3>
 
 <p>利用したい値を比較的早い段階の Middleware で req などに予め設定しておきます。前述したように req インスタンスはリクエスト毎のライフサイクルを持っているので、リクエストクライアント固有の情報などを扱う場合はこちらの方法がよさそうです。</p>
 
@@ -269,7 +269,7 @@ app.request.getAwesomeHeader = function () {
 app.use("/users", routes.users);
 </pre>
 
-<h3 id="3-middleware-routes-作成時の引数として任意の変数を与える:71e2bdc3939118ff9134553a549177b5">3. Middleware / routes 作成時の引数として任意の変数を与える</h3>
+<h3 id="3-middleware-routes-作成時の引数として任意の変数を与える">3. Middleware / routes 作成時の引数として任意の変数を与える</h3>
 
 <p>Middleware, routes の実装時、それらを作成する関数として exports する体制にしておけば、require() 時に引数を与えてインスタンスを作成しつつ、Middleware 側で与えられた引数を用いた処理ができるようになります。</p>
 
@@ -291,7 +291,7 @@ app.use("/users", routes.users);
 <pre>app.use(“/items”, require(“./routes/items”)(services));
 </pre>
 
-<h2 id="view-のキャッシュについて:71e2bdc3939118ff9134553a549177b5">view のキャッシュについて</h2>
+<h2 id="view-のキャッシュについて">view のキャッシュについて</h2>
 
 <p>Production 環境で稼働している、あるいは res.render() のオプションに cache = true を付与することで、view に対してキャッシュが有効となりますが、これはレンダリング処理に関わる各種情報のキャッシュであり、ページキャッシュではありません。</p>
 
@@ -316,7 +316,7 @@ if (caches[id]) {
 }
 </pre>
 
-<h2 id="おまけ-routes-以下に設置したファイルの読み込みを楽にする:71e2bdc3939118ff9134553a549177b5">おまけ: routes 以下に設置したファイルの読み込みを楽にする</h2>
+<h2 id="おまけ-routes-以下に設置したファイルの読み込みを楽にする">おまけ: routes 以下に設置したファイルの読み込みを楽にする</h2>
 
 <p>Express 固有の話ではありませんが、いくつかの routes 定義ファイルを１つずつ require() していくのは若干面倒です。そこで <a href="https://github.com/troygoode/node-require-directory">require-directory</a> モジュールを利用すると、指定するディレクトリ以下にある全てのファイルを１つのオブジェクトへまとめて exports オブジェクトへ再帰的にマッピングしてくれるため、ルーティング定義時が少し楽になります。</p>
 
@@ -408,6 +408,31 @@ app.use('/register', routes.auth.register);
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2016/06/08/hugo_08" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/06/hugo_08.png)" alt="Node Express でそこまで取り上げられていないあれこれ" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                        静的サイトジェネレータ
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/06/08/hugo_08" class="title">静的サイトジェネレータ「Hugo」v0.16 がリリースされました</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-06-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-06-08</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -509,31 +534,6 @@ app.use('/register', routes.auth.register);
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://staff.feedtailor.jp/2016/04/20/hugo_03" class="thumbnail">
-                    
-                        
-                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_03.png)" alt="Node Express でそこまで取り上げられていないあれこれ" class="thumbnail-image"></span>
-                        
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-category">
-                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
-                        静的サイトジェネレータ
-                        </a>
-                    </p>
-                    
-                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/04/20/hugo_03" class="title">静的サイトジェネレータHugoを使ったサイト構築（レイアウト編１）</a></p>
-                    <p class="item-date">
-                        <time datetime="2016-04-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-04-20</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -551,7 +551,7 @@ app.use('/register', routes.auth.register);
                 <a class="category-list-link" href="http://staff.feedtailor.jp/categories/hugo">
                     hugo
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
             <li class="category-list-item">
@@ -593,7 +593,7 @@ app.use('/register', routes.auth.register);
                 <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
                     静的サイトジェネレータ
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
         </ul>
@@ -920,8 +920,10 @@ app.use('/register', routes.auth.register);
                 <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2016/06">
                     2016/06
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
+            
+            
             
             
             
@@ -947,7 +949,7 @@ app.use('/register', routes.auth.register);
         
         <a href="http://staff.feedtailor.jp/tags/bgtube" style="font-size: 12px;">bgtube</a>
         
-        <a href="http://staff.feedtailor.jp/tags/book" style="font-size: 12px;">book</a>
+        <a href="http://staff.feedtailor.jp/tags/book&#43;" style="font-size: 12px;">book&#43;</a>
         
         <a href="http://staff.feedtailor.jp/tags/cocos2d-x" style="font-size: 12px;">cocos2d-x</a>
         
