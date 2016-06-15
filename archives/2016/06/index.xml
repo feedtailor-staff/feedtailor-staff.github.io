@@ -6,8 +6,127 @@
     <description>Recent content in 2016/06 on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 08 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jun 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/archives/2016/06/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（コンテンツ編３）</title>
+      <link>http://staff.feedtailor.jp/2016/06/15/hugo_09</link>
+      <pubDate>Wed, 15 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/06/15/hugo_09</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;shortcodes&lt;/strong&gt; について。&lt;/p&gt;
+
+&lt;p&gt;Hugo はコンテンツの記述にMarkdown記法を用いますが、Markdown記法はシンプルで覚えやすい反面、対応していない事項が多数あります。&lt;br /&gt;
+例えば、コンテンツにスタイルを適用したりビデオを埋め込んだりしたい場合はHTMLを直接書かなければいけません。&lt;/p&gt;
+
+&lt;p&gt;それらを回避するために Hugo では &lt;strong&gt;shortcodes&lt;/strong&gt; という仕組みが用意されています。&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
+
+&lt;p&gt;shortcode とは簡単に言うとコンテンツファイルの中で使用できるスニペットです。&lt;br /&gt;
+※テンプレートファイルの中には記述できませんので注意してください。&lt;/p&gt;
+
+&lt;p&gt;使い方は簡単で、コンテンツ内に以下のようなタグを記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% name parameters %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;一つ目の単語が shortcode の名前で、それにパラメータが続きます。パラメータはスペース区切りで複数指定でき、スペースを含むパラメータはダブルクオートで括ります。
+パラメータは name=&amp;ldquo;value&amp;rdquo; という形式で名前つきで指定することもできます。&lt;/p&gt;
+
+&lt;p&gt;また、HTML と同じように終了タグが必要なものがあります。その場合は、以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% name parameters %}} shortcode&#39;s **inner** content {{% /name %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上の例は shortcode のタグに % を使っていましたが &amp;lt; &amp;gt; を使用する場合もあります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; name parameters &amp;gt;}} shortcode&#39;s &amp;lt;strong&amp;gt;inner&amp;lt;strong&amp;gt; content {{&amp;lt; /name &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;% と &amp;lt; &amp;gt; では、タグの間のコンテンツの扱いが異なります。&lt;br /&gt;
+% はタグ間のコンテンツをMarkdown変換しますが、&amp;lt; &amp;gt; は変換せずそのままHTMLに出力されます。&lt;/p&gt;
+
+&lt;h2 id=&#34;作り方&#34;&gt;作り方&lt;/h2&gt;
+
+&lt;p&gt;shortcode は、layouts/shortcodes フォルダ内にテンプレートを配置します。&lt;br /&gt;
+テンプレートのファイル名が shortcode の名前になります。&lt;/p&gt;
+
+&lt;h4 id=&#34;パラメータの取得&#34;&gt;パラメータの取得&lt;/h4&gt;
+
+&lt;p&gt;shortcode に渡されたパラメータを取得する方法は二つあります。&lt;/p&gt;
+
+&lt;p&gt;名前付きでパラメータを指定した場合は、テンプレート中から以下のように取得できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Get &amp;quot;parameter_name&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;パラメータが名前つきでない場合は、ポジションを指定します。0 が先頭パラメータのポジションです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Get 0 }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;変数&#34;&gt;変数&lt;/h4&gt;
+
+&lt;p&gt;開始タグと終了タグの間に記述した部分は &lt;code&gt;.Inner&lt;/code&gt; 変数に格納されます。&lt;br /&gt;
+&lt;code&gt;.Inner&lt;/code&gt; を使用している shortcode の終了タグを省略する場合は以下のように記述してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; name parameters /&amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;また、shortcode を記述したページには &lt;code&gt;.Page&lt;/code&gt; 変数を介してアクセスできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Page.Title }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;使用例&#34;&gt;使用例&lt;/h2&gt;
+
+&lt;h4 id=&#34;例1-baseurl&#34;&gt;例1. baseurl&lt;/h4&gt;
+
+&lt;p&gt;簡単な例として、コンテンツ内にサイトの BaseURL を埋め込む shortcode をご紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;layouts/shortcodes/baseurl.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Page.Site.BaseURL }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コンテンツ内で &lt;code&gt;{{&amp;lt; baseurl &amp;gt;}}&lt;/code&gt; と記述すると、当サイトでしたらHTMLに &lt;code&gt;http://staff.feedtailor.jp/&lt;/code&gt; と出力されます。&lt;/p&gt;
+
+&lt;h4 id=&#34;例2-div&#34;&gt;例2. div&lt;/h4&gt;
+
+&lt;p&gt;もう少しだけ複雑な例として style 属性を指定できる div タグの shortcode を挙げます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;layouts/shortcodes/div.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div{{ with .Get &amp;quot;style&amp;quot; }} style=&amp;quot;{{ . | safeCSS }}&amp;quot;{{ end }}&amp;gt;{{ .Inner }}&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コンテンツには以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; div style=&amp;quot;color: red;&amp;quot; &amp;gt;}}red{{&amp;lt; /div &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;実際にこのエントリに埋め込んでみたところ、&lt;/p&gt;
+
+&lt;div style=&#34;color: red;&#34;&gt;red&lt;/div&gt;
+
+&lt;p&gt;が出力されています。&lt;/p&gt;
+
+&lt;p&gt;このように shortcode を定義すると、コンテンツに複雑なHTMLを配置したり、繰り返し記述する定型文を簡単に埋め込むことができるようになります。&lt;br /&gt;
+Hugo に最初から組み込まれている便利な shortcodes もありますのでぜひ活用してください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34;&gt;http://gohugo.io/extras/shortcodes/&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータ「Hugo」v0.16 がリリースされました</title>

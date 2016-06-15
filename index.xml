@@ -6,8 +6,127 @@
     <description>Recent content on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 08 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jun 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（コンテンツ編３）</title>
+      <link>http://staff.feedtailor.jp/2016/06/15/hugo_09</link>
+      <pubDate>Wed, 15 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/06/15/hugo_09</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;shortcodes&lt;/strong&gt; について。&lt;/p&gt;
+
+&lt;p&gt;Hugo はコンテンツの記述にMarkdown記法を用いますが、Markdown記法はシンプルで覚えやすい反面、対応していない事項が多数あります。&lt;br /&gt;
+例えば、コンテンツにスタイルを適用したりビデオを埋め込んだりしたい場合はHTMLを直接書かなければいけません。&lt;/p&gt;
+
+&lt;p&gt;それらを回避するために Hugo では &lt;strong&gt;shortcodes&lt;/strong&gt; という仕組みが用意されています。&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
+
+&lt;p&gt;shortcode とは簡単に言うとコンテンツファイルの中で使用できるスニペットです。&lt;br /&gt;
+※テンプレートファイルの中には記述できませんので注意してください。&lt;/p&gt;
+
+&lt;p&gt;使い方は簡単で、コンテンツ内に以下のようなタグを記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% name parameters %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;一つ目の単語が shortcode の名前で、それにパラメータが続きます。パラメータはスペース区切りで複数指定でき、スペースを含むパラメータはダブルクオートで括ります。
+パラメータは name=&amp;ldquo;value&amp;rdquo; という形式で名前つきで指定することもできます。&lt;/p&gt;
+
+&lt;p&gt;また、HTML と同じように終了タグが必要なものがあります。その場合は、以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% name parameters %}} shortcode&#39;s **inner** content {{% /name %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上の例は shortcode のタグに % を使っていましたが &amp;lt; &amp;gt; を使用する場合もあります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; name parameters &amp;gt;}} shortcode&#39;s &amp;lt;strong&amp;gt;inner&amp;lt;strong&amp;gt; content {{&amp;lt; /name &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;% と &amp;lt; &amp;gt; では、タグの間のコンテンツの扱いが異なります。&lt;br /&gt;
+% はタグ間のコンテンツをMarkdown変換しますが、&amp;lt; &amp;gt; は変換せずそのままHTMLに出力されます。&lt;/p&gt;
+
+&lt;h2 id=&#34;作り方&#34;&gt;作り方&lt;/h2&gt;
+
+&lt;p&gt;shortcode は、layouts/shortcodes フォルダ内にテンプレートを配置します。&lt;br /&gt;
+テンプレートのファイル名が shortcode の名前になります。&lt;/p&gt;
+
+&lt;h4 id=&#34;パラメータの取得&#34;&gt;パラメータの取得&lt;/h4&gt;
+
+&lt;p&gt;shortcode に渡されたパラメータを取得する方法は二つあります。&lt;/p&gt;
+
+&lt;p&gt;名前付きでパラメータを指定した場合は、テンプレート中から以下のように取得できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Get &amp;quot;parameter_name&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;パラメータが名前つきでない場合は、ポジションを指定します。0 が先頭パラメータのポジションです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Get 0 }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;変数&#34;&gt;変数&lt;/h4&gt;
+
+&lt;p&gt;開始タグと終了タグの間に記述した部分は &lt;code&gt;.Inner&lt;/code&gt; 変数に格納されます。&lt;br /&gt;
+&lt;code&gt;.Inner&lt;/code&gt; を使用している shortcode の終了タグを省略する場合は以下のように記述してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; name parameters /&amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;また、shortcode を記述したページには &lt;code&gt;.Page&lt;/code&gt; 変数を介してアクセスできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Page.Title }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;使用例&#34;&gt;使用例&lt;/h2&gt;
+
+&lt;h4 id=&#34;例1-baseurl&#34;&gt;例1. baseurl&lt;/h4&gt;
+
+&lt;p&gt;簡単な例として、コンテンツ内にサイトの BaseURL を埋め込む shortcode をご紹介します。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;layouts/shortcodes/baseurl.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Page.Site.BaseURL }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コンテンツ内で &lt;code&gt;{{&amp;lt; baseurl &amp;gt;}}&lt;/code&gt; と記述すると、当サイトでしたらHTMLに &lt;code&gt;http://staff.feedtailor.jp/&lt;/code&gt; と出力されます。&lt;/p&gt;
+
+&lt;h4 id=&#34;例2-div&#34;&gt;例2. div&lt;/h4&gt;
+
+&lt;p&gt;もう少しだけ複雑な例として style 属性を指定できる div タグの shortcode を挙げます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;layouts/shortcodes/div.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div{{ with .Get &amp;quot;style&amp;quot; }} style=&amp;quot;{{ . | safeCSS }}&amp;quot;{{ end }}&amp;gt;{{ .Inner }}&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コンテンツには以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; div style=&amp;quot;color: red;&amp;quot; &amp;gt;}}red{{&amp;lt; /div &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;実際にこのエントリに埋め込んでみたところ、&lt;/p&gt;
+
+&lt;div style=&#34;color: red;&#34;&gt;red&lt;/div&gt;
+
+&lt;p&gt;が出力されています。&lt;/p&gt;
+
+&lt;p&gt;このように shortcode を定義すると、コンテンツに複雑なHTMLを配置したり、繰り返し記述する定型文を簡単に埋め込むことができるようになります。&lt;br /&gt;
+Hugo に最初から組み込まれている便利な shortcodes もありますのでぜひ活用してください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34;&gt;http://gohugo.io/extras/shortcodes/&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータ「Hugo」v0.16 がリリースされました</title>
@@ -1664,376 +1783,6 @@ task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
 &lt;p&gt;そして、こういった取り組みを業務の時間を使ってチャレンジさせてもらえる環境が非常にありがたいと思います。&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>超聖域: Unityでゲームを作ろうとした話</title>
-      <link>http://staff.feedtailor.jp/2015/08/03/965</link>
-      <pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://staff.feedtailor.jp/2015/08/03/965</guid>
-      <description>
-
-&lt;p&gt;フィードテイラーの赤魔道士&lt;a href=&#34;http://twitter.com/sumihiro&#34; target=&#34;_blank&#34;&gt;すみひろ&lt;/a&gt;です。&lt;/p&gt;
-
-&lt;p&gt;先日、フィードテイラー社内で「&lt;a href=&#34;http://feedtailor.jp/wp/?p=14540&#34; target=&#34;_blank&#34;&gt;超聖域！1週間(2015/07/01〜2015/07/07)ぶっ通しでハッカソン&lt;/a&gt;」というイベントが開催されました。&lt;/p&gt;
-
-&lt;p&gt;各スタッフからレポートが上がっていますが、私からもやってみたことのレポートを報告します。&lt;/p&gt;
-
-&lt;h2 id=&#34;何をしたか&#34;&gt;何をしたか&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unity/&#34; target=&#34;_blank&#34;&gt;Unity&lt;/a&gt;を使用してゲーム作りに挑戦してみました。&lt;/p&gt;
-
-&lt;p&gt;ちなみに今までに本格的なゲーム作成の経験はありません。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unity/&#34; target=&#34;_blank&#34;&gt;Unity&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unity/&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-966&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/F8EE9162-5D47-48DC-B63D-47FEC8D17C54-300x200.png&#34; alt=&#34;F8EE9162-5D47-48DC-B63D-47FEC8D17C54&#34; width=&#34;300&#34; height=&#34;200&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unity/&#34;&gt;http://japan.unity3d.com/unity/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;なぜか&#34;&gt;なぜか&lt;/h2&gt;
-
-&lt;p&gt;フィードテイラーにおける私の普段のメインの業務はiOSのアプリ作成です。&lt;/p&gt;
-
-&lt;p&gt;アプリといえば色々なジャンンルがありますが、担当するアプリの多くはユーティリティや仕事効率化のジャンルに含まれるアプリです。&lt;/p&gt;
-
-&lt;p&gt;例えば「玄関で降水確率をお知らせする&lt;a href=&#34;http://sorayoujin.feedtailor.jp/&#34; target=&#34;_blank&#34;&gt;そら用心&lt;/a&gt;」や「勝手にTwitterのタイムラインから画像を集めてくる&lt;a href=&#34;http://feedtailor.jp/wp/?p=13172&#34; target=&#34;_blank&#34;&gt;Nyatter&lt;/a&gt;」などを担当しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a title=&#34;玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！&#34; href=&#34;http://staff.feedtailor.jp/2014/12/02/647&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-668&#34; src=&#34;http://staff.feedtailor.jp/images/2014/12/sorabeacon_for_press-300x300.jpg&#34; alt=&#34;そらビーコン&#34; width=&#34;300&#34; height=&#34;300&#34; /&gt;&lt;br /&gt; 玄関に行けば降水確率を声でお知らせするiPhoneアプリ「そら用心」をリリースしました！&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[&lt;img class=&#34;alignnone size-medium wp-image-985&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/3ee82baae43444b9c60393c472b24bb9-300x120.png&#34; alt=&#34;スクリーンショット 2015-07-28 16.59.21&#34; width=&#34;300&#34; height=&#34;120&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Twitterでニヤニヤしよう!!画像収集支援iPhoneアプリ「Nyatter(ニヤッター)」を公開します](&lt;a href=&#34;http://feedtailor.jp/wp/?p=13172&#34;&gt;http://feedtailor.jp/wp/?p=13172&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;このようなアプリでキモになってくるのは「バックグラウンドで自動的に処理して云々」や「サーバとの連携が云々」であって、「リアルタイムにユーザーの操作を受け付ける」という部分ではありません。&lt;/p&gt;
-
-&lt;p&gt;常日頃から「目の前の問題を殴る道具はたくさん持っている方がいい」と考えている私としては、新しいものに挑戦する良い機会と判断してゲーム作りに取り組みました。&lt;/p&gt;
-
-&lt;h2 id=&#34;何を作ろうとしたか&#34;&gt;何を作ろうとしたか&lt;/h2&gt;
-
-&lt;p&gt;まず、&lt;a href=&#34;https://www.ingress.com/&#34; target=&#34;_blank&#34;&gt;Ingress&lt;/a&gt;というゲームが流行っておりまして、私も流行りに乗っかってハマっています。（陣営は緑。レベル15です。）&lt;/p&gt;
-
-&lt;p&gt;Ingressについてのわかりやすい解説は、実は三菱東京UFJ銀行のサイトに掲載されていますので、そちらをご確認いただければ大体の仕組みや雰囲気をご理解いただけるのではないでしょうか。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.bk.mufg.jp/ingress/&#34; target=&#34;_blank&#34;&gt;BTMU × Ingress タイアップ | 三菱東京UFJ銀行&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.bk.mufg.jp/ingress/&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-967&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/92BD6BC5-1CFF-4307-8E26-F20909546F56-300x189.png&#34; alt=&#34;92BD6BC5-1CFF-4307-8E26-F20909546F56&#34; width=&#34;300&#34; height=&#34;189&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.bk.mufg.jp/ingress/&#34;&gt;http://www.bk.mufg.jp/ingress/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;詳しい解説は省きますが、ゲームの中で3個の「ポータル（拠点）」を「リンク」でつないで三角形「コントロールフィールド（通称、CF）」を作るという作業があります。&lt;/p&gt;
-
-&lt;p&gt;基本ルールの中にあるこの作業がほどよい感じに複雑で、それを詰将棋のようにお題を解く「詰イングレス」という遊び方があります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://plus.google.com/communities/109394012439402992158/stream/c2801c8e-c06a-464d-bd2c-5b838d316e08&#34;&gt;詰イングレス&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://plus.google.com/communities/109394012439402992158/stream/c2801c8e-c06a-464d-bd2c-5b838d316e08&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-968&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/b8a4f8b2d3a67d0989db45709febd095-300x168.png&#34; alt=&#34;スクリーンショット 2015-07-28 11.22.41&#34; width=&#34;300&#34; height=&#34;168&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://plus.google.com/communities/109394012439402992158/stream/c2801c8e-c06a-464d-bd2c-5b838d316e08&#34;&gt;https://plus.google.com/communities/109394012439402992158/stream/c2801c8e-c06a-464d-bd2c-5b838d316e08&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;「限られたポータルでいくつのCFを効率良く作るか」を競うゲームは頭の体操にも良く、一部のエージェント（Ingressのプレイヤー）から大人気のようです。&lt;/p&gt;
-
-&lt;p&gt;その詰イングレスを存分に遊べるゲーム「詰めCF」を作ってみました。&lt;/p&gt;
-
-&lt;h2 id=&#34;どうなったか&#34;&gt;どうなったか&lt;/h2&gt;
-
-&lt;p&gt;「お題を選択してCFを作る」という部分までなんとか実装したに留まってしまいました。&lt;/p&gt;
-
-&lt;p&gt;もう少し作り込めると期待して開始したのですが、なかなか思い通りには進まず。&lt;/p&gt;
-
-&lt;p&gt;スクリーンショットだけ公開しておきます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/801d466d45e2aa1bf15e0d9a29e159c3.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-969&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/801d466d45e2aa1bf15e0d9a29e159c3-152x300.png&#34; alt=&#34;スクリーンショット 2015-07-28 11.34.45&#34; width=&#34;152&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/dacc3943d6778772efcfa50ca36ef080.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-970&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/dacc3943d6778772efcfa50ca36ef080-151x300.png&#34; alt=&#34;スクリーンショット 2015-07-28 11.47.08&#34; width=&#34;151&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/4f228dfe4b4c572400d2071cd305f3a4.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-971&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/4f228dfe4b4c572400d2071cd305f3a4-151x300.png&#34; alt=&#34;スクリーンショット 2015-07-28 11.37.25&#34; width=&#34;151&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;レベルを選択すればポータルが生えたフィールドが現れる。ポータルを二つ選択するとリンクが張られ、リンク3本に囲まれるとフィールドが出現します。&lt;/p&gt;
-
-&lt;p&gt;スコアはフィールドの総面積で決定されます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/b35e69985a32bb494e5df1e991970e5d.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-972&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/b35e69985a32bb494e5df1e991970e5d-151x300.png&#34; alt=&#34;スクリーンショット 2015-07-28 15.32.14&#34; width=&#34;151&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;エディットモードもあり、ユーザーの皆さんが自由にお題を作って公開できるようにと考えていたのですが、そこまでの実装は期間内に追いつきませんでした。&lt;/p&gt;
-
-&lt;p&gt;結果的には自分に対して惨敗となってしまいましたが、たくさんの知見を得ることができました。新しい環境って難しいけど楽しいものですね。&lt;/p&gt;
-
-&lt;p&gt;よって、ここからが本題。&lt;/p&gt;
-
-&lt;p&gt;以下に、詰めCFを作るにあたって参考にしたサイトやツールなどをご紹介します。&lt;/p&gt;
-
-&lt;h2 id=&#34;何を使ったか&#34;&gt;何を使ったか&lt;/h2&gt;
-
-&lt;p&gt;まずは&lt;a href=&#34;http://japan.unity3d.com/unity/&#34;&gt;Unity&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;ユーザー登録は必要ですが、基本的には無料で使用できます。&lt;/p&gt;
-
-&lt;p&gt;無料のライセンスは有料版のProライセンスに機能の違いがあるのに加え、以下の条件で提供されています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/company/legal/eula&#34;&gt;http://japan.unity3d.com/company/legal/eula&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;組織規模による Unity 無料版の使用制限&lt;/p&gt;
-
-&lt;p&gt;各プラットフォーム向けの無料アドオン製品も含む、Unity Free(以下、「Unity 無料版」)のライセンスは、直前会計年度の総収益が US$100,000 を超える事業体、または組織全体の直前会計年度の総予算が US$100,000 を超える教育機関、学校機関、非営利団体、政府組織には許諾されず、それらの事業体または組織による Unity 無料版の使用は認められません。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;一番の注意点は「直前会計年度の総収益が US$100,000 を超える事業体」という条件でしょうか。ベンチャー企業に対する「この条件を超えるまでは無料で、超えたら払ってね」というメッセージのようにも読めます。&lt;/p&gt;
-
-&lt;h3 id=&#34;アセット&#34;&gt;アセット&lt;/h3&gt;
-
-&lt;p&gt;Unityのプロジェクト内で使用できるライブラリをアセットと呼びます。アセットは &lt;a href=&#34;https://www.assetstore.unity3d.com/jp/&#34; target=&#34;_blank&#34;&gt;Asset Store&lt;/a&gt;で販売、または無料で配布され、3Dモデルやオーディオ素材だけでなく、外部サービスとの連携のためのSDKやエディタを拡張するツールなどまで取り扱われています。&lt;/p&gt;
-
-&lt;p&gt;また、GitHubなどで無料で公開されている場合もあります。このようなアセットもプロジェクチにインポートしようすることもできます。&lt;/p&gt;
-
-&lt;p&gt;今回のプロジェクトで使用したアセットをご紹介します。&lt;/p&gt;
-
-&lt;h4 id=&#34;a-href-https-www-assetstore-unity3d-com-jp-content-710-target-blank-json-object-a&#34;&gt;&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/710&#34; target=&#34;_blank&#34;&gt;JSON Object&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/2704CFF9-ABE8-44D7-A657-77BA35AB353C.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-973&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/2704CFF9-ABE8-44D7-A657-77BA35AB353C-300x282.png&#34; alt=&#34;2704CFF9-ABE8-44D7-A657-77BA35AB353C&#34; width=&#34;300&#34; height=&#34;282&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/710&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/710&#34;&gt;https://www.assetstore.unity3d.com/jp/#!/content/710&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;JSONのパーサ。&lt;/p&gt;
-
-&lt;p&gt;今回はステージのデータをJSONで用意したので、それの読み書きに使用しました。&lt;/p&gt;
-
-&lt;p&gt;JSONの文字列からJSONObjectを作成します。JSONObjectからはさらにJSONObject、または数値、文字列が取得できます。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;// JSONのテキストからJSONObjectを作成する&lt;/p&gt;
-
-&lt;p&gt;JSONObject json = new JSONObject(jsonText);&lt;/p&gt;
-
-&lt;p&gt;// 型によって取得できるものが異なる&lt;/p&gt;
-
-&lt;p&gt;JSONObject stage = json.GetField(&amp;#8220;stage&amp;#8221;);&lt;/p&gt;
-
-&lt;p&gt;string title = (string)json.GetField(&amp;#8220;title&amp;#8221;).str;&lt;/p&gt;
-
-&lt;p&gt;int count = (int)json.GetField(&amp;#8220;count&amp;#8221;).n;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&#34;a-href-https-github-com-naichilab-unity-fademanager-blob-master-readme-ja-md-target-blank-unity-fademanager-a&#34;&gt;&lt;a href=&#34;https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md&#34; target=&#34;_blank&#34;&gt;Unity-FadeManager&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-974&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/BB54CCBD-BE6F-4690-AA07-3862AD6F7B5B-300x165.png&#34; alt=&#34;BB54CCBD-BE6F-4690-AA07-3862AD6F7B5B&#34; width=&#34;300&#34; height=&#34;165&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md&#34;&gt;https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;シーンの切り替えをフェードイン、フェードアウトで行うアセット。&lt;/p&gt;
-
-&lt;p&gt;メニュー画面からゲーム画面に切り替える場面で使用しました。パッと瞬間的に画面が切り替わるとユーザは面食らってしまい安く感じてしまいますが、フェードイン、フェードアウトを使うだけでグッと「それっぽく」なりました。&lt;/p&gt;
-
-&lt;p&gt;フェードイン、フェードアウトをさせるときはこのように書きます。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;// シーンの名前とフェードする秒数を渡す&lt;/p&gt;
-
-&lt;p&gt;FadeManager.Instance.LoadLevel (&amp;#8220;Scene1&amp;#8243;, 2.0f);&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&#34;a-href-http-itween-pixelplacement-com-index-php-target-blank-itween-a&#34;&gt;&lt;a href=&#34;http://itween.pixelplacement.com/index.php&#34; target=&#34;_blank&#34;&gt;iTween&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://itween.pixelplacement.com/index.php&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-975&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/E689A6F1-8051-4BF0-9A54-7F58FD64E6DF-300x225.png&#34; alt=&#34;E689A6F1-8051-4BF0-9A54-7F58FD64E6DF&#34; width=&#34;300&#34; height=&#34;225&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://itween.pixelplacement.com/index.php&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://itween.pixelplacement.com/index.php&#34;&gt;http://itween.pixelplacement.com/index.php&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;定番のアセット。「ここからここへ滑らかに動かす」ような処理を簡単に書くことができるようになるアセットです。&lt;/p&gt;
-
-&lt;p&gt;リンクが伸びていく処理で使用されています。リンクにはこのようなコードを書きました。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;void Start () {&lt;/p&gt;
-
-&lt;p&gt;string easeType = &amp;#8220;easeInOutExpo&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;float time = 0.5f;&lt;/p&gt;
-
-&lt;p&gt;// 起点から終点まで伸びる&lt;/p&gt;
-
-&lt;p&gt;// 移動&lt;/p&gt;
-
-&lt;p&gt;Vector3 target = transform.position; // 本来あるべき位置&lt;/p&gt;
-
-&lt;p&gt;Vector3 start = FirstPortal.transform.position; // リンク元の位置&lt;/p&gt;
-
-&lt;p&gt;transform.position = start;&lt;/p&gt;
-
-&lt;p&gt;iTween.MoveTo(gameObject,iTween.Hash(&amp;#8220;x&amp;#8221;,target.x, &amp;#8220;y&amp;#8221;, target.y, &amp;#8220;z&amp;#8221;, target.z,&amp;#8221;easeType&amp;#8221;,easeType,&amp;#8221;time&amp;#8221;,time));&lt;/p&gt;
-
-&lt;p&gt;// 長さ&lt;/p&gt;
-
-&lt;p&gt;float scale = transform.localScale.x; // 本来の長さ&lt;/p&gt;
-
-&lt;p&gt;transform.localScale = new Vector3(0f,transform.localScale.y,transform.localScale.z); // 長さを0に&lt;/p&gt;
-
-&lt;p&gt;iTween.ScaleTo(gameObject,iTween.Hash(&amp;#8220;x&amp;#8221;,scale,&amp;#8221;easeType&amp;#8221;,easeType,&amp;#8221;time&amp;#8221;,time));&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;最終的には2個のポータル間の中心に配置され、長さはホータル間の距離になるので、最初に片方のポータルの位置に長さ0の状態で配置し、長さと位置が同時に変わることで「伸びていく」ように見せることができました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://itween.pixelplacement.com/documentation.php&#34; target=&#34;_blank&#34;&gt;ドキュメント&lt;/a&gt;を見ると様々操作が簡単にできることがわかります。&lt;/p&gt;
-
-&lt;h4 id=&#34;a-href-http-www-protoolsforunity3d-com-prototype-target-blank-prototype-a&#34;&gt;&lt;a href=&#34;http://www.protoolsforunity3d.com/prototype/&#34; target=&#34;_blank&#34;&gt;Prototype&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.protoolsforunity3d.com/prototype/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-976&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/D6592C9B-0E7C-4DA1-978F-AE9E86B29AD9-300x168.png&#34; alt=&#34;D6592C9B-0E7C-4DA1-978F-AE9E86B29AD9&#34; width=&#34;300&#34; height=&#34;168&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.protoolsforunity3d.com/prototype/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.protoolsforunity3d.com/prototype/&#34;&gt;http://www.protoolsforunity3d.com/prototype/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;プロトタイプを簡単に作成できることで有名なアセットです。&lt;/p&gt;
-
-&lt;p&gt;通常ならば&lt;a href=&#34;https://www.blender.org/features/2-75/&#34; target=&#34;_blank&#34;&gt;Blender&lt;/a&gt;などを使って作成する3Dオブジェクトを簡単な設定で作ることができます。&lt;/p&gt;
-
-&lt;p&gt;もちろん、細かな自由な形の3Dオブジェクトを作るにはBlenderなどが必要ですが、Prototypeではメッシュの頂点数を自由に設定することができるので、変形させることも簡単になっています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/1f64bd9842c29bc6fe3b120d186a7bfd.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-977&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/1f64bd9842c29bc6fe3b120d186a7bfd-300x220.png&#34; alt=&#34;スクリーンショット 2015-07-28 14.27.57&#34; width=&#34;300&#34; height=&#34;220&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ポータルやリンク、また床などをこのアセットを使用して作成しました。&lt;/p&gt;
-
-&lt;h4 id=&#34;a-href-https-ilih-ru-unity-assets-uiwidgets-target-blank-new-ui-widgets-a&#34;&gt;&lt;a href=&#34;https://ilih.ru/unity-assets/UIWidgets/&#34; target=&#34;_blank&#34;&gt;New UI Widgets&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ilih.ru/unity-assets/UIWidgets/&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-978&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/01533F3D-5D2F-454C-808F-6694F1935CAD-300x159.png&#34; alt=&#34;01533F3D-5D2F-454C-808F-6694F1935CAD&#34; width=&#34;300&#34; height=&#34;159&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ilih.ru/unity-assets/UIWidgets/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://ilih.ru/unity-assets/UIWidgets/&#34;&gt;https://ilih.ru/unity-assets/UIWidgets/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;標準のUIパーツでは作ることが難しい複雑なUIを作るアセットです。&lt;/p&gt;
-
-&lt;p&gt;コンボボックス、リストビュー、プログレスバー、スピナー、タブ、ツールチップ、通知、ドラッグできるウインドウなどなど多彩なパーツを含み、またそれぞれのパーツのリデザインも簡単にできることがウリです。&lt;/p&gt;
-
-&lt;p&gt;特に使いたかったのはリストビューです。動的に数が変わるアイテムの一覧を出そうとすると標準のUIではうまくできず、こちらを利用しました。&lt;/p&gt;
-
-&lt;p&gt;iOSのUITableViewのようにできればベストでしたが、そこまではできませんでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/images/2015/07/dacc3943d6778772efcfa50ca36ef0801.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-979&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/dacc3943d6778772efcfa50ca36ef0801-151x300.png&#34; alt=&#34;スクリーンショット 2015-07-28 11.47.08&#34; width=&#34;151&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;今回は結局ここでしか使わなかったんですけどね…&lt;/p&gt;
-
-&lt;h3 id=&#34;エディタ&#34;&gt;エディタ&lt;/h3&gt;
-
-&lt;h4 id=&#34;a-href-https-code-visualstudio-com-target-blank-visual-studio-code-a&#34;&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34;&gt;Visual Studio Code&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-980&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/7FFA3930-F64A-43F5-83E0-22EDBEB41B4F-300x198.png&#34; alt=&#34;7FFA3930-F64A-43F5-83E0-22EDBEB41B4F&#34; width=&#34;300&#34; height=&#34;198&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Unityには標準で&lt;a href=&#34;http://docs.unity3d.com/ja/current/Manual/MonoDevelop.html&#34; target=&#34;_blank&#34;&gt;MonoDevelop&lt;/a&gt;というIDEが入っています。しかし、このMonoDevelopがMacの日本語環境下ではとても使いづらい…具体的にはデフォルトの設定では日本語が正しく入力できなかったりします。&lt;/p&gt;
-
-&lt;p&gt;そのため、開発者は&lt;a href=&#34;http://www.sublimetext.com/3&#34; target=&#34;_blank&#34;&gt;Sublime Text 3&lt;/a&gt;などのエディタを使用してコードを書くのですが、超聖域が始まる少し前にリリースされた&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34;&gt;Visual Studio Code&lt;/a&gt;を使用してみました。&lt;/p&gt;
-
-&lt;p&gt;結論から言うと、非常に使いやすかったです。名前からお分かりかもしれませんが、Visual Studio CodeはWindowsを作っているMicrosoft製のツールです。&lt;/p&gt;
-
-&lt;p&gt;Windowsを作っているMicrosoftと、Macを作っているAppleは、いわばライバルの関係にあります。そのライバルが作ったツールなんて…と高を括って試してみたのですが、実際にはとても使いやすいツールでした。&lt;/p&gt;
-
-&lt;p&gt;Unityからの呼び出しもスムーズですし、プロジェクトの設定を読み込ませればコード補完もきっちりと動作します。&lt;/p&gt;
-
-&lt;p&gt;UnityとVisual Studio Codeの連携の設定の仕方は、こちらの記事が参考になりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://qiita.com/STAR_ZERO/items/6708b69d18eb8c815963&#34; target=&#34;_blank&#34;&gt;UnityでVisual Studio Codeを使う &amp;#8211; Qiita&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://qiita.com/STAR_ZERO/items/6708b69d18eb8c815963&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://qiita.com/STAR_ZERO/items/6708b69d18eb8c815963&#34;&gt;http://qiita.com/STAR_ZERO/items/6708b69d18eb8c815963&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;バージョンの違いにより、一部で設定の方法が変わっている可能性があります。&lt;/p&gt;
-
-&lt;h2 id=&#34;参考にしたもの&#34;&gt;参考にしたもの&lt;/h2&gt;
-
-&lt;p&gt;実は超聖域開始前に「完全にニュートラルな状態から入るのは無理がある」と判断し、Unityの入門書を1冊読みました。&lt;/p&gt;
-
-&lt;p&gt;その本はとてもわかりやすく参考になり入門書としてはとても良いと思うのですが、一部の内容に技術書として不適切であると判断できる内容が含まれているため、具体的な書名の掲載は控えます。&lt;/p&gt;
-
-&lt;p&gt;Youtubeなどの動画サイトでレクチャーも多く公開されており、それらもとても参考になりました。開発中に閲覧したサイトや動画をいくつかご紹介します。&lt;/p&gt;
-
-&lt;h3 id=&#34;はじめての-unity-http-japan-unity3d-com-developer-document-tutorial-my-first-unity&#34;&gt;&lt;a href=&#34;http://japan.unity3d.com/developer/document/tutorial/my-first-unity/&#34;&gt;はじめての Unity&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/developer/document/tutorial/my-first-unity/&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-981&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/C80F93E7-8918-4F54-AF30-3AC40ADC2DF8-300x124.png&#34; alt=&#34;C80F93E7-8918-4F54-AF30-3AC40ADC2DF8&#34; width=&#34;300&#34; height=&#34;124&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/developer/document/tutorial/my-first-unity/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://japan.unity3d.com/developer/document/tutorial/my-first-unity/&#34;&gt;http://japan.unity3d.com/developer/document/tutorial/my-first-unity/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;公式サイトによる最も初歩的なステップガイド。&lt;/p&gt;
-
-&lt;p&gt;よくあるブロック崩しを作ります。ただし、まだ途中までしかなく、スマホへのパブリッシュ手法などは近日公開のままです。&lt;/p&gt;
-
-&lt;h3 id=&#34;a-href-https-www-youtube-com-watch-v-ep0rlbqrcvc-target-blank-unity-5-tutorial-basics-a&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ep0rlBQRcVc&#34; target=&#34;_blank&#34;&gt;Unity 5 Tutorial : Basics&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ep0rlBQRcVc&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ep0rlBQRcVc&#34;&gt;https://www.youtube.com/watch?v=Ep0rlBQRcVc&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Unityの基本的な操作や使い方、書き出しまでを一通り。&lt;/p&gt;
-
-&lt;h3 id=&#34;a-href-https-www-youtube-com-playlist-list-plt-y3hw1v3qtebh8fqv1duouih9nf0k6c-target-blank-3dbuzz-modern-ui-development-in-unity-4-6-a&#34;&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&#34; target=&#34;_blank&#34;&gt;3DBuzz Modern UI Development in Unity 4.6&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&#34;&gt;https://www.youtube.com/playlist?list=PLt_Y3Hw1v3QTEbh8fQV1DUOUIh9nF0k6c&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;全10回に渡る、UI用のパーツの使い方のチュートリアル。&lt;/p&gt;
-
-&lt;p&gt;UI用のパーツは通常のパーツとは異なりレイアウトを自動で行ったりする仕組みなど、メニューや設定画面で使いやすい仕組みが用意されています。&lt;/p&gt;
-
-&lt;h2 id=&#34;今後の展開&#34;&gt;今後の展開&lt;/h2&gt;
-
-&lt;p&gt;「詰めCF」自体は私にとってとても興味深いゲームですので…もしかするといつの日かリリースされるかもしれません。&lt;/p&gt;
-
-&lt;p&gt;また、Unityを実際に触ることによって、使用する前とはずいぶんと印象が変わった部分がありました。&lt;/p&gt;
-
-&lt;h3 id=&#34;開発環境が想像以上にカオス&#34;&gt;開発環境が想像以上にカオス&lt;/h3&gt;
-
-&lt;p&gt;これはiOSでももちろんそうなのですが、複数人で一つのプロジェクトを回すことがあります。その際に重要なことは他人と自分の触るファイルをできるだけ分けることであると思います。&lt;/p&gt;
-
-&lt;p&gt;Unityではメタファイルが存在していたり、プロジェクト設定が個人の環境別になっていなかったりと扱うのが相当に面倒に見えました。&lt;/p&gt;
-
-&lt;p&gt;上手に運用するための手法はこちらが参考になりそうです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tsubakit1.hateblo.jp/entry/20140613/1402670011&#34; target=&#34;_blank&#34;&gt;Unity開発者が複数人で開発を進める上で覚えておくと幸せになる9つの事&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tsubakit1.hateblo.jp/entry/20140613/1402670011&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://tsubakit1.hateblo.jp/entry/20140613/1402670011&#34;&gt;http://tsubakit1.hateblo.jp/entry/20140613/1402670011&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;また、スクウェア・エニックスさんが公開されているこの資料もとても参考になります。そして、本当に大変そうです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unite/unite2015/files/DAY2_1500_room2_Hamaguchi.pdf&#34; target=&#34;_blank&#34;&gt;MEVIUS FINAL FANTASY におけるUnity開発事例&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://japan.unity3d.com/unite/unite2015/files/DAY2_1500_room2_Hamaguchi.pdf&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://japan.unity3d.com/unite/unite2015/files/DAY2_1500_room2_Hamaguchi.pdf&#34;&gt;http://japan.unity3d.com/unite/unite2015/files/DAY2_1500_room2_Hamaguchi.pdf&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;ゲーム以外でも意外と使えそう&#34;&gt;ゲーム以外でも意外と使えそう&lt;/h3&gt;
-
-&lt;p&gt;ちょうどこのようなツイートがありました。&lt;/p&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;
-  &lt;p dir=&#34;ltr&#34; lang=&#34;ja&#34;&gt;
-    見える動くデモって教材としても良いと思う。 インフラエンジニアがUnityをやるべきたった一つの理由 &lt;a href=&#34;https://twitter.com/hashtag/engineer?src=hash&#34;&gt;#engineer&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/iaas?src=hash&#34;&gt;#iaas&lt;/a&gt; &lt;a href=&#34;http://t.co/Hi4gwVrMOp&#34;&gt;http://t.co/Hi4gwVrMOp&lt;/a&gt; &lt;a href=&#34;https://twitter.com/SlideShare&#34;&gt;@SlideShare&lt;/a&gt;さんから
-  &lt;/p&gt;
-  
-  &lt;p&gt;
-    — アンコウテルオ (@ankou1060) &lt;a href=&#34;https://twitter.com/ankou1060/status/625479919938592768&#34;&gt;2015, 7月 27&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;「何かをしている感」というのはコンソールやターミナルではなかなか伝わりにくいです。&lt;/p&gt;
-
-&lt;p&gt;ドラマや映画でもテキストがどんどんスクロールしていく様子より、よくわからないボタンがチカチカと光ってゲージがギュイーンと伸びてアラートがガンガン上がってるような様子の方が映えますよね。&lt;/p&gt;
-
-&lt;p&gt;上記スライドでも挙げられていますが、Unityはネットワークソケットをそのまま使えますので外部との連携がとても柔軟にできます。&lt;/p&gt;
-
-&lt;p&gt;そして表現力の豊かさとその便利さはまさにUnityのウリですので、どんなUIでも自由に表現することができます。&lt;/p&gt;
-
-&lt;p&gt;例えば、MYOという腕のジェスチャーを非常に細かく取れるガジェットがあります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.thalmic.com/myo/&#34; target=&#34;_blank&#34;&gt;MYO&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.thalmic.com/myo/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-982&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/arm-dble-tap-300x260.jpg&#34; alt=&#34;arm-dble-tap&#34; width=&#34;300&#34; height=&#34;260&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.thalmic.com/myo/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.thalmic.com/myo/&#34;&gt;https://www.thalmic.com/myo/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;このガジェットは&lt;a href=&#34;http://developerblog.myo.com/setting-myo-package-unity/&#34; target=&#34;_blank&#34;&gt;Unityに対応している&lt;/a&gt;ので、Unityで作ったUIをジェスチャーで操作することが可能です。&lt;/p&gt;
-
-&lt;p&gt;これらを組み合わせて映画「マイノリティ・リポート」であったような未来の操作環境を作って、「EC2のサーバーの死活監視を行う」ような超現実的な泥臭いことができるのです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://penginez.com/archives/3498&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-983&#34; src=&#34;http://staff.feedtailor.jp/images/2015/07/873F7A0F-A244-4607-B3C8-246903D0463A-300x158.png&#34; alt=&#34;873F7A0F-A244-4607-B3C8-246903D0463A&#34; width=&#34;300&#34; height=&#34;158&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://penginez.com/archives/3498&#34; target=&#34;_blank&#34;&gt;10年前でもこの未来感!映画『マイノリティ・リポート』にあった未来技術11選&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://penginez.com/archives/3498&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://penginez.com/archives/3498&#34;&gt;http://penginez.com/archives/3498&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;すごくワクワクしませんか？まあ、実際にやるかやらないかというと、&lt;strong&gt;やらない&lt;/strong&gt;んですけど。&lt;/p&gt;
-
-&lt;p&gt;ともかく、ゲームだけではなく、状態監視にも使えそうなUnity。今後は表現の方法の一つとして利用できるツールとして、「目の前の問題を殴る道具」として役に立ちそうです。&lt;/p&gt;
 </description>
     </item>
     
