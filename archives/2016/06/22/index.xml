@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016/06/22 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2016/06/22/</link>
+    <description>Recent content in 2016/06/22 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 22 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2016/06/22/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（リスト編）</title>
+      <link>http://staff.feedtailor.jp/2016/06/22/hugo_10</link>
+      <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/06/22/hugo_10</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; のリストページと並び順について。&lt;/p&gt;
+
+&lt;h2 id=&#34;リストページ&#34;&gt;リストページ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#39;http://staff.feedtailor.jp/2016/04/20/hugo_03&#39;&gt;レイアウト編１&lt;/a&gt;でご紹介したように Hugo では Homepage や List テンプレートで全コンテンツや任意の section/type、taxonomy のリストページを作ることができます。&lt;/p&gt;
+
+&lt;p&gt;例えば、Homepage (サイトのトップページ) では &lt;code&gt;.Data.Pages&lt;/code&gt; という変数にすべてのコンテンツの情報が格納されています。これを表示するにはテンプレートで &lt;code&gt;range&lt;/code&gt; を使用して以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages }}
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt;
+&amp;lt;div class=&amp;quot;meta&amp;quot;&amp;gt;{{ .Date.Format &amp;quot;Mon, Jan 2, 2006&amp;quot; }}&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;range&lt;/code&gt; から &lt;code&gt;end&lt;/code&gt; がループで、その間はループの現在値（ページの値）に . で直接アクセスできます。&lt;/p&gt;
+
+&lt;p&gt;section のリストページでは &lt;code&gt;.Data.Pages&lt;/code&gt; に該当する section のコンテンツのみが格納されます。section のリストページとしてどのレイアウトが使用されるかは&lt;a href=&#39;http://staff.feedtailor.jp/2016/05/11/hugo_05&#39;&gt;レイアウト編３&lt;/a&gt;を参照ください。&lt;/p&gt;
+
+&lt;h3 id=&#34;並び順&#34;&gt;並び順&lt;/h3&gt;
+
+&lt;p&gt;Hugo はデフォルト（前述の例）でコンテンツのソートに &lt;strong&gt;weight&lt;/strong&gt; と &lt;strong&gt;date&lt;/strong&gt; という２つのパラメータを使用します。&lt;br /&gt;
+どちらもフロントマターで指定します。必須ではありません。&lt;/p&gt;
+
+&lt;p&gt;まず &lt;strong&gt;weight&lt;/strong&gt; でソートして、その後 &lt;strong&gt;date&lt;/strong&gt; の新しいものから順に並べます。
+&lt;strong&gt;weight&lt;/strong&gt; は値が大きいほど後ろに追加（日付が古い方）へ追加されます。&lt;strong&gt;weight&lt;/strong&gt; が指定されていない場合は weight=0 と同じです。&lt;strong&gt;weight&lt;/strong&gt; と &lt;strong&gt;date&lt;/strong&gt; のどちらも指定されていない場合は、順序は保証されません。&lt;/p&gt;
+
+&lt;p&gt;コンテンツの並び順を変更したい場合は、コンテンツ格納している配列（.Data.Pages）に並び順を指定することでソートします。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;weight -&amp;gt; date (デフォルト)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;dateのみ（weightを無視する）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages.ByDate }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;title&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages.ByPublishDate }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;他にも &lt;code&gt;.ByPublishDate&lt;/code&gt;, &lt;code&gt;.ByLastMod&lt;/code&gt;, &lt;code&gt;.ByLength&lt;/code&gt;, &lt;code&gt;.ByLinkTitle&lt;/code&gt;, &lt;code&gt;.Reverse&lt;/code&gt; 等が利用できます。&lt;/p&gt;
+
+&lt;h3 id=&#34;グルーピング&#34;&gt;グルーピング&lt;/h3&gt;
+
+&lt;p&gt;並び順だけではなく、date や任意のページ変数、ページパラメータ等でコンテンツをグルーピングすることもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;date&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;年月でグルーピングする場合&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages.GroupByDate &amp;quot;2006-01&amp;quot; }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;年月日でグルーピングする場合&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages.GroupByDate &amp;quot;2006-01-02&amp;quot; }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;ページ変数&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;sectionの部分が変数名です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages.GroupBy &amp;quot;Section&amp;quot; }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;ページパラメータ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages.GroupByParam &amp;quot;param_key&amp;quot; }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;フィルタリング&#34;&gt;フィルタリング&lt;/h3&gt;
+
+&lt;p&gt;件数を制限したり、特定の条件で絞り込むこともできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;件数制限&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range first 10 .Data.Pages }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;絞り込み&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range where .Data.Pages &amp;quot;Section&amp;quot; &amp;quot;post&amp;quot; }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;組み合わせ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range first 5 (where .Data.Pages &amp;quot;Section&amp;quot; &amp;quot;post&amp;quot;) }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;range&lt;/code&gt; の扱いは難しいところもありますが、他にも細かな設定が可能ですので是非お試しください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/templates/list/&#34;&gt;http://gohugo.io/templates/list/&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
