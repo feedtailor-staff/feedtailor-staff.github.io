@@ -10,6 +10,156 @@
     <atom:link href="http://staff.feedtailor.jp/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（Taxonomy編）</title>
+      <link>http://staff.feedtailor.jp/2016/06/29/hugo_11</link>
+      <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/06/29/hugo_11</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の Taxonomy ついて。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Taxonomy&lt;/strong&gt; （タクソノミー）とは、ざっくり言うとコンテンツをグルーピングする &lt;strong&gt;分類&lt;/strong&gt; のことです。&lt;/p&gt;
+
+&lt;p&gt;Hugo ではデフォルトで &lt;strong&gt;tags&lt;/strong&gt; と &lt;strong&gt;categories&lt;/strong&gt; の２つの Taxonomy が定義されています。Taxonomy を使用すると Hugo は自動的に Taxonomy 自体のリスト(tags, categories, &amp;hellip;)、各Taxonomy毎のキーのリスト、各Taxonomyに紐づくコンテンツのリストを生成します。&lt;/p&gt;
+
+&lt;h2 id=&#34;定義&#34;&gt;定義&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Taxonomy&lt;/th&gt;&lt;td&gt;コンテンツを分類するカテゴリ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Term&lt;/th&gt;&lt;td&gt;Taxonomyに含まれるキー&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Value&lt;/th&gt;&lt;td&gt;Termに紐づけられたコンテンツ&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;公式ドキュメントに記載されている俳優(Actor)というTaxonomyと出演作品（Content）の例をあげます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Actor                    &amp;lt;- Taxonomy
+    Bruce Willis         &amp;lt;- Term
+        The Six Sense    &amp;lt;- Content
+        Unbreakable      &amp;lt;- Content
+    Samuel L. Jackson    &amp;lt;- Term
+        Unbreakable      &amp;lt;- Content
+        The Avengers     &amp;lt;- Content
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;同じ内容をContentでまとめると次のようになります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Unbreakable                 &amp;lt;- Content
+    Actors                  &amp;lt;- Taxonomy
+        Bruce Willis        &amp;lt;- Term
+        Samuel L. Jackson   &amp;lt;- Term
+The Six Sense
+    Actors                  &amp;lt;- Taxonomy
+        Bruce Willis        &amp;lt;- Term
+The Avengers
+    Actors                  &amp;lt;- Taxonomy
+        Samuel L. Jackson   &amp;lt;- Term
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;設定&#34;&gt;設定&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#39;http://staff.feedtailor.jp/2016/05/18/hugo_06&#39;&gt;コンテンツ編１&lt;/a&gt; でも記載したように tag, category 以外の Taxonomy を利用するためには config.toml に定義を記載しなければいけません。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// config.toml
+[taxonomies]
+tag = &amp;quot;tags&amp;quot;
+category = &amp;quot;categories&amp;quot;
+series = &amp;quot;series&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;左辺が Taxonomy の名前（&lt;strong&gt;SINGULAR&lt;/strong&gt; key）で、右辺がそれをコンテンツに紐づけるための値（&lt;strong&gt;PLURAL&lt;/strong&gt; value）です。&lt;br /&gt;
+フロントマターには右辺の tags, categories, series を指定します。&lt;/p&gt;
+
+&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
+
+&lt;p&gt;コンテンツのテンプレートで、そのコンテンツが紐づく Taxonomy は変数 &lt;code&gt;.Params&lt;/code&gt; を介してアクセスできます。&lt;br /&gt;
+例えば、自身の紐づくtags の Term リストは以下のように表示します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul id=&amp;quot;tags&amp;quot;&amp;gt;
+  {{ range .Params.tags }}
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;tags/{{ . | urlize }}&amp;quot;&amp;gt;{{ . }}&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+  {{ end }}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;全ての Taxonomy の情報は変数 &lt;code&gt;.Site.Taxonomies&lt;/code&gt; に格納されています。&lt;br /&gt;
+例えば、サイト全体で使用されている tags の Term とコンテンツのリストは以下のように表示します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul id=&amp;quot;all-tags&amp;quot;&amp;gt;
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/tags/{{ $name | urlize }}&amp;quot;&amp;gt;{{ $name }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;ul&amp;gt;
+        {{ range $taxonomy.Pages }}
+        &amp;lt;li hugo-nav=&amp;quot;{{ .RelPermalink}}&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;{{ .Permalink}}&amp;quot;&amp;gt; {{ .LinkTitle }} &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+        {{ end }}
+    &amp;lt;/ul&amp;gt;
+  {{ end }}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上の例の &lt;code&gt;$name&lt;/code&gt; には Term が、&lt;code&gt;$taxonomy&lt;/code&gt; には Term に紐づくコンテンツの情報が格納されています。&lt;/p&gt;
+
+&lt;h2 id=&#34;リストテンプレート&#34;&gt;リストテンプレート&lt;/h2&gt;
+
+&lt;h3 id=&#34;termのリスト&#34;&gt;Termのリスト&lt;/h3&gt;
+
+&lt;p&gt;Taxonomy の Term のリストは /&lt;em&gt;PLURAL&lt;/em&gt;/ （PLURAL は config.toml の右辺： /tags/, /categories/）というURLで生成されます。&lt;br /&gt;
+使用されるテンプレートは以下の順に検索されます。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;/layouts/taxonomy/&lt;em&gt;SINGULAR&lt;/em&gt;.terms.html&lt;br /&gt;
+（SINGULAR は config.toml の左辺： tag, category）&lt;/li&gt;
+&lt;li&gt;/layouts/_default/terms.html&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;どちらも存在しない場合はページは生成されません。
+上のテンプレートでは Term は変数 &lt;strong&gt;.Data.Terms&lt;/strong&gt; に格納されています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  {{ $data := .Data }}
+  {{ range $key, $value := .Data.Terms }}
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;{{ $data.Plural }}/{{ $key | urlize }}&amp;quot;&amp;gt;{{ $key }}&amp;lt;/a&amp;gt; {{ len $value }}&amp;lt;/li&amp;gt;
+  {{ end }}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/templates/terms/&#34;&gt;http://gohugo.io/templates/terms/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;termに紐づくコンテンツのリスト&#34;&gt;Termに紐づくコンテンツのリスト&lt;/h3&gt;
+
+&lt;p&gt;特定の Term に紐づくコンテンツのリストは /&lt;em&gt;PLURAL&lt;/em&gt;/Term/ (例えば /tags/hugo/) というURLで生成されます。&lt;br /&gt;
+使用されるテンプレートは以下の順に検索されます。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;/layouts/taxonomy/&lt;em&gt;SINGULAR&lt;/em&gt;.html (例： /layouts/taxonomy/topic.html)&lt;/li&gt;
+&lt;li&gt;/layouts/_default/taxonomy.html&lt;/li&gt;
+&lt;li&gt;/layouts/_default/list.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/taxonomy/&lt;em&gt;SINGULAR&lt;/em&gt;.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/_default/taxonomy.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/_default/list.html&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;上のテンプレートでは変数 &lt;code&gt;.Data.Pages&lt;/code&gt; にコンテンツの情報が格納されています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Data.Pages }}
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt;
+&amp;lt;div class=&amp;quot;meta&amp;quot;&amp;gt;{{ .Date.Format &amp;quot;Mon, Jan 2, 2006&amp;quot; }}&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/templates/list/&#34;&gt;http://gohugo.io/templates/list/&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（リスト編）</title>
       <link>http://staff.feedtailor.jp/2016/06/22/hugo_10</link>
       <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
