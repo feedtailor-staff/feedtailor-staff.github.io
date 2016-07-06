@@ -6,8 +6,116 @@
     <description>Recent content in Posts on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 29 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Jul 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（テーマ編）</title>
+      <link>http://staff.feedtailor.jp/2016/07/06/hugo_12</link>
+      <pubDate>Wed, 06 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/07/06/hugo_12</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;テーマ（theme）&lt;/strong&gt;ついて。&lt;/p&gt;
+
+&lt;p&gt;Hugoでは、WordPressや他のCMS、ブログと同じようにテーマを利用してデザインを変更できます。&lt;br /&gt;
+また、自分で作成したレイアウトテンプレートや画像等をテーマとして纏めておくことで、コンテンツを変更することなくサイトのデザインを変更できるようになります。&lt;/p&gt;
+
+&lt;p&gt;Hugoにはデフォルトのテーマがありませんので、新規サイト作成時にはお好みのテーマを選択して適用してください。テーマの適用後もデザインは自由にカスタマイズ可能です。&lt;/p&gt;
+
+&lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;Hugo themes&lt;/a&gt; というサイトにコミュニティで作られたテーマが多数公開されています。&lt;br /&gt;
+各テーマは GitHub で公開されていますので、以下のように git コマンドでインストールしてください。「gitって何？」という方は後述の zip ファイルをダウンロードしてインストールすることもできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;全てのテーマをインストール (git)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone --recursive https://github.com/spf13/hugoThemes.git themes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;特定のテーマをインストール (git)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir themes
+$ cd theme
+$ git clone テーマのURL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;URLは&lt;a href=&#34;https://github.com/spf13/hugoThemes&#34;&gt;GitHubのリポジトリ&lt;/a&gt;からインストールしたいテーマを選択し、画面右上にある緑の &amp;ldquo;Clone or download&amp;rdquo; ボタンで表示できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2016/07/hugo_12_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;特定のテーマをインストール (zip)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/spf13/hugoThemes&#34;&gt;GitHubのリポジトリ&lt;/a&gt;からインストールしたテーマを選択し、画面右上にある緑の &amp;ldquo;Clone or download&amp;rdquo; ボタンから &amp;ldquo;Download ZIP&amp;rdquo; を実行してください。&lt;br /&gt;
+config.toml と同じ階層に themes フォルダを作成し、ダウンロードしたzipファイルを展開します。
+展開したフォルダは hugo-uno-4bc5f0c635995c55723284be3b0f826c86efdd13 のように末尾に長い英数字（gitのリビジョン）がついているので、最後の - 以降を削除（hugo-uno に名前を変更）します。&lt;/p&gt;
+
+&lt;h2 id=&#34;テーマを適用する&#34;&gt;テーマを適用する&lt;/h2&gt;
+
+&lt;p&gt;テーマを適用する方法は２つあります。一つがコマンドラインの引数、もう一つは設定ファイルで指定です。&lt;/p&gt;
+
+&lt;p&gt;コマンドラインでは以下のように &amp;ldquo;-t テーマ名&amp;rdquo; を追加します。&lt;code&gt;hugo server&lt;/code&gt; コマンドでも同様です。テーマ名は themes フォルダ内にあるテーマのフォルダ名です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo -t テーマ名
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;設定ファイルで指定する場合は config.toml に以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# config.toml
+theme = &amp;quot;テーマ名&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;テーマをカスタマイズする&#34;&gt;テーマをカスタマイズする&lt;/h2&gt;
+
+&lt;p&gt;テーマフォルダ（themes/テーマ名）内の構造はサイトと同様で layouts、static、archetypes フォルダがあります。&lt;/p&gt;
+
+&lt;p&gt;カスタマイズしたい場合はテーマフォルダ内のファイルを直接変更するのではなく、変更したいファイルを対応するサイトのフォルダ（layouts等）にコピーして編集します。
+例えば、themes/テーマ名/&lt;strong&gt;layouts/defaults/single.html&lt;/strong&gt; を変更したい場合は、&lt;strong&gt;layouts/defaults/single.html&lt;/strong&gt; にファイルをコピーして変更します。&lt;br /&gt;
+staticやarchetypesフォルダ内のファイルも同様です。&lt;/p&gt;
+
+&lt;h2 id=&#34;テーマを作成する&#34;&gt;テーマを作成する&lt;/h2&gt;
+
+&lt;p&gt;新たにテーマを作成する時は以下のコマンドを使用するのが便利です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new theme テーマ名
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コマンドを実行すると themes/テーマ名 フォルダにテーマのひな型が作成されます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;themes/
+└── テーマ名
+    ├── LICENSE.md
+    ├── archetypes
+    │   └── default.md
+    ├── layouts
+    │   ├── 404.html
+    │   ├── _default
+    │   │   ├── list.html
+    │   │   └── single.html
+    │   ├── index.html
+    │   └── partials
+    │       ├── footer.html
+    │       └── header.html
+    ├── static
+    │   ├── css
+    │   └── js
+    └── theme.toml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;先ほどの layouts、static、archetypes フォルダとtheme.toml、各フォルダにはダミーのファイルやフォルダ（archetypes/default.md, static/css &amp;hellip;）が生成されますのでそれらを変更するのが良いでしょう。&lt;/p&gt;
+
+&lt;p&gt;theme.toml には作者やライセンス、config.toml に記載する設定のサンプル等を記載します。ページ生成には影響しません。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/themes/creation/&#34;&gt;http://gohugo.io/themes/creation/&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（Taxonomy編）</title>
@@ -1698,126 +1806,6 @@ hogehoge dir_path + &amp;quot;_2&amp;quot;
 &lt;/ul&gt;
 
 &lt;p&gt;当初の作戦(fastlaneへの移行)とは違う方向になりましたが、結果的には社内ツールが利用・メンテナンス共にすっきりした状態に移行できました。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>超聖域：JavaFXのGradleビルド</title>
-      <link>http://staff.feedtailor.jp/2015/08/10/1013</link>
-      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://staff.feedtailor.jp/2015/08/10/1013</guid>
-      <description>
-
-&lt;p&gt;営業兼開発の tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
-
-&lt;p&gt;7月1日〜7日まで弊社の９周年記念(?)として&lt;a href=&#34;http://feedtailor.jp/wp/?p=14425&#34;&gt;「超聖域」&lt;/a&gt;なるイベントが開催されました。&lt;/p&gt;
-
-&lt;p&gt;「超聖域」っていうのは、期間中は通常業務をやらなくていいので自由に作りたいものを作ってねー、というもので、私は対外的な業務があるので100%開発とは行かなかったのですが、2日間くらいはがっつり開発できました。&lt;/p&gt;
-
-&lt;p&gt;で、何をやったかというと以前から着手していた &lt;a href=&#34;http://www.syncnel.biz&#34;&gt;SYNCNEL&lt;/a&gt; のJavaFXアプリケーションのGradleビルドスクリプトを書いてました。&lt;/p&gt;
-
-&lt;h1 id=&#34;javafx&#34;&gt;JavaFX&lt;/h1&gt;
-
-&lt;p&gt;JavaFXとはJavaのGUIツールキットでJDK8からは標準で提供されています。&lt;/p&gt;
-
-&lt;p&gt;SYNCNELでは以前からWindows専用アプリケーションをいくつかご提供していたのですが、個人的に「Macでも使いたい」とか「Java8の新機能（ラムダ式とか）を使ってみたい」との思いから（主に後者）、JavaFXでデスクトップアプリを作り始めました。&lt;/p&gt;
-
-&lt;p&gt;JavaFXではSelf-Containedなアプリ（ルー語みたい？）、つまりJavaの実行環境を内包した単独実行できるアプリケーションを作る機能が用意されていて、比較的簡単にデスクトップアプリが作成できます。&lt;/p&gt;
-
-&lt;p&gt;簡単とは言いましたが、はまるポイントは幾つもあったので、今回はその内のビルドスクリプトについてご紹介します。&lt;/p&gt;
-
-&lt;h1 id=&#34;gradleビルドスクリプト&#34;&gt;Gradleビルドスクリプト&lt;/h1&gt;
-
-&lt;p&gt;アプリ自体はコードが書ければできあがるんですが、それを公開するとなるといろいろやることがあります。&lt;/p&gt;
-
-&lt;p&gt;一般の方に使っていただくにはインストーラを用意したり、コードにサインしたり、・・・・・・。&lt;/p&gt;
-
-&lt;p&gt;JavaFXアプリをビルドするための方法は標準でOracleから提供されているんですが、これがなぜかAntのタスクで。&lt;/p&gt;
-
-&lt;p&gt;既にあるGradleスクリプトから外部タスクとして実行する手もあったんですがなんか気持ちよくないので、Gradleのタスクとして直接実行するようにしました。&lt;/p&gt;
-
-&lt;p&gt;JARファイル作成までは探せば情報があるんですが、その先がなくて、試行錯誤の末、できあがったのが以下の build.gradle です。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import groovy.xml.NamespaceBuilder
-
-apply plugin: &#39;java&#39;
-apply plugin: &#39;idea&#39;
-
-version = &#39;アプリのバージョン&#39;
-
-def vender_name    = &#39;ベンダー名&#39;
-def jar_name       = &#39;JARファイル名&#39;
-def app_name       = &#39;アプリ名&#39;
-def app_width      = &#39;アプリのウィンドウ幅&#39;
-def app_height     = &#39;アプリのウィンドウ高さ&#39;
-def app_main_class = &#39;JavaFXのアプリケーションクラス&#39;
-
-configurations { antfx }
-
-...
-
-dependencies {
-    // 環境変数からJDKのロケーションを取得
-    antfx files(&amp;quot;${project.property(&#39;org.gradle.java.home&#39;)}/lib/ant-javafx.jar&amp;quot;)
-    // 依存ライブラリ
-    compile ... 
-}
-
-task fx_deploy(dependsOn: &#39;classes&#39;) &amp;lt;&amp;lt; {
-    def jar_dir  = &amp;quot;${buildDir}/libs&amp;quot;
-    def jar_file = &amp;quot;${jar_dir}/${jar_name}-${version}.jar&amp;quot;
-
-    def fx = NamespaceBuilder.newInstance(ant, &#39;javafx:com.sun.javafx.tools.ant&#39;)
-    ant.taskdef(
-            resource: &#39;com/sun/javafx/tools/ant/antlib.xml&#39;,
-            uri: &#39;javafx:com.sun.javafx.tools.ant&#39;,
-            // src/main/deploy をクラスパスに追加
-            classpath: &#39;src/main/deploy:&#39; + configurations.antfx.asPath)
-
-    fx.application(
-            id: jar_name,
-            name: app_name,
-            version: version,
-            mainClass: app_main_class)
-
-    copy {
-        into jar_dir
-        from configurations.runtime
-    }
-
-    fx.jar(destfile: jar_file) {
-        application(refid: jar_name)
-        fileset(dir: &amp;quot;${buildDir}/resources/main&amp;quot;)
-        fileset(dir: &amp;quot;${buildDir}/classes/main&amp;quot;)
-        resources {
-            fileset(dir: jar_dir)
-        }
-    }
-
-    fx.deploy(
-            outdir: distsDir,
-            outfile: jar_name,
-            width: app_width,
-            height: app_height,
-            nativeBundles: &#39;all&#39;,
-            verbose: true) {
-        application(refid: jar_name)
-        resources {
-            fileset(dir: jar_dir)
-        }
-        info(title: app_name, vendor: vender_name)
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;アプリやOSX用dmgのアイコン等のプラットフォーム固有のファイルは src/main/deploy/package/(macosx|windows) 以下に置いてください。&lt;/p&gt;
-
-&lt;p&gt;後はタスクを実行するだけで、OSXならdmgファイル、Windowsならmsiファイル(WIXが必要) まで出来上がり。署名すれば、MacAppStore にも出せます。&lt;/p&gt;
-
-&lt;p&gt;Androidアプリをデスクトップに移植とかしたい人はJavaFXを検討するのもいいかもしれません。&lt;/p&gt;
-
-&lt;p&gt;ということで、ビルドしたアプリケーションは近日中に SYNCNEL Content Manager（仮名）としてリリース予定です！！&lt;/p&gt;
 </description>
     </item>
     
