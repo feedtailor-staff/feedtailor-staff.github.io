@@ -6,8 +6,110 @@
     <description>Recent content on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 06 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jul 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（データファイル編）</title>
+      <link>http://staff.feedtailor.jp/2016/07/13/hugo_13</link>
+      <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/07/13/hugo_13</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;データファイル&lt;/strong&gt;ついて。&lt;/p&gt;
+
+&lt;p&gt;Hugoでは、YAML / JSON / TOML形式で記述したデータをサイトに表示することができます。
+自社の製品データや販売実績、トピックス等をデータファイルとして保存しておくと、レイアウトやコンテンツに手を入れることなく表示データの更新が可能になります。&lt;/p&gt;
+
+&lt;h3 id=&#34;使用方法&#34;&gt;使用方法&lt;/h3&gt;
+
+&lt;p&gt;データファイルは &lt;code&gt;data&lt;/code&gt; フォルダに設置します。サブフォルダを作っても良いです。&lt;br /&gt;
+設置したデータファイルは、テンプレートやショートコードから &lt;code&gt;.Site.Data&lt;/code&gt; 変数を介してアクセスできます。&lt;br /&gt;
+具体的には、&lt;code&gt;.Site.Data&lt;/code&gt; に続けてサブフォルダ名、ファイル名を . (ドット)でつなげた変数に格納されます。&lt;br /&gt;
+サブフォルダ名に . が入っていると変数を参照できなくなるので注意してください。&lt;/p&gt;
+
+&lt;p&gt;例えば、日本の祝日リストのデータファイルを作成する場合は以下のようになります。&lt;/p&gt;
+
+&lt;p&gt;まず、data/calendar/holidays.toml として祝日データファイルを保存します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;year_2016 = [
+&amp;quot;1/1 元日&amp;quot;,
+&amp;quot;1/11 成人の日&amp;quot;,
+&amp;quot;2/11 建国記念の日&amp;quot;,
+...
+&amp;quot;12/23 天皇誕生日&amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上のデータは変数 &lt;code&gt;.Site.Data.calendar.holidays&lt;/code&gt; に格納されますので、次のような記述でリストを表示できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+{{ range .Site.Data.calendar.holidays.year_2016 }}
+  &amp;lt;li&amp;gt;{{ . }}&amp;lt;/li&amp;gt;
+{{ end }}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;data-driven-content&#34;&gt;Data-driven Content&lt;/h2&gt;
+
+&lt;p&gt;Hugo ではデータファイルに加え、ローカル環境または外部サーバにある JSON / CSV ファイルをビルド時に自動取得して表示することができます。&lt;/p&gt;
+
+&lt;p&gt;データは getJSON, getCSV 関数を使用して取得します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// JSONの場合
+{{ $dataJ := getJSON &amp;quot;url&amp;quot; }}
+
+// CSVの場合
+{{ $dataC := getCSV &amp;quot;separator&amp;quot; &amp;quot;url&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;引数の url はスペース区切りで分割して書くこともできます。例えば&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;https://gohugo.io&amp;quot; &amp;quot;/extras&amp;quot; &amp;quot;/datadrivencontent/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;は結合した一つのURL&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;https://gohugo.io/extras/datadrivencontent/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;として扱われます。&lt;/p&gt;
+
+&lt;p&gt;ローカル環境のファイルを指定する場合は、ファイルをワークフォルダ（hugoのサイトフォルダ）内に置き、url はフォルダ内の相対パスで指定してください。&lt;/p&gt;
+
+&lt;p&gt;CSVの場合は次のように行や列を指定して表示します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;table&amp;gt;
+{{ range $i, $r := getCSV &amp;quot;,&amp;quot; &amp;quot;http://.../sample.csv” }}
+{{ if gt $i 0 }}
+&amp;lt;tr&amp;gt;
+  &amp;lt;td&amp;gt;{{ index $r 0 }}&amp;lt;/td&amp;gt;
+  &amp;lt;td&amp;gt;{{ index $r 1 }}&amp;lt;/td&amp;gt;
+  &amp;lt;td&amp;gt;{{ index $r 2 }}&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+{{ end }}
+{{ end }}
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;変数 &lt;code&gt;$i&lt;/code&gt; には行番号（0始まり）が、&lt;code&gt;$r&lt;/code&gt; には各行のデータが格納されます。&lt;br /&gt;
+データは index 関数を使用して取得します。第１引数は行全体のデータ、第２引数は列番号（0始まり）です。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;キャッシュ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;リモートデータはビルドまたはプレビュー（ライブリロード）時に取得しています。一度取得したデータはキャッシュされますので注意してください。&lt;br /&gt;
+キャッシュされたデータはデフォルトでは &lt;code&gt;$TMPDIR/hugo_cache/&lt;/code&gt; に保存されますが、&lt;code&gt;hugo&lt;/code&gt; コマンドのオプション &lt;code&gt;--cacheDir&lt;/code&gt; でフォルダを変更することもできます。&lt;/p&gt;
+
+&lt;p&gt;また、&lt;code&gt;--ignoreCache&lt;/code&gt; オプションを使用すると、キャッシュを使用せずビルドの度に毎回取得することもできます。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（テーマ編）</title>
@@ -1637,175 +1739,6 @@ Markdownの書き方は以下のサイトが参考になります。
 &lt;p&gt;静的サイトへの移行については「なんでそんな面倒臭いことを？」とか「わざわざ移行する必要ある？」とか意見はあると思いますが、好きなテキストエディタを使って &lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34;&gt;Markdown記法&lt;/a&gt; で書けるので個人的にはとても気に入ってます。&lt;/p&gt;
 
 &lt;p&gt;もちろん動的サイトじゃないと無理って言うところもあるので、全部置き換えることはできないしその必要もありませんが、Markdownで記事を書いてサクッと投稿、みたいな運用をしたい方は移行を検討してみても良いのではないでしょうか。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>超聖域: iOSアプリのビルドツール</title>
-      <link>http://staff.feedtailor.jp/2015/08/11/1083</link>
-      <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://staff.feedtailor.jp/2015/08/11/1083</guid>
-      <description>
-
-&lt;p&gt;iOSアプリ開発担当のふじしげ((&lt;a href=&#34;https://twitter.com/nakiwo&#34;&gt;@nakiwo&lt;/a&gt;)です。&lt;/p&gt;
-
-&lt;p&gt;7/1 から 7/7 にかけて社内で行われた&lt;a href=&#34;http://feedtailor.jp/wp/?p=14425&#34;&gt;「超聖域」&lt;/a&gt; の結果レポートをまとめました。&lt;/p&gt;
-
-&lt;p&gt;結論からいいますと、紆余曲折あって最終的は&amp;#8221;DSLな設定ファイルを利用するRubyGemを作ってみよう&amp;#8221;という取り組みになっています。&lt;/p&gt;
-
-&lt;p&gt;フィードテイラーのiOSアプリビルドには、当初itok作のMakefileが利用されていました。xcodebuildを初めとするXcode付属のコマンドラインツールを組み合わせて、ビルドからデプロイを行うものです。Xcodeツール類のバージョンアップに伴う修正や新しい要件に対応するためこのMakefileの改造に着手。気づけば自分がメンテナンス担当に。&lt;/p&gt;
-
-&lt;p&gt;日々細かい改良を施すというよりは、必要な時に少しまとまった時間をとって最低限の改良を行うにとどまる事が多かったのですが、超聖域という事で今まで気になりつつも放置していた部分に大きく手を入れよう試みを行いました。&lt;/p&gt;
-
-&lt;h2 id=&#34;これまでの状況&#34;&gt;これまでの状況&lt;/h2&gt;
-
-&lt;p&gt;これまでの状況はざっくりと以下のような感じです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Makefileに改造が必要になる。iOS2時代から綿々と受け継がれる秘伝のタレのレシピを紐解く。&lt;/li&gt;
-&lt;li&gt;そのうちMakefileで何をやってるか分かってきたので改造開始。&lt;/li&gt;
-&lt;li&gt;Makefile内のシェル芸の理解にかかる時間が多くなってきたので、慣れているRubyベースでRakefile化 (シェル苦手)&lt;/li&gt;
-&lt;li&gt;Rakefileをメンテナンス&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Xcodeビルドツール類の情報は、現在ではネット上に沢山あるので基本的に困る事はないと思います。ツールとしてまとまったものとしては、&lt;a href=&#34;https://github.com/nomad/shenzhen&#34;&gt;SHENZHEN&lt;/a&gt;や、新しいところでは&lt;a href=&#34;https://github.com/KrauseFx/fastlane&#34;&gt;fastlane&lt;/a&gt;が有名どころです。(これらのツールのコードを読むと色々参考になるのでオススメ)&lt;/p&gt;
-
-&lt;p&gt;社内のRakefileでは、xcodebuildを直接触って動作確認しつつ、ネット上の各種情報や既存の実装を参考に必要なエッセンスを取り込むような事をしていました。&lt;/p&gt;
-
-&lt;h2 id=&#34;fastlane&#34;&gt;fastlane&lt;/h2&gt;
-
-&lt;p&gt;先にあげましたが、新しめのツールとして &lt;a href=&#34;https://github.com/KrauseFx/fastlane&#34;&gt;fastlane&lt;/a&gt;があります。iOSアプリ開発にまつわる様々なタスクをなんでも自動化してしまおうという壮大なプロジェクト。試してみる価値大では？という印象を受けました。&lt;/p&gt;
-
-&lt;p&gt;超聖域は、自前ツールのメンテナンスをやめてfastlaneで既存のタスクを置き換えようという試みからスタートする事に。&lt;/p&gt;
-
-&lt;p&gt;設定ファイルであるFastfileで各種ツールの組み合わせを柔軟にカスタマイズ可能で、これを極めて今後はこれ一本で！と勢い勇んで取り掛かりました。しかしいざやってみると細かい挙動を理解するのに一苦労。&lt;/p&gt;
-
-&lt;p&gt;fastlaneはそれぞれ単体で利用可能なツール類を組み合わせて利用する仕組みになっています。細かい挙動を知るにはそれら単体ツールの挙動をよく知る必要が有ります。それに加えてfastlane自体の挙動もよく理解している必要があり、思ったより学習コストが高い印象を受けました。&lt;/p&gt;
-
-&lt;p&gt;ドキュメントに記載されていない挙動を理解するためにfastlaneツール類のソースコードを読む事しばし。そのうちに色々知見が得られました。残念ながらfastlane自体を使いこなすにはいたりませんでしたが、得られた知見を元に元の社内ツールを改良するというアプローチに方向転換しました。&lt;/p&gt;
-
-&lt;p&gt;(fastlane自体はやりたい事にうまくはまると良いツールだと思いますので今後も注目していきたいと思っています)&lt;/p&gt;
-
-&lt;h2 id=&#34;gem化したコマンドラインツールへの置き換え&#34;&gt;Gem化したコマンドラインツールへの置き換え&lt;/h2&gt;
-
-&lt;p&gt;社内Rakefileは必要最低限の機能しかない規模の小さいもので見通しは良い状態にあります。ただ、いくつか問題があったのでそれを潰していく事にしました。&lt;/p&gt;
-
-&lt;p&gt;まず既存のRakefileで抱えていた問題点から。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1つのRakefileだけで構成。gitで管理してはいるものの、バージョン管理が曖昧な状態。&lt;/li&gt;
-&lt;li&gt;Rakefile内に全ての必要なコードが書かれている。別途Gemを取り込むということができない構造&lt;/li&gt;
-&lt;li&gt;Rakefileのタスクの挙動を変更するために別途YAMLの設定ファイルを利用している。Ruby DSLな設定ファイルが使えればもう少し柔軟な記述ができるのに..。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;問題点を解消するために以下のような構成に変更することにしました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Rakefileではなく、Gem化した専用コマンドツール化する。バージョン管理と依存Gemの取り込みが容易になる。&lt;/li&gt;
-&lt;li&gt;設定ファイルはYAMLではなくDSL化した専用ファイルにする。設定ファイル内の記述が柔軟に。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ここからはiOS周りの話ではなく、&amp;#8221;GemやRuby DSLを作ったことが無い人間によるコマンドラインツール作成&amp;#8221;、という内容になります。&lt;/p&gt;
-
-&lt;p&gt;作ったコマンドは&amp;#8221;ftbuild&amp;#8221;と命名しました。(今の所一般公開予定はありません)&lt;/p&gt;
-
-&lt;h2 id=&#34;gemの作成&#34;&gt;Gemの作成&lt;/h2&gt;
-
-&lt;p&gt;bundlerでGemのひな形を作成することができるのでこれを利用。(&lt;a href=&#34;http://bundler.io/v1.10/bundle_gem.html&#34;&gt;&lt;code&gt;bundle gem&lt;/code&gt;&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;gempsec自体じっくり見るのは初めてでしたが、cocoapodsのpodspecと似た構造なのですんなり理解できました。&lt;/p&gt;
-
-&lt;p&gt;(cocoapodsはRubyGemsやBundlerを真似て作られているので似ていて当然)&lt;/p&gt;
-
-&lt;p&gt;Gem化する事で、ツールのバージョン管理と、依存Gemの取り込みが一般的な方法でできるようになりました。&lt;/p&gt;
-
-&lt;p&gt;このGemは一般公開する予定が無いので、privateなgitリポジトリに置きます。&lt;/p&gt;
-
-&lt;p&gt;利用する際は、bundlerのGemfileで以下のようにリポジトリを直接指定します。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;gem &amp;quot;ftbuild&amp;quot;, :git =&amp;gt; &#39;url/to/ftbuild.git&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;次にgemspecに依存Gemを追加。今回は以下のようなGemを利用しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://whatisthor.com&#34;&gt;Thor&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;サブコマンドを持つコマンドラインインターフェースを簡単に作成できる。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/defunkt/colored&#34;&gt;colored&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ターミナルへのテキスト色付け。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/JEG2/highline&#34;&gt;highline&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ユーザとの対話。パスワード伏字機能アリ。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/supermarin/xcpretty&#34;&gt;xcpretty&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;xcodebuildの出力をいい感じに整形。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/ckruse/CFPropertyList&#34;&gt;CFPropertyList&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;plistの操作。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-sdk-ruby&#34;&gt;aws-sdk-resources&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;s3の操作用。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;あとは元のRakefileに実装していた諸々機能をThorベースでコマンド化していきます。&lt;/p&gt;
-
-&lt;h2 id=&#34;dsl&#34;&gt;DSL&lt;/h2&gt;
-
-&lt;p&gt;昨今の開発シーンでは、RubyベースのDSLを設定ファイルとして利用する事がよくあります。(Gemfile、Podfile、Rakefile、Fastfile、etc..)&lt;/p&gt;
-
-&lt;p&gt;fastlaneのソースを読んでいる際、DSLの設定ファイルの取り扱いのコードが案外あっさりしている事がわかったので実装してみました。(参考にしたのは&lt;a href=&#34;https://github.com/KrauseFx/deliver/tree/d6dcdaf0bcc8c15befe25def1664ec0ae1a2f304/lib/deliver/deliverfile&#34;&gt;このあたり&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;基本はRubyで書かれた設定ファイルを読み込んでinstance_evalするだけです。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;content = File.read(path)
-self.instance_eval(content)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;あとは上の例でselfとなっているオブジェクトに、設定項目に対応するメソッドを用意します。&lt;/p&gt;
-
-&lt;p&gt;例えば設定ファイルに&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hogehoge &amp;quot;xyz&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;という項目を作りたい場合は、&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;def hogehoge(val)
-  # valを保存
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;というメソッドを作って値を保存するなり好きなように料理します。&lt;/p&gt;
-
-&lt;p&gt;単純な値設定のみの項目であれば、method_missing を実装して処理を共通化するとすっきりします。(&lt;a href=&#34;https://github.com/KrauseFx/deliver/blob/d6dcdaf0bcc8c15befe25def1664ec0ae1a2f304/lib/deliver/deliverfile/dsl.rb#L19-L61&#34;&gt;参考コード&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;ここまでの段階だけでも設定ファイル側では、&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;dir_path = &amp;quot;path_to_dir&amp;quot;
-
-hogehoge dir_path + &amp;quot;_1&amp;quot;
-hogehoge dir_path + &amp;quot;_2&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;のような記述が可能になり、YAMLの設定ファイルより記述力が格段に増します。&lt;/p&gt;
-
-&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;fastlaneは要注目。&lt;/li&gt;
-&lt;li&gt;fastlane配下の各種ツールは単体で使える。必要なものだけつまみ食いするのも有効。&lt;/li&gt;
-&lt;li&gt;RubyGem・Ruby DSLの作成は思ったより敷居が低かった。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;当初の作戦(fastlaneへの移行)とは違う方向になりましたが、結果的には社内ツールが利用・メンテナンス共にすっきりした状態に移行できました。&lt;/p&gt;
 </description>
     </item>
     

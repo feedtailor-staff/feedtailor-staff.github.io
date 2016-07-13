@@ -6,8 +6,110 @@
     <description>Recent content in 2016 on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 06 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jul 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/archives/2016/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（データファイル編）</title>
+      <link>http://staff.feedtailor.jp/2016/07/13/hugo_13</link>
+      <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/07/13/hugo_13</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;データファイル&lt;/strong&gt;ついて。&lt;/p&gt;
+
+&lt;p&gt;Hugoでは、YAML / JSON / TOML形式で記述したデータをサイトに表示することができます。
+自社の製品データや販売実績、トピックス等をデータファイルとして保存しておくと、レイアウトやコンテンツに手を入れることなく表示データの更新が可能になります。&lt;/p&gt;
+
+&lt;h3 id=&#34;使用方法&#34;&gt;使用方法&lt;/h3&gt;
+
+&lt;p&gt;データファイルは &lt;code&gt;data&lt;/code&gt; フォルダに設置します。サブフォルダを作っても良いです。&lt;br /&gt;
+設置したデータファイルは、テンプレートやショートコードから &lt;code&gt;.Site.Data&lt;/code&gt; 変数を介してアクセスできます。&lt;br /&gt;
+具体的には、&lt;code&gt;.Site.Data&lt;/code&gt; に続けてサブフォルダ名、ファイル名を . (ドット)でつなげた変数に格納されます。&lt;br /&gt;
+サブフォルダ名に . が入っていると変数を参照できなくなるので注意してください。&lt;/p&gt;
+
+&lt;p&gt;例えば、日本の祝日リストのデータファイルを作成する場合は以下のようになります。&lt;/p&gt;
+
+&lt;p&gt;まず、data/calendar/holidays.toml として祝日データファイルを保存します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;year_2016 = [
+&amp;quot;1/1 元日&amp;quot;,
+&amp;quot;1/11 成人の日&amp;quot;,
+&amp;quot;2/11 建国記念の日&amp;quot;,
+...
+&amp;quot;12/23 天皇誕生日&amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上のデータは変数 &lt;code&gt;.Site.Data.calendar.holidays&lt;/code&gt; に格納されますので、次のような記述でリストを表示できます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+{{ range .Site.Data.calendar.holidays.year_2016 }}
+  &amp;lt;li&amp;gt;{{ . }}&amp;lt;/li&amp;gt;
+{{ end }}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;data-driven-content&#34;&gt;Data-driven Content&lt;/h2&gt;
+
+&lt;p&gt;Hugo ではデータファイルに加え、ローカル環境または外部サーバにある JSON / CSV ファイルをビルド時に自動取得して表示することができます。&lt;/p&gt;
+
+&lt;p&gt;データは getJSON, getCSV 関数を使用して取得します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// JSONの場合
+{{ $dataJ := getJSON &amp;quot;url&amp;quot; }}
+
+// CSVの場合
+{{ $dataC := getCSV &amp;quot;separator&amp;quot; &amp;quot;url&amp;quot; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;引数の url はスペース区切りで分割して書くこともできます。例えば&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;https://gohugo.io&amp;quot; &amp;quot;/extras&amp;quot; &amp;quot;/datadrivencontent/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;は結合した一つのURL&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;https://gohugo.io/extras/datadrivencontent/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;として扱われます。&lt;/p&gt;
+
+&lt;p&gt;ローカル環境のファイルを指定する場合は、ファイルをワークフォルダ（hugoのサイトフォルダ）内に置き、url はフォルダ内の相対パスで指定してください。&lt;/p&gt;
+
+&lt;p&gt;CSVの場合は次のように行や列を指定して表示します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;table&amp;gt;
+{{ range $i, $r := getCSV &amp;quot;,&amp;quot; &amp;quot;http://.../sample.csv” }}
+{{ if gt $i 0 }}
+&amp;lt;tr&amp;gt;
+  &amp;lt;td&amp;gt;{{ index $r 0 }}&amp;lt;/td&amp;gt;
+  &amp;lt;td&amp;gt;{{ index $r 1 }}&amp;lt;/td&amp;gt;
+  &amp;lt;td&amp;gt;{{ index $r 2 }}&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+{{ end }}
+{{ end }}
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;変数 &lt;code&gt;$i&lt;/code&gt; には行番号（0始まり）が、&lt;code&gt;$r&lt;/code&gt; には各行のデータが格納されます。&lt;br /&gt;
+データは index 関数を使用して取得します。第１引数は行全体のデータ、第２引数は列番号（0始まり）です。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;キャッシュ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;リモートデータはビルドまたはプレビュー（ライブリロード）時に取得しています。一度取得したデータはキャッシュされますので注意してください。&lt;br /&gt;
+キャッシュされたデータはデフォルトでは &lt;code&gt;$TMPDIR/hugo_cache/&lt;/code&gt; に保存されますが、&lt;code&gt;hugo&lt;/code&gt; コマンドのオプション &lt;code&gt;--cacheDir&lt;/code&gt; でフォルダを変更することもできます。&lt;/p&gt;
+
+&lt;p&gt;また、&lt;code&gt;--ignoreCache&lt;/code&gt; オプションを使用すると、キャッシュを使用せずビルドの度に毎回取得することもできます。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（テーマ編）</title>
