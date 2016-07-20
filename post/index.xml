@@ -6,8 +6,122 @@
     <description>Recent content in Posts on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 13 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jul 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（URL編）</title>
+      <link>http://staff.feedtailor.jp/2016/07/20/hugo_14</link>
+      <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/07/20/hugo_14</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
+
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;URL&lt;/strong&gt;ついて。&lt;/p&gt;
+
+&lt;p&gt;Hugoのデフォルト設定では、URLはコンテンツの配置によって決まりますが、フロントマターのパラメータで指定のURLに変更したり、エイリアスを配置することができます。&lt;/p&gt;
+
+&lt;h3 id=&#34;urlの変更-ページ単位&#34;&gt;URLの変更(ページ単位)&lt;/h3&gt;
+
+&lt;p&gt;デフォルト設定では content/post/sample.md から以下のページが生成されます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public/post/sample/index.html   // URL: [baseurl]/post/sample/
+
+// uglyURLs オプションが true の場合
+public/post/sample.html         // URL: [baseurl]/post/sample.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;任意のパスに変更したい場合は、フロントマターの url パラメータを使用します。&lt;/p&gt;
+
+&lt;p&gt;content/post/sample.md&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+// YAML形式の場合
+url: a/b/c
+....
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;生成されるページは &lt;code&gt;public/a/b/c/index.html&lt;/code&gt; (または &lt;code&gt;public/a/b/c.html&lt;/code&gt;) です。&lt;br /&gt;
+url パラメータについては &lt;a href=&#34;http://staff.feedtailor.jp/2016/05/11/hugo_05&#34;&gt;レイアウト編３&lt;/a&gt; を参照してください。&lt;/p&gt;
+
+&lt;h3 id=&#34;urlの変更-セクション単位&#34;&gt;URLの変更(セクション単位)&lt;/h3&gt;
+
+&lt;p&gt;config.toml の permalinks 設定を使用すると SECTION (コンテンツが置かれたフォルダの１階層目)単位で URL のパターンを指定する事ができます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[permalinks]
+  post = &amp;quot;/:year/:month/:title/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;左辺がセクション名で右辺がURLパターンです。&lt;br /&gt;
+URLパターンで使用できるパラメータは以下の通りです。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;:year&lt;/th&gt;&lt;td&gt;年：数字4桁&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:month&lt;/th&gt;&lt;td&gt;月：数字2桁&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:monthname&lt;/th&gt;&lt;td&gt;月名：January, February ... December&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:day&lt;/th&gt;&lt;td&gt;日：数字2桁&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:weekday&lt;/th&gt;&lt;td&gt;曜日：日曜=0, 月曜=1 ... 土曜=6&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:weekdayname&lt;/th&gt;&lt;td&gt;曜日名：Sunday, Monday ... Saturday&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:yearday&lt;/th&gt;&lt;td&gt;年の日：1月1日=1, 1月2日=2 ... 12月31日=365 (or 366)&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:section&lt;/th&gt;&lt;td&gt;コンテンツのsection&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:title&lt;/th&gt;&lt;td&gt;コンテンツのtitle&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:slug&lt;/th&gt;&lt;td&gt;コンテンツのslug（なければtitle）&lt;td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;:filename&lt;/th&gt;&lt;td&gt;コンテンツのファイル名（拡張子なし）&lt;td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;エイリアス&#34;&gt;エイリアス&lt;/h3&gt;
+
+&lt;p&gt;サイトを移行したりHugoでリプレースした時、旧サイトとURLが変わってしまい、旧URLから新URLへリダイレクトしたい事があります。&lt;br /&gt;
+alias パラメータを使用すると、旧URLにリダイレクト用ページを生成する事ができます。&lt;/p&gt;
+
+&lt;p&gt;リダイレクト先コンテンツのフロントマターに次のような設定を追加します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+// YAML形式の場合
+aliases:
+  - a/b/c.html  // 拡張子まで指定する
+  - d/e/        // 複数指定可能
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記の設定を追加すると、新URLのコンテンツに変更はありませんが、旧URLにリダイレクトするための以下のようなページが生成されます。&lt;br /&gt;
+旧URLにアクセスすると 0 秒後に新URLにリダイレクトします。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;link rel=&amp;quot;canonical&amp;quot; href=&amp;quot;リダイレクト先コンテンツのURL&amp;quot;/&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;content-type&amp;quot; content=&amp;quot;text/html; charset=utf-8&amp;quot;/&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;refresh&amp;quot; content=&amp;quot;0;url=リダイレクト先コンテンツのURL&amp;quot;/&amp;gt;
+  &amp;lt;/head&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;クロスリファレンス&#34;&gt;クロスリファレンス&lt;/h3&gt;
+
+&lt;p&gt;任意のコンテンツに対するURLを生成したい場合は ref または relref ショートコードを使用するのが便利です。&lt;br /&gt;
+ref は指定したコンテンツの絶対パス、relref は相対パスを生成します。&lt;/p&gt;
+
+&lt;p&gt;ショートコードを使用して以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{&amp;lt; ref &amp;quot;post/sample.md&amp;quot; &amp;gt;}}     =&amp;gt; [baseurl]/post/sample/
+{{&amp;lt; ref &amp;quot;sample.md&amp;quot; &amp;gt;}}          =&amp;gt; [baseurl]/post/sample/
+{{&amp;lt; relref &amp;quot;post/sample.md&amp;quot; &amp;gt;}}  =&amp;gt; /post/sample/
+{{&amp;lt; relref &amp;quot;sample.md&amp;quot; &amp;gt;}}       =&amp;gt; /post/sample/
+{{&amp;lt; relref &amp;quot;sample.md#top&amp;quot; &amp;gt;}}   =&amp;gt; /post/sample/#top
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上の２番目、４番目のようにフォルダ名は省略可能ですが、同一ファイル名のコンテンツが複数存在する場合には結果は保証されませんので注意してください。&lt;br /&gt;
+５番目のように anchor 付きでも指定できます。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（データファイル編）</title>
@@ -1711,34 +1825,6 @@ Markdownの書き方は以下のサイトが参考になります。
 &lt;p&gt;サイトの静的化に興味がある方や既に運用しているがコマンドラインの操作が煩わしい、というような方は是非ご相談ください。&lt;/p&gt;
 
 &lt;p&gt;2016/3/31 一部加筆・修正しました。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>スタッフブログを静的サイトに移行しました</title>
-      <link>http://staff.feedtailor.jp/2016/03/25/migration</link>
-      <pubDate>Fri, 25 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://staff.feedtailor.jp/2016/03/25/migration</guid>
-      <description>&lt;p&gt;久しぶりの投稿になります、 tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2014/04/18/45/&#34;&gt;2014年4月の開設&lt;/a&gt; からずっと &lt;a href=&#34;https://ja.wordpress.org/&#34;&gt;WordPress&lt;/a&gt; で運用していた本スタッフブログを静的サイトに移行しました。&lt;/p&gt;
-
-&lt;p&gt;昨年末から弊社が管理しているウェブサイトを徐々に静的サイトに移行していて、これで既に６サイト目。今回も静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; を使用しています。&lt;/p&gt;
-
-&lt;p&gt;既存のテーマを拝借して、&lt;a href=&#34;https://ja.wordpress.org/&#34;&gt;WordPress&lt;/a&gt; から記事をエクスポートしたり何やかんや手を入れてトータル３日くらいで設置しました。その後も少しずつ修正してますが。
-ちなみに本サイトは &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; で運用。ソースコードも &lt;a href=&#34;https://github.com/feedtailor/StaffBlog&#34;&gt;弊社のGitHub&lt;/a&gt; で公開しています。&lt;/p&gt;
-
-&lt;p&gt;というわけで、構築した時のノウハウとか課題とか、本サイトを更新しながら備忘録的に書いていく予定です。静的Webサイトに関する勉強会もやってますので、興味のある方は是非ご参加ください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://connpass.com/event/26420/&#34;&gt;第2回 静的Webサイト 勉強会&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://connpass.com/event/25507/&#34;&gt;第1回 静的Webサイト 勉強会&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;静的サイトへの移行については「なんでそんな面倒臭いことを？」とか「わざわざ移行する必要ある？」とか意見はあると思いますが、好きなテキストエディタを使って &lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34;&gt;Markdown記法&lt;/a&gt; で書けるので個人的にはとても気に入ってます。&lt;/p&gt;
-
-&lt;p&gt;もちろん動的サイトじゃないと無理って言うところもあるので、全部置き換えることはできないしその必要もありませんが、Markdownで記事を書いてサクッと投稿、みたいな運用をしたい方は移行を検討してみても良いのではないでしょうか。&lt;/p&gt;
 </description>
     </item>
     

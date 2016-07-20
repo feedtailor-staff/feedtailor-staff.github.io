@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>静的サイトジェネレータHugoを使ったサイト構築（URL編） &middot; feedtailor Inc. スタッフブログ</title>
+    <meta name="generator" content="Hugo 0.16" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="feedtailor Inc.">
+    
+      <meta name="description" content="feedtailor Inc. スタッフブログ">
+    
+    
+    <link rel="icon" href="http://staff.feedtailor.jp/favicon.ico">
+    <link rel="apple-touch-icon" href="http://staff.feedtailor.jp/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/style.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/css/monokai.css">
+    <link rel="stylesheet" href="http://staff.feedtailor.jp/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="静的サイトジェネレータHugoを使ったサイト構築（URL編）" />
+<meta property="og:description" content="こんにちは、tamaoki (@t0shiya) です。
+
+今回は、静的サイトジェネレータ Hugo の URLついて。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://staff.feedtailor.jp/2016/07/20/hugo_14" />
+
+
+<meta property="og:updated_time" content="2016-07-20T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="静的サイトジェネレータHugoを使ったサイト構築（URL編）">
+<meta itemprop="description" content="こんにちは、tamaoki (@t0shiya) です。
+
+今回は、静的サイトジェネレータ Hugo の URLついて。
+">
+
+
+<meta itemprop="dateModified" content="2016-07-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1316">
+
+
+
+<meta itemprop="keywords" content="2014,2014/04,2014/04/17,2014/04/18,2014/04/24,2014/05,2014/05/07,2014/05/13,2014/05/15,2014/05/21,2014/05/22,2014/05/26,2014/06,2014/06/06,2014/06/12,2014/06/30,2014/07,2014/07/28,2014/07/31,2014/08,2014/08/04,2014/09,2014/09/03,2014/09/08,2014/09/17,2014/09/29,2014/10,2014/10/09,2014/10/10,2014/10/14,2014/10/17,2014/10/22,2014/10/27,2014/10/28,2014/10/30,2014/11,2014/11/04,2014/11/05,2014/11/06,2014/11/10,2014/11/13,2014/11/17,2014/12,2014/12/02,2014/12/10,2014/12/12,2014/12/22,2015,2015/01,2015/01/13,2015/01/29,2015/02,2015/02/04,2015/03,2015/03/18,2015/03/31,2015/04,2015/04/17,2015/04/21,2015/04/23,2015/04/28,2015/04/30,2015/05,2015/05/21,2015/05/28,2015/07,2015/07/30,2015/07/31,2015/08,2015/08/03,2015/08/05,2015/08/06,2015/08/10,2015/08/11,2016,2016/03,2016/03/25,2016/03/30,2016/04,2016/04/05,2016/04/13,2016/04/20,2016/04/27,2016/05,2016/05/11,2016/05/18,2016/06,2016/06/01,2016/06/08,2016/06/15,2016/06/22,2016/06/29,2016/07,2016/07/06,2016/07/13,2016/07/20,hugo,node,アプリご紹介,全般,技術情報,未分類,静的サイトジェネレータ,8bitter,bgtube,book&#43;,cocos2d-x,codescanner,cwnotify,dailyshot,express,groups,imasks,node,nyatter,php,qr目覚まし,sora,sunshine,tailsearch,かんじかな,そらアルバム,そらレーダー,そら案内,そら気温,そら用心,アプリリリース,富豪keyboard,超聖域," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="静的サイトジェネレータHugoを使ったサイト構築（URL編）"/>
+<meta name="twitter:description" content="こんにちは、tamaoki (@t0shiya) です。
+
+今回は、静的サイトジェネレータ Hugo の URLついて。
+"/>
+<meta name="twitter:site" content="@feedtailor"/>
+
+
+</head>
+
+
+<body>
+<div class="container">
+
+<div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://staff.feedtailor.jp/" id="logo"><span class="site-title">feedtailor Inc. スタッフブログ</span></a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://staff.feedtailor.jp/categories/">Categories</a>
+          
+          
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/cse" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search" />
+          <button type="submit" name="sa" value="Search" class="search-form-submit"></button>
+          <input type="hidden" name="cx" value="003452515502113334774:ivdehod_nfm" />
+          <input type="hidden" name="ie" value="UTF-8" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://staff.feedtailor.jp/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://staff.feedtailor.jp/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	<div class="outer">
+        <section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                
+                <img src="http://staff.feedtailor.jp/images/2016/07/hugo_14.png" class="article-banner">
+                
+            
+
+            <header class="article-header">
+    <a href="http://staff.feedtailor.jp/2016/07/20/hugo_14">
+    <h1 class="article-title" itemprop="name">
+        静的サイトジェネレータHugoを使ったサイト構築（URL編）
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-07-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-07-20</time>
+            
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">静的サイトジェネレータ</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://staff.feedtailor.jp/categories/hugo">Hugo</a>
+                
+                
+            </div>
+            
+        
+
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>こんにちは、tamaoki (<a href="https://twitter.com/t0shiya">@t0shiya</a>) です。</p>
+
+<p>今回は、静的サイトジェネレータ <a href="http://gohugo.io">Hugo</a> の <strong>URL</strong>ついて。</p>
+
+<p>Hugoのデフォルト設定では、URLはコンテンツの配置によって決まりますが、フロントマターのパラメータで指定のURLに変更したり、エイリアスを配置することができます。</p>
+
+<h3 id="urlの変更-ページ単位">URLの変更(ページ単位)</h3>
+
+<p>デフォルト設定では content/post/sample.md から以下のページが生成されます。</p>
+
+<pre><code>public/post/sample/index.html   // URL: [baseurl]/post/sample/
+
+// uglyURLs オプションが true の場合
+public/post/sample.html         // URL: [baseurl]/post/sample.html
+</code></pre>
+
+<p>任意のパスに変更したい場合は、フロントマターの url パラメータを使用します。</p>
+
+<p>content/post/sample.md</p>
+
+<pre><code>---
+// YAML形式の場合
+url: a/b/c
+....
+---
+</code></pre>
+
+<p>生成されるページは <code>public/a/b/c/index.html</code> (または <code>public/a/b/c.html</code>) です。<br />
+url パラメータについては <a href="/2016/05/11/hugo_05">レイアウト編３</a> を参照してください。</p>
+
+<h3 id="urlの変更-セクション単位">URLの変更(セクション単位)</h3>
+
+<p>config.toml の permalinks 設定を使用すると SECTION (コンテンツが置かれたフォルダの１階層目)単位で URL のパターンを指定する事ができます。</p>
+
+<pre><code>[permalinks]
+  post = &quot;/:year/:month/:title/&quot;
+</code></pre>
+
+<p>左辺がセクション名で右辺がURLパターンです。<br />
+URLパターンで使用できるパラメータは以下の通りです。</p>
+
+<table>
+<tr><th>:year</th><td>年：数字4桁<td></tr>
+<tr><th>:month</th><td>月：数字2桁<td></tr>
+<tr><th>:monthname</th><td>月名：January, February ... December<td></tr>
+<tr><th>:day</th><td>日：数字2桁<td></tr>
+<tr><th>:weekday</th><td>曜日：日曜=0, 月曜=1 ... 土曜=6<td></tr>
+<tr><th>:weekdayname</th><td>曜日名：Sunday, Monday ... Saturday<td></tr>
+<tr><th>:yearday</th><td>年の日：1月1日=1, 1月2日=2 ... 12月31日=365 (or 366)<td></tr>
+<tr><th>:section</th><td>コンテンツのsection<td></tr>
+<tr><th>:title</th><td>コンテンツのtitle<td></tr>
+<tr><th>:slug</th><td>コンテンツのslug（なければtitle）<td></tr>
+<tr><th>:filename</th><td>コンテンツのファイル名（拡張子なし）<td></tr>
+</table>
+
+<h3 id="エイリアス">エイリアス</h3>
+
+<p>サイトを移行したりHugoでリプレースした時、旧サイトとURLが変わってしまい、旧URLから新URLへリダイレクトしたい事があります。<br />
+alias パラメータを使用すると、旧URLにリダイレクト用ページを生成する事ができます。</p>
+
+<p>リダイレクト先コンテンツのフロントマターに次のような設定を追加します。</p>
+
+<pre><code>---
+// YAML形式の場合
+aliases:
+  - a/b/c.html  // 拡張子まで指定する
+  - d/e/        // 複数指定可能
+...
+</code></pre>
+
+<p>上記の設定を追加すると、新URLのコンテンツに変更はありませんが、旧URLにリダイレクトするための以下のようなページが生成されます。<br />
+旧URLにアクセスすると 0 秒後に新URLにリダイレクトします。</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;canonical&quot; href=&quot;リダイレクト先コンテンツのURL&quot;/&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;
+    &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;url=リダイレクト先コンテンツのURL&quot;/&gt;
+  &lt;/head&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="クロスリファレンス">クロスリファレンス</h3>
+
+<p>任意のコンテンツに対するURLを生成したい場合は ref または relref ショートコードを使用するのが便利です。<br />
+ref は指定したコンテンツの絶対パス、relref は相対パスを生成します。</p>
+
+<p>ショートコードを使用して以下のように記述します。</p>
+
+<pre><code>{{&lt; ref &quot;post/sample.md&quot; &gt;}}     =&gt; [baseurl]/post/sample/
+{{&lt; ref &quot;sample.md&quot; &gt;}}          =&gt; [baseurl]/post/sample/
+{{&lt; relref &quot;post/sample.md&quot; &gt;}}  =&gt; /post/sample/
+{{&lt; relref &quot;sample.md&quot; &gt;}}       =&gt; /post/sample/
+{{&lt; relref &quot;sample.md#top&quot; &gt;}}   =&gt; /post/sample/#top
+</code></pre>
+
+<p>上の２番目、４番目のようにフォルダ名は省略可能ですが、同一ファイル名のコンテンツが複数存在する場合には結果は保証されませんので注意してください。<br />
+５番目のように anchor 付きでも指定できます。</p>
+
+<hr />
+
+<p><a href="http://www.feedtailor.jp">feedtailor</a> では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に<a href="http://www.feedtailor.jp/form/">お問い合わせ</a>ください。</p>
+
+            </div>
+            <footer class="article-footer">
+    <div class="article-share-link">
+        
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+        <div class="article-share-link-button">
+            <div class="fb-like" data-href="http://staff.feedtailor.jp/2016/07/20/hugo_14" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+        </div>
+        
+        <div class="article-share-link-button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://staff.feedtailor.jp/2016/07/20/hugo_14" data-lang="ja">ツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        
+        <div class="article-share-link-button">
+            <a href="http://b.hatena.ne.jp/entry/http://staff.feedtailor.jp/2016/07/20/hugo_14" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加">
+            <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+            <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+    </div>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://staff.feedtailor.jp/2016/07/13/hugo_13" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">静的サイトジェネレータHugoを使ったサイト構築（データファイル編）</div>
+    </a>
+    
+
+    
+</nav>
+
+
+    </article>
+    <section id="comments">
+        <div id="disqus_thread">
+            
+        </div>
+    </section>
+
+</section>
+
+        <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2016/07/20/hugo_14" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/07/hugo_14.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（URL編）" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                        静的サイトジェネレータ
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/07/20/hugo_14" class="title">静的サイトジェネレータHugoを使ったサイト構築（URL編）</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-07-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-07-20</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2016/07/13/hugo_13" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/07/hugo_13.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（URL編）" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                        静的サイトジェネレータ
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/07/13/hugo_13" class="title">静的サイトジェネレータHugoを使ったサイト構築（データファイル編）</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-07-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-07-13</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2016/07/06/hugo_12" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/07/hugo_12.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（URL編）" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                        静的サイトジェネレータ
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/07/06/hugo_12" class="title">静的サイトジェネレータHugoを使ったサイト構築（テーマ編）</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-07-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-07-06</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2016/06/29/hugo_11" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/06/hugo_11.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（URL編）" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                        静的サイトジェネレータ
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/06/29/hugo_11" class="title">静的サイトジェネレータHugoを使ったサイト構築（Taxonomy編）</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-06-29</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://staff.feedtailor.jp/2016/06/22/hugo_10" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://staff.feedtailor.jp/images/2016/04/hugo_04.png)" alt="静的サイトジェネレータHugoを使ったサイト構築（URL編）" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                        静的サイトジェネレータ
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://staff.feedtailor.jp/2016/06/22/hugo_10" class="title">静的サイトジェネレータHugoを使ったサイト構築（リスト編）</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-06-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-06-22</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">16</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/node">
+                    node
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e3%82%a2%e3%83%97%e3%83%aa%e3%81%94%e7%b4%b9%e4%bb%8b">
+                    アプリご紹介
+                </a>
+                <span class="category-list-count">49</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e5%85%a8%e8%88%ac">
+                    全般
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e6%8a%80%e8%a1%93%e6%83%85%e5%a0%b1">
+                    技術情報
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e6%9c%aa%e5%88%86%e9%a1%9e">
+                    未分類
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/categories/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf">
+                    静的サイトジェネレータ
+                </a>
+                <span class="category-list-count">16</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/04">
+                    2014/04
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/05">
+                    2014/05
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/06">
+                    2014/06
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/07">
+                    2014/07
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/08">
+                    2014/08
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/09">
+                    2014/09
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/10">
+                    2014/10
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/11">
+                    2014/11
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2014/12">
+                    2014/12
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/01">
+                    2015/01
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/02">
+                    2015/02
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/03">
+                    2015/03
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/04">
+                    2015/04
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/05">
+                    2015/05
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/07">
+                    2015/07
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2015/08">
+                    2015/08
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2016/03">
+                    2016/03
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2016/04">
+                    2016/04
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2016/05">
+                    2016/05
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2016/06">
+                    2016/06
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://staff.feedtailor.jp/archives/2016/07">
+                    2016/07
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://staff.feedtailor.jp/tags/8bitter" style="font-size: 12px;">8bitter</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/bgtube" style="font-size: 12px;">bgtube</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/book&#43;" style="font-size: 12px;">book&#43;</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/cocos2d-x" style="font-size: 12px;">cocos2d-x</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/codescanner" style="font-size: 12px;">codescanner</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/cwnotify" style="font-size: 12px;">cwnotify</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/dailyshot" style="font-size: 12px;">dailyshot</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/express" style="font-size: 12px;">express</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/groups" style="font-size: 12px;">groups</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/imasks" style="font-size: 12px;">imasks</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/node" style="font-size: 12px;">node</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/nyatter" style="font-size: 12px;">nyatter</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/php" style="font-size: 12px;">php</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/qr%e7%9b%ae%e8%a6%9a%e3%81%be%e3%81%97" style="font-size: 12px;">qr目覚まし</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/sora" style="font-size: 12px;">sora</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/sunshine" style="font-size: 12px;">sunshine</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/tailsearch" style="font-size: 12px;">tailsearch</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%8b%e3%82%93%e3%81%98%e3%81%8b%e3%81%aa" style="font-size: 12px;">かんじかな</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e3%82%a2%e3%83%ab%e3%83%90%e3%83%a0" style="font-size: 12px;">そらアルバム</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e3%83%ac%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">そらレーダー</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e6%a1%88%e5%86%85" style="font-size: 12px;">そら案内</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e6%b0%97%e6%b8%a9" style="font-size: 12px;">そら気温</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%81%9d%e3%82%89%e7%94%a8%e5%bf%83" style="font-size: 12px;">そら用心</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e3%82%a2%e3%83%97%e3%83%aa%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9" style="font-size: 12px;">アプリリリース</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e5%af%8c%e8%b1%aakeyboard" style="font-size: 12px;">富豪keyboard</a>
+        
+        <a href="http://staff.feedtailor.jp/tags/%e8%b6%85%e8%81%96%e5%9f%9f" style="font-size: 12px;">超聖域</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+    </div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-538130-14', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://staff.feedtailor.jp/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://staff.feedtailor.jp/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</div>
+</body>
+</html>
