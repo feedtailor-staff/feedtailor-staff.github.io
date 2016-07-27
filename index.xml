@@ -6,8 +6,155 @@
     <description>Recent content on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 20 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jul 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（メニュー編）</title>
+      <link>http://staff.feedtailor.jp/2016/07/27/hugo_15</link>
+      <pubDate>Wed, 27 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/07/27/hugo_15</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;br /&gt;
+今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;メニュー&lt;/strong&gt; について解説します。&lt;/p&gt;
+
+&lt;h3 id=&#34;メニューとは&#34;&gt;メニューとは？&lt;/h3&gt;
+
+&lt;p&gt;Hugoにはシンプルなメニュー構築機能が備わっています。メニュー機能は以下のような特徴があります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;コンテンツを任意のメニュー（複数可）に追加できる&lt;/li&gt;
+&lt;li&gt;メニューを階層化できる&lt;/li&gt;
+&lt;li&gt;コンテンツなしでもメニューを追加できる&lt;/li&gt;
+&lt;li&gt;選択中のメニュー表示を変更できる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;内部構造的に言うとメニューとは .Site.Menu という変数でアクセスできる連想配列のようなものです。&lt;br /&gt;
+例えば main というメニューは &lt;code&gt;.Site.Menu.main&lt;/code&gt; でアクセスします。&lt;/p&gt;
+
+&lt;p&gt;メニューには以下のようなプロパティがあります。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URL&lt;/th&gt;&lt;td&gt;コンテンツのパーマリンク、または指定URL&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;td&gt;表示名&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Menu&lt;/th&gt;&lt;td&gt;所属メニュー&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Identifier&lt;/th&gt;&lt;td&gt;セクション名、または指定文字列&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Pre&lt;/th&gt;&lt;td&gt;指定HTML&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Post&lt;/th&gt;&lt;td&gt;指定HTML&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Weight&lt;/th&gt;&lt;td&gt;並び順&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Parent&lt;/th&gt;&lt;td&gt;親メニュー名&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Children&lt;/th&gt;&lt;td&gt;子メニュー&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;また、&lt;code&gt;HasChildren&lt;/code&gt; という関数で子メニューが存在するか確認できます。&lt;/p&gt;
+
+&lt;h3 id=&#34;メニューの追加&#34;&gt;メニューの追加&lt;/h3&gt;
+
+&lt;p&gt;メニューを追加する方法は二つあります。一つはコンテンツのフロントマターで指定する方法、もう一つは config.toml で指定する方法です。&lt;/p&gt;
+
+&lt;h4 id=&#34;コンテンツをメニューに追加&#34;&gt;コンテンツをメニューに追加&lt;/h4&gt;
+
+&lt;p&gt;コンテンツのフロントマターにメニュー項目を書くだけで、メニュー定義の追加とメニューへのコンテンツ登録が行われます。&lt;br /&gt;
+フロントマターには以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+// YAML形式の場合
+menu: &amp;quot;main&amp;quot;
+
+// 複数のメニューに追加する場合
+menu: [&amp;quot;main&amp;quot;, &amp;quot;footer&amp;quot;]
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;次のように親メニュー項目を指定して階層化したり、weight で並べ替えをすることもできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+// YAML形式の場合
+menu:
+  main:
+    parent: &#39;extras&#39;
+    weight: 20
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;config-toml-でメニューを追加&#34;&gt;config.toml でメニューを追加&lt;/h4&gt;
+
+&lt;p&gt;menuの表示順を変更したり、リンク等のコンテンツに紐付かないメニューを追加する場合は config.toml に定義を記載します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[menu.main]]
+    name = &amp;quot;about hugo&amp;quot;
+    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-heart&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+    weight = -110
+    identifier = &amp;quot;about&amp;quot;
+    url = &amp;quot;http://gohugo.io/&amp;quot;
+[[menu.main]]
+    name = &amp;quot;getting started&amp;quot;
+    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-road&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+    weight = -100
+    url = &amp;quot;/getting-started/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;各項目は前述の通りです。url は絶対パスまたはbaseURLからの相対パスで指定してください。&lt;/p&gt;
+
+&lt;h3 id=&#34;メニューを表示&#34;&gt;メニューを表示&lt;/h3&gt;
+
+&lt;p&gt;冒頭で記した通りテンプレートからは .Site.Menus 変数を介してアクセスします。&lt;br /&gt;
+例えば、メニュー項目 main を表示するには以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul class=&amp;quot;menu&amp;quot;&amp;gt;
+  {{ $currentNode := . }}
+  {{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+      &amp;lt;li class=&amp;quot;sub-menu{{if $currentNode.HasMenuCurrent &amp;quot;main&amp;quot; . }} active{{end}}&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;&amp;quot;&amp;gt;
+          {{ .Pre }}
+          &amp;lt;span&amp;gt;{{ .Name }}&amp;lt;/span&amp;gt;
+          &amp;lt;span class=&amp;quot;menu-arrow arrow_carrot-right&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+      &amp;lt;/a&amp;gt;
+      &amp;lt;ul class=&amp;quot;sub&amp;quot;&amp;gt;
+          {{ range .Children }}
+          &amp;lt;li{{if $currentNode.IsMenuCurrent &amp;quot;main&amp;quot; . }} class=&amp;quot;active&amp;quot;{{end}}&amp;gt;&amp;lt;a href=&amp;quot;{{.URL}}&amp;quot;&amp;gt; {{ .Name }} &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+          {{ end }}
+      &amp;lt;/ul&amp;gt;
+      &amp;lt;/li&amp;gt;
+    {{else}}
+      &amp;lt;li&amp;gt;
+      &amp;lt;a class=&amp;quot;&amp;quot; href=&amp;quot;{{.URL}}&amp;quot;&amp;gt;
+          {{ .Pre }}
+          &amp;lt;span&amp;gt;{{ .Name }}&amp;lt;/span&amp;gt;
+      &amp;lt;/a&amp;gt;
+      &amp;lt;/li&amp;gt;
+    {{end}}
+  {{end}}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2行目は range の中から現在の表示ページ情報を参照するため、$currentNode に . を代入しています。&lt;br /&gt;
+&lt;code&gt;.Site.Menus.main&lt;/code&gt; に対して階層化されているかどうかで処理を切り替えています。&lt;code&gt;$currentNode.HasMenuCurrent&lt;/code&gt;, &lt;code&gt;$currentNode.IsMenuCurrent&lt;/code&gt; でそれぞれ表示中のコンテンツが当該メニューの配下にいるか、当該メニューであるか、を判定しています。&lt;/p&gt;
+
+&lt;h3 id=&#34;セクションをメニューに登録&#34;&gt;セクションをメニューに登録&lt;/h3&gt;
+
+&lt;p&gt;次の設定を config.toml に記載すると全セクション、コンテンツが main メニューに一括登録されます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SectionPagesMenu = &amp;quot;main&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;デフォルトでは、セクション名が表示名になります。表示名や並び順を変更したい場合は config.toml に定義を追加してください。この時、&lt;code&gt;identifier&lt;/code&gt; をセクション名にしてください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; [[menu.main]]
+        name = &amp;quot;This is the post section&amp;quot;
+        weight = -110
+        identifier = &amp;quot;post&amp;quot;
+        url = &amp;quot;/post/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（URL編）</title>
@@ -19,7 +166,7 @@
 
 &lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
 
-&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;URL&lt;/strong&gt;ついて。&lt;/p&gt;
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;URL&lt;/strong&gt; について。&lt;/p&gt;
 
 &lt;p&gt;Hugoのデフォルト設定では、URLはコンテンツの配置によって決まりますが、フロントマターのパラメータで指定のURLに変更したり、エイリアスを配置することができます。&lt;/p&gt;
 
@@ -1754,77 +1901,6 @@ Markdownの書き方は以下のサイトが参考になります。
 &lt;p&gt;ウェブサイトとして公開するファイル一式が &lt;strong&gt;public&lt;/strong&gt; フォルダに出力されますので、このままウェブサーバに設置してください。&lt;/p&gt;
 
 &lt;p&gt;今回はインストールからページ生成、ウェブサーバの公開までの流れを急ぎでご紹介しましたが、次回以降は各項目についてもう少し掘り下げていこうと思います。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>第2回静的Webサイト勉強会を開催しました</title>
-      <link>http://staff.feedtailor.jp/2016/03/30/swebmtg2</link>
-      <pubDate>Wed, 30 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://staff.feedtailor.jp/2016/03/30/swebmtg2</guid>
-      <description>&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
-
-&lt;p&gt;今週 2016/03/28(月) に東京高円寺にある &lt;a href=&#34;http://www.val.co.jp&#34;&gt;ヴァル研究所様&lt;/a&gt; で &lt;a href=&#34;http://connpass.com/event/26420/&#34;&gt;第2回 静的Webサイト 勉強会&lt;/a&gt; を開催しました。&lt;/p&gt;
-
-&lt;p&gt;勉強会は約60名様、その後の懇親会も半数の方が参加くださって大盛況でした。ありがとうございました。&lt;/p&gt;
-
-&lt;p&gt;今回はゲストスピーカーとして &lt;a href=&#34;https://www.alleyoop.co.jp&#34;&gt;株式会社アリウープ&lt;/a&gt; の河野様 に講演いただきました。&lt;br /&gt;
-名だたる大手企業のサイトを多数手掛けていらっしゃるので説得力が違います。静的サイトと動的要素の組み合わせ例とか今後の予測とか本当に勉強になりました。
-弊社では現状フリーの静的サイトジェネレータしか実績がありませんので、機会があれば商用静的CMSについても調査、比較検討してみたいと思います。&lt;/p&gt;
-
-&lt;p&gt;ライトニングトークの１つ目は &lt;a href=&#34;http://m2mtech.jp/&#34;&gt;M2Mテクノロジーズ株式会社&lt;/a&gt; 内山様からウェブサイトの改竄検知について。
-シンプルな方法ですが、HTMLや画像をファイルレベルで差分を取るって有効だと感じました。&lt;/p&gt;
-
-&lt;p&gt;２つ目は &lt;a href=&#34;http://classmethod.jp/&#34;&gt;クラスメソッド株式会社&lt;/a&gt; 鈴木様 からCloudFrontの利用について。
-静的サイトはCDNと相性がいいので積極的に利用するのも良いかも。安めのサーバと組み合わせるとトータルコストが下がる可能性もありそうです。&lt;/p&gt;
-
-&lt;p&gt;さて、私は大阪で行った &lt;a href=&#34;http://connpass.com/event/25507/&#34;&gt;第1回&lt;/a&gt; と同じく「静的サイトジェネレータHugoを使ったサイト運用」という題目で話してきました。&lt;br /&gt;
-&lt;a href=&#34;http://staff.feedtailor.jp/2016/03/25/migration&#34;&gt;前回のエントリ&lt;/a&gt; でも書きましたが、既に６つほど静的サイトを構築していますので、その際に感じたことをざっくりでも共有できたらと思いまして。
-話した内容は、&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;構築したサイトのご紹介
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.syncnel.biz/&#34;&gt;SYNCNELオフィシャルサイト&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;弊社コーポレートサイト&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.feedtailor.jp&#34;&gt;弊社社長ブログ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://hitokoto.feedtailor.jp&#34;&gt;弊社スタッフのひとことブログ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;当ブログ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Hugoでブログエントリの追加の実演&lt;/li&gt;
-&lt;li&gt;構築／運用上の課題、メリット&lt;/li&gt;
-&lt;li&gt;自作GUIのチラ見せ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;です。&lt;br /&gt;
-個人的に非技術者の方が &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; を利用する上で１番の障害になっているのが黒い画面（コマンドライン）だと感じておりまして、私のプレゼンではそれをフォローするために作成したGUIをご紹介しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2016/03/swebmtg2_gui.png&#34; alt=&#34;GUI&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;上段左から順に操作するとエントリの追加、バージョン管理からサーバへの反映まで出来るようになっています。各ボタンの機能を簡単にご紹介します。&lt;/p&gt;
-
-&lt;table&gt;
-&lt;tr&gt;&lt;th&gt;フォルダを開く&lt;/th&gt;&lt;td&gt;プロジェクトのフォルダを開く&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;更新&lt;/th&gt;&lt;td&gt;git pull コマンドの実行&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;コンテンツを追加&lt;/th&gt;&lt;td&gt;hugo new コマンドの実行&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;画像を追加&lt;/th&gt;&lt;td&gt;指定した画像のサムネイルを作成&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;プレビュー&lt;/th&gt;&lt;td&gt;hugo server コマンドの実行、ブラウザの起動&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;ビルド&lt;/th&gt;&lt;td&gt;hugo コマンドの実行&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;登録&lt;/th&gt;&lt;td&gt;git add / commit / push コマンドの実行&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;アップロード&lt;/th&gt;&lt;td&gt;サーバへのファイル転送&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;JavaFXで作成したUIから、直接コマンドを実行したりシェルスクリプトを呼び出しているだけの簡単なものですが、黒い画面を排除するには十分で、
-先に紹介した弊社の&lt;a href=&#34;http://hitokoto.feedtailor.jp/&#34;&gt;ひとことブログ&lt;/a&gt;はこれを使用して更新しています。&lt;/p&gt;
-
-&lt;p&gt;懇親会でもいろんな方と話しましたが、まだまだ静的サイトの有用性や&lt;a href=&#34;http://staticgen.com&#34;&gt;静的サイトジェネレータ&lt;/a&gt;の存在が広まってないな、と感じました。
-ご紹介したGUIのようなものや日本語の情報が増えて一般の方にも利用してもらいやすい環境ができれば良いなと思います。&lt;/p&gt;
-
-&lt;p&gt;サイトの静的化に興味がある方や既に運用しているがコマンドラインの操作が煩わしい、というような方は是非ご相談ください。&lt;/p&gt;
-
-&lt;p&gt;2016/3/31 一部加筆・修正しました。&lt;/p&gt;
 </description>
     </item>
     

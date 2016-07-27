@@ -19,7 +19,7 @@
 
 &lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
 
-&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;URL&lt;/strong&gt;ついて。&lt;/p&gt;
+&lt;p&gt;今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;URL&lt;/strong&gt; について。&lt;/p&gt;
 
 &lt;p&gt;Hugoのデフォルト設定では、URLはコンテンツの配置によって決まりますが、フロントマターのパラメータで指定のURLに変更したり、エイリアスを配置することができます。&lt;/p&gt;
 

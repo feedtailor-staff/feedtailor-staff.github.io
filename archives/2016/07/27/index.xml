@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016/07/27 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2016/07/27/</link>
+    <description>Recent content in 2016/07/27 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 27 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2016/07/27/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（メニュー編）</title>
+      <link>http://staff.feedtailor.jp/2016/07/27/hugo_15</link>
+      <pubDate>Wed, 27 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/07/27/hugo_15</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;br /&gt;
+今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;メニュー&lt;/strong&gt; について解説します。&lt;/p&gt;
+
+&lt;h3 id=&#34;メニューとは&#34;&gt;メニューとは？&lt;/h3&gt;
+
+&lt;p&gt;Hugoにはシンプルなメニュー構築機能が備わっています。メニュー機能は以下のような特徴があります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;コンテンツを任意のメニュー（複数可）に追加できる&lt;/li&gt;
+&lt;li&gt;メニューを階層化できる&lt;/li&gt;
+&lt;li&gt;コンテンツなしでもメニューを追加できる&lt;/li&gt;
+&lt;li&gt;選択中のメニュー表示を変更できる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;内部構造的に言うとメニューとは .Site.Menu という変数でアクセスできる連想配列のようなものです。&lt;br /&gt;
+例えば main というメニューは &lt;code&gt;.Site.Menu.main&lt;/code&gt; でアクセスします。&lt;/p&gt;
+
+&lt;p&gt;メニューには以下のようなプロパティがあります。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;URL&lt;/th&gt;&lt;td&gt;コンテンツのパーマリンク、または指定URL&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;td&gt;表示名&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Menu&lt;/th&gt;&lt;td&gt;所属メニュー&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Identifier&lt;/th&gt;&lt;td&gt;セクション名、または指定文字列&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Pre&lt;/th&gt;&lt;td&gt;指定HTML&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Post&lt;/th&gt;&lt;td&gt;指定HTML&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Weight&lt;/th&gt;&lt;td&gt;並び順&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Parent&lt;/th&gt;&lt;td&gt;親メニュー名&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Children&lt;/th&gt;&lt;td&gt;子メニュー&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;また、&lt;code&gt;HasChildren&lt;/code&gt; という関数で子メニューが存在するか確認できます。&lt;/p&gt;
+
+&lt;h3 id=&#34;メニューの追加&#34;&gt;メニューの追加&lt;/h3&gt;
+
+&lt;p&gt;メニューを追加する方法は二つあります。一つはコンテンツのフロントマターで指定する方法、もう一つは config.toml で指定する方法です。&lt;/p&gt;
+
+&lt;h4 id=&#34;コンテンツをメニューに追加&#34;&gt;コンテンツをメニューに追加&lt;/h4&gt;
+
+&lt;p&gt;コンテンツのフロントマターにメニュー項目を書くだけで、メニュー定義の追加とメニューへのコンテンツ登録が行われます。&lt;br /&gt;
+フロントマターには以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+// YAML形式の場合
+menu: &amp;quot;main&amp;quot;
+
+// 複数のメニューに追加する場合
+menu: [&amp;quot;main&amp;quot;, &amp;quot;footer&amp;quot;]
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;次のように親メニュー項目を指定して階層化したり、weight で並べ替えをすることもできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+// YAML形式の場合
+menu:
+  main:
+    parent: &#39;extras&#39;
+    weight: 20
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;config-toml-でメニューを追加&#34;&gt;config.toml でメニューを追加&lt;/h4&gt;
+
+&lt;p&gt;menuの表示順を変更したり、リンク等のコンテンツに紐付かないメニューを追加する場合は config.toml に定義を記載します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[menu.main]]
+    name = &amp;quot;about hugo&amp;quot;
+    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-heart&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+    weight = -110
+    identifier = &amp;quot;about&amp;quot;
+    url = &amp;quot;http://gohugo.io/&amp;quot;
+[[menu.main]]
+    name = &amp;quot;getting started&amp;quot;
+    pre = &amp;quot;&amp;lt;i class=&#39;fa fa-road&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;
+    weight = -100
+    url = &amp;quot;/getting-started/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;各項目は前述の通りです。url は絶対パスまたはbaseURLからの相対パスで指定してください。&lt;/p&gt;
+
+&lt;h3 id=&#34;メニューを表示&#34;&gt;メニューを表示&lt;/h3&gt;
+
+&lt;p&gt;冒頭で記した通りテンプレートからは .Site.Menus 変数を介してアクセスします。&lt;br /&gt;
+例えば、メニュー項目 main を表示するには以下のように記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul class=&amp;quot;menu&amp;quot;&amp;gt;
+  {{ $currentNode := . }}
+  {{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+      &amp;lt;li class=&amp;quot;sub-menu{{if $currentNode.HasMenuCurrent &amp;quot;main&amp;quot; . }} active{{end}}&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;&amp;quot;&amp;gt;
+          {{ .Pre }}
+          &amp;lt;span&amp;gt;{{ .Name }}&amp;lt;/span&amp;gt;
+          &amp;lt;span class=&amp;quot;menu-arrow arrow_carrot-right&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+      &amp;lt;/a&amp;gt;
+      &amp;lt;ul class=&amp;quot;sub&amp;quot;&amp;gt;
+          {{ range .Children }}
+          &amp;lt;li{{if $currentNode.IsMenuCurrent &amp;quot;main&amp;quot; . }} class=&amp;quot;active&amp;quot;{{end}}&amp;gt;&amp;lt;a href=&amp;quot;{{.URL}}&amp;quot;&amp;gt; {{ .Name }} &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+          {{ end }}
+      &amp;lt;/ul&amp;gt;
+      &amp;lt;/li&amp;gt;
+    {{else}}
+      &amp;lt;li&amp;gt;
+      &amp;lt;a class=&amp;quot;&amp;quot; href=&amp;quot;{{.URL}}&amp;quot;&amp;gt;
+          {{ .Pre }}
+          &amp;lt;span&amp;gt;{{ .Name }}&amp;lt;/span&amp;gt;
+      &amp;lt;/a&amp;gt;
+      &amp;lt;/li&amp;gt;
+    {{end}}
+  {{end}}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2行目は range の中から現在の表示ページ情報を参照するため、$currentNode に . を代入しています。&lt;br /&gt;
+&lt;code&gt;.Site.Menus.main&lt;/code&gt; に対して階層化されているかどうかで処理を切り替えています。&lt;code&gt;$currentNode.HasMenuCurrent&lt;/code&gt;, &lt;code&gt;$currentNode.IsMenuCurrent&lt;/code&gt; でそれぞれ表示中のコンテンツが当該メニューの配下にいるか、当該メニューであるか、を判定しています。&lt;/p&gt;
+
+&lt;h3 id=&#34;セクションをメニューに登録&#34;&gt;セクションをメニューに登録&lt;/h3&gt;
+
+&lt;p&gt;次の設定を config.toml に記載すると全セクション、コンテンツが main メニューに一括登録されます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SectionPagesMenu = &amp;quot;main&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;デフォルトでは、セクション名が表示名になります。表示名や並び順を変更したい場合は config.toml に定義を追加してください。この時、&lt;code&gt;identifier&lt;/code&gt; をセクション名にしてください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; [[menu.main]]
+        name = &amp;quot;This is the post section&amp;quot;
+        weight = -110
+        identifier = &amp;quot;post&amp;quot;
+        url = &amp;quot;/post/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
