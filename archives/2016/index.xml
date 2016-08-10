@@ -6,8 +6,126 @@
     <description>Recent content in 2016 on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 27 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/archives/2016/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（アーカイブ編）</title>
+      <link>http://staff.feedtailor.jp/2016/08/10/hugo_16</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/08/10/hugo_16</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;br /&gt;
+今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;アーカイブページ&lt;/strong&gt; について。&lt;/p&gt;
+
+&lt;p&gt;WordPress 等の CMS で記事を投稿すると自動的に日付に応じたアーカイブページが生成されたりしますが、Hugo にはそのような機構は用意されていません。&lt;br /&gt;
+以下では、当ブログで使用している年／月／日のアーカイブページの生成方法をご紹介します。&lt;/p&gt;
+
+&lt;h3 id=&#34;概要&#34;&gt;概要&lt;/h3&gt;
+
+&lt;p&gt;当ブログでは、年／月／日アーカイブページのURLをそれぞれ以下のように設定しています。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;年別アーカイブ&lt;/th&gt;&lt;td&gt;http://staff.feedtailor.jp/archives/2016/&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;月別アーカイブ&lt;/th&gt;&lt;td&gt;http://staff.feedtailor.jp/archives/2016/08/&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;日別アーカイブ&lt;/th&gt;&lt;td&gt;http://staff.feedtailor.jp/archives/2016/08/10/&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Hugo では、タグやカテゴリ等、特定の条件に一致するコンテンツのリストページ生成に Taxonomy を使用するのが一般的ですので、
+この機能を利用して年／月／日のアーカイブページを作成します。&lt;/p&gt;
+
+&lt;p&gt;ざっくり言うとコンテンツの &amp;ldquo;archives&amp;rdquo; という Taxonomy に &amp;ldquo;2016&amp;rdquo;, &amp;ldquo;2016/08&amp;rdquo;, &amp;ldquo;2016/08/10&amp;rdquo; を指定すれば良いです。&lt;/p&gt;
+
+&lt;h3 id=&#34;taxonomyの登録&#34;&gt;Taxonomyの登録&lt;/h3&gt;
+
+&lt;p&gt;まず config.toml に Taxonomy を登録します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[taxonomies]
+  tag = &amp;quot;tags&amp;quot;
+  category = &amp;quot;categories&amp;quot;
+  archive = &amp;quot;archives&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2016/06/29/hugo_11&#34;&gt;Taxonomy編&lt;/a&gt; で説明したように、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;左辺（Singular）の &amp;ldquo;archive&amp;rdquo; が、リストページのテンプレートファイル名&lt;/li&gt;
+&lt;li&gt;右辺（Plural）の &amp;ldquo;archives&amp;rdquo; が、コンテンツのフロントマターで登録する値＝URLのパスになる値&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;です。&lt;/p&gt;
+
+&lt;h3 id=&#34;レイアウトの作成&#34;&gt;レイアウトの作成&lt;/h3&gt;
+
+&lt;p&gt;次にアーカイブページのレイアウトテンプレートを用意します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2016/06/29/hugo_11&#34;&gt;Taxonomy編&lt;/a&gt; で説明したように、以下の順に検索されます。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;/layouts/taxonomy/&lt;em&gt;SINGULAR&lt;/em&gt;.html&lt;/li&gt;
+&lt;li&gt;/layouts/_default/taxonomy.html&lt;/li&gt;
+&lt;li&gt;/layouts/_default/list.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/taxonomy/&lt;em&gt;SINGULAR&lt;/em&gt;.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/_default/taxonomy.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/_default/list.html&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;前述の config.toml の設定では左辺が archive でしたので、上の 1 は &lt;code&gt;/layout/taxonomy/archive.html&lt;/code&gt; となります。&lt;/p&gt;
+
+&lt;p&gt;以下はテンプレートの例です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;アーカイブ：{{ .Title }}&amp;lt;/h3&amp;gt;
+&amp;lt;/pre&amp;gt;
+{{ range .Data.Pages }}
+&amp;lt;li&amp;gt;
+    &amp;lt;div class=&amp;quot;date&amp;quot;&amp;gt;{{ .Date.Format &amp;quot;2006.01.02 (Mon)&amp;quot; }}&amp;lt;/div&amp;gt;
+    &amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Term （フロントマターで指定した値 &amp;ldquo;2016&amp;rdquo;や&amp;rdquo;2016/08&amp;rdquo;）は変数 &lt;code&gt;.Title&lt;/code&gt; に格納されています。&lt;br /&gt;
+年／月／日で表示を変えたい場合は、次のように &lt;code&gt;.Title&lt;/code&gt; の文字列長で分岐させるか、SINGULAR をそれぞれ year, month, date 等に分けてください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;
+    {{ if eq 4 (len .Title) }}年別：{{ else if eq 7 (len .Title) }}月別：{{ else if eq 10 (len .Title) }}日別：{{ end }}{{ .Title }}
+&amp;lt;/h3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;フロントマターの設定&#34;&gt;フロントマターの設定&lt;/h3&gt;
+
+&lt;p&gt;最後にコンテンツをどのページにリストアップするかを指定します。&lt;/p&gt;
+
+&lt;p&gt;例えば、本エントリの日付は 2016年8月10日ですので、&amp;rdquo;2016&amp;rdquo;, &amp;ldquo;2016/08&amp;rdquo;, &amp;ldquo;2016/08/10&amp;rdquo; の３つのアーカイブページにリストアップしたいとします。&lt;br /&gt;
+その場合は、フロントマターに以下を追加します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# フロントマター（YAML形式）の場合
+archives:
+  - 2016
+  - 2016/08
+  - 2016/08/10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;毎回 archives を設定するのは手間ですので、archetypes に空の値を３つ登録しておくのも良いかもしれません。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# archetypes/post.md
+archives:
+  - &amp;quot;&amp;quot;
+  - &amp;quot;&amp;quot;
+  - &amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上で、アーカイブページの生成されコンテンツがリストアップされます。コンテンツを追加する際にはフロントマターに指定するだけでOKです。&lt;/p&gt;
+
+&lt;p&gt;応用するとHugoでも様々なアーカイブページを生成することができますので、WordPress からの移行等でアーカイブページが自動生成されなくて困っていたり、リストページを充実させたい方は、是非お試しください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（メニュー編）</title>
@@ -1755,152 +1873,6 @@ Hugo では複数のテーマを保存しておいて、簡単に切り替える
 
 &lt;p&gt;今回は以上です。&lt;br /&gt;
 各フォルダの詳細についても順次書いていこうと思います。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>静的サイトジェネレータHugoを使ったサイト構築（導入編）</title>
-      <link>http://staff.feedtailor.jp/2016/04/05/hugo_01</link>
-      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://staff.feedtailor.jp/2016/04/05/hugo_01</guid>
-      <description>
-
-&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
-
-&lt;p&gt;これから何回かに分けて本サイト構築時に使用した静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; についてご紹介したいと思います。&lt;/p&gt;
-
-&lt;h3 id=&#34;hugoとは&#34;&gt;Hugoとは？&lt;/h3&gt;
-
-&lt;p&gt;Go言語で書かれた&lt;a href=&#34;http://staticgen.com&#34;&gt;静的サイトジェネレータ&lt;/a&gt;です。&lt;br /&gt;
-代表的な静的サイトジェネレータとして、GitHub社が開発している&lt;a href=&#34;https://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;や&lt;a href=&#34;https://middlemanapp.com/jp/&#34;&gt;Middleman&lt;/a&gt;、
-国産ではChatwork社が開発している&lt;a href=&#34;https://github.com/chatwork/Phest&#34;&gt;Phest&lt;/a&gt;等がありますが、Hugoを選んだ大きな理由は以下の３つです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;インストールが楽&lt;/li&gt;
-&lt;li&gt;クロスプラットフォーム対応&lt;/li&gt;
-&lt;li&gt;ページ生成が速い&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Win/Mac/Linux環境に対応していて、どの環境も実行ファイル１つです。簡易HTTPサーバも内蔵しているのでRubyやPHPのインストールはもちろんApacheさえも不要です。&lt;br /&gt;
-ページ生成も高速で本ブログの規模であれば0.3秒くらいで生成されます。&lt;/p&gt;
-
-&lt;h3 id=&#34;インストール&#34;&gt;インストール&lt;/h3&gt;
-
-&lt;p&gt;各プラットフォーム用の実行ファイルが提供されているので&lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;リリース情報のページ&lt;/a&gt;からダウンロードしてください。
-Windows 64bit版はhugo_0.15_windows_amd64.zip、MacOSX版はhugo_0.15_darwin_amd64.zipです。zipファイルから展開した実行ファイルは hugo（Winは hugo.exe）という名前に変更しておきましょう。&lt;br /&gt;
-Mac版であれば&lt;a href=&#34;http://brew.sh/index_ja.html&#34;&gt;Homebrew&lt;/a&gt;からもインストールできます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ /usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
-$ brew update
-$ brew install hugo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;サイト作成&#34;&gt;サイト作成&lt;/h3&gt;
-
-&lt;p&gt;新規サイトを作成するには以下のコマンドを実行します。hugo(.exe)を環境変数PATHに登録していない場合はダウンロードしたhugo(.exe)があるフォルダで実行しましょう。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo new site サイト名
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これで空のサイトが出来上がります。生成されたのはサイトの情報を入力する config.toml ファイルと空のフォルダ５つ（&lt;strong&gt;archetypes&lt;/strong&gt;, &lt;strong&gt;content&lt;/strong&gt;, &lt;strong&gt;data&lt;/strong&gt;, &lt;strong&gt;layouts&lt;/strong&gt;, &lt;strong&gt;static&lt;/strong&gt;）だけで中身はありません。
-以降、hugo コマンドは config.toml ファイルのあるフォルダで実行しますので、hugo(.exe)を同じ場所に移動しておくとよいでしょう。&lt;/p&gt;
-
-&lt;p&gt;生成された config.toml ファイルは以下のようになっています。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://replace-this-with-your-hugo-site.com/&amp;quot;
-languageCode = &amp;quot;en-us&amp;quot;
-title = &amp;quot;My New Hugo Site&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;baseurlがこのサイトを公開するURL、languageCodeはRSS出力に付与する文字コード、titleはサイトのタイトルです。環境に合わせて変更してください。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://example.com/&amp;quot;
-languageCode = &amp;quot;ja&amp;quot;
-title = &amp;quot;Hugo入門&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;テーマのインストール&#34;&gt;テーマのインストール&lt;/h3&gt;
-
-&lt;p&gt;レイアウトを１から作るのは時間がかかるので、一般公開されているテーマを利用してみましょう。&lt;br /&gt;
-Hugo公式サイトの&lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;テーマ一覧のページ&lt;/a&gt;から好きなデザインを選択します。ここでは公式サイトの&lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;クイックスタート&lt;/a&gt;と同じく &lt;a href=&#34;http://themes.gohugo.io/hugo-uno/&#34;&gt;hugo-uno&lt;/a&gt; テーマを使ってみます。
-まずはサイトのトップフォルダ（config.tomlがあるフォルダ）に themes というフォルダを作って、そこにhugo-unoテーマを設置します。gitコマンドが使える方は以下で。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mkdir themes
-$ cd themes
-$ git clone https://github.com/SenjinDarashiva/hugo-uno.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;git コマンドが使えない方は &lt;a href=&#34;https://github.com/SenjinDarashiva/hugo-uno/archive/master.zip&#34;&gt;ここ&lt;/a&gt; からzipファイルをダウンロードして展開してください。フォルダ名は hugo-uno に変更してください。&lt;/p&gt;
-
-&lt;h3 id=&#34;記事の追加&#34;&gt;記事の追加&lt;/h3&gt;
-
-&lt;p&gt;記事は content フォルダに置きます。以下のコマンドでからの記事ファイルを作ることができます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo new ファイル名
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ここでは post/hello.md という名前で作ってみます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo new post/hello.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;コマンドを実行すると content フォルダ内に post フォルダが作成され、その中に hello.md ファイルが作られます。&lt;br /&gt;
-標準設定ではファイルの場所・名前がそのままURLのパス部分になるので、この記事は http://サーバ名/post/hello/ というURLで公開されることになります。&lt;/p&gt;
-
-&lt;p&gt;テキストエディタで hello.md を編集しましょう。生成された直後の hello.md ファイルの中身は以下のようになっています。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+++
-date = &amp;quot;2016-04-05T12:00:00+09:00&amp;quot;
-draft = true
-title = &amp;quot;hello&amp;quot;
-
-+++
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;先頭の半角 + 3文字から次の + 3文字の行までを &lt;strong&gt;フロントマター&lt;/strong&gt; と呼び、記事のタイトルや日付、カテゴリ等ページの属性を指定します。&lt;br /&gt;
-title がページのタイトルです。draft は下書きかどうかの状態で true が指定されているとプレビューやページ生成がされませんので false に指定するか削除しましょう。本文はフロントマター以降（この場合は７行目以降）に &lt;a href=&#34;https://ja.wikipedia.org/wiki/Markdown&#34;&gt;Markdown記法&lt;/a&gt; で記述します。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+++
-date = &amp;quot;2016-04-05T12:00:00+09:00&amp;quot;
-title = &amp;quot;Hugoを始めました&amp;quot;
-
-+++
-
-こんにちは、**Hugo** を始めました。
-
-### Markdown記法
-
-Markdownの書き方は以下のサイトが参考になります。
-
-- [Wikipedia](https://ja.wikipedia.org/wiki/Markdown)
-- [Qiita](http://qiita.com/Qiita/items/c686397e4a0f4f11683d)
-- [日本語Markdownユーザー会](http://www.markdown.jp/what-is-markdown/#markdown-1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;プレビュー&#34;&gt;プレビュー&lt;/h3&gt;
-
-&lt;p&gt;hugo は簡易HTTPサーバを内蔵していていつでもプレビューできます。プレビュー中は自動的にリロードがかかるため何もしなくても表示が逐次更新されます。
-プレビュー機能を実行するには &lt;strong&gt;hugo server&lt;/strong&gt; コマンドを使用します。-t の後ろはテーマのフォルダ名を指定してください。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo server -t hugo-uno -w
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ブラウザで &lt;a href=&#34;http://127.0.0.1:1313/&#34;&gt;http://127.0.0.1:1313/&lt;/a&gt; にアクセスすると作成したサイトが表示されます。終了するときは Ctrl+C を押してください。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://staff.feedtailor.jp/images/2016/04/hugo_01_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;ページ生成&#34;&gt;ページ生成&lt;/h3&gt;
-
-&lt;p&gt;プレビューで問題がないことを確認できたらページ生成です。以下のコマンドを実行してください。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo -t hugo-uno
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ウェブサイトとして公開するファイル一式が &lt;strong&gt;public&lt;/strong&gt; フォルダに出力されますので、このままウェブサーバに設置してください。&lt;/p&gt;
-
-&lt;p&gt;今回はインストールからページ生成、ウェブサーバの公開までの流れを急ぎでご紹介しましたが、次回以降は各項目についてもう少し掘り下げていこうと思います。&lt;/p&gt;
 </description>
     </item>
     

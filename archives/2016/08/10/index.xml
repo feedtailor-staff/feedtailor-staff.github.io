@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016/08/10 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2016/08/10/</link>
+    <description>Recent content in 2016/08/10 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 10 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2016/08/10/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（アーカイブ編）</title>
+      <link>http://staff.feedtailor.jp/2016/08/10/hugo_16</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/08/10/hugo_16</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;br /&gt;
+今回は、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; の &lt;strong&gt;アーカイブページ&lt;/strong&gt; について。&lt;/p&gt;
+
+&lt;p&gt;WordPress 等の CMS で記事を投稿すると自動的に日付に応じたアーカイブページが生成されたりしますが、Hugo にはそのような機構は用意されていません。&lt;br /&gt;
+以下では、当ブログで使用している年／月／日のアーカイブページの生成方法をご紹介します。&lt;/p&gt;
+
+&lt;h3 id=&#34;概要&#34;&gt;概要&lt;/h3&gt;
+
+&lt;p&gt;当ブログでは、年／月／日アーカイブページのURLをそれぞれ以下のように設定しています。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;年別アーカイブ&lt;/th&gt;&lt;td&gt;http://staff.feedtailor.jp/archives/2016/&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;月別アーカイブ&lt;/th&gt;&lt;td&gt;http://staff.feedtailor.jp/archives/2016/08/&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;日別アーカイブ&lt;/th&gt;&lt;td&gt;http://staff.feedtailor.jp/archives/2016/08/10/&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Hugo では、タグやカテゴリ等、特定の条件に一致するコンテンツのリストページ生成に Taxonomy を使用するのが一般的ですので、
+この機能を利用して年／月／日のアーカイブページを作成します。&lt;/p&gt;
+
+&lt;p&gt;ざっくり言うとコンテンツの &amp;ldquo;archives&amp;rdquo; という Taxonomy に &amp;ldquo;2016&amp;rdquo;, &amp;ldquo;2016/08&amp;rdquo;, &amp;ldquo;2016/08/10&amp;rdquo; を指定すれば良いです。&lt;/p&gt;
+
+&lt;h3 id=&#34;taxonomyの登録&#34;&gt;Taxonomyの登録&lt;/h3&gt;
+
+&lt;p&gt;まず config.toml に Taxonomy を登録します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[taxonomies]
+  tag = &amp;quot;tags&amp;quot;
+  category = &amp;quot;categories&amp;quot;
+  archive = &amp;quot;archives&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2016/06/29/hugo_11&#34;&gt;Taxonomy編&lt;/a&gt; で説明したように、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;左辺（Singular）の &amp;ldquo;archive&amp;rdquo; が、リストページのテンプレートファイル名&lt;/li&gt;
+&lt;li&gt;右辺（Plural）の &amp;ldquo;archives&amp;rdquo; が、コンテンツのフロントマターで登録する値＝URLのパスになる値&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;です。&lt;/p&gt;
+
+&lt;h3 id=&#34;レイアウトの作成&#34;&gt;レイアウトの作成&lt;/h3&gt;
+
+&lt;p&gt;次にアーカイブページのレイアウトテンプレートを用意します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2016/06/29/hugo_11&#34;&gt;Taxonomy編&lt;/a&gt; で説明したように、以下の順に検索されます。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;/layouts/taxonomy/&lt;em&gt;SINGULAR&lt;/em&gt;.html&lt;/li&gt;
+&lt;li&gt;/layouts/_default/taxonomy.html&lt;/li&gt;
+&lt;li&gt;/layouts/_default/list.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/taxonomy/&lt;em&gt;SINGULAR&lt;/em&gt;.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/_default/taxonomy.html&lt;/li&gt;
+&lt;li&gt;/themes/THEME/layouts/_default/list.html&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;前述の config.toml の設定では左辺が archive でしたので、上の 1 は &lt;code&gt;/layout/taxonomy/archive.html&lt;/code&gt; となります。&lt;/p&gt;
+
+&lt;p&gt;以下はテンプレートの例です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;アーカイブ：{{ .Title }}&amp;lt;/h3&amp;gt;
+&amp;lt;/pre&amp;gt;
+{{ range .Data.Pages }}
+&amp;lt;li&amp;gt;
+    &amp;lt;div class=&amp;quot;date&amp;quot;&amp;gt;{{ .Date.Format &amp;quot;2006.01.02 (Mon)&amp;quot; }}&amp;lt;/div&amp;gt;
+    &amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Term （フロントマターで指定した値 &amp;ldquo;2016&amp;rdquo;や&amp;rdquo;2016/08&amp;rdquo;）は変数 &lt;code&gt;.Title&lt;/code&gt; に格納されています。&lt;br /&gt;
+年／月／日で表示を変えたい場合は、次のように &lt;code&gt;.Title&lt;/code&gt; の文字列長で分岐させるか、SINGULAR をそれぞれ year, month, date 等に分けてください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;h3&amp;gt;
+    {{ if eq 4 (len .Title) }}年別：{{ else if eq 7 (len .Title) }}月別：{{ else if eq 10 (len .Title) }}日別：{{ end }}{{ .Title }}
+&amp;lt;/h3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;フロントマターの設定&#34;&gt;フロントマターの設定&lt;/h3&gt;
+
+&lt;p&gt;最後にコンテンツをどのページにリストアップするかを指定します。&lt;/p&gt;
+
+&lt;p&gt;例えば、本エントリの日付は 2016年8月10日ですので、&amp;rdquo;2016&amp;rdquo;, &amp;ldquo;2016/08&amp;rdquo;, &amp;ldquo;2016/08/10&amp;rdquo; の３つのアーカイブページにリストアップしたいとします。&lt;br /&gt;
+その場合は、フロントマターに以下を追加します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# フロントマター（YAML形式）の場合
+archives:
+  - 2016
+  - 2016/08
+  - 2016/08/10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;毎回 archives を設定するのは手間ですので、archetypes に空の値を３つ登録しておくのも良いかもしれません。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# archetypes/post.md
+archives:
+  - &amp;quot;&amp;quot;
+  - &amp;quot;&amp;quot;
+  - &amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上で、アーカイブページの生成されコンテンツがリストアップされます。コンテンツを追加する際にはフロントマターに指定するだけでOKです。&lt;/p&gt;
+
+&lt;p&gt;応用するとHugoでも様々なアーカイブページを生成することができますので、WordPress からの移行等でアーカイブページが自動生成されなくて困っていたり、リストページを充実させたい方は、是非お試しください。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
