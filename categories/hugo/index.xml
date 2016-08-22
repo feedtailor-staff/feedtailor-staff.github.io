@@ -6,8 +6,144 @@
     <description>Recent content in Hugo on feedtailor Inc. スタッフブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 10 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://staff.feedtailor.jp/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（WordPressからの移行編１）</title>
+      <link>http://staff.feedtailor.jp/2016/08/19/hugo_17</link>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/08/19/hugo_17</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;br /&gt;
+今回は、 &lt;a href=&#34;http://wordpress.org&#34;&gt;WordPress&lt;/a&gt; から静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; への移行について。&lt;/p&gt;
+
+&lt;p&gt;当ブログは開設当初からずっと WordPress で運営していたのですが、今年に入ってから Hugo に移行しました。&lt;br /&gt;
+今回はその時の作業内容を元に、移行手順を簡単にご説明します。&lt;/p&gt;
+
+&lt;p&gt;ざっくり言うと以下のような内容です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;投稿の移行&lt;/li&gt;
+&lt;li&gt;テーマの適用&lt;/li&gt;
+&lt;li&gt;リダイレクトの設定&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;投稿の移行&#34;&gt;投稿の移行&lt;/h3&gt;
+
+&lt;p&gt;WordPressの投稿データからHugo用のMarkdownファイルへの変換は、WordPressのプラグイン &lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;&gt;wordpress-to-hugo-exporter&lt;/a&gt; を使用しました。&lt;br /&gt;
+Hugoのオフィシャルサイトでも紹介されているプラグインで、投稿、固定ページやタグ等のメタデータ諸々を１クリックでエクスポートできます。&lt;/p&gt;
+
+&lt;p&gt;インストールは簡単で、&lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;&gt;Github&lt;/a&gt;からgit cloneまたはzip形式でダウンロードしたフォルダをwp-content/pluginsフォルダに置き、WordPressの管理メニューでプラグインを有効化するだけです。&lt;/p&gt;
+
+&lt;p&gt;有効化するとツールメニューの下に &amp;ldquo;Export to Hugo&amp;rdquo; と言うサブメニューが追加されます。このメニューを選択しても管理画面などはなく、すぐにコンテンツと画像を含むzipファイルの生成とダウンロードが始まります。数分かかる場合もあるので注意してください。&lt;/p&gt;
+
+&lt;p&gt;エクスポートの作業自体はこれだけなのですが、幾つか調整したい事項があったので少しだけプラグインに手を入れました。変更内容は後述します。&lt;/p&gt;
+
+&lt;p&gt;ダウンロードした hugo-export.zip の内容は以下のようになっています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo-export
+├── config.yaml
+├── post
+│   ├── 2014-04-17-投稿タイトル.md
+│   ├── 2014-04-18-投稿タイトル2.md
+│   ├── 2014-04-24-投稿タイトル3.md
+│   └── ....
+└── wp-content
+    └── uploads
+        └── 2014
+            └── 04
+                └── 画像.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;config.yaml は url、name、description しか記載されていないので新たに作成しても良いでしょう。&lt;br /&gt;
+wp-content/uploads 配下は、WordPressにアップロードしたファイルがそのまま含まれています。移行先のHugoサイトのstaticにコピーしてください。&lt;/p&gt;
+
+&lt;p&gt;肝心のコンテンツですが、ファイル名に日本語が含まれていたり、フロントマターの項目が少なかったりしたので以下の改修を行いました。&lt;/p&gt;
+
+&lt;h4 id=&#34;コンテンツファイル名の変更&#34;&gt;コンテンツファイル名の変更&lt;/h4&gt;
+
+&lt;p&gt;ファイル名に日本語の投稿名がそのまま入っているため、ファイル名が長すぎてzip解凍に失敗したので、プラグインを変更してファイル名を 年-月-日-投稿ID.md に変更しました。&lt;/p&gt;
+
+&lt;p&gt;変更したのは hugo-export.php の &lt;code&gt;function write($output, $post)&lt;/code&gt; です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$filename = $this-&amp;gt;post_folder . date(&#39;Y-m-d&#39;, strtotime($post-&amp;gt;post_date)) . &#39;-&#39; . urldecode($post-&amp;gt;post_name) . &#39;.md&#39;;
+
+// 上の行を以下に変更
+
+$filename = $this-&amp;gt;post_folder . date(&#39;Y-m-d&#39;, strtotime($post-&amp;gt;post_date)) . &#39;-&#39; . $post-&amp;gt;ID . &#39;.md&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;フロントマターの追加&#34;&gt;フロントマターの追加&lt;/h4&gt;
+
+&lt;p&gt;エクスポートしたコンテンツを見ると、フロントマターは以下のようになっていました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title: feedtailor スタッフブログを始めます
+author: oishi
+layout: post
+date: 2014-04-17
+categories:
+  - 全般
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;パーマリンクを個別指定している場合は url パラメータもつくようです。&lt;/p&gt;
+
+&lt;p&gt;標準で追加される項目以外に、WordPress投稿IDやバナー画像、&lt;a href=&#34;http://staff.feedtailor.jp/2016/08/10/hugo_16&#34;&gt;アーカイブ編&lt;/a&gt; でご紹介した archives パラメータも移行したかったため、フロントマターに出力するよう変更しました。&lt;/p&gt;
+
+&lt;p&gt;変更したのは hugo-export.php の &lt;code&gt;function convert_meta($post)&lt;/code&gt; です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// 投稿日
+$unixTime = strtotime($post-&amp;gt;post_date_gmt);
+// banner画像の取得
+preg_match(&amp;quot;/(?&amp;lt;=src=[&#39;|\&amp;quot;])[^&#39;|\&amp;quot;]*?(?=[&#39;|\&amp;quot;])/i&amp;quot;, get_the_post_thumbnail($post-&amp;gt;ID), $match);
+$banner = $match[0];
+        
+$output = array(
+    &#39;title&#39;  =&amp;gt; html_entity_decode(get_the_title($post)),
+    &#39;author&#39; =&amp;gt; get_userdata($post-&amp;gt;post_author)-&amp;gt;display_name,
+    &#39;layout&#39; =&amp;gt; get_post_type($post),
+    &#39;date&#39;   =&amp;gt; $this-&amp;gt;_getPostDateAsIso($post),
+    // 追加した項目
+    &#39;post_id&#39; =&amp;gt; $post-&amp;gt;ID,
+    &#39;banner&#39; =&amp;gt; $banner,
+    &#39;archives&#39; =&amp;gt; array(date(&#39;Y&#39;, $unixTime), date(&#39;Y/m&#39;, $unixTime), date(&#39;Y/m/d&#39;, $unixTime)),
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;その他にも出力したい項目があれば $output に追加してください。&lt;/p&gt;
+
+&lt;h4 id=&#34;markdownのリンクを変更&#34;&gt;Markdownのリンクを変更&lt;/h4&gt;
+
+&lt;p&gt;また、リンクの記法が以下のような参照リンクとして段落外に書かれていたため、直接URLを指定するように変更しました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[feedtailor サイト][1]
+
+[1]： http://www.feedtailor.jp/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これは &lt;code&gt;function convert_content($post)&lt;/code&gt; の &lt;code&gt;Markdownify\ConverterExtra&lt;/code&gt; の引数を変更するだけです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$converter = new Markdownify\ConverterExtra;
+
+// 上の行を以下に変更
+
+$converter = new Markdownify\ConverterExtra(2);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;プラグインの改修は以上です。&lt;br /&gt;
+コンテンツをエクスポートしてHugoサイトに組み込んでください。&lt;/p&gt;
+
+&lt;p&gt;テーマの適用とリダイレクト設定の作業内容についてはまた改めてご紹介します。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>静的サイトジェネレータHugoを使ったサイト構築（アーカイブ編）</title>
@@ -1756,123 +1892,6 @@ Go テンプレートでは . は、現在スコープのコンテキストを�
 &lt;p&gt;その他のテンプレートや Partial の中身については順次ご説明します。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、SSGの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽にご相談ください。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>静的サイトジェネレータHugoを使ったサイト構築（フォルダ構成編）</title>
-      <link>http://staff.feedtailor.jp/2016/04/13/hugo_02</link>
-      <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://staff.feedtailor.jp/2016/04/13/hugo_02</guid>
-      <description>
-
-&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://staff.feedtailor.jp/2016/04/05/hugo_01&#34;&gt;前回&lt;/a&gt;に引き続き、静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; について書きたいと思います。今回はフォルダ構成について。&lt;/p&gt;
-
-&lt;h3 id=&#34;フォルダ構成&#34;&gt;フォルダ構成&lt;/h3&gt;
-
-&lt;p&gt;Hugo では、記事や画像、レイアウトを種類毎にそれぞれ決まったフォルダに配置する必要があります。&lt;br /&gt;
-新規サイトを作成する &lt;strong&gt;hugo new site&lt;/strong&gt; コマンドを利用すると、デフォルト設定に準じた以下のファイル・フォルダが生成されます。&lt;/p&gt;
-
-&lt;table&gt;
-&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/overview/configuration/&#34; target=&#34;_blank&#34;&gt;config.toml&lt;/a&gt;&lt;/th&gt;&lt;td&gt;サイト全体の設定ファイル&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/content/archetypes/&#34; target=&#34;_blank&#34;&gt;archetypes&lt;/a&gt;&lt;/th&gt;&lt;td&gt;記事の雛形を置くフォルダ&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/content/organization/&#34; target=&#34;_blank&#34;&gt;content&lt;/a&gt;&lt;/th&gt;&lt;td&gt;記事を置くフォルダ&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/extras/datafiles/&#34; target=&#34;_blank&#34;&gt;data&lt;/a&gt;&lt;/th&gt;&lt;td&gt;データファイルを置くフォルダ&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/layout/overview/&#34; target=&#34;_blank&#34;&gt;layouts&lt;/a&gt;&lt;/th&gt;&lt;td&gt;レイアウトを置くフォルダ&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;th&gt;&lt;a href=&#34;http://gohugo.io/themes/creation#toc_4&#34; target=&#34;_blank&#34;&gt;static&lt;/a&gt;&lt;/th&gt;&lt;td&gt;画像等の静的素材を置くフォルダ&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;その他に、テーマを置く &lt;strong&gt;&lt;a href=&#34;http://gohugo.io/themes/overview/&#34;&gt;themes&lt;/a&gt;&lt;/strong&gt; フォルダ、ファイルが出力される &lt;strong&gt;public&lt;/strong&gt; フォルダの位置がデフォルトで設定されています。&lt;/p&gt;
-
-&lt;h3 id=&#34;config-tomlファイル&#34;&gt;config.tomlファイル&lt;/h3&gt;
-
-&lt;p&gt;URLやタイトル、フォルダ構成等、サイト全体の設定を記載するファイルです。&lt;br /&gt;
-デフォルトでは拡張子の通り、&lt;a href=&#34;https://github.com/toml-lang/toml&#34;&gt;TOML形式&lt;/a&gt; で書きます。config.toml が存在しない場合は config.yaml、config.json の順に使用されます。&lt;/p&gt;
-
-&lt;p&gt;生成直後は次のような内容ですので、ご利用の環境に合わせて変更してください。&lt;br /&gt;
-定義されている項目は&lt;a href=&#34;http://gohugo.io/overview/configuration/&#34;&gt;こちら&lt;/a&gt;。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://replace-this-with-your-hugo-site.com/&amp;quot;
-languageCode = &amp;quot;en-us&amp;quot;
-title = &amp;quot;My New Hugo Site&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;前述のフォルダ構成を変更したり任意の項目を追加することもできます。&lt;/p&gt;
-
-&lt;p&gt;設定値は以下のコマンドで確認できます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;publicフォルダ&#34;&gt;publicフォルダ&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;hugo&lt;/strong&gt; コマンドで生成されるファイル群は public フォルダに出力されます。&lt;br /&gt;
-このフォルダをウェブサーバに設置してサイトを公開します。&lt;/p&gt;
-
-&lt;h3 id=&#34;archetypesフォルダ&#34;&gt;archetypesフォルダ&lt;/h3&gt;
-
-&lt;p&gt;記事の雛形を置くフォルダです。&lt;br /&gt;
-雛形ファイルは &lt;strong&gt;hugo new&lt;/strong&gt; コマンドで記事ファイルを生成する時に使用されます。雛形が見つからない場合は、日付、タイトル、下書きフラグのみの記事が生成されます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+++
-date = &amp;quot;2016-04-13T14:31:25+09:00&amp;quot;
-draft = true
-title = &amp;quot;test&amp;quot;
-
-+++
-
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;contentフォルダ&#34;&gt;contentフォルダ&lt;/h3&gt;
-
-&lt;p&gt;記事を置くフォルダです。&lt;br /&gt;
-このフォルダにあるファイルはHugoの変換処理を通ります。例えば、.md（Markdown形式）ファイルの内容は、HTMLに変換され、所定のレイアウトに埋め込まれてHTMLファイルとして出力されます。&lt;br /&gt;
-変換処理が不要なファイルは後述する &lt;strong&gt;static&lt;/strong&gt; フォルダに置いてください。&lt;/p&gt;
-
-&lt;h3 id=&#34;dataフォルダ&#34;&gt;dataフォルダ&lt;/h3&gt;
-
-&lt;p&gt;データファイルを置くフォルダです。&lt;br /&gt;
-データファイルは、任意の名前・値を定義することができるので、簡易なKey-Valueデータストアとして使用できます。&lt;br /&gt;
-例えば、トピックスや会社の年表、製品情報等をデータファイルとして保存しておくと、レイアウトファイルを変更することなくデータのみを更新することができます。&lt;br /&gt;
-因みに &lt;a href=&#34;http://www.feedtailor.jp/&#34; target=&#34;_blank&#34;&gt;弊社サイト&lt;/a&gt; の &amp;ldquo;WHAT&amp;rsquo;S NEW&amp;rdquo; の内容は、レイアウトに直接書くのではなく、以下のようにTOML形式のデータファイルに記載しています。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[[news_row]]
-  date        = &amp;quot;2016.03.14&amp;quot;
-  title       = &#39;&amp;lt;a href=&amp;quot;http://staff.feedtailor.jp/&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;スタッフブログ&amp;lt;/a&amp;gt;のデザインを変更しました(静的Webサイト化)&#39;
-
-[[news_row]]
-  date        = &amp;quot;2015.01.27&amp;quot;
-  title       = &amp;quot;B2B向けサービス「SYNCNEL」を事業売却しました&amp;quot;
-  url         = &amp;quot;http://feedtailor.jp/wp/?p=15686&amp;quot;
-
-[[news_row]]
-  date        = &amp;quot;2015.10.16&amp;quot;
-  title       = &amp;quot;天気予報アプリ「そら案内」および関連全事業を無償譲渡しました&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;layoutフォルダ&#34;&gt;layoutフォルダ&lt;/h3&gt;
-
-&lt;p&gt;HTMLのレイアウトを置くフォルダです。&lt;br /&gt;
-このフォルダにあるレイアウトに &lt;strong&gt;content&lt;/strong&gt; フォルダ内の記事や &lt;strong&gt;data&lt;/strong&gt; フォルダのデータを埋め込んでHTMLを生成します。&lt;br /&gt;
-レイアウト内の制御文やループはGo言語の &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/templateライブラリ&lt;/a&gt; を使って記述します。&lt;/p&gt;
-
-&lt;h3 id=&#34;staticフォルダ&#34;&gt;staticフォルダ&lt;/h3&gt;
-
-&lt;p&gt;JSやCSS、画像等の静的素材を置くフォルダです。&lt;br /&gt;
-Hugoの変換処理が不要なファイルはこのフォルダに設置してください。&lt;strong&gt;public&lt;/strong&gt; フォルダにそのままコピーされます。&lt;/p&gt;
-
-&lt;h3 id=&#34;themeフォルダ&#34;&gt;themeフォルダ&lt;/h3&gt;
-
-&lt;p&gt;テーマを置くフォルダです。&lt;br /&gt;
-Hugo では複数のテーマを保存しておいて、簡単に切り替えることができます。&lt;br /&gt;
-&lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;公開されているテーマ&lt;/a&gt; も沢山ありますので利用してみるのもよいでしょう。&lt;/p&gt;
-
-&lt;p&gt;今回は以上です。&lt;br /&gt;
-各フォルダの詳細についても順次書いていこうと思います。&lt;/p&gt;
 </description>
     </item>
     

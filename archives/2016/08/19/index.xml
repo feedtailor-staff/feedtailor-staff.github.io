@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016/08/19 on feedtailor Inc. スタッフブログ</title>
+    <link>http://staff.feedtailor.jp/archives/2016/08/19/</link>
+    <description>Recent content in 2016/08/19 on feedtailor Inc. スタッフブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 19 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://staff.feedtailor.jp/archives/2016/08/19/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータHugoを使ったサイト構築（WordPressからの移行編１）</title>
+      <link>http://staff.feedtailor.jp/2016/08/19/hugo_17</link>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://staff.feedtailor.jp/2016/08/19/hugo_17</guid>
+      <description>
+
+&lt;p&gt;こんにちは、tamaoki (&lt;a href=&#34;https://twitter.com/t0shiya&#34;&gt;@t0shiya&lt;/a&gt;) です。&lt;br /&gt;
+今回は、 &lt;a href=&#34;http://wordpress.org&#34;&gt;WordPress&lt;/a&gt; から静的サイトジェネレータ &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt; への移行について。&lt;/p&gt;
+
+&lt;p&gt;当ブログは開設当初からずっと WordPress で運営していたのですが、今年に入ってから Hugo に移行しました。&lt;br /&gt;
+今回はその時の作業内容を元に、移行手順を簡単にご説明します。&lt;/p&gt;
+
+&lt;p&gt;ざっくり言うと以下のような内容です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;投稿の移行&lt;/li&gt;
+&lt;li&gt;テーマの適用&lt;/li&gt;
+&lt;li&gt;リダイレクトの設定&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;投稿の移行&#34;&gt;投稿の移行&lt;/h3&gt;
+
+&lt;p&gt;WordPressの投稿データからHugo用のMarkdownファイルへの変換は、WordPressのプラグイン &lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;&gt;wordpress-to-hugo-exporter&lt;/a&gt; を使用しました。&lt;br /&gt;
+Hugoのオフィシャルサイトでも紹介されているプラグインで、投稿、固定ページやタグ等のメタデータ諸々を１クリックでエクスポートできます。&lt;/p&gt;
+
+&lt;p&gt;インストールは簡単で、&lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;&gt;Github&lt;/a&gt;からgit cloneまたはzip形式でダウンロードしたフォルダをwp-content/pluginsフォルダに置き、WordPressの管理メニューでプラグインを有効化するだけです。&lt;/p&gt;
+
+&lt;p&gt;有効化するとツールメニューの下に &amp;ldquo;Export to Hugo&amp;rdquo; と言うサブメニューが追加されます。このメニューを選択しても管理画面などはなく、すぐにコンテンツと画像を含むzipファイルの生成とダウンロードが始まります。数分かかる場合もあるので注意してください。&lt;/p&gt;
+
+&lt;p&gt;エクスポートの作業自体はこれだけなのですが、幾つか調整したい事項があったので少しだけプラグインに手を入れました。変更内容は後述します。&lt;/p&gt;
+
+&lt;p&gt;ダウンロードした hugo-export.zip の内容は以下のようになっています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo-export
+├── config.yaml
+├── post
+│   ├── 2014-04-17-投稿タイトル.md
+│   ├── 2014-04-18-投稿タイトル2.md
+│   ├── 2014-04-24-投稿タイトル3.md
+│   └── ....
+└── wp-content
+    └── uploads
+        └── 2014
+            └── 04
+                └── 画像.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;config.yaml は url、name、description しか記載されていないので新たに作成しても良いでしょう。&lt;br /&gt;
+wp-content/uploads 配下は、WordPressにアップロードしたファイルがそのまま含まれています。移行先のHugoサイトのstaticにコピーしてください。&lt;/p&gt;
+
+&lt;p&gt;肝心のコンテンツですが、ファイル名に日本語が含まれていたり、フロントマターの項目が少なかったりしたので以下の改修を行いました。&lt;/p&gt;
+
+&lt;h4 id=&#34;コンテンツファイル名の変更&#34;&gt;コンテンツファイル名の変更&lt;/h4&gt;
+
+&lt;p&gt;ファイル名に日本語の投稿名がそのまま入っているため、ファイル名が長すぎてzip解凍に失敗したので、プラグインを変更してファイル名を 年-月-日-投稿ID.md に変更しました。&lt;/p&gt;
+
+&lt;p&gt;変更したのは hugo-export.php の &lt;code&gt;function write($output, $post)&lt;/code&gt; です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$filename = $this-&amp;gt;post_folder . date(&#39;Y-m-d&#39;, strtotime($post-&amp;gt;post_date)) . &#39;-&#39; . urldecode($post-&amp;gt;post_name) . &#39;.md&#39;;
+
+// 上の行を以下に変更
+
+$filename = $this-&amp;gt;post_folder . date(&#39;Y-m-d&#39;, strtotime($post-&amp;gt;post_date)) . &#39;-&#39; . $post-&amp;gt;ID . &#39;.md&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;フロントマターの追加&#34;&gt;フロントマターの追加&lt;/h4&gt;
+
+&lt;p&gt;エクスポートしたコンテンツを見ると、フロントマターは以下のようになっていました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title: feedtailor スタッフブログを始めます
+author: oishi
+layout: post
+date: 2014-04-17
+categories:
+  - 全般
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;パーマリンクを個別指定している場合は url パラメータもつくようです。&lt;/p&gt;
+
+&lt;p&gt;標準で追加される項目以外に、WordPress投稿IDやバナー画像、&lt;a href=&#34;http://staff.feedtailor.jp/2016/08/10/hugo_16&#34;&gt;アーカイブ編&lt;/a&gt; でご紹介した archives パラメータも移行したかったため、フロントマターに出力するよう変更しました。&lt;/p&gt;
+
+&lt;p&gt;変更したのは hugo-export.php の &lt;code&gt;function convert_meta($post)&lt;/code&gt; です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;// 投稿日
+$unixTime = strtotime($post-&amp;gt;post_date_gmt);
+// banner画像の取得
+preg_match(&amp;quot;/(?&amp;lt;=src=[&#39;|\&amp;quot;])[^&#39;|\&amp;quot;]*?(?=[&#39;|\&amp;quot;])/i&amp;quot;, get_the_post_thumbnail($post-&amp;gt;ID), $match);
+$banner = $match[0];
+        
+$output = array(
+    &#39;title&#39;  =&amp;gt; html_entity_decode(get_the_title($post)),
+    &#39;author&#39; =&amp;gt; get_userdata($post-&amp;gt;post_author)-&amp;gt;display_name,
+    &#39;layout&#39; =&amp;gt; get_post_type($post),
+    &#39;date&#39;   =&amp;gt; $this-&amp;gt;_getPostDateAsIso($post),
+    // 追加した項目
+    &#39;post_id&#39; =&amp;gt; $post-&amp;gt;ID,
+    &#39;banner&#39; =&amp;gt; $banner,
+    &#39;archives&#39; =&amp;gt; array(date(&#39;Y&#39;, $unixTime), date(&#39;Y/m&#39;, $unixTime), date(&#39;Y/m/d&#39;, $unixTime)),
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;その他にも出力したい項目があれば $output に追加してください。&lt;/p&gt;
+
+&lt;h4 id=&#34;markdownのリンクを変更&#34;&gt;Markdownのリンクを変更&lt;/h4&gt;
+
+&lt;p&gt;また、リンクの記法が以下のような参照リンクとして段落外に書かれていたため、直接URLを指定するように変更しました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[feedtailor サイト][1]
+
+[1]： http://www.feedtailor.jp/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これは &lt;code&gt;function convert_content($post)&lt;/code&gt; の &lt;code&gt;Markdownify\ConverterExtra&lt;/code&gt; の引数を変更するだけです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$converter = new Markdownify\ConverterExtra;
+
+// 上の行を以下に変更
+
+$converter = new Markdownify\ConverterExtra(2);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;プラグインの改修は以上です。&lt;br /&gt;
+コンテンツをエクスポートしてHugoサイトに組み込んでください。&lt;/p&gt;
+
+&lt;p&gt;テーマの適用とリダイレクト設定の作業内容についてはまた改めてご紹介します。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.feedtailor.jp&#34;&gt;feedtailor&lt;/a&gt; では、静的サイトジェネレータの利用に限らず、ウェブサイト静的化の御相談を承っておりますのでお気軽に&lt;a href=&#34;http://www.feedtailor.jp/form/&#34;&gt;お問い合わせ&lt;/a&gt;ください。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
